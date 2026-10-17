@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-17T23:57:39.758Z",
+  "candidate": "mg-6262dac5695bf4",
+  "checks": {
+    "actualOldTabHeld": true,
+    "oldCheckpointPreserved": true,
+    "titleScreen": true,
+    "publicMatch": true,
+    "publicUndo": true,
+    "threeCollections": true,
+    "studio": true,
+    "sixtyLevels": true,
+    "threeD": true
+  }
+}

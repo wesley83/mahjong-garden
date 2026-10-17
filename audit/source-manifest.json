@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T23:55:00.062Z",
+  "utc": "2026-10-17T23:59:14.045Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 37983,
-      "sha256": "e7f9939f5369e16153d7f784dfbfca889a0fc93fb9b2d8d1c521b71a09f57413"
+      "bytes": 40336,
+      "sha256": "294e00f4c7de9da36ea106d7dffb7e799464424002dcd647a146c17c19db882a"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 3467,
-      "sha256": "fc92e4548f9444dee17b69388f770d9bf61ca736fe1752d1d8f1b2e6fce69059"
+      "bytes": 3824,
+      "sha256": "813e12bcb9e69e5097090d023bd2d4eb9e226349d43402c928fcbf9d4691b759"
     },
     {
       "path": "audit/current/legacy-public.json",
@@ -140,8 +140,8 @@
     },
     {
       "path": "audit/current/public.json",
-      "bytes": 1120,
-      "sha256": "823f674edfcd85116c1125960554a37a74b93eec1ec0d659cd0b751a800fdd81"
+      "bytes": 516,
+      "sha256": "1c64357b2f0de39dbde261f1f6e94dc96e8d2f6585a2192ea613e24eaf51eab8"
     },
     {
       "path": "audit/current/README.md",
@@ -190,8 +190,8 @@
     },
     {
       "path": "audit/presentation/deployment-journal.json",
-      "bytes": 355,
-      "sha256": "bf2c6834a028d48d347f733bda1c5cfb28bf1ff03c4aaf3dc2f0ecb40502cc38"
+      "bytes": 1760,
+      "sha256": "c80ea9a10060a4be4b52efd26be93175d141d3f570bd544b57058a24475b4e01"
     },
     {
       "path": "audit/presentation/host-preflight-command.txt",
@@ -219,14 +219,19 @@
       "sha256": "653dce8f5ad1c071edceb61c690453cb2b6a58249f64e2a85d9ba741e9003862"
     },
     {
+      "path": "audit/presentation/public-raw.json",
+      "bytes": 328,
+      "sha256": "35f1bcdff3be579dbcf882fb93e19b92e48642ad0442f3a8b55e28341ce1a81e"
+    },
+    {
       "path": "audit/presentation/release.json",
       "bytes": 8380,
       "sha256": "737957544655527fc924acc67fd5bb372f86e17564b091149444f62e7169694c"
     },
     {
       "path": "audit/presentation/REVIEW.md",
-      "bytes": 4787,
-      "sha256": "4b9ef3ef10ccc1227314aa8456f28afb3e9f4b5ff3c31d03179a76c62547d4e6"
+      "bytes": 5734,
+      "sha256": "e9d5df4d1be10926fc4e6376b0a8601ab15353c8a7b4f16fd7e425ea3442bfea"
     },
     {
       "path": "audit/public-smoke.json",

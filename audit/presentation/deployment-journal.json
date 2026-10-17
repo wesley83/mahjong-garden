@@ -12,6 +12,50 @@
       "receipt": "host-preflight.json",
       "rootUnchanged": true,
       "fixtureCleaned": true
+    },
+    {
+      "utc": "2026-10-17T23:55:51.771Z",
+      "state": "backup requested",
+      "target": "approved owner DAV host",
+      "previousResources": "retained"
+    },
+    {
+      "utc": "2026-10-17T23:56:08.067Z",
+      "state": "backup verified",
+      "files": 45,
+      "directories": 12,
+      "bytes": 1573505,
+      "location": "ignored .local/server-backup/2026-10-17T23-55-31-159Z",
+      "note": "Earlier backup-request UTC is the recording time after the result, not the request start"
+    },
+    {
+      "utc": "2026-10-17T23:56:08.068Z",
+      "state": "promotion requested",
+      "candidate": "mg-6262dac5695bf4"
+    },
+    {
+      "utc": "2026-10-17T23:56:20.373Z",
+      "state": "entry promoted and public readback verified",
+      "candidate": "mg-6262dac5695bf4",
+      "entrySha256": "3d2e1602846ccb6b71d089a17ef7f1ddee46742dfb5200d222698855114b507a",
+      "publicFiles": 16,
+      "conditionalStatus": 200
+    },
+    {
+      "utc": "2026-10-17T23:57:39.758Z",
+      "state": "live interaction and actual old-client transition verified",
+      "candidate": "mg-6262dac5695bf4",
+      "checks": {
+        "actualOldTabHeld": true,
+        "oldCheckpointPreserved": true,
+        "titleScreen": true,
+        "publicMatch": true,
+        "publicUndo": true,
+        "threeCollections": true,
+        "studio": true,
+        "sixtyLevels": true,
+        "threeD": true
+      }
     }
   ]
 }

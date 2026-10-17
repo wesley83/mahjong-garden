@@ -25,3 +25,8 @@ Local acceptance is complete. Commit/push, fresh verified backup, conditional pu
 ## Host preflight
 
 The exact new entry passed actual authoring/public semantic readback, including its inline CSS, through an isolated create-only resource. Conditional cleanup succeeded and the existing live root was unchanged. See host-preflight.json. Source 86e44e1 is pushed; backup/promotion/live observations remain pending.
+
+
+## Publication evidence
+
+PRESENT-PUBLISH is passed. Pushed commit f6ff865 was promoted as mg-6262dac5695bf4 after a complete verified backup of 45 files/12 directories/1,573,505 bytes. All sixteen authoring/public resources and the public root passed readback; prior releases were retained. The actual original public tab kept its old graph and all 24 tiles while promotion occurred. Reload then consumed the new graph with the same checkpoint, and native public match 24 to 22, undo to 24, three collections, studio/image-input access, sixty levels and CSS 3D all passed. No new browser errors were reported. Full local data-loss/recovery scenarios remain bounded to their recorded local fixtures; no production faults or rollback were induced. See host-preflight.json, deployment-journal.json, public-raw.json and ../current/deployment.json. Local acceptance and live publication outcomes are now complete; final evidence commit/push follows.
