@@ -1,0 +1,17 @@
+{
+  "candidate": "mg-6262dac5695bf4",
+  "events": [
+    {
+      "utc": "2026-10-17T23:54:44.574Z",
+      "state": "source pushed",
+      "commit": "86e44e1"
+    },
+    {
+      "utc": "2026-10-17T23:54:07.544Z",
+      "state": "preflight passed",
+      "receipt": "host-preflight.json",
+      "rootUnchanged": true,
+      "fixtureCleaned": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+import fs from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {htmlIdentity} from '../tools/deploy.mjs';
+const publicOrigin='https://grab-lead-8328.onpagelove.com',davOrigin='https://dav-grab-lead-8328.onpagelove.com';
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+if(!process.stdin.isTTY)throw Error('Hidden input requires a TTY');
+process.stdin.setRawMode(true);process.stdin.setEncoding('utf8');let buffer='';
+console.log('Ready for hidden host preflight input.');
+process.stdin.on('data',async chunk=>{buffer+=chunk;if(buffer.length>4096)process.exit(1);if(!/[\r\n]/.test(buffer))return;process.stdin.pause();
+ const path='/__mg-preflight-'+Date.now()+'.html';let key='',etag='',created=false,cleanup=false;const report={utc:new Date().toISOString(),target:publicOrigin,path};
+ try{
+  key=JSON.parse(buffer.trim()).key;buffer='';
+  const request=async(name,options={},authoring=false)=>{const response=await fetch((authoring?davOrigin:publicOrigin)+name,{...options,headers:{...options.headers,...(authoring?{Authorization:'Bearer '+key}:{})},cache:'no-store',redirect:'error',signal:AbortSignal.timeout(30000)});return{status:response.status,type:response.headers.get('content-type'),etag:response.headers.get('etag'),bytes:Buffer.from(await response.arrayBuffer())};};
+  const release=JSON.parse(await fs.readFile('dist/release.json','utf8')),entry=await fs.readFile('dist/index.html'),before=await request('/');report.candidate=release.id;report.entrySha256=hash(entry);report.originalPublicSha256=hash(before.bytes);
+  if(hash(entry)!==release.files.find(file=>file.path==='index.html').sha256)throw Error('Candidate entry changed');
+  const written=await request(path,{method:'PUT',headers:{'If-None-Match':'*','Content-Type':'text/html; charset=utf-8'},body:entry},true);if(![200,201,204].includes(written.status))throw Error('Isolated preflight create refused '+written.status);created=true;
+  const authored=await request(path,{},true),served=await request(path);etag=authored.etag;
+  if(authored.status!==200||served.status!==200||!served.type?.startsWith('text/html')||htmlIdentity(entry)!==htmlIdentity(authored.bytes)||htmlIdentity(entry)!==htmlIdentity(served.bytes,true))throw Error('Host semantic preflight mismatch');
+  report.authoringEquivalent=true;report.publicEquivalent=true;report.inlineStylesVerified=true;
+  if(!/^"[^"\r\n]+"$/.test(etag))throw Error('Preflight cleanup needs a strong ETag');
+  const removed=await request(path,{method:'DELETE',headers:{'If-Match':etag}},true);cleanup=[200,204].includes(removed.status);if(!cleanup)throw Error('Conditional fixture cleanup refused '+removed.status);
+  const after=await request('/');if(hash(after.bytes)!==hash(before.bytes))throw Error('Public root changed during preflight');report.originalRootUnchanged=true;report.fixtureCleaned=true;report.status='passed';
+ }catch(error){report.status='failed';report.error=error.message;report.fixtureCreated=created;report.fixtureCleaned=cleanup;report.recovery='Only the uniquely named preflight resource may need conditional cleanup; root entry was never written by this helper';process.exitCode=1;}
+ finally{key='';await fs.mkdir('audit/presentation',{recursive:true});await fs.writeFile('audit/presentation/host-preflight.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));process.stdin.setRawMode(false);process.stdin.destroy();}
+});

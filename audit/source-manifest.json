@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T23:50:51.654Z",
+  "utc": "2026-10-17T23:55:00.062Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 35732,
-      "sha256": "114a69ee456b42407dc0034d578f78ced796c3b62f2e6d0c354f3188c9f05fa1"
+      "bytes": 37983,
+      "sha256": "e7f9939f5369e16153d7f784dfbfca889a0fc93fb9b2d8d1c521b71a09f57413"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -189,6 +189,21 @@
       "sha256": "0ab047690ef0cbaf97b49ffe8147c806cd863cfa370ac3e42b4ea120332fe183"
     },
     {
+      "path": "audit/presentation/deployment-journal.json",
+      "bytes": 355,
+      "sha256": "bf2c6834a028d48d347f733bda1c5cfb28bf1ff03c4aaf3dc2f0ecb40502cc38"
+    },
+    {
+      "path": "audit/presentation/host-preflight-command.txt",
+      "bytes": 3424,
+      "sha256": "5264208f42bd392f764b9ac7b4339d4064afb543d1bcf0ceb1c8cef8c992274a"
+    },
+    {
+      "path": "audit/presentation/host-preflight.json",
+      "bytes": 527,
+      "sha256": "cf15b64afd2c90d88c83e37fe73cbef9a7c58e0a1f949d8dc621f48cfef34a61"
+    },
+    {
       "path": "audit/presentation/native-raw.json",
       "bytes": 477,
       "sha256": "b208ea4b0a506cd4f37aaed1436d2fcabb6a2ad1fc85a6c88b2c18741086b040"
@@ -210,8 +225,8 @@
     },
     {
       "path": "audit/presentation/REVIEW.md",
-      "bytes": 4455,
-      "sha256": "76c6b8eddf8a2b3af571f4db5acf9337ed393cda5a5530e3d2d178150b6b8087"
+      "bytes": 4787,
+      "sha256": "4b9ef3ef10ccc1227314aa8456f28afb3e9f4b5ff3c31d03179a76c62547d4e6"
     },
     {
       "path": "audit/public-smoke.json",

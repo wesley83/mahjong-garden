@@ -21,3 +21,7 @@ The actual release gate first refused stale previous-candidate receipts. After w
 Visual review: the title, daylight board, stacked moonlit level and phone-sized board were inspected through the browser. Local screenshots are retained under ignored .local/. The phone fixture renders a 390×844 CSS viewport at 0.8 display scale to fit the desktop capture; it establishes that fixture's layout, not a physical device. Original CSS source bytes frozen into the built entry render correctly; the earlier external-style failure remains recorded in MG-020. Other engines, full accessibility conformance, enjoyment and unmeasured presentation timings are not certified.
 
 Local acceptance is complete. Commit/push, fresh verified backup, conditional publication, old-client transition and public smoke remain pending at this decision. Subsequent results must be appended, not inferred from local success.
+
+## Host preflight
+
+The exact new entry passed actual authoring/public semantic readback, including its inline CSS, through an isolated create-only resource. Conditional cleanup succeeded and the existing live root was unchanged. See host-preflight.json. Source 86e44e1 is pushed; backup/promotion/live observations remain pending.
