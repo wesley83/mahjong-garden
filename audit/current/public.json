@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-17T22:48:38.454Z",
+  "origin": "https://grab-lead-8328.onpagelove.com",
+  "candidate": "mg-1cb39865bf468b",
+  "sourceDigest": "1cb39865bf468bf23b470d04bde71733c3d5f87973e5424cd481237d82028bec",
+  "checks": {
+    "ready": true,
+    "match": true,
+    "undo": true,
+    "themesPreservedTiles": true,
+    "sixtyLevels": true,
+    "studioAvailable": true,
+    "reloadCheckpoint": true
+  },
+  "observations": {
+    "liveBefore": 24,
+    "liveAfter": 22,
+    "liveUndo": 24,
+    "themeCounts": [
+      {
+        "theme": "Animals",
+        "remaining": 24
+      },
+      {
+        "theme": "Emoji",
+        "remaining": 24
+      },
+      {
+        "theme": "Traditional",
+        "remaining": 24
+      }
+    ],
+    "liveLevels": 60,
+    "liveStudio": {
+      "cells": 48,
+      "imageInput": "image/png,image/jpeg,image/webp"
+    },
+    "liveReload": {
+      "release": "mg-1cb39865bf468b",
+      "remaining": 24,
+      "message": "Welcome back. Your garden is just as you left it."
+    }
+  },
+  "environment": "Live public Chromium browser native pointer/key actions; actual DOM and reload observations"
+}

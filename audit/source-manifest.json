@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T22:47:26.145Z",
+  "utc": "2026-10-17T22:50:07.790Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 22681,
-      "sha256": "31a84bad0e7864b98710d0bc4137c8515357939dfd4310b56127afa248b29dfa"
+      "bytes": 24679,
+      "sha256": "1e5afc8dba421dd453477a80a498bc15fc1fbe830e30fed76c1f40e29d5d2b14"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -95,13 +95,18 @@
     },
     {
       "path": "audit/current/dependencies.json",
-      "bytes": 292,
-      "sha256": "e3a249251728a612d7e6cc95adfd4bd1098e988db251cfcf5dc69534cf57e9aa"
+      "bytes": 276,
+      "sha256": "c3858481f95ce3397cf9c594719255495585c2fbd4d9c7b1f14a7013a946535d"
+    },
+    {
+      "path": "audit/current/deployment.json",
+      "bytes": 3467,
+      "sha256": "fc92e4548f9444dee17b69388f770d9bf61ca736fe1752d1d8f1b2e6fce69059"
     },
     {
       "path": "audit/current/legacy-public.json",
       "bytes": 1905,
-      "sha256": "ab0cdad3fe061ab3dc665a0a993fc47caf55a024163a01239034226759d4a239"
+      "sha256": "2c52d8096f42836c6ea2d5b20173bedec647e965f57405160a924d661e488ba1"
     },
     {
       "path": "audit/current/native-clock-initial-observation.json",
@@ -134,9 +139,14 @@
       "sha256": "4504b89257fa51392f7448e7ada5a14daf605bf7508faadd65ca0e286e5ca46a"
     },
     {
+      "path": "audit/current/public.json",
+      "bytes": 1120,
+      "sha256": "823f674edfcd85116c1125960554a37a74b93eec1ec0d659cd0b751a800fdd81"
+    },
+    {
       "path": "audit/current/README.md",
-      "bytes": 3236,
-      "sha256": "1384ca00420f69c8f167294d592238913178fa378123cba572420418f6ffbc8d"
+      "bytes": 3708,
+      "sha256": "e4b8770bbc9ee3301339b2202ddc3790d703f84494d5aee78e43c5dceb611478"
     },
     {
       "path": "audit/current/release.json",
@@ -160,8 +170,8 @@
     },
     {
       "path": "audit/HANDBOOK-REVIEW.md",
-      "bytes": 15059,
-      "sha256": "fe629f45760af08cc161e3153c1adf774f97a4b2b37165a84ced1a87a1bd03aa"
+      "bytes": 16631,
+      "sha256": "d7ff9ca3ba00bd7d02a6a646f6f796292e616fbaec3b6f744d811a7dc7fa396a"
     },
     {
       "path": "audit/native-input.json",
