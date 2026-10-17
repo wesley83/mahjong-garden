@@ -68,3 +68,9 @@ No extra approval gate is introduced: Wesley explicitly requested these fixes, c
 Performance: final ordinary-control fixture measured 34 dispatch samples, p95 5.5ms, max/board max 6.3ms. Timing is synchronous handler/DOM work, not presentation latency. Earlier cold-audio outliers are preserved and were treated as failures, then corrected and rerun. Chapter source ranges/stacking and the limited design rubric are in current/progression.json. No enjoyment or natural-difficulty claim follows from solver completion.
 
 Release decision: source is ready to commit/push. Production entry promotion, public old/new-client verification and the final evidence push remain to be executed. The original pregame wipe is not repeated.
+
+### Publication correction and revalidation
+
+2026-10-17T22:40:37Z, MG-012/013. The first promotion was refused before the live entry changed: the public HTML comparator's body getter mutated an omitted-head document. A nonmutating body query and an exact-footer/altered-content regression corrected the verifier; direct public readback then compared equal. The older staged graph remains retained and unused.
+
+New candidate mg-cb73fff73dd23c passed the gate with **19** Node groups, all ten browser groups and new native keyboard/focus receipts. Same 14 artifacts/373,967 gameplay bytes; 34 dispatch samples, p95/board max 5.3ms and aggregate max 5.9ms. Native complete/mismatch/text/grid/modal checks passed again; dialog clock remained 00:07. Current node/browser/native/release receipts supersede the pre-publication candidate receipts, which remain retained. A fresh verified backup includes the original game plus harmless staged dependencies: 19 files, six directories, 706,473 bytes, at ignored .local/server-backup/2026-10-17T22-40-07-944Z. Live promotion and A→B check remain pending.

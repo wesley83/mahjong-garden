@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T22:35:12.582Z",
+  "utc": "2026-10-17T22:40:54.975Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 16347,
-      "sha256": "bd265aaf209bcca5ac4f24db8c3d0d03b333e6797d5baa8829ae8f9842beeebd"
+      "bytes": 19156,
+      "sha256": "6dd53701e005c4ced8f6428846b8b3c2c688f98f71049c25e18cb59dbdce37ab"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -84,9 +84,14 @@
       "sha256": "764dbb773519c08203d4a46184487b02d1e2680875be82a948290153851f4a39"
     },
     {
-      "path": "audit/current/browser.json",
+      "path": "audit/current/browser-pre-publication.json",
       "bytes": 11617,
       "sha256": "cb6696d8ade7c304eb76f08e8384046c487e1746306e66c4aba647a4320d3a26"
+    },
+    {
+      "path": "audit/current/browser.json",
+      "bytes": 11666,
+      "sha256": "e8ab7209f0ba5b4e894daa299ad79ce21800d6e4528425aff87a219d08e423e3"
     },
     {
       "path": "audit/current/dependencies.json",
@@ -94,19 +99,24 @@
       "sha256": "e3a249251728a612d7e6cc95adfd4bd1098e988db251cfcf5dc69534cf57e9aa"
     },
     {
-      "path": "audit/current/native.json",
+      "path": "audit/current/native-pre-publication.json",
       "bytes": 1582,
       "sha256": "5a982c7f55a887d613874a4aec2cde18f5d692462335ef74ce626920acea091b"
     },
     {
+      "path": "audit/current/native.json",
+      "bytes": 1530,
+      "sha256": "8d9b9d2f338220b470e9dff678b7f80ec83c293b47ac81bbb25170c91dd6a2e2"
+    },
+    {
       "path": "audit/current/node-tests.tap",
-      "bytes": 4240,
-      "sha256": "ffe45e102253a93ae78bd4b88989125762eb479c12938c703ab48687dcffb951"
+      "bytes": 4506,
+      "sha256": "6410ffbcecbda77d93f8ad6fa8bb3a3816f9206a4c45ca34f06093b9df909e07"
     },
     {
       "path": "audit/current/node.json",
       "bytes": 461,
-      "sha256": "b0a91c6bdd22b861563a614b6ba554636cef3b7e728b56584efd3bba48acb361"
+      "sha256": "437656ab9d6f1d5bcb1a7e60a253b6124e3948b6331cbc92da11f7786d1e3fd2"
     },
     {
       "path": "audit/current/progression.json",
@@ -115,13 +125,13 @@
     },
     {
       "path": "audit/current/README.md",
-      "bytes": 2821,
-      "sha256": "b83d231911d7ec8073920a5ecd009efdfc353ecf5d3841e4947cad3ee2bcc5b7"
+      "bytes": 3236,
+      "sha256": "468b183942f01fb867725b362d1a824d10e20ab5edd26a8104032ab29cfe98ae"
     },
     {
       "path": "audit/current/release.json",
       "bytes": 7605,
-      "sha256": "bfda325aa398b32e35cb7655763acbcf00d04f36ddb1fd2b9d6ad34b1a6754af"
+      "sha256": "fdc4ddb05e163b82c9f5b3870a8dfb0c5cd72b367b84b8fdc10249ea66fbf32e"
     },
     {
       "path": "audit/deployment.json",
@@ -135,8 +145,8 @@
     },
     {
       "path": "audit/HANDBOOK-REVIEW.md",
-      "bytes": 12130,
-      "sha256": "8f7c72557bdb39147f313d7ce8eea1d5a39282a749bf67d8bdb101668adbf6d9"
+      "bytes": 13227,
+      "sha256": "3bdb4f3574711a1c79ff66bc9318f8cf16f78162cb3d5f4abfb86d98ae554043"
     },
     {
       "path": "audit/native-input.json",
@@ -265,8 +275,8 @@
     },
     {
       "path": "tests/release.test.mjs",
-      "bytes": 6393,
-      "sha256": "d93a8ab43de940475f9af27ba9c58b7d82afe573ea40857e92d68a646986c06a"
+      "bytes": 7462,
+      "sha256": "aab158f2050020f7561065d6b7b8457cfe21205347421553328d1f8e057d88bf"
     },
     {
       "path": "tests/review.mjs",
@@ -305,8 +315,8 @@
     },
     {
       "path": "tools/deploy.mjs",
-      "bytes": 11197,
-      "sha256": "a8163a1914bd80d4471990eb51cae6df1fb2b3d4a60698be44be23999961e589"
+      "bytes": 11221,
+      "sha256": "9c7925ff444c6e95ed83b462f2fda566c317f2f1cf6808f20a352e32460d5dad"
     },
     {
       "path": "tools/gate.mjs",

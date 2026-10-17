@@ -1,8 +1,8 @@
 {
-  "utc": "2026-10-17T22:34:15.931Z",
-  "candidate": "mg-4fc596dd45616c",
-  "sourceDigest": "4fc596dd45616c501062686fcb91c0ce88f5a0750330f51a9b42d0e3ba867b37",
-  "environment": "Chromium 155.0.0.0, Windows user agent, Codex native locator press actions",
+  "utc": "2026-10-17T22:40:28.287Z",
+  "candidate": "mg-cb73fff73dd23c",
+  "sourceDigest": "cb73fff73dd23cb3c27ae546b264db6311b2dd75444fee987baba5119b2d3e0a",
+  "environment": "Chromium 155.0.0.0, Windows user agent, Codex native locator key actions",
   "checks": {
     "keyboardClear": true,
     "textFocus": true,
@@ -18,14 +18,13 @@
       "remaining": "22"
     },
     "editorFocus": {
-      "label": "Column 1, row 1, layer 1, empty",
       "parent": "editor-grid",
       "x": "0",
       "y": "0"
     },
     "modalReturn": "help-dialog",
-    "pausedClock": "00:15",
-    "stillPaused": "00:15",
+    "pausedClock": "00:07",
+    "stillPaused": "00:07",
     "keyboardSteps": [
       {
         "before": 22,

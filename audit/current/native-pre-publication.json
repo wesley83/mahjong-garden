@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-17T22:34:15.931Z",
+  "candidate": "mg-4fc596dd45616c",
+  "sourceDigest": "4fc596dd45616c501062686fcb91c0ce88f5a0750330f51a9b42d0e3ba867b37",
+  "environment": "Chromium 155.0.0.0, Windows user agent, Codex native locator press actions",
+  "checks": {
+    "keyboardClear": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "modalReturn": true,
+    "mismatchRefused": true,
+    "dialogClockPaused": true
+  },
+  "observations": {
+    "initialTiles": 24,
+    "textMatched": {
+      "parent": "text-tiles",
+      "remaining": "22"
+    },
+    "editorFocus": {
+      "label": "Column 1, row 1, layer 1, empty",
+      "parent": "editor-grid",
+      "x": "0",
+      "y": "0"
+    },
+    "modalReturn": "help-dialog",
+    "pausedClock": "00:15",
+    "stillPaused": "00:15",
+    "keyboardSteps": [
+      {
+        "before": 22,
+        "after": 20
+      },
+      {
+        "before": 20,
+        "after": 18
+      },
+      {
+        "before": 18,
+        "after": 16
+      },
+      {
+        "before": 16,
+        "after": 14
+      },
+      {
+        "before": 14,
+        "after": 12
+      },
+      {
+        "before": 12,
+        "after": 10
+      },
+      {
+        "before": 10,
+        "after": 8
+      },
+      {
+        "before": 8,
+        "after": 6
+      },
+      {
+        "before": 6,
+        "after": 4
+      },
+      {
+        "before": 4,
+        "after": 2
+      },
+      {
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "finalTiles": 0,
+    "winOpen": true,
+    "keys": [
+      "Enter",
+      "Space",
+      "h",
+      "Escape"
+    ]
+  }
+}

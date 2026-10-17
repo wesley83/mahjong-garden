@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-17T22:31:43.971Z",
-  "candidate": "mg-4fc596dd45616c",
-  "sourceDigest": "4fc596dd45616c501062686fcb91c0ce88f5a0750330f51a9b42d0e3ba867b37",
+  "utc": "2026-10-17T22:37:47.382Z",
+  "candidate": "mg-cb73fff73dd23c",
+  "sourceDigest": "cb73fff73dd23cb3c27ae546b264db6311b2dd75444fee987baba5119b2d3e0a",
   "node": "24.19.0",
   "command": [
     "node",
@@ -11,7 +11,7 @@
     "tests/core.test.mjs",
     "tests/release.test.mjs"
   ],
-  "tests": 18,
+  "tests": 19,
   "exitCode": 0,
-  "outputSha256": "ffe45e102253a93ae78bd4b88989125762eb479c12938c703ab48687dcffb951"
+  "outputSha256": "6410ffbcecbda77d93f8ad6fa8bb3a3816f9206a4c45ca34f06093b9df909e07"
 }

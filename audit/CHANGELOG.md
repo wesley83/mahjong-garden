@@ -109,3 +109,22 @@
 - Performance correction: Final board max 6.3ms, p95 5.5ms after deferring AudioContext setup; the 416.1ms old match sample remains in failed-performance evidence.
 - Corrected evidence attempts: Direct iframe DOM inspection is unavailable in the browser tool, so the local fixture itself reads each child's meta identity and the gate verifies every result. Before current receipts existed, the real gate refused missing browser/native evidence; it passed only after executed receipts were written. Historical failed candidates/observations are retained, not reused as current acceptance.
 - Backup: Complete current application backup observed at ignored .local/server-backup/2026-10-17T22-30-22-376Z, eight files/three directories/348,722 bytes. Deployment console closed before loading final publisher code. Production unchanged; source commit/push and a fresh backup/promotion next.
+
+## MG-012 — refused publication and semantic-reader correction
+- UTC: 2026-10-17T22:37:39Z
+- Actor: Codex
+- Reference: MG-008/GAP-07; pushed source af3c2d0006a5dfd9752844dba839b302d48d162d.
+- Observation: The exact-candidate gate and fresh eight-file backup passed, but publication stopped on public level-HTML semantic readback before root promotion. Live entry remained the original mg-604629dc35a167; staged dependencies were retained.
+- Diagnosis/plan before correction: The level document legitimately omits an explicit head element. Linkedom's doc.body getter mutates such a parsed document by inserting empty head/body nodes. The comparator used that getter only on public readback, so equivalent documents compared differently. Replace it with a nonmutating body query, retain the exact provider-footer allowlist, and add omitted-head/footer/altered-footer regression cases. Rebuild, execute matching receipts, commit/push, load a fresh publisher and back up again before retrying.
+- Affected: tools/deploy.mjs, tests/release.test.mjs, current acceptance evidence and this audit. Gameplay is unchanged by this parser correction.
+- Verification: Local comparison of the unchanged source and prior DAV backup is semantically equal; public inspection reproduced the reader-induced extra nodes. No live entry mutation occurred. Production retry pending.
+
+## MG-013 — corrected verifier acceptance and retry preparation
+- UTC: 2026-10-17T22:40:37Z
+- Actor: Codex
+- Reference: MG-012.
+- Change: Rebuilt the corrected publisher candidate; reran all ten browser groups and native input journeys with matching release IDs; retained earlier receipts as pre-publication evidence. Updated current release/verification records and backed up all existing resources again.
+- Why: Do not promote a graph whose exact source/artifact identity lacks current executed evidence.
+- Affected: tools/deploy.mjs and tests/release.test.mjs semantic-reader correction; audit/current receipts, review and source manifest.
+- Verification: mg-cb73fff73dd23c gate passed, 19 Node groups, ten browser groups, native required checks all true. Public semantic readback of the staged level document now passes while altered-footer/content regression remains rejecting. One diagnostic fetch initially used the restricted network path and was retried through the approved network permission; no production mutation resulted from that diagnostic failure. Final board max 5.3ms, aggregate max 5.9ms, p95 5.3ms. Backup complete: 19 files/six directories/706,473 bytes at ignored .local/server-backup/2026-10-17T22-40-07-944Z. This includes the unused partial prior graph; no resources deleted.
+- Delivery: Commit/push this verified correction next, then retry conditional promotion. Original live entry remains unchanged at this entry.
