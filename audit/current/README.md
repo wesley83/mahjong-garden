@@ -2,7 +2,7 @@
 
 Review MG-008 onward, 2026-10-17, actor Codex. Baseline evidence remains in the parent audit directory and Git history. Current production candidate is identified by node.json, browser.json and native.json; the publisher requires the same source/artifact identity and a clean pushed commit.
 
-- node.json + node-tests.tap: 19 executable groups, including 720 initial deals across all sixty geometries, strict contracts, predecode image bounds/cancellation/history, v1 baseline read/write compatibility and negative publication/rollback fixtures.
+- node.json + node-tests.tap: 20 executable groups, including 720 initial deals across all sixty geometries, strict contracts, predecode image bounds/cancellation/history, v1 baseline read/write compatibility and negative publication/rollback fixtures.
 - browser.json: ten ordinary built-control and failure/recovery groups. Each result reads its release ID from the actual iframe document. Synthetic fixtures run on a disposable localhost origin and are distinct from native input.
 - native.json: real locator/key actions on the compiled graph, including keyboard completion, mismatch refusal, text/grid focus and modal return; written only after observation.
 - progression.json: chapter geometry measurements and explicitly limited LLM design judgment.

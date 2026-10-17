@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-17T22:44:37.815Z",
+  "origin": "https://grab-lead-8328.onpagelove.com",
+  "baseline": "mg-604629dc35a167",
+  "method": "Every retained baseline dependency read publicly; exact bytes except strict semantic HTML/provider footer comparison",
+  "results": [
+    {
+      "path": "/releases/mg-604629dc35a167/content/levels.html",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "0f1c66802b70558154125f11bbf8090b87321652e078d146c76bb13aed19bd7f",
+      "type": "text/html"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/app.mjs",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "f8ce2c70b1fdf598b63402cdf9b84beddde5755e63141cb0c077723a4d0b9858",
+      "type": "text/javascript"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/core.mjs",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "4289fdce14d1b96fe374058795b7da3145ba967ef1d91dd8d7963817178f3a5d",
+      "type": "text/javascript"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/faces.mjs",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56",
+      "type": "text/javascript"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/favicon.svg",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "0e244758efda54053eee00103452ff73daefbeb1979ff9d082a090c32e8ab81a",
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/storage.mjs",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "3ba83f8b90a93781f766a0d9f9fc4eda2e7a93b982fc978d1fcbf648e372da76",
+      "type": "text/javascript"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/style.css",
+      "status": 200,
+      "passed": true,
+      "servedSha256": "f451a628225fd0afffdf33529414b7fa6325de309471250f6047bce04ce1dea7",
+      "type": "text/css"
+    }
+  ]
+}

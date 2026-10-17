@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-17T22:47:01.036Z",
+  "baseline": "mg-604629dc35a167",
+  "candidate": "mg-1cb39865bf468b",
+  "sourceDigest": "1cb39865bf468bf23b470d04bde71733c3d5f87973e5424cd481237d82028bec",
+  "environment": "Isolated localhost same-origin clients, exact retained A entry/dependencies then built B entry; paired with public legacy dependency checks",
+  "checks": {
+    "legacyMatch": true,
+    "tilesPreserved": true,
+    "draftPreserved": true,
+    "imagesPreserved": true,
+    "normalUndoAfterRestore": true
+  },
+  "observations": {
+    "legacyBefore": 30,
+    "legacyAfter": 28,
+    "newAfterRestore": 28,
+    "restoredName": "Legacy update check",
+    "restoredImages": 2,
+    "restoredUndo": 30
+  }
+}

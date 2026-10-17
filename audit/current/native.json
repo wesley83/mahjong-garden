@@ -1,8 +1,8 @@
 {
-  "utc": "2026-10-17T22:40:28.287Z",
-  "candidate": "mg-cb73fff73dd23c",
-  "sourceDigest": "cb73fff73dd23cb3c27ae546b264db6311b2dd75444fee987baba5119b2d3e0a",
-  "environment": "Chromium 155.0.0.0, Windows user agent, Codex native locator key actions",
+  "utc": "2026-10-17T22:46:33.120Z",
+  "candidate": "mg-1cb39865bf468b",
+  "sourceDigest": "1cb39865bf468bf23b470d04bde71733c3d5f87973e5424cd481237d82028bec",
+  "environment": "Chromium 155.0.0.0, Windows user agent, native locator press",
   "checks": {
     "keyboardClear": true,
     "textFocus": true,
@@ -12,7 +12,6 @@
     "dialogClockPaused": true
   },
   "observations": {
-    "initialTiles": 24,
     "textMatched": {
       "parent": "text-tiles",
       "remaining": "22"
@@ -23,8 +22,8 @@
       "y": "0"
     },
     "modalReturn": "help-dialog",
-    "pausedClock": "00:07",
-    "stillPaused": "00:07",
+    "pausedClock": "00:00",
+    "stillPaused": "00:00",
     "keyboardSteps": [
       {
         "before": 22,
@@ -71,6 +70,7 @@
         "after": 0
       }
     ],
+    "initialTiles": 24,
     "finalTiles": 0,
     "winOpen": true,
     "keys": [
@@ -78,6 +78,21 @@
       "Space",
       "h",
       "Escape"
-    ]
+    ],
+    "pauseMeasurement": {
+      "setup": "Regular one-second display refreshed before the two samples; original early display catch-up retained separately",
+      "baseline": {
+        "clock": "00:00",
+        "utc": "2026-10-17T22:46:19.456Z"
+      },
+      "after": {
+        "clock": "00:00",
+        "utc": "2026-10-17T22:46:33.120Z"
+      }
+    },
+    "initialDisplaySamples": {
+      "before": "00:00",
+      "after": "00:01"
+    }
   }
 }

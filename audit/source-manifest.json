@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T22:40:54.975Z",
+  "utc": "2026-10-17T22:47:26.145Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 19156,
-      "sha256": "6dd53701e005c4ced8f6428846b8b3c2c688f98f71049c25e18cb59dbdce37ab"
+      "bytes": 22681,
+      "sha256": "31a84bad0e7864b98710d0bc4137c8515357939dfd4310b56127afa248b29dfa"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -90,13 +90,23 @@
     },
     {
       "path": "audit/current/browser.json",
-      "bytes": 11666,
-      "sha256": "e8ab7209f0ba5b4e894daa299ad79ce21800d6e4528425aff87a219d08e423e3"
+      "bytes": 11628,
+      "sha256": "c6cc74ee291ab11167faf5ec445cf8252083e4ddb5a0258e2db4467ec9858214"
     },
     {
       "path": "audit/current/dependencies.json",
       "bytes": 292,
       "sha256": "e3a249251728a612d7e6cc95adfd4bd1098e988db251cfcf5dc69534cf57e9aa"
+    },
+    {
+      "path": "audit/current/legacy-public.json",
+      "bytes": 1905,
+      "sha256": "ab0cdad3fe061ab3dc665a0a993fc47caf55a024163a01239034226759d4a239"
+    },
+    {
+      "path": "audit/current/native-clock-initial-observation.json",
+      "bytes": 1709,
+      "sha256": "88a04a48704a3fa76ea2b8203b7765d2da791cac41f30d3b1160ad6f9d26dcd5"
     },
     {
       "path": "audit/current/native-pre-publication.json",
@@ -105,18 +115,18 @@
     },
     {
       "path": "audit/current/native.json",
-      "bytes": 1530,
-      "sha256": "8d9b9d2f338220b470e9dff678b7f80ec83c293b47ac81bbb25170c91dd6a2e2"
+      "bytes": 1958,
+      "sha256": "811adf78b2e0e10af29ff279200ba08e2b3b3b092eb6b05be40a84b18174ab21"
     },
     {
       "path": "audit/current/node-tests.tap",
-      "bytes": 4506,
-      "sha256": "6410ffbcecbda77d93f8ad6fa8bb3a3816f9206a4c45ca34f06093b9df909e07"
+      "bytes": 4748,
+      "sha256": "89850a134c65bb3f1fd04d26473a030cb3c024871a045d06c6b417e2a921cec1"
     },
     {
       "path": "audit/current/node.json",
       "bytes": 461,
-      "sha256": "437656ab9d6f1d5bcb1a7e60a253b6124e3948b6331cbc92da11f7786d1e3fd2"
+      "sha256": "ae2e43c30cc199375afc34821ddc6ab1aa7573f0c15348777d98e5045f2c83ea"
     },
     {
       "path": "audit/current/progression.json",
@@ -126,12 +136,17 @@
     {
       "path": "audit/current/README.md",
       "bytes": 3236,
-      "sha256": "468b183942f01fb867725b362d1a824d10e20ab5edd26a8104032ab29cfe98ae"
+      "sha256": "1384ca00420f69c8f167294d592238913178fa378123cba572420418f6ffbc8d"
     },
     {
       "path": "audit/current/release.json",
       "bytes": 7605,
-      "sha256": "fdc4ddb05e163b82c9f5b3870a8dfb0c5cd72b367b84b8fdc10249ea66fbf32e"
+      "sha256": "e893dd7262addbc1da7ff3414e359f6641d1c7cfe3eb4849f975b8b9cede3229"
+    },
+    {
+      "path": "audit/current/update-compatibility.json",
+      "bytes": 710,
+      "sha256": "903e31713c5bb4e8df8ea8812c84573f3d0ce67d981e1f587f67e37db2dcf139"
     },
     {
       "path": "audit/deployment.json",
@@ -145,8 +160,8 @@
     },
     {
       "path": "audit/HANDBOOK-REVIEW.md",
-      "bytes": 13227,
-      "sha256": "3bdb4f3574711a1c79ff66bc9318f8cf16f78162cb3d5f4abfb86d98ae554043"
+      "bytes": 15059,
+      "sha256": "fe629f45760af08cc161e3153c1adf774f97a4b2b37165a84ced1a87a1bd03aa"
     },
     {
       "path": "audit/native-input.json",
@@ -275,8 +290,8 @@
     },
     {
       "path": "tests/release.test.mjs",
-      "bytes": 7462,
-      "sha256": "aab158f2050020f7561065d6b7b8457cfe21205347421553328d1f8e057d88bf"
+      "bytes": 7929,
+      "sha256": "31d89fb16daa84655aa56bd8bff12ad3fda605475aa2ef725bf23834f708cd04"
     },
     {
       "path": "tests/review.mjs",
@@ -315,8 +330,8 @@
     },
     {
       "path": "tools/deploy.mjs",
-      "bytes": 11221,
-      "sha256": "9c7925ff444c6e95ed83b462f2fda566c317f2f1cf6808f20a352e32460d5dad"
+      "bytes": 11249,
+      "sha256": "243d0227181ff70feae35d3d43a360950556b5db61fbc207f96380c095324f4f"
     },
     {
       "path": "tools/gate.mjs",

@@ -128,3 +128,25 @@
 - Affected: tools/deploy.mjs and tests/release.test.mjs semantic-reader correction; audit/current receipts, review and source manifest.
 - Verification: mg-cb73fff73dd23c gate passed, 19 Node groups, ten browser groups, native required checks all true. Public semantic readback of the staged level document now passes while altered-footer/content regression remains rejecting. One diagnostic fetch initially used the restricted network path and was retried through the approved network permission; no production mutation resulted from that diagnostic failure. Final board max 5.3ms, aggregate max 5.9ms, p95 5.3ms. Backup complete: 19 files/six directories/706,473 bytes at ignored .local/server-backup/2026-10-17T22-40-07-944Z. This includes the unused partial prior graph; no resources deleted.
 - Delivery: Commit/push this verified correction next, then retry conditional promotion. Original live entry remains unchanged at this entry.
+
+## MG-014 — reconcile promoted entry serialization
+- UTC: 2026-10-17T22:43:29Z
+- Actor: Codex
+- Reference: MG-012/013.
+- Observation: All new dependencies were publicly verified and conditional entry PUT promoted mg-cb73fff73dd23c, but authoring semantic readback then refused SVG attribute casing (viewBox became viewbox). Public GET confirms HTTP 200 and the promoted release ID. No complete deployment receipt is claimed yet.
+- Plan before correction: HTML tokenization treats attribute names without case sensitivity and adjusts known SVG names; compare HTML element/attribute names in one case while keeping values, nodes and unknown additions strict. Add a case-only SVG regression plus changed-viewBox refusal, compare the cached real entry pair, then rebuild/rerun matching acceptance before final promotion.
+- Affected: publisher HTML identity, release regressions, exact-candidate receipts and this audit. Existing production source/assets are complete; no resource deletion or data migration occurs.
+- Tool limitation: The originally retained public browser tab was no longer present when reacquired. Execute an isolated same-origin legacy-client→new-client checkpoint journey using the exact retained A graph, plus public readback of every old dependency and the final public new-client journey; report this equivalent evidence explicitly instead of claiming the missing tab survived.
+- Verification: Pending correction/revalidation and final public checks.
+
+## MG-015 — final exact-candidate and legacy continuation acceptance
+- UTC: 2026-10-17T22:46:52Z
+- Actor: Codex
+- Reference: MG-014.
+- Change: Completed HTML-name case normalization and changed-value rejection, revalidated all source/control checks, executed exact baseline-client→new-client continuation and recorded the explicit browser-tab limitation.
+- Why: Finish the promoted-entry reconciliation with strict semantics and compatible local state before final publication.
+- Affected: publisher/release regression, current node/browser/native/update/legacy-public/release receipts, comparison and source manifest.
+- Verification: mg-1cb39865bf468b gate passed: 20 Node groups, ten browser groups, all required native checks. Full cached expected/served HTML is equivalent after valid name normalization; changed SVG values, unknown footer or changed content still reject. 34 dispatch samples: p95/board max 4.8ms, aggregate max 5.2ms. Legacy A client actually matched 30→28, saved its current studio name and two fixture images; B resumed identical tiles/draft/images and ordinary undo restored 30. Every old public dependency read back intact. This continuation is on an isolated same-origin preview, paired with public retention/new-client checks.
+- Native timing clarification: The first pause display sample preceded its regular one-second clock refresh and caught up from 00:00 to 00:01 for pre-dialog elapsed time. That initial failed comparison is retained separately. After the regular refresh, an active new run stayed at 00:00 across two timestamped samples while help remained open; final native receipt states that measurement method. No gameplay state was altered to make the check pass.
+- Backup: Verified current host backup at ignored .local/server-backup/2026-10-17T22-44-17-976Z, 32 files/nine directories/1,140,963 bytes, including previous and staged releases. No deletion.
+- Delivery: Commit/push this correction and its matching acceptance, then conditionally promote the final entry and finish public smoke checks.

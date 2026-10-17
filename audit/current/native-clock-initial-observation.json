@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-17T22:45:30.392Z",
+  "candidate": "mg-1cb39865bf468b",
+  "sourceDigest": "1cb39865bf468bf23b470d04bde71733c3d5f87973e5424cd481237d82028bec",
+  "environment": "Chromium 155.0.0.0, Windows user agent, native locator press",
+  "checks": {
+    "keyboardClear": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "modalReturn": true,
+    "mismatchRefused": true,
+    "dialogClockPaused": false
+  },
+  "observations": {
+    "textMatched": {
+      "parent": "text-tiles",
+      "remaining": "22"
+    },
+    "editorFocus": {
+      "parent": "editor-grid",
+      "x": "0",
+      "y": "0"
+    },
+    "modalReturn": "help-dialog",
+    "pausedClock": "00:00",
+    "stillPaused": "00:01",
+    "keyboardSteps": [
+      {
+        "before": 22,
+        "after": 20
+      },
+      {
+        "before": 20,
+        "after": 18
+      },
+      {
+        "before": 18,
+        "after": 16
+      },
+      {
+        "before": 16,
+        "after": 14
+      },
+      {
+        "before": 14,
+        "after": 12
+      },
+      {
+        "before": 12,
+        "after": 10
+      },
+      {
+        "before": 10,
+        "after": 8
+      },
+      {
+        "before": 8,
+        "after": 6
+      },
+      {
+        "before": 6,
+        "after": 4
+      },
+      {
+        "before": 4,
+        "after": 2
+      },
+      {
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "initialTiles": 24,
+    "finalTiles": 0,
+    "winOpen": true,
+    "keys": [
+      "Enter",
+      "Space",
+      "h",
+      "Escape"
+    ]
+  },
+  "interpretation": "Initial display sample preceded the one-second display refresh of elapsed time captured before opening the dialog; repeat pause measurement after its regular refresh."
+}
