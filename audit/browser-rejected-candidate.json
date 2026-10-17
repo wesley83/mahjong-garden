@@ -1,0 +1,15 @@
+[
+  {
+    "utc": "2026-10-17T21:41:15.137Z",
+    "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
+    "status": "failed",
+    "error": "Hint did not identify pair"
+  },
+  {
+    "utc": "2026-10-17T21:41:38.339Z",
+    "name": "game backup export/import round-trip",
+    "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "status": "failed",
+    "error": "No game export produced"
+  }
+]

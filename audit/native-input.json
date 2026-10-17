@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-17T21:42:48.700Z",
+  "candidate": "mg-604629dc35a167",
+  "method": "CUA native Playwright keyboard input: Enter and Space on board buttons; real pointer controls",
+  "result": {
+    "pairs": 12,
+    "reshuffles": 0
+  },
+  "win": true
+}

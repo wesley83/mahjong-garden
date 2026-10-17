@@ -1,0 +1,16 @@
+Measured max initial-deal ms: 1.12
+✔ independent free-tile rules: sides, covers and different rows/layers (0.9617ms)
+✔ 60 unique layouts; 12 seeds each complete with only legal identical pairs (949.6826ms)
+✔ deterministic deal, illegal and duplicate matches do not mutate (1.418ms)
+✔ reshuffle preserves positions/count, undo and assistance scoring (1.9392ms)
+✔ bounded solver distinguishes impossible and budget exhaustion (0.1745ms)
+✔ import validates before mutation and refuses markup, future data and unsupported geometry (1.1693ms)
+✔ checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state (2.0532ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1070.773

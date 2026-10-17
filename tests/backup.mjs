@@ -1,0 +1,11 @@
+import {openStore,readProfile} from '../storage.mjs';
+const frame=document.querySelector('#app'),out=document.querySelector('#results'),wait=ms=>new Promise(r=>setTimeout(r,ms));
+document.querySelector('#backup').onclick=async()=>{
+ const result={utc:new Date().toISOString(),name:'game backup export/import round-trip',environment:navigator.userAgent};
+ const doc=()=>frame.contentDocument,click=async s=>{const b=doc().querySelector(s);if(!b)throw Error('Missing '+s);b.click();await wait(300);};
+ try{
+  await click('[data-open="settings-dialog"]');let exported;const urls=frame.contentWindow.URL,create=urls.createObjectURL;urls.createObjectURL=function(blob){exported=blob;return create.call(this,blob);};const stop=e=>{if(e.target.closest('a[download]'))e.preventDefault();};doc().addEventListener('click',stop);await click('#export-profile');urls.createObjectURL=create;doc().removeEventListener('click',stop);if(!exported)throw Error('No game export produced');
+  const envelope=JSON.parse(await exported.text()),transfer=new DataTransfer();transfer.items.add(new File([JSON.stringify(envelope)],'game-backup.json',{type:'application/json'}));const input=doc().querySelector('#import-profile');input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));await wait(600);if(!doc().querySelector('#confirm-dialog').open)throw Error('Restore confirmation absent');await click('#confirm-ok');await wait(400);const db=await openStore(),after=await readProfile(db);db.close();if(JSON.stringify(after.run.tiles)!==JSON.stringify(envelope.profile.run.tiles)||JSON.stringify(after.progress)!==JSON.stringify(envelope.profile.progress)||JSON.stringify(after.studio)!==JSON.stringify(envelope.profile.studio))throw Error('Round-trip changed stored fields');if(!doc().querySelector('#game-message').textContent.includes('backup is restored'))throw Error('Restore not consumed by ordinary flow');result.status='passed';result.observations={activeTilesPreserved:true,progressPreserved:true,imagesAndDraftPreserved:true,explicitConfirmation:true};
+ }catch(e){result.status='failed';result.error=e.message;}
+ let rows=[];try{rows=JSON.parse(out.textContent||'[]');}catch{}rows.push(result);out.textContent=JSON.stringify(rows,null,2);
+};

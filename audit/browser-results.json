@@ -1,0 +1,113 @@
+[
+  {
+    "utc": "2026-10-17T21:37:59.011Z",
+    "name": "responsive layout matrix",
+    "status": "passed",
+    "observations": [
+      {
+        "width": 320,
+        "height": 568,
+        "documentWidth": 305,
+        "tiles": 64,
+        "minTileWidth": 28,
+        "minTileHeight": 36,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "documentWidth": 375,
+        "tiles": 64,
+        "minTileWidth": 28,
+        "minTileHeight": 36,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 568,
+        "height": 320,
+        "documentWidth": 553,
+        "tiles": 64,
+        "minTileWidth": 40,
+        "minTileHeight": 51,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "documentWidth": 829,
+        "tiles": 64,
+        "minTileWidth": 43,
+        "minTileHeight": 55,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentWidth": 1265,
+        "tiles": 64,
+        "minTileWidth": 66,
+        "minTileHeight": 84,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "documentWidth": 1425,
+        "tiles": 64,
+        "minTileWidth": 66,
+        "minTileHeight": 84,
+        "controlsInViewport": true,
+        "dialogs": []
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-17T21:38:08.196Z",
+    "name": "atomic storage conflict, failure and next action",
+    "status": "passed",
+    "observations": {
+      "staleWriteRefused": true,
+      "quotaFailurePreservedPrevious": true,
+      "nextWriteSucceeded": true
+    }
+  },
+  {
+    "utc": "2026-10-17T21:38:50.714Z",
+    "name": "studio editing, personal image conversion and failed import preservation",
+    "status": "passed",
+    "observations": {
+      "undoRedo": true,
+      "currentNameSaved": true,
+      "imagesConvertedAndSaved": 2,
+      "customTheme": true,
+      "badImportPreservedDraft": true,
+      "playtest": true
+    }
+  },
+  {
+    "utc": "2026-10-17T21:39:34.970Z",
+    "name": "studio failed save stays recoverable, retry then close",
+    "status": "passed",
+    "observations": {
+      "previousRevisionPreserved": true,
+      "failedCloseRetainedDraft": true,
+      "retrySavedCurrentDraft": true,
+      "normalCloseAfterRecovery": true
+    }
+  },
+  {
+    "utc": "2026-10-17T21:40:07.817Z",
+    "name": "atomic storage conflict, failure and next action",
+    "status": "passed",
+    "observations": {
+      "staleWriteRefused": true,
+      "quotaFailurePreservedPrevious": true,
+      "nextWriteSucceeded": true
+    }
+  }
+]
