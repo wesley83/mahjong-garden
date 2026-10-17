@@ -2,122 +2,122 @@ TAP version 13
 # Subtest: semantic campaign accessors accept reordered attributes and reject ambiguous definitions
 ok 1 - semantic campaign accessors accept reordered attributes and reject ambiguous definitions
   ---
-  duration_ms: 464.6703
+  duration_ms: 370.1615
   type: 'test'
   ...
 # Subtest: profile and unfinished studio round trips preserve live values and strictly reject future data
 ok 2 - profile and unfinished studio round trips preserve live values and strictly reject future data
   ---
-  duration_ms: 26.2309
+  duration_ms: 21.5515
   type: 'test'
   ...
 # Subtest: image headers enforce format, bytes and pixel bounds before a browser decoder runs
 ok 3 - image headers enforce format, bytes and pixel bounds before a browser decoder runs
   ---
-  duration_ms: 1.1553
+  duration_ms: 4.5104
   type: 'test'
   ...
 # Subtest: cancellation and timeouts dispose late image results and do not revive older jobs
 ok 4 - cancellation and timeouts dispose late image results and do not revive older jobs
   ---
-  duration_ms: 6.6897
+  duration_ms: 35.7425
   type: 'test'
   ...
 # Subtest: studio history includes layout and images and remains bounded
 ok 5 - studio history includes layout and images and remains bounded
   ---
-  duration_ms: 2.1434
+  duration_ms: 2.3937
   type: 'test'
   ...
 # Subtest: elapsed time is incorporated before matching and cannot advance a complete or invalid interval
 ok 6 - elapsed time is incorporated before matching and cannot advance a complete or invalid interval
   ---
-  duration_ms: 1.9681
+  duration_ms: 1.5319
   type: 'test'
   ...
 # Subtest: baseline version-one checkpoints and rollback reader remain compatible
 ok 7 - baseline version-one checkpoints and rollback reader remain compatible
   ---
-  duration_ms: 145.5896
+  duration_ms: 178.6789
   type: 'test'
   ...
-# Measured max initial-deal ms: 1.70
+# Measured max initial-deal ms: 1.24
 # Subtest: independent free-tile rules: sides, covers and different rows/layers
 ok 8 - independent free-tile rules: sides, covers and different rows/layers
   ---
-  duration_ms: 1.5
+  duration_ms: 1.0512
   type: 'test'
   ...
 # Subtest: 60 unique layouts; 12 seeds each complete with only legal identical pairs
 ok 9 - 60 unique layouts; 12 seeds each complete with only legal identical pairs
   ---
-  duration_ms: 1354.7404
+  duration_ms: 1229.9234
   type: 'test'
   ...
 # Subtest: deterministic deal, illegal and duplicate matches do not mutate
 ok 10 - deterministic deal, illegal and duplicate matches do not mutate
   ---
-  duration_ms: 1.2013
+  duration_ms: 1.0508
   type: 'test'
   ...
 # Subtest: reshuffle preserves positions/count, undo and assistance scoring
 ok 11 - reshuffle preserves positions/count, undo and assistance scoring
   ---
-  duration_ms: 1.4612
+  duration_ms: 1.4038
   type: 'test'
   ...
 # Subtest: bounded solver distinguishes impossible and budget exhaustion
 ok 12 - bounded solver distinguishes impossible and budget exhaustion
   ---
-  duration_ms: 0.133
+  duration_ms: 0.1319
   type: 'test'
   ...
 # Subtest: import validates before mutation and refuses markup, future data and unsupported geometry
 ok 13 - import validates before mutation and refuses markup, future data and unsupported geometry
   ---
-  duration_ms: 1.0147
+  duration_ms: 0.9188
   type: 'test'
   ...
 # Subtest: checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
 ok 14 - checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
   ---
-  duration_ms: 2.4288
+  duration_ms: 1.6888
   type: 'test'
   ...
 # Subtest: gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
 ok 15 - gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
   ---
-  duration_ms: 676.4544
+  duration_ms: 891.39
   type: 'test'
   ...
 # Subtest: semantic HTML verification catches content changes while allowing serialization
 ok 16 - semantic HTML verification catches content changes while allowing serialization
   ---
-  duration_ms: 15.1717
+  duration_ms: 17.1876
   type: 'test'
   ...
 # Subtest: HTML SVG attribute name serialization preserves semantics but changed values are refused
 ok 17 - HTML SVG attribute name serialization preserves semantics but changed values are refused
   ---
-  duration_ms: 0.8033
+  duration_ms: 0.5932
   type: 'test'
   ...
 # Subtest: public HTML comparison handles omitted head without mutation and allows only the exact host footer
 ok 18 - public HTML comparison handles omitted head without mutation and allows only the exact host footer
   ---
-  duration_ms: 2.9254
+  duration_ms: 1.6567
   type: 'test'
   ...
 # Subtest: publisher requires completed backup and refuses a concurrent live-entry change
 ok 19 - publisher requires completed backup and refuses a concurrent live-entry change
   ---
-  duration_ms: 29.9964
+  duration_ms: 23.7933
   type: 'test'
   ...
 # Subtest: publisher reconciles an ambiguous dependency write and rolls back only its entry
 ok 20 - publisher reconciles an ambiguous dependency write and rolls back only its entry
   ---
-  duration_ms: 23.9752
+  duration_ms: 16.4379
   type: 'test'
   ...
 1..20
@@ -128,4 +128,4 @@ ok 20 - publisher reconciles an ambiguous dependency write and rolls back only i
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1539.0872
+# duration_ms 1357.1555

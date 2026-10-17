@@ -1,0 +1,263 @@
+{
+  "id": "mg-6262dac5695bf4",
+  "version": "1.2.0",
+  "rules": "mg-rules-1",
+  "contentRevision": 1,
+  "saveVersion": 1,
+  "levels": 60,
+  "sourceDigest": "6262dac5695bf493343cc2c23605bf4b59ddf4608d9438f697a2966f6373a746",
+  "sourceFiles": [
+    {
+      "path": ".node-version",
+      "sha256": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc"
+    },
+    {
+      "path": "app.mjs",
+      "sha256": "d142e2b02fe0f4b15df5ec3400f33c8a0d77e26b07cbe3d91239d05b05296f85"
+    },
+    {
+      "path": "assets/apple-touch-icon.png",
+      "sha256": "9b2f0107ea7a28c6fc93840b3bd55b3b818331614461d613107260cde19ad7b2"
+    },
+    {
+      "path": "assets/social-card.png",
+      "sha256": "1d9fe4e3219ed2ab35b8f583e9a88bce9c742195c20957db21843ad06be776e3"
+    },
+    {
+      "path": "assets/social-card.svg",
+      "sha256": "4d2545f0841f3df8d5d219a027d497dbe916af38bf74f12876d42ce91c7f5d0c"
+    },
+    {
+      "path": "boot.mjs",
+      "sha256": "5962acd91eed9a53f727e143c17274cafed6f7115b991f01852edde05100969a"
+    },
+    {
+      "path": "content/levels.html",
+      "sha256": "143978b2fb5d64668f40b10564ab59e184c3a8556b8f1148fa52884873fa5552"
+    },
+    {
+      "path": "core.mjs",
+      "sha256": "a913942d94113e4d0596ddc6a9be203cd82b1a2a2f9237685cd0716fd6183472"
+    },
+    {
+      "path": "faces.mjs",
+      "sha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "744f271d7e716c7a61971f34d672aa5e7267483d0d0851ffe28c35b59ea71739"
+    },
+    {
+      "path": "game.css",
+      "sha256": "d5a7e1aaba66424fd389bdaecdf90953c228f17419d0c6af4ed1c8f66c7e2dd9"
+    },
+    {
+      "path": "image-input.mjs",
+      "sha256": "d4735c4184f9a8549bd6641fb06939149fb9744fcf1eb668f071032ce3e7ba81"
+    },
+    {
+      "path": "index.html",
+      "sha256": "e3402fe302b0b95d4824592ae05a85bb2bbe7ccfccc14e7e6e57efe94f8a0036"
+    },
+    {
+      "path": "operations.mjs",
+      "sha256": "8172c535ebefa56115513fd83cf96fc91c9f9a4beade3f342be43d90ee0c8a16"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e3ccfdd322383f8a9fc01563ff6d552c4978f0b6f0fc63f9d000ac7805026265"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "55f7374d8377dd77c2089246b3d20b69823cd0704b4877a0a00f6cd3e5aaaa27"
+    },
+    {
+      "path": "profile.mjs",
+      "sha256": "db735e1d75b4895e31c1c09f5b3af290b303bc5f8c28dde548697353b15b7f56"
+    },
+    {
+      "path": "scenery.mjs",
+      "sha256": "c29e981fc66db68a50da0fd1fb6f911228c548c3d2ef2a590b3f26acb9e3b15f"
+    },
+    {
+      "path": "storage.mjs",
+      "sha256": "0f89a3b859077f3ba517661ab7a2da52e28058818d6e0ed12b7ce9dd68a9e896"
+    },
+    {
+      "path": "style.css",
+      "sha256": "41a536e019fb5dcb7a2921b92afe970e1d85c47a24fd555e7cf22783635d5abd"
+    },
+    {
+      "path": "tests/backup.mjs",
+      "sha256": "fe91ca16c21d7fa97d200cb9229bcb8bb29663e2e836b0b657aa69b34affac7d"
+    },
+    {
+      "path": "tests/browser.html",
+      "sha256": "cfcbddb65cc25bdea9c6711ca181dc37c45af9c2f74ee0b005baf4eec8d8dc7e"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "sha256": "1b3e228d0b8c91d64b215aa75308fb0f32bce390f66d4aa43d4dba9aa08d5aa8"
+    },
+    {
+      "path": "tests/contracts.test.mjs",
+      "sha256": "51ec5963de7a4fb4d60b79d900f89dbe8a7df0903d9c2eb6a0caf15b7eeb543f"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "b708636eada00a32d7f8a82797ed060f84cadee31648de2b44044f27597fe68e"
+    },
+    {
+      "path": "tests/presentation.mjs",
+      "sha256": "a0e79c5d3ec730f8f3e801efd82cac22ccb20658fa4c13bfcbbfc9b0ad1232f7"
+    },
+    {
+      "path": "tests/release.test.mjs",
+      "sha256": "94398bb0725b084efc9d40eaca36b115918c0a9dd9375e4dae91822d47f9d830"
+    },
+    {
+      "path": "tests/review.mjs",
+      "sha256": "04f05ae23c9c44a5cc837abeb1e5a78cbdfe26d8ecda6a7ede862c2a7450096a"
+    },
+    {
+      "path": "tools/audit.mjs",
+      "sha256": "87ed7435c9365b588283d5758fc9119543cee9a640dce75b6bb8a750cf332e82"
+    },
+    {
+      "path": "tools/author-levels.mjs",
+      "sha256": "9e2df5e8ebdcbaceeff934ae4fb82625a897423d50b24c2f590cd646a484e19e"
+    },
+    {
+      "path": "tools/build.mjs",
+      "sha256": "f3e924a1294c223a473809b490b671a37b3ead13c3993597c9e6eaf061e98939"
+    },
+    {
+      "path": "tools/check.mjs",
+      "sha256": "97ab2c750efc2b58e44039c361c8ab090cecf89ba72dc2c9595fee3c869406cf"
+    },
+    {
+      "path": "tools/contracts.mjs",
+      "sha256": "95f46afa503e0fefcd50d4660eda8243a60d59673f747b263ca6e05f1b41d187"
+    },
+    {
+      "path": "tools/deploy-console.mjs",
+      "sha256": "3dbc63bddb3d4af09cfc509992b45e1a2f96fb1b8a420df6583b67392ae318ec"
+    },
+    {
+      "path": "tools/deploy.mjs",
+      "sha256": "243d0227181ff70feae35d3d43a360950556b5db61fbc207f96380c095324f4f"
+    },
+    {
+      "path": "tools/gate.mjs",
+      "sha256": "04e621e8d281080929caddab8303cad194f8b1ee6eb93276b9216fffe48a7f36"
+    },
+    {
+      "path": "tools/render-assets.mjs",
+      "sha256": "74c0ce171a8e1a9d057f0196b6ad3a009976f590b25012bbe16ffa03c9671fdd"
+    },
+    {
+      "path": "tools/serve.mjs",
+      "sha256": "00cdae8e6cef944dbfc075e116bea51551682fcc739eb123748a9deab7cf5c98"
+    }
+  ],
+  "node": "24.19.0",
+  "initialBytes": 396989,
+  "files": [
+    {
+      "path": "releases/mg-6262dac5695bf4/boot.mjs",
+      "sha256": "5962acd91eed9a53f727e143c17274cafed6f7115b991f01852edde05100969a",
+      "bytes": 403,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/app.mjs",
+      "sha256": "d142e2b02fe0f4b15df5ec3400f33c8a0d77e26b07cbe3d91239d05b05296f85",
+      "bytes": 43401,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/core.mjs",
+      "sha256": "a913942d94113e4d0596ddc6a9be203cd82b1a2a2f9237685cd0716fd6183472",
+      "bytes": 11311,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/profile.mjs",
+      "sha256": "db735e1d75b4895e31c1c09f5b3af290b303bc5f8c28dde548697353b15b7f56",
+      "bytes": 2774,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/operations.mjs",
+      "sha256": "8172c535ebefa56115513fd83cf96fc91c9f9a4beade3f342be43d90ee0c8a16",
+      "bytes": 2292,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/image-input.mjs",
+      "sha256": "d4735c4184f9a8549bd6641fb06939149fb9744fcf1eb668f071032ce3e7ba81",
+      "bytes": 1796,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/faces.mjs",
+      "sha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56",
+      "bytes": 4110,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/storage.mjs",
+      "sha256": "0f89a3b859077f3ba517661ab7a2da52e28058818d6e0ed12b7ce9dd68a9e896",
+      "bytes": 2748,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/scenery.mjs",
+      "sha256": "c29e981fc66db68a50da0fd1fb6f911228c548c3d2ef2a590b3f26acb9e3b15f",
+      "bytes": 6788,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/style.css",
+      "sha256": "41a536e019fb5dcb7a2921b92afe970e1d85c47a24fd555e7cf22783635d5abd",
+      "bytes": 24878,
+      "initial": false
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/game.css",
+      "sha256": "d5a7e1aaba66424fd389bdaecdf90953c228f17419d0c6af4ed1c8f66c7e2dd9",
+      "bytes": 16200,
+      "initial": false
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/favicon.svg",
+      "sha256": "744f271d7e716c7a61971f34d672aa5e7267483d0d0851ffe28c35b59ea71739",
+      "bytes": 376,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/content/levels.html",
+      "sha256": "143978b2fb5d64668f40b10564ab59e184c3a8556b8f1148fa52884873fa5552",
+      "bytes": 263057,
+      "initial": true
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/assets/social-card.png",
+      "sha256": "1d9fe4e3219ed2ab35b8f583e9a88bce9c742195c20957db21843ad06be776e3",
+      "bytes": 70050,
+      "initial": false
+    },
+    {
+      "path": "releases/mg-6262dac5695bf4/assets/apple-touch-icon.png",
+      "sha256": "9b2f0107ea7a28c6fc93840b3bd55b3b818331614461d613107260cde19ad7b2",
+      "bytes": 4741,
+      "initial": false
+    },
+    {
+      "path": "index.html",
+      "sha256": "3d2e1602846ccb6b71d089a17ef7f1ddee46742dfb5200d222698855114b507a",
+      "bytes": 57933,
+      "initial": true
+    }
+  ]
+}

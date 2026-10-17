@@ -1,98 +1,36 @@
 {
-  "utc": "2026-10-17T22:46:33.120Z",
-  "candidate": "mg-1cb39865bf468b",
-  "sourceDigest": "1cb39865bf468bf23b470d04bde71733c3d5f87973e5424cd481237d82028bec",
-  "environment": "Chromium 155.0.0.0, Windows user agent, native locator press",
+  "utc": "2026-10-17T23:47:57.562Z",
+  "candidate": "mg-6262dac5695bf4",
   "checks": {
-    "keyboardClear": true,
+    "mismatchRefused": true,
     "textFocus": true,
     "editorFocus": true,
+    "titleMenuFocus": true,
     "modalReturn": true,
-    "mismatchRefused": true,
-    "dialogClockPaused": true
+    "continueFocus": true,
+    "keyboardClear": true
   },
   "observations": {
-    "textMatched": {
-      "parent": "text-tiles",
-      "remaining": "22"
-    },
-    "editorFocus": {
-      "parent": "editor-grid",
-      "x": "0",
-      "y": "0"
-    },
-    "modalReturn": "help-dialog",
-    "pausedClock": "00:00",
-    "stillPaused": "00:00",
-    "keyboardSteps": [
-      {
-        "before": 22,
-        "after": 20
-      },
-      {
-        "before": 20,
-        "after": 18
-      },
-      {
-        "before": 18,
-        "after": 16
-      },
-      {
-        "before": 16,
-        "after": 14
-      },
-      {
-        "before": 14,
-        "after": 12
-      },
-      {
-        "before": 12,
-        "after": 10
-      },
-      {
-        "before": 10,
-        "after": 8
-      },
-      {
-        "before": 8,
-        "after": 6
-      },
-      {
-        "before": 6,
-        "after": 4
-      },
-      {
-        "before": 4,
-        "after": 2
-      },
-      {
-        "before": 2,
-        "after": 0
-      }
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
     ],
-    "initialTiles": 24,
-    "finalTiles": 0,
-    "winOpen": true,
-    "keys": [
-      "Enter",
-      "Space",
-      "h",
-      "Escape"
-    ],
-    "pauseMeasurement": {
-      "setup": "Regular one-second display refreshed before the two samples; original early display catch-up retained separately",
-      "baseline": {
-        "clock": "00:00",
-        "utc": "2026-10-17T22:46:19.456Z"
-      },
-      "after": {
-        "clock": "00:00",
-        "utc": "2026-10-17T22:46:33.120Z"
-      }
-    },
-    "initialDisplaySamples": {
-      "before": "00:00",
-      "after": "00:01"
-    }
+    "reshuffles": 0
+  },
+  "sourceDigest": "6262dac5695bf493343cc2c23605bf4b59ddf4608d9438f697a2966f6373a746",
+  "rawEvidence": {
+    "path": "audit/presentation/native-raw.json",
+    "sha256": "b208ea4b0a506cd4f37aaed1436d2fcabb6a2ad1fc85a6c88b2c18741086b040"
   }
 }

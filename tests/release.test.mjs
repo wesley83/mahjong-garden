@@ -1,13 +1,16 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';
-import {buildProject,ROOT} from '../tools/build.mjs';import {verifyGate,REQUIRED_BROWSER} from '../tools/gate.mjs';import {createPublisher,htmlIdentity} from '../tools/deploy.mjs';import {hash} from '../tools/contracts.mjs';
+import {buildProject,ROOT} from '../tools/build.mjs';import {verifyGate,REQUIRED_BROWSER,PRESENTATION_OUTCOMES,requiredNodeTests} from '../tools/gate.mjs';import {createPublisher,htmlIdentity} from '../tools/deploy.mjs';import {hash} from '../tools/contracts.mjs';
 const temp=async()=>{await fs.mkdir(path.join(ROOT,'.local/fixtures'),{recursive:true});return fs.mkdtemp(path.join(ROOT,'.local/fixtures/release-'));};
 test('gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates',async()=>{
  const dir=await temp(),output=path.join(dir,'dist'),receipts=path.join(dir,'receipts'),release=await buildProject({output});await fs.mkdir(receipts);
  const gate=()=>verifyGate({output,receiptDirectory:receipts});await assert.rejects(gate,/ENOENT/);
  const common={utc:new Date().toISOString(),candidate:release.id,sourceDigest:release.sourceDigest};
- const node={...common,exitCode:0,tests:20,node:release.node},browser={...common,results:REQUIRED_BROWSER.map(name=>({name,status:'passed',candidate:release.id}))},native={...common,checks:{keyboardClear:true,textFocus:true,editorFocus:true,modalReturn:true,mismatchRefused:true}};
+ const names=await requiredNodeTests(),tap=names.map((name,i)=>`ok ${i+1} - ${name}`).join('\n')+'\n# fail 0\n';await fs.writeFile(path.join(receipts,'node-tests.tap'),tap);
+ const node={...common,exitCode:0,tests:names.length,node:release.node,outputSha256:hash(tap)},browser={...common,results:REQUIRED_BROWSER.map(name=>({name,status:'passed',candidate:release.id,observations:{outcomes:Object.fromEntries(PRESENTATION_OUTCOMES.map(id=>[id,'passed']))}}))},native={...common,checks:{keyboardClear:true,textFocus:true,editorFocus:true,modalReturn:true,mismatchRefused:true}};
  // Synthetic receipts are confined to this isolated negative-gate fixture, never audit/current.
  for(const [name,value]of Object.entries({node,browser,native}))await fs.writeFile(path.join(receipts,name+'.json'),JSON.stringify(value));assert.equal((await gate()).passed,true);
+ const incomplete=structuredClone(browser);delete incomplete.results.at(-1).observations.outcomes['PRESENT-3D'];await fs.writeFile(path.join(receipts,'browser.json'),JSON.stringify(incomplete));await assert.rejects(gate,/presentation outcome/);await fs.writeFile(path.join(receipts,'browser.json'),JSON.stringify(browser));
+ await fs.appendFile(path.join(receipts,'node-tests.tap'),'changed');await assert.rejects(gate,/raw evidence changed/);await fs.writeFile(path.join(receipts,'node-tests.tap'),tap);
  const asset=path.join(output,release.files.find(f=>f.path.endsWith('social-card.png')).path),bytes=await fs.readFile(asset);await fs.unlink(asset);await assert.rejects(gate,/ENOENT/);await fs.writeFile(asset,bytes);
  await fs.writeFile(path.join(receipts,'native.json'),JSON.stringify({...native,candidate:'other'}));await assert.rejects(gate,/exact candidate/);await fs.writeFile(path.join(receipts,'native.json'),JSON.stringify(native));
  await fs.appendFile(path.join(output,'index.html'),'changed');await assert.rejects(gate,/Artifact changed/);

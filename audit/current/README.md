@@ -18,3 +18,7 @@ Environment limits: observed Chromium 155/Windows user agent in the Codex browse
 Publication attempt MG-012: the original entry was retained when semantic readback refused the level HTML. The nonmutating body query now handles the source’s valid omitted-head form; the added regression checks both exact allowed footer and altered-footer/content refusal. Direct recheck of staged public HTML passed. The final new candidate is rerun before retry, rather than carrying old-ID receipts forward.
 
 Final publication: mg-1cb39865bf468b, code commit 8a2aa4d5f8cf64f176755b5c72e5b0126639e7b2. deployment.json and public.json now record executed successful publication and live input/reload checks. update-compatibility.json plus post-deployment legacy-public.json establish the equivalent old-client/local checkpoint and publicly retained dependency outcomes described in the review. All nine scoped gaps are resolved; no update wipe or production rollback was performed.
+
+
+## Presentation 1.2 evidence
+Current candidate mg-6262dac5695bf4 uses the newly executed Node, browser and native receipts. The browser group count is eleven and presentation/ contains the required outcome inventory, raw observations and separate coverage/evidence review. Other older receipts retain their original candidate/time provenance and are not relabeled as new runs. See ../presentation/REVIEW.md for scope and publication status.

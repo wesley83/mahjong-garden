@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';
 export const ORIGIN='https://grab-lead-8328.onpagelove.com';
-export const RUNTIME=['boot.mjs','app.mjs','core.mjs','profile.mjs','operations.mjs','image-input.mjs','faces.mjs','storage.mjs','style.css','favicon.svg','content/levels.html'];
+export const RUNTIME=['boot.mjs','app.mjs','core.mjs','profile.mjs','operations.mjs','image-input.mjs','faces.mjs','storage.mjs','scenery.mjs','style.css','game.css','favicon.svg','content/levels.html'];
 export const ASSETS=[{role:'link-preview',path:'assets/social-card.png',source:'assets/social-card.svg',width:1200,height:630,initial:false},{role:'touch-icon',path:'assets/apple-touch-icon.png',source:'favicon.svg',width:180,height:180,initial:false}];
 export const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 export async function sourceIdentity(root){

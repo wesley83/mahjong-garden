@@ -1,6 +1,6 @@
 # Mahjong Garden
 
-A quiet, dependency-free mahjong solitaire game with **60 unique levels**, traditional/animal/emoji tile collections, and a personal tile studio.
+A quiet, dependency-free mahjong solitaire game with **60 unique levels**, CSS 3D tiles, six illustrated chapter environments, traditional/animal/emoji tile collections, and a personal tile studio.
 
 [Play Mahjong Garden](https://grab-lead-8328.onpagelove.com/) · [Public source](https://github.com/wesley83/mahjong-garden)
 
@@ -10,7 +10,9 @@ Match identical free tiles. A tile must have no tile directly above it and an op
 
 All 60 levels are open from the beginning. Earn one star for completion, two without reshuffles, and three without either hints or reshuffles. Undo has no added penalty and keeps the hint/reshuffle use already recorded for that attempt. Change tile collections during a run without changing its pairs.
 
-Use mouse/touch, Tab and Enter/Space. Arrow keys move tile focus. **H** reveals a pair; **U** undoes; **Escape** clears selection. A text tile view exposes the same actions. Settings offer larger tiles, reduced motion and optional synthesized match sounds. The clock pauses while a dialog is open or the tab is hidden. There is no time limit.
+Begin or continue from the title screen. Menu returns to the title without resetting your board. Tile collections, all sixty levels and the personal studio remain available through game menus. Each tile uses front, back and side planes with CSS perspective.
+
+Use mouse/touch, Tab and Enter/Space. Arrow keys move tile focus. **H** reveals a pair; **U** undoes; **Escape** clears selection. A text tile view exposes the same actions. Settings offer larger tiles, reduced motion and optional synthesized match sounds. The clock pauses on the title screen, while a dialog is open or the tab is hidden. There is no time limit.
 
 ## Your tile studio
 
@@ -35,11 +37,11 @@ pnpm gate
 
 The baseline compatibility test reads the original released rules from Git commit `0cbfa62865e0e270a5ee967052c25e257199a787`; run the suite from a full Git clone. Set `PORT` to select an unused preview origin. Avoid an origin where an unrelated service worker is installed. For the local browser acceptance harness, open `/tests/browser.html` on a separate disposable preview origin. Its synthetic input/storage tests are explicitly separated from real native pointer/keyboard observations in `audit/`.
 
-Production output lives in ignored `dist/`: an entry page plus immutable, content-addressed release assets. Deploy the contents of `dist/` to a static server that serves `.mjs` as JavaScript. No service worker is installed and offline reload is not promised.
+Production output lives in ignored `dist/`: an entry page plus immutable, content-addressed release assets. Styles remain editable in style.css/game.css; build freezes their bytes into the entry for deterministic first paint. Deploy only the paths in dist/release.json to a static server that serves `.mjs` as JavaScript. No service worker is installed and offline reload is not promised.
 
 ## Content and architecture
 
-The [development plan](GAME-PLAN.md) follows Pagelove's Web Game Development Handbook edition 2.8.0. [Level HTML](content/levels.html) is the sole authored campaign definition. Every article has a stable identity/revision and readable coordinate-bearing tile elements. `tools/author-levels.mjs` is an explicit authoring operation; ordinary builds validate the existing source instead of silently regenerating it.
+The [development plan](GAME-PLAN.md) follows Pagelove's Web Game Development Handbook edition 2.9.0. [Level HTML](content/levels.html) is the sole authored campaign definition. Every article has a stable identity/revision and readable coordinate-bearing tile elements. `tools/author-levels.mjs` is an explicit authoring operation; ordinary builds validate the existing source instead of silently regenerating it.
 
 `core.mjs` owns validated rules and bounded geometry search; `profile.mjs` shares strict profile/draft validation across restore, writes and tests. `app.mjs` derives gameplay from the HTML library and keeps runtime actions separate from authoring. The live `#studio-source` DOM subtree owns the current editable layout. JSON exports are a versioned interchange format. `storage.mjs` applies revision-checked IndexedDB transactions; unsupported records are retained for recovery rather than erased.
 

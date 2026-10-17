@@ -1,0 +1,490 @@
+[
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "responsive layout matrix",
+    "observations": [
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 320,
+        "height": 568,
+        "minTileHeight": 36.97843551635742,
+        "minTileWidth": 29.08211326599121,
+        "tiles": 64,
+        "width": 320
+      },
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 390,
+        "height": 844,
+        "minTileHeight": 36.83624267578125,
+        "minTileWidth": 29.072574615478516,
+        "tiles": 64,
+        "width": 390
+      },
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 568,
+        "height": 320,
+        "minTileHeight": 37.224998474121094,
+        "minTileWidth": 29.108612060546875,
+        "tiles": 64,
+        "width": 568
+      },
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 829,
+        "height": 390,
+        "minTileHeight": 35.66422653198242,
+        "minTileWidth": 28.55861473083496,
+        "tiles": 64,
+        "width": 844
+      },
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 1280,
+        "height": 720,
+        "minTileHeight": 43.13094329833984,
+        "minTileWidth": 35.10184860229492,
+        "tiles": 64,
+        "width": 1280
+      },
+      {
+        "controlsInViewport": true,
+        "dialogs": [],
+        "documentWidth": 1440,
+        "height": 900,
+        "minTileHeight": 68.1748275756836,
+        "minTileWidth": 55.86393356323242,
+        "tiles": 64,
+        "width": 1440
+      }
+    ],
+    "status": "passed",
+    "utc": "2026-10-17T23:43:43.949Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "atomic storage conflict, failure and next action",
+    "observations": {
+      "nextWriteSucceeded": true,
+      "quotaFailurePreservedPrevious": true,
+      "staleWriteRefused": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:43:44.912Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "studio editing, personal image conversion and failed import preservation",
+    "observations": {
+      "badImportPreservedDraft": true,
+      "currentNameSaved": true,
+      "customTheme": true,
+      "imagesConvertedAndSaved": 2,
+      "playtest": true,
+      "undoRedo": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:43:50.281Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "studio failed save stays recoverable, retry then close",
+    "observations": {
+      "failedCloseRetainedDraft": true,
+      "normalCloseAfterRecovery": true,
+      "previousRevisionPreserved": true,
+      "retrySavedCurrentDraft": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:43:52.223Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
+    "observations": {
+      "actionSamples": [
+        {
+          "milliseconds": 6.100000023841858,
+          "selector": "[data-open=\"levels-dialog\"]"
+        },
+        {
+          "milliseconds": 0.699999988079071,
+          "selector": "#level-library .chapter-group:first-child .level-card:first-child"
+        },
+        {
+          "milliseconds": 3,
+          "selector": "#restart"
+        },
+        {
+          "milliseconds": 2.800000011920929,
+          "selector": "#confirm-ok"
+        },
+        {
+          "milliseconds": 3.100000023841858,
+          "selector": "#hint"
+        },
+        {
+          "milliseconds": 3.300000011920929,
+          "selector": "#board [data-tile=\"t-0-1-0\"]"
+        },
+        {
+          "milliseconds": 3.5,
+          "selector": "#board [data-tile=\"t-5-1-0\"]"
+        },
+        {
+          "milliseconds": 2.899999976158142,
+          "selector": "#undo"
+        },
+        {
+          "milliseconds": 3.300000011920929,
+          "selector": "#shuffle"
+        },
+        {
+          "milliseconds": 2.900000035762787,
+          "selector": "#board [data-tile=\"t-5-0-0\"]"
+        },
+        {
+          "milliseconds": 3,
+          "selector": "#board [data-tile=\"t-0-1-0\"]"
+        },
+        {
+          "milliseconds": 2.699999988079071,
+          "selector": "#board [data-tile=\"t-4-0-0\"]"
+        },
+        {
+          "milliseconds": 2.899999976158142,
+          "selector": "#board [data-tile=\"t-5-1-0\"]"
+        },
+        {
+          "milliseconds": 2.799999952316284,
+          "selector": "#board [data-tile=\"t-0-2-0\"]"
+        },
+        {
+          "milliseconds": 2.699999988079071,
+          "selector": "#board [data-tile=\"t-0-3-0\"]"
+        },
+        {
+          "milliseconds": 2.400000035762787,
+          "selector": "#board [data-tile=\"t-4-1-0\"]"
+        },
+        {
+          "milliseconds": 2.300000011920929,
+          "selector": "#board [data-tile=\"t-1-2-0\"]"
+        },
+        {
+          "milliseconds": 2.400000035762787,
+          "selector": "#board [data-tile=\"t-0-0-0\"]"
+        },
+        {
+          "milliseconds": 2.900000035762787,
+          "selector": "#board [data-tile=\"t-2-2-0\"]"
+        },
+        {
+          "milliseconds": 2.099999964237213,
+          "selector": "#board [data-tile=\"t-1-0-0\"]"
+        },
+        {
+          "milliseconds": 2.600000023841858,
+          "selector": "#board [data-tile=\"t-3-0-0\"]"
+        },
+        {
+          "milliseconds": 1.899999976158142,
+          "selector": "#board [data-tile=\"t-2-0-0\"]"
+        },
+        {
+          "milliseconds": 2.5,
+          "selector": "#board [data-tile=\"t-1-1-0\"]"
+        },
+        {
+          "milliseconds": 1.800000011920929,
+          "selector": "#board [data-tile=\"t-3-2-0\"]"
+        },
+        {
+          "milliseconds": 2.899999976158142,
+          "selector": "#board [data-tile=\"t-1-3-0\"]"
+        },
+        {
+          "milliseconds": 1.800000011920929,
+          "selector": "#board [data-tile=\"t-3-1-0\"]"
+        },
+        {
+          "milliseconds": 2.300000011920929,
+          "selector": "#board [data-tile=\"t-2-3-0\"]"
+        },
+        {
+          "milliseconds": 2.400000035762787,
+          "selector": "#board [data-tile=\"t-4-2-0\"]"
+        },
+        {
+          "milliseconds": 1.7000000476837158,
+          "selector": "#board [data-tile=\"t-5-2-0\"]"
+        },
+        {
+          "milliseconds": 1.699999988079071,
+          "selector": "#board [data-tile=\"t-3-3-0\"]"
+        },
+        {
+          "milliseconds": 1.399999976158142,
+          "selector": "#board [data-tile=\"t-5-3-0\"]"
+        },
+        {
+          "milliseconds": 1.699999988079071,
+          "selector": "#board [data-tile=\"t-2-1-0\"]"
+        },
+        {
+          "milliseconds": 12.599999964237211,
+          "selector": "#board [data-tile=\"t-4-3-0\"]"
+        },
+        {
+          "milliseconds": 1.4000000357627869,
+          "selector": "#next-level"
+        }
+      ],
+      "boardDispatchMaxMs": 12.599999964237211,
+      "checkpointResume": true,
+      "dispatchMaxMs": 12.599999964237211,
+      "dispatchP95ms": 6.100000023841858,
+      "dispatchSamples": 34,
+      "iterations": 12,
+      "nextLevel": true,
+      "shuffle": true,
+      "startTiles": 24,
+      "undo": true,
+      "win": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:03.284Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "name": "game backup export/import round-trip",
+    "observations": {
+      "activeTilesPreserved": true,
+      "explicitConfirmation": true,
+      "imagesAndDraftPreserved": true,
+      "progressPreserved": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:03.394Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "delayed saves, stale restores, cancellation and image undo",
+    "observations": {
+      "canceledBitmapDisposed": true,
+      "closedRestoreIgnored": true,
+      "imageUndoRedo": true,
+      "laterEditPreserved": true,
+      "latestOverlappingRestoreWins": true,
+      "nextActionUnlocked": true,
+      "saveAndLeaveLocked": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:05.360Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "text enlargement, safe insets, long labels and focus",
+    "observations": [
+      {
+        "frequentControls": 8,
+        "height": 568,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 320,
+        "textScale": 2,
+        "width": 320
+      },
+      {
+        "frequentControls": 8,
+        "height": 844,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 390,
+        "textScale": 2,
+        "width": 390
+      },
+      {
+        "frequentControls": 8,
+        "height": 320,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 553,
+        "textScale": 2,
+        "width": 568
+      },
+      {
+        "frequentControls": 8,
+        "height": 390,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 829,
+        "textScale": 2,
+        "width": 844
+      },
+      {
+        "frequentControls": 8,
+        "height": 720,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 1265,
+        "textScale": 2,
+        "width": 1280
+      },
+      {
+        "frequentControls": 8,
+        "height": 900,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 1425,
+        "textScale": 2,
+        "width": 1440
+      }
+    ],
+    "status": "passed",
+    "utc": "2026-10-17T23:44:13.988Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "loading, image and audio failure recovery",
+    "observations": {
+      "audioRejectionHandled": true,
+      "libraryFailureRetry": true,
+      "moduleFailureRetry": true,
+      "normalActionAfterFailure": true,
+      "oversizedImageRejectedBeforeDecode": true,
+      "voicesStopped": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:18.309Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "version-one checkpoint compatibility",
+    "observations": {
+      "checkpointConsumed": true,
+      "nextActionSucceeded": true,
+      "nodeFixtureAlsoUsesBaselineReader": true,
+      "rules": "mg-rules-1",
+      "saveVersion": 1,
+      "studioPreserved": true
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:27.312Z"
+  },
+  {
+    "candidate": "mg-6262dac5695bf4",
+    "name": "CSS 3D presentation and game screen lifecycle",
+    "observations": {
+      "clockSamples": [
+        "00:04",
+        "00:04"
+      ],
+      "collections": [
+        "Traditional tile collection",
+        "Animals tile collection",
+        "Emoji tile collection",
+        "My images tile collection"
+      ],
+      "layouts": [
+        {
+          "height": 568,
+          "targets": 8,
+          "tiles": 60,
+          "width": 320
+        },
+        {
+          "height": 844,
+          "targets": 8,
+          "tiles": 60,
+          "width": 390
+        },
+        {
+          "height": 320,
+          "targets": 8,
+          "tiles": 60,
+          "width": 568
+        },
+        {
+          "height": 390,
+          "targets": 8,
+          "tiles": 60,
+          "width": 844
+        },
+        {
+          "height": 720,
+          "targets": 8,
+          "tiles": 60,
+          "width": 1280
+        },
+        {
+          "height": 900,
+          "targets": 8,
+          "tiles": 60,
+          "width": 1440
+        }
+      ],
+      "outcomes": {
+        "PRESENT-3D": "passed",
+        "PRESENT-FACES": "passed",
+        "PRESENT-LAYOUT": "passed",
+        "PRESENT-MENUS": "passed",
+        "PRESENT-MOTION": "passed",
+        "PRESENT-RECOVERY": "passed",
+        "PRESENT-SCENES": "passed",
+        "PRESENT-SCREENS": "passed"
+      },
+      "scenes": [
+        "DAWN AT THE PAVILION",
+        "THE LOTUS WATER GARDEN",
+        "THE MOUNTAIN SANCTUARY",
+        "THE AMBER MAPLE GROVE",
+        "THE MOONLIT COURTYARD",
+        "BEYOND THE GARDEN GATE"
+      ],
+      "threeD": {
+        "perspective": "1700px",
+        "planes": [
+          "top",
+          "back",
+          "right",
+          "bottom",
+          "left"
+        ]
+      }
+    },
+    "status": "passed",
+    "utc": "2026-10-17T23:44:28.626Z"
+  }
+]

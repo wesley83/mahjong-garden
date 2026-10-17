@@ -1,6 +1,6 @@
 # Mahjong Garden — development plan
 
-Plan MG-001, consolidated by review MG-008 on 2026-10-17. Actor: Codex. Requested by Wesley. Basis: Pagelove Web Game Development Handbook, edition 2.8.0, `games/prism-breaker/GAME-DEVELOPMENT-BEST-PRACTICES.md`, especially sections 1–7, 10–17, puzzle/board modules in 18, Pagelove adapter in 19 and evidence templates in 21.
+Plan MG-001, consolidated by review MG-008 and presentation plan MG-019 on 2026-10-17. Actor: Codex. Requested by Wesley. Basis: Pagelove Web Game Development Handbook, edition 2.9.0, `games/prism-breaker/GAME-DEVELOPMENT-BEST-PRACTICES.md`, especially sections 1–7, 10–17, puzzle/board modules in 18, Pagelove adapter in 19 and evidence templates in 21.
 
 ## Player and delivery contract
 
@@ -8,7 +8,7 @@ A quiet, tactile mahjong solitaire game: select two identical free tiles until t
 
 Deliver 60 individually identified levels in six ten-level chapters; 60 unique geometries vary in size, stacking and tile variety across six chapters. All levels are available from entry. Persist completion, best stars, settings, an exact active-run checkpoint and studio drafts. Traditional, animal and emoji faces can switch during a run without changing matching identities. Traditional artwork is original SVG, with named suits and ranks; no font dependency.
 
-Visual direction: warm paper, deep pine felt, ivory raised tiles, forest green controls, brass secondary details, restrained botanical line art. Serif display type with a system sans interface. Avoid colored card accent rails and northeast arrow icons. Light, responsive DOM interface, native buttons/dialogs, clearly selected and blocked states, reduced motion, optional synthesized sound after activation.
+Visual direction, approved MG-019: an atmospheric illustrated puzzle game with six original chapter environments, a dedicated title screen and full-window play. Native CSS 3D tiles use front, back and side planes, ivory bevels, jade backs, shallow board perspective and a lifted selected state. Match faces remain interchangeable, including personal photos. Collections and studio live in game menus; paper-toned native dialogs remain readable over the scenery. Serif display type with a system sans interface. Avoid colored card accent rails and northeast arrow icons. Preserve native keyboard controls, clearly selected and blocked states, reduced motion and optional synthesized sound after activation. `audit/presentation/PLAN.md` is the authoritative acceptance inventory for the added presentation outcomes.
 
 ## Content, authority and editing
 
@@ -30,7 +30,7 @@ Mouse/touch click and native Enter/Space activation dispatch identical commands.
 
 Target: current Chromium desktop, responsive layouts at 320×568, 390×844, 844×390, 1280×720 and 1440×900, pointer and keyboard. Actual available browser/version evidence will be named. Other engines/physical phones remain unverified, not claimed certified. WCAG AA is an engineering target, not a conformance claim. Meaningful labels, focus, selection text, live status, no color-only matching, no flashing, reduced motion. Sound is optional and failure does not block play.
 
-Performance goals: dependency-free production JS, under 400,000 bytes initial code/content excluding imported images, board actions under 100 ms on the observed desktop, no continuous animation or simulation loop. Bound tile counts, imports, searches, DOM work and retained histories. Retain measured timings and explain tool limits.
+Performance goals: dependency-free production JS, under 400,000 bytes initial code/content including scenery and CSS but excluding imported images, board actions under 100 ms on the observed desktop, no continuous animation or simulation loop. Stylesheets remain canonical source files; the build freezes their bytes into the entry document for deterministic first paint and counts those bytes once. Immutable stylesheet copies are retained as non-initial artifacts. Bound tile counts, imports, searches, DOM work and retained histories. Retain measured timings and explain tool limits.
 
 ## Ordered implementation and release
 

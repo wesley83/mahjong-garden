@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-17T23:46:30.435Z",
+  "candidate": "mg-6262dac5695bf4",
+  "checks": {
+    "mismatchRefused": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "titleMenuFocus": true,
+    "modalReturn": true,
+    "continueFocus": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "reshuffles": 0
+  }
+}
