@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-17T21:44:36.267Z",
+  "utc": "2026-10-17T21:48:33.697Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -35,13 +35,18 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 5658,
-      "sha256": "724a75e36875d3839075c2431c56ac699898420ac95b0c7a23c0029d77931229"
+      "bytes": 9344,
+      "sha256": "45c764917929c2e19cb0d9c87cd87cbb586c20ff177ae49495d75c087bc945ce"
+    },
+    {
+      "path": "audit/deployment.json",
+      "bytes": 2713,
+      "sha256": "fe27fe31850c3c64aec6d4d7ecc333d157edb23b2b1016d92c059b4445868392"
     },
     {
       "path": "audit/EVIDENCE.md",
-      "bytes": 5309,
-      "sha256": "b27d4fdf1e5f97868104427284c2eb01739cdc56963c0adb26201c16fc3f2a77"
+      "bytes": 5838,
+      "sha256": "a2cef36e5fe65799f18be11312210fbd570e5763bfab6fa03c09f52b5d961277"
     },
     {
       "path": "audit/native-input.json",
@@ -52,6 +57,16 @@
       "path": "audit/node-tests.txt",
       "bytes": 765,
       "sha256": "d46a8a3933a6f2243ef358dc88a912cd777632572401e1ea0d4427e42d980114"
+    },
+    {
+      "path": "audit/public-smoke.json",
+      "bytes": 365,
+      "sha256": "a6c293dc6bc308d5447f57bec75bf5900d8594b85fc314ce04a09e825a857ec9"
+    },
+    {
+      "path": "audit/wipe.json",
+      "bytes": 6425,
+      "sha256": "fd5e46c717d1de5bc56574896240dc24821ae441edf2d66b0e13bf997d232682"
     },
     {
       "path": "content/levels.html",
@@ -95,8 +110,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5965,
-      "sha256": "0b4206f94436ea61798411134f37be426d93ef1ae0d839262877727a627645d7"
+      "bytes": 6091,
+      "sha256": "113e9e78daa088430482aa2320b787ebd3cb57c81721cf4c3436b2d3259817a2"
     },
     {
       "path": "storage.mjs",

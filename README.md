@@ -2,6 +2,8 @@
 
 A quiet, dependency-free mahjong solitaire game with **60 unique levels**, traditional/animal/emoji tile collections, and a personal tile studio.
 
+[Play Mahjong Garden](https://grab-lead-8328.onpagelove.com/) · [Public source](https://github.com/wesley83/mahjong-garden)
+
 ## Play
 
 Match identical free tiles. A tile must have no tile directly above it and an open left or right side. Clear the board to finish. Flowers and winds use exact-symbol matching. Every initial deal and reshuffle has a verified solution; your choices can still lead to a dead end. Undo, hints, reshuffle and restart are always available.

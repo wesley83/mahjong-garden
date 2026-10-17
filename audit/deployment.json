@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-17T21:46:00.650Z",
+  "origin": "https://grab-lead-8328.onpagelove.com",
+  "dav": "https://dav-grab-lead-8328.onpagelove.com",
+  "release": "mg-604629dc35a167",
+  "verifiedPublicFiles": 8,
+  "publication": "Dependencies staged and publicly verified before entry promotion",
+  "sourceEntrySha256": "9aba7da28b96636a4959a03c6d8bdde39cabc41ef5ab090c9284b1b7902c5877",
+  "servedEntrySha256": "474a894e92f4a514918696036ba2793140f83b3ecb67b513c40cb3576cc21709",
+  "htmlSerializationObserved": true,
+  "written": [
+    {
+      "path": "/releases/mg-604629dc35a167/app.mjs",
+      "status": 201,
+      "sourceSha256": "f8ce2c70b1fdf598b63402cdf9b84beddde5755e63141cb0c077723a4d0b9858",
+      "authoringSha256": "f8ce2c70b1fdf598b63402cdf9b84beddde5755e63141cb0c077723a4d0b9858"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/core.mjs",
+      "status": 201,
+      "sourceSha256": "4289fdce14d1b96fe374058795b7da3145ba967ef1d91dd8d7963817178f3a5d",
+      "authoringSha256": "4289fdce14d1b96fe374058795b7da3145ba967ef1d91dd8d7963817178f3a5d"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/faces.mjs",
+      "status": 201,
+      "sourceSha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56",
+      "authoringSha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/storage.mjs",
+      "status": 201,
+      "sourceSha256": "3ba83f8b90a93781f766a0d9f9fc4eda2e7a93b982fc978d1fcbf648e372da76",
+      "authoringSha256": "3ba83f8b90a93781f766a0d9f9fc4eda2e7a93b982fc978d1fcbf648e372da76"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/style.css",
+      "status": 201,
+      "sourceSha256": "f451a628225fd0afffdf33529414b7fa6325de309471250f6047bce04ce1dea7",
+      "authoringSha256": "f451a628225fd0afffdf33529414b7fa6325de309471250f6047bce04ce1dea7"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/favicon.svg",
+      "status": 201,
+      "sourceSha256": "0e244758efda54053eee00103452ff73daefbeb1979ff9d082a090c32e8ab81a",
+      "authoringSha256": "0e244758efda54053eee00103452ff73daefbeb1979ff9d082a090c32e8ab81a"
+    },
+    {
+      "path": "/releases/mg-604629dc35a167/content/levels.html",
+      "status": 201,
+      "sourceSha256": "143978b2fb5d64668f40b10564ab59e184c3a8556b8f1148fa52884873fa5552",
+      "authoringSha256": "c724b7955b838144990329b8fff63543370b4f2fb61e6d96b00316dd9cd46da8"
+    },
+    {
+      "path": "/index.html",
+      "status": 201,
+      "sourceSha256": "9aba7da28b96636a4959a03c6d8bdde39cabc41ef5ab090c9284b1b7902c5877",
+      "authoringSha256": "5629850935f51d8014c539a9f6941c08880c421326e2757cabe38384e90b395d"
+    }
+  ],
+  "credentialStored": false
+}

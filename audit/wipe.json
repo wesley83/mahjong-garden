@@ -1,0 +1,313 @@
+{
+  "utc": "2026-10-17T21:45:49.164Z",
+  "dav": "https://dav-grab-lead-8328.onpagelove.com",
+  "backupVerified": true,
+  "backupLocation": "Ignored .local/server-backup",
+  "deleted": [
+    {
+      "path": "/assets/email-previews/01-pagelove-kickoff-announcement-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/02-pagelove-kickoff-reminder-24h-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/03-pagelove-kickoff-reminder-1h-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/04-pagelove-kickoff-recording-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/06-pagelove-template-deadline-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/05-pagelove-kickoff-week-one-1440.png",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/schema/listing.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/schema/submission.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/schema/discussion.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/schema/reaction.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/schema/checkin.html",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/JetBrainsMono-Variable.woff2",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/schema/comment.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/schema/resource.html",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/SpaceGrotesk-Variable.woff2",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/SourceSerif4-Variable.woff",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/BebasNeue-Regular.woff2",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/index.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/styles.css",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/FiraCode-Regular.woff2",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/motion.js",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/Inter-Variable.woff2",
+      "status": 204
+    },
+    {
+      "path": "/assets/pagelove-logo-official.svg",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/schema/",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/index.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/styles.css",
+      "status": 204
+    },
+    {
+      "path": "/press-review/proposed-changes.css",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/index.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/styles.css",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/app.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/feed.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/motion.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/schema/event.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/motion.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/index.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/styles.css",
+      "status": 204
+    },
+    {
+      "path": "/assets/vendor/anime.umd.min.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/schema/",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/motion.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/schema/",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/app.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/app.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/schema/",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/app.js",
+      "status": 204
+    },
+    {
+      "path": "/assets/social/linkedin.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/social/whatsapp.png",
+      "status": 204
+    },
+    {
+      "path": "/demo-03-resource-exchange/",
+      "status": 204
+    },
+    {
+      "path": "/assets/social/bluesky.png",
+      "status": 204
+    },
+    {
+      "path": "/assets/social/discord.png",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/index.html",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/styles.css",
+      "status": 204
+    },
+    {
+      "path": "/assets/og-demo-apps.svg",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/motion.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-04-accountability/",
+      "status": 204
+    },
+    {
+      "path": "/press-review/index.html",
+      "status": 204
+    },
+    {
+      "path": "/assets/email-previews/",
+      "status": 204
+    },
+    {
+      "path": "/demo-02-show-and-tell/",
+      "status": 204
+    },
+    {
+      "path": "/press-review/style.css",
+      "status": 204
+    },
+    {
+      "path": "/assets/motion-core.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/schema/",
+      "status": 204
+    },
+    {
+      "path": "/demo-05-professional/",
+      "status": 204
+    },
+    {
+      "path": "/assets/ui-enhance.js",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/app.js",
+      "status": 204
+    },
+    {
+      "path": "/assets/social/",
+      "status": 204
+    },
+    {
+      "path": "/assets/vendor/",
+      "status": 204
+    },
+    {
+      "path": "/demo-01-event/",
+      "status": 204
+    },
+    {
+      "path": "/assets/fonts/",
+      "status": 204
+    },
+    {
+      "path": "/press-review/",
+      "status": 204
+    },
+    {
+      "path": "/og-image.png",
+      "status": 204
+    },
+    {
+      "path": "/og-image.svg",
+      "status": 204
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 204
+    },
+    {
+      "path": "/gallery.css",
+      "status": 204
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 204
+    },
+    {
+      "path": "/index.html",
+      "status": 204
+    },
+    {
+      "path": "/robots.txt",
+      "status": 204
+    },
+    {
+      "path": "/assets/",
+      "status": 204
+    }
+  ],
+  "remaining": 0
+}

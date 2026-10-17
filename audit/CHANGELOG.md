@@ -39,3 +39,32 @@
 - Why: Bind release approval to the corrected, tested source before any remote replacement.
 - Affected: audit/browser-final.json, audit/native-input.json, audit/EVIDENCE.md, audit/CHANGELOG.md, audit/source-manifest.json.
 - Verification: All seven Node groups and six browser fixture groups pass. Real keyboard clear passes. Chrome 155 user-agent observed. Final page/content/assets total 348,499 bytes. Private backups and credentials excluded; final source scan/hash reconciliation pending immediately before commit. Server remains untouched.
+
+## MG-005 — repository published; replacement started
+- UTC: 2026-10-17T21:45:28.574Z
+- Actor: Codex
+- Reference: MG-001 and explicit user authorization to back up, wipe and deploy the exact supplied host.
+- Change: Created public https://github.com/wesley83/mahjong-garden and pushed initial source commit 6c040db to main. Starting conditional wipe of the verified DAV inventory, followed immediately by staged release mg-604629dc35a167.
+- Why: Deliver the requested public source and replace the user-designated disposable server contents.
+- Affected: Remote GitHub main; exact host DAV resources; local audit receipt files.
+- Verification: GitHub reports PUBLIC and push succeeded. First elevated push refused the sandbox-owned checkout; retried successfully with a per-command safe.directory exception scoped to this one new repository. No global Git trust change. Final source scan passed; private server backups are ignored. Wipe/deployment readback pending.
+
+## MG-006 — deployment and public verification complete
+- UTC: 2026-10-17T21:47:47.208Z
+- Actor: Codex
+- Reference: MG-001 / MG-004 / MG-005.
+- Change: Conditionally removed all 76 backed-up resources on the exact supplied DAV host. Staged versioned release assets/content, verified public dependencies and promoted the entry page. Added deployment, wipe and public smoke receipts; added live/source README links.
+- Why: Complete the requested server replacement while retaining a verified local recovery copy.
+- Affected: Supplied Pagelove application resources, README.md, audit receipts/evidence/log/manifest.
+- Verification: Wipe reported empty DAV inventory. Deployment verified eight public files for release mg-604629dc35a167; source/served entry digests and HTML serialization are recorded in deployment.json. Real public input matched 24→22 tiles, Undo restored 24, 60 level buttons were counted, and reload restored the run. Deployed game displayed successfully. Local screenshot saved under ignored .local/. The unavailable full-page screenshot method was replaced by the supported viewport screenshot; this did not affect game verification.
+- Backup: Latest complete local backup remains .local/server-backup/2026-10-17T21-41-06-591Z with its verified manifest; no original data or credentials were published. Earlier complete backup also retained. Production rollback was not exercised.
+- Final reconciliation: Only documentation and sanitized operation evidence changed after the tested source commit; gameplay/assets remain candidate mg-604629dc35a167. Final source hashes and credential scan rerun before the evidence commit. Remaining local preview/credential console teardown and final evidence push are operational cleanup.
+
+## MG-007 — final reconciliation and cleanup
+- UTC: 2026-10-17T21:48:32.107Z
+- Actor: Codex
+- Reference: MG-006.
+- Change: Set the public repository homepage to the deployed game. Retained the delivered public browser tab, closed the disposable QA tab, stopped all three task-owned local preview sessions and exited the credential-bearing deployment console.
+- Why: Leave only the delivered game and durable recovery/evidence artifacts.
+- Affected: GitHub repository metadata; task-owned local processes and tabs; this audit and source manifest.
+- Verification: Deployment console exited 0; all three preview processes exited after interrupt. Public match/undo/reload and live release identity already passed. Credential scan and source manifest regenerated before final evidence commit; final push is verified by the returned Git/GitHub result. Private backup and local screenshot remain ignored. No gameplay source changed after mg-604629dc35a167 passed its gates.
