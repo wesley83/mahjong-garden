@@ -1,0 +1,139 @@
+{
+  "utc": "2026-10-17T22:26:38.479Z",
+  "method": "Source geometry inspection; 720 seeded legal-solution replays in unit receipt",
+  "chapters": [
+    {
+      "chapter": 1,
+      "levels": 10,
+      "tileRange": [
+        24,
+        68
+      ],
+      "meanTiles": 40.8,
+      "maxLayers": 2,
+      "goals": [
+        "Match identical open tiles. Start at either end of a row.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair.",
+        "Look for matching open ends before removing a pair."
+      ]
+    },
+    {
+      "chapter": 2,
+      "levels": 10,
+      "tileRange": [
+        26,
+        74
+      ],
+      "meanTiles": 48.6,
+      "maxLayers": 2,
+      "goals": [
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath.",
+        "Clear upper layers to open the tiles underneath."
+      ]
+    },
+    {
+      "chapter": 3,
+      "levels": 10,
+      "tileRange": [
+        26,
+        68
+      ],
+      "meanTiles": 48.4,
+      "maxLayers": 3,
+      "goals": [
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open."
+      ]
+    },
+    {
+      "chapter": 4,
+      "levels": 10,
+      "tileRange": [
+        28,
+        76
+      ],
+      "meanTiles": 47.8,
+      "maxLayers": 3,
+      "goals": [
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open.",
+        "Plan a few pairs ahead and keep both sides open."
+      ]
+    },
+    {
+      "chapter": 5,
+      "levels": 10,
+      "tileRange": [
+        32,
+        86
+      ],
+      "meanTiles": 51.6,
+      "maxLayers": 3,
+      "goals": [
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges."
+      ]
+    },
+    {
+      "chapter": 6,
+      "levels": 10,
+      "tileRange": [
+        30,
+        64
+      ],
+      "meanTiles": 48.4,
+      "maxLayers": 3,
+      "goals": [
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges.",
+        "Balance the upper layers with the outside edges."
+      ]
+    }
+  ],
+  "rubric": "LLM inspection: all chapters remain open, tile-count variation provides shorter rests among larger boards, stacking introduces blocked/open choices. Retain broad variety rather than force a monotonic difficulty ramp. Solver coverage proves represented initial deals can clear; it does not establish natural player difficulty, discovery or enjoyment."
+}

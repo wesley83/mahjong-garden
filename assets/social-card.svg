@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f7f5ee"/><rect x="32" y="32" width="1136" height="566" rx="30" fill="#234c3d"/>
+<rect x="47" y="47" width="1106" height="536" rx="20" fill="none" stroke="#b7c3a2" opacity=".3"/>
+<text x="95" y="122" font-family="Segoe UI,Arial,sans-serif" font-size="15" letter-spacing="4" fill="#d4dabb">A LITTLE FOCUS. A LITTLE CALM.</text>
+<text x="92" y="228" font-family="Georgia,serif" font-size="80" fill="#fff9e8">mahjong</text><text x="92" y="318" font-family="Georgia,serif" font-style="italic" font-size="80" fill="#e1dfbb">garden</text>
+<text x="95" y="399" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#e1e5d2">60 little escapes. One pair at a time.</text>
+<text x="95" y="510" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#d4dabb">TRADITIONAL · ANIMALS · EMOJI · YOUR OWN IMAGES</text>
+<g transform="translate(726 152) rotate(-9)"><rect y="9" width="145" height="205" rx="17" fill="#bbc4a0"/><rect width="145" height="195" rx="17" fill="#fff9e8"/><g fill="none" stroke-width="7"><circle cx="44" cy="48" r="16" stroke="#375c76"/><circle cx="101" cy="48" r="16" stroke="#27634f"/><circle cx="44" cy="99" r="16" stroke="#ad4438"/><circle cx="101" cy="99" r="16" stroke="#375c76"/><circle cx="44" cy="150" r="16" stroke="#27634f"/><circle cx="101" cy="150" r="16" stroke="#ad4438"/></g></g>
+<g transform="translate(899 222) rotate(9)"><rect y="9" width="145" height="205" rx="17" fill="#bbc4a0"/><rect width="145" height="195" rx="17" fill="#fff9e8"/><g fill="none" stroke-width="7"><circle cx="44" cy="48" r="16" stroke="#375c76"/><circle cx="101" cy="48" r="16" stroke="#27634f"/><circle cx="44" cy="99" r="16" stroke="#ad4438"/><circle cx="101" cy="99" r="16" stroke="#375c76"/><circle cx="44" cy="150" r="16" stroke="#27634f"/><circle cx="101" cy="150" r="16" stroke="#ad4438"/></g></g>
+<path d="M1020 84c-48 1-58 37-43 59 39 5 64-24 43-59Zm-58 90 43-70" fill="none" stroke="#c8d2b5" stroke-width="2" opacity=".55"/>
+</svg>

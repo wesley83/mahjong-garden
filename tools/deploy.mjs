@@ -1,82 +1,32 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
-const root=fileURLToPath(new URL('../',import.meta.url));
-const dav='https://dav-grab-lead-8328.onpagelove.com';
-const origin='https://grab-lead-8328.onpagelove.com';
-const hash=b=>createHash('sha256').update(b).digest('hex');
-let key='',backupPath='',inventory=[];
+import {DOMParser} from 'linkedom';
+import {ORIGIN,hash} from './contracts.mjs';
+import {verifyGate} from './gate.mjs';
+import {execFileSync} from 'node:child_process';
+const ROOT=fileURLToPath(new URL('../',import.meta.url)),DAV='https://dav-grab-lead-8328.onpagelove.com';
+const types={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.json':'application/json'};
 const decode=s=>s.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,"'");
-async function req(name,options={},publicRead=false){
- if(!name.startsWith('/')||name.includes('..')||name.includes('?')||name.includes('#'))throw Error('Unsafe remote path');
- const r=await fetch((publicRead?origin:dav)+name,{...options,headers:{...(!publicRead?{Authorization:'Bearer '+key}:{}),...options.headers},redirect:'manual',cache:'no-store',signal:AbortSignal.timeout(30000)});
- if(r.status>=300&&r.status<400)throw Error('Redirect refused');
- return{status:r.status,etag:r.headers.get('etag'),type:r.headers.get('content-type'),bytes:Buffer.from(await r.arrayBuffer())};
-}
-async function list(dir){
- const r=await req(dir,{method:'PROPFIND',headers:{Depth:'1','Content-Type':'application/xml'},body:'<?xml version="1.0"?><d:propfind xmlns:d="DAV:"><d:prop><d:resourcetype/><d:getetag/><d:getcontentlength/></d:prop></d:propfind>'});
- if(r.status!==207)throw Error('List failed '+r.status);
- const entries=[];
- for(const m of r.bytes.toString().matchAll(/<(?:\w+:)?response\b[^>]*>([\s\S]*?)<\/(?:\w+:)?response>/gi)){
-  const text=m[1],href=text.match(/<(?:\w+:)?href[^>]*>([\s\S]*?)<\/(?:\w+:)?href>/i)?.[1];if(!href)throw Error('Invalid DAV response');
-  const url=new URL(decode(href),dav);if(url.origin!==dav)throw Error('DAV returned another host');
-  const name=url.pathname;if(name===dir||name.replace(/\/$/,'')===dir.replace(/\/$/,''))continue;
-  if(!name.startsWith(dir)||decodeURIComponent(name).includes('..'))throw Error('Out-of-scope DAV path');
-  entries.push({path:name,directory:/<(?:\w+:)?collection\b/i.test(text)});
+const strong=tag=>typeof tag==='string'&&/^"[^"\r\n]+"$/.test(tag);
+function styleIs(raw,expected){const entries=raw.split(';').map(s=>s.trim()).filter(Boolean).map(s=>{const i=s.indexOf(':');return[s.slice(0,i).trim(),s.slice(i+1).trim()];});return entries.length===Object.keys(expected).length&&new Set(entries.map(e=>e[0])).size===entries.length&&entries.every(([k,v])=>expected[k]===v);}
+function providerFooter(e){if(e?.localName!=='div'||e.attributes.length!==1||!e.hasAttribute('style')||!styleIs(e.getAttribute('style'),{position:'fixed',bottom:'0',left:'0',right:'0',padding:'8px',background:'#f0f0f0','text-align':'center','font-size':'12px',color:'#666','z-index':'9999',opacity:'0.8','border-top':'1px solid #ddd'}))return false;const a=e.children[0];return e.children.length===1&&a.localName==='a'&&a.children.length===0&&a.attributes.length===2&&a.getAttribute('href')==='https://pagelove.com/'&&styleIs(a.getAttribute('style')||'',{color:'#4a90d9','text-decoration':'none'})&&a.textContent.trim()==='Pagelove'&&e.textContent.replace(/\s+/g,' ').trim()==='Powered by Pagelove';}
+export function htmlIdentity(bytes,publicRead=false){const doc=new DOMParser().parseFromString(bytes.toString('utf8'),'text/html');if(publicRead&&providerFooter(doc.body.lastElementChild))doc.body.lastElementChild.remove();doc.documentElement.normalize();const visit=n=>n.nodeType===3?(/^(SCRIPT|STYLE|PRE)$/.test(n.parentNode?.nodeName)?n.textContent.trim():n.textContent.replace(/\s+/g,' ').trim()):n.nodeType!==1?null:[n.localName,[...n.attributes].filter(a=>!/^xmlns(?::|$)/.test(a.name)).map(a=>[a.name,a.value]).sort((a,b)=>a[0].localeCompare(b[0])),[...n.childNodes].map(visit).filter(x=>x!==null&&x!=='')];return JSON.stringify(visit(doc.documentElement));}
+function equivalent(name,a,b,publicRead=false){return name.endsWith('.html')?htmlIdentity(a)===htmlIdentity(b,publicRead):a.equals(b);}
+export function assertPushed(root){const git=(...args)=>execFileSync('git',['-c','safe.directory='+root.replaceAll('\\','/'),...args],{cwd:root,encoding:'utf8'}).trim();if(git('status','--porcelain'))throw Error('Commit and push all source/evidence before publishing');const head=git('rev-parse','HEAD'),remote=git('ls-remote','origin','refs/heads/main').split(/\s/)[0];if(head!==remote)throw Error('Remote main does not match the committed candidate');return head;}
+export function createPublisher({root=ROOT,transport,gate=()=>verifyGate({root}),gitCheck=()=>assertPushed(root)}={}){
+ let key='',complete=false,baseline=[],backupPath='';
+ async function req(name,options={},publicRead=false){if(!name.startsWith('/')||name.includes('..')||/[?#\\]/.test(name))throw Error('Unsafe remote path');if(transport)return transport(name,options,publicRead);const r=await fetch((publicRead?ORIGIN:DAV)+name,{...options,headers:{...(!publicRead?{Authorization:'Bearer '+key}:{}),...options.headers},redirect:'manual',cache:'no-store',signal:AbortSignal.timeout(30000)});if(r.status>=300&&r.status<400)throw Error('Redirect refused');return{status:r.status,etag:r.headers.get('etag'),type:r.headers.get('content-type')||'',bytes:Buffer.from(await r.arrayBuffer())};}
+ async function list(dir){const r=await req(dir,{method:'PROPFIND',headers:{Depth:'1','Content-Type':'application/xml'},body:'<?xml version="1.0"?><d:propfind xmlns:d="DAV:"><d:prop><d:resourcetype/><d:getetag/></d:prop></d:propfind>'});if(r.status!==207)throw Error('List failed '+r.status);const entries=[];for(const m of r.bytes.toString().matchAll(/<(?:\w+:)?response\b[^>]*>([\s\S]*?)<\/(?:\w+:)?response>/gi)){const text=m[1],href=text.match(/<(?:\w+:)?href[^>]*>([\s\S]*?)<\/(?:\w+:)?href>/i)?.[1];if(!href)throw Error('Invalid DAV response');const url=new URL(decode(href),DAV);if(url.origin!==DAV)throw Error('Unexpected DAV host');const name=url.pathname;if(name.replace(/\/$/,'')===dir.replace(/\/$/,''))continue;if(!name.startsWith(dir)||decodeURIComponent(name).split('/').some(s=>s==='..'||s==='.')||name.includes('\\'))throw Error('Unsafe DAV path');entries.push({path:name,directory:/<(?:\w+:)?collection\b/i.test(text)});}if(!r.bytes.toString().includes('response'))throw Error('Unrecognized DAV listing');return entries;}
+ async function walk(dir='/',seen=new Set()){if(seen.has(dir)||seen.size>=2000)throw Error('Backup directory limit');seen.add(dir);let all=[];for(const e of await list(dir)){all.push(e);if(e.directory)all.push(...await walk(e.path.endsWith('/')?e.path:e.path+'/',seen));if(all.length>10000)throw Error('Backup inventory limit');}return all;}
+ async function backup(secret){complete=false;baseline=[];if(typeof secret!=='string'||!secret.startsWith('pk_'))throw Error('Missing owner credential');key=secret;const inventory=await walk();backupPath=path.join(root,'.local/server-backup',new Date().toISOString().replace(/[:.]/g,'-'));await fs.mkdir(backupPath,{recursive:true});let total=0;for(const e of inventory.filter(e=>!e.directory)){const r=await req(e.path);if(r.status!==200)throw Error('Backup read failed: '+e.path);total+=r.bytes.length;if(total>500*1024*1024)throw Error('Backup exceeds 500 MB limit');const local=path.resolve(backupPath,'.'+decodeURIComponent(e.path));if(!local.startsWith(backupPath+path.sep))throw Error('Unsafe backup target');await fs.mkdir(path.dirname(local),{recursive:true});await fs.writeFile(local,r.bytes);Object.assign(e,{hash:hash(r.bytes),bytes:r.bytes.length,etag:r.etag});if(hash(await fs.readFile(local))!==e.hash)throw Error('Local backup verification failed');}
+  const entry=inventory.find(e=>e.path==='/index.html'&&!e.directory);if(!entry||!strong(entry.etag))throw Error('A backed-up entry with a strong ETag is required');const now=await req('/index.html');if(now.status!==200||now.etag!==entry.etag||hash(now.bytes)!==entry.hash)throw Error('Entry changed during backup');await fs.writeFile(path.join(backupPath,'manifest.json'),JSON.stringify({utc:new Date().toISOString(),dav:DAV,origin:ORIGIN,entries:inventory,verified:true},null,2));baseline=inventory;complete=true;return{backedUp:true,files:inventory.filter(e=>!e.directory).length,directories:inventory.filter(e=>e.directory).length,bytes:total,backupPath};
  }
- if(!r.bytes.toString().includes('response'))throw Error('Unrecognized DAV listing');
- return entries;
+ async function readback(name,bytes,publicRead=false){const r=await req(name,{},publicRead);if(r.status!==200||!equivalent(name,bytes,r.bytes,publicRead))throw Error('Semantic/byte readback mismatch: '+name);const expected=types[path.extname(name)]?.split(';')[0];if(publicRead&&expected&&!r.type?.toLowerCase().startsWith(expected))throw Error('Wrong public MIME type: '+name);return r;}
+ async function immutable(name,bytes){const before=await req(name);if(before.status===200){if(!equivalent(name,bytes,before.bytes))throw Error('Immutable dependency already differs: '+name);return{path:name,existed:true};}if(before.status!==404)throw Error('Dependency pre-read failed');let result;try{result=await req(name,{method:'PUT',headers:{'Content-Type':types[path.extname(name)]||'application/octet-stream','If-None-Match':'*'},body:bytes});if(![200,201,204].includes(result.status))throw Error('Create refused '+result.status);}catch(error){await readback(name,bytes);result={status:'reconciled'};}await readback(name,bytes);return{path:name,status:result.status,sourceSha256:hash(bytes)};}
+ async function replaceEntry(bytes,expected){if(!strong(expected.etag))throw Error('Strong baseline ETag required');const before=await req('/index.html');if(before.status!==200||before.etag!==expected.etag||hash(before.bytes)!==expected.hash)throw Error('Backed-up entry changed; promotion refused');let status;try{const r=await req('/index.html',{method:'PUT',headers:{'Content-Type':types['.html'],'If-Match':expected.etag},body:bytes});if(![200,201,204].includes(r.status))throw Error('Conditional entry promotion refused '+r.status);status=r.status;}catch(error){const after=await req('/index.html');if(after.status!==200||!equivalent('/index.html',bytes,after.bytes))throw error;status='reconciled';}const saved=await readback('/index.html',bytes);return{path:'/index.html',status,etag:saved.etag,hash:hash(saved.bytes)};}
+ async function deploy(){const verified=await gate();const commit=await gitCheck();if(!key||!complete)throw Error('Completed verified backup required');const release=verified.release,dir='/releases/'+release.id+'/';for(const d of ['/releases/',dir,dir+'content/',dir+'assets/']){const r=await req(d,{method:'MKCOL'});if(![201,405].includes(r.status))throw Error('Collection creation failed');}const written=[];for(const f of release.files.filter(f=>f.path!=='index.html')){const bytes=await fs.readFile(path.join(root,'dist',f.path));if(hash(bytes)!==f.sha256)throw Error('Candidate changed during publication');written.push(await immutable('/'+f.path,bytes));await readback('/'+f.path,bytes,true);}const index=await fs.readFile(path.join(root,'dist/index.html'));if(hash(index)!==release.files.find(f=>f.path==='index.html').sha256)throw Error('Entry changed during publication');const promoted=await replaceEntry(index,baseline.find(e=>e.path==='/index.html'));const live=await readback('/index.html',index,true);const rootPage=await req('/',{},true);if(rootPage.status!==200||!equivalent('/index.html',index,rootPage.bytes,true))throw Error('Public root differs from promoted entry');const receipt={utc:new Date().toISOString(),origin:ORIGIN,dav:DAV,candidate:release.id,sourceDigest:release.sourceDigest,commit,verifiedPublicFiles:release.files.length,backupVerified:true,backupLocation:'Ignored .local/server-backup',previousEntrySha256:baseline.find(e=>e.path==='/index.html').hash,publication:'Retained previous releases; immutable dependencies verified before conditional entry promotion',sourceEntrySha256:hash(index),servedEntrySha256:hash(live.bytes),promoted,written,credentialStored:false};await fs.mkdir(path.join(root,'audit/current'),{recursive:true});await fs.writeFile(path.join(root,'audit/current/deployment.json'),JSON.stringify(receipt,null,2));return{deployed:true,origin:ORIGIN,release:release.id,verifiedPublicFiles:release.files.length};}
+ async function rollback(expected){if(!complete)throw Error('Completed verified backup required');const entry=baseline.find(e=>e.path==='/index.html'),bytes=await fs.readFile(path.resolve(backupPath,'.'+entry.path));if(hash(bytes)!==entry.hash)throw Error('Backup entry changed');return replaceEntry(bytes,expected);}
+ return{backup,deploy,rollback};
 }
-async function walk(dir='/'){
- const out=[];for(const e of await list(dir)){out.push(e);if(e.directory)out.push(...await walk(e.path.endsWith('/')?e.path:e.path+'/'));if(out.length>10000)throw Error('Backup inventory limit');}return out;
-}
-export async function backup(secret){
- if(typeof secret!=='string'||!secret.startsWith('pk_'))throw Error('Missing owner credential');key=secret;
- inventory=await walk();backupPath=path.join(root,'.local','server-backup',new Date().toISOString().replace(/[:.]/g,'-'));await fs.mkdir(backupPath,{recursive:true});
- let total=0;for(const e of inventory.filter(x=>!x.directory)){
-  const r=await req(e.path);if(r.status!==200)throw Error('Backup read failed '+e.path+' '+r.status);
-  total+=r.bytes.length;if(total>500*1024*1024)throw Error('Backup exceeds bounded 500 MB operation');
-  const local=path.resolve(backupPath,'.'+decodeURIComponent(e.path));if(!local.startsWith(backupPath+path.sep))throw Error('Unsafe backup path');
-  await fs.mkdir(path.dirname(local),{recursive:true});await fs.writeFile(local,r.bytes);
-  e.hash=hash(r.bytes);e.bytes=r.bytes.length;e.etag=r.etag;
-  if(hash(await fs.readFile(local))!==e.hash)throw Error('Local backup verification failed');
- }
- await fs.writeFile(path.join(backupPath,'manifest.json'),JSON.stringify({utc:new Date().toISOString(),dav,origin,entries:inventory,verified:true},null,2));
- return{backedUp:true,files:inventory.filter(e=>!e.directory).length,directories:inventory.filter(e=>e.directory).length,bytes:total,backupPath};
-}
-export async function wipe(){
- if(!backupPath)throw Error('Verified backup required');
- const now=await walk();const names=x=>x.map(e=>e.path).sort().join('\n');if(names(now)!==names(inventory))throw Error('Remote inventory changed since backup');
- for(const e of inventory.filter(e=>!e.directory)){const r=await req(e.path);if(r.status!==200||hash(r.bytes)!==e.hash||r.etag!==e.etag)throw Error('Remote content changed since backup: '+e.path);}
- const deleted=[];
- for(const e of [...inventory].sort((a,b)=>b.path.length-a.path.length)){
-  if(e.directory&&(await list(e.path.endsWith('/')?e.path:e.path+'/')).length)throw Error('Concurrent new content appeared in '+e.path);
-  const r=await req(e.path,{method:'DELETE',headers:e.etag?{'If-Match':e.etag}:{}});
-  if(![200,204,404].includes(r.status))throw Error('Delete failed '+e.path+' '+r.status);deleted.push({path:e.path,status:r.status});
- }
- const remaining=await walk();if(remaining.length)throw Error('Wipe did not empty the host');
- await fs.writeFile(path.join(root,'audit/wipe.json'),JSON.stringify({utc:new Date().toISOString(),dav,backupVerified:true,backupLocation:'Ignored .local/server-backup',deleted,remaining:0},null,2));
- return{wiped:true,deleted:deleted.length};
-}
-const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.json':'application/json'};
-async function upload(name,bytes){
- const before=await req(name);if(![200,404].includes(before.status))throw Error('Pre-write read failed');
- const r=await req(name,{method:'PUT',headers:{'Content-Type':types[path.extname(name)]||'application/octet-stream',...(before.status===200?{'If-Match':before.etag}:{'If-None-Match':'*'})},body:bytes});
- if(![200,201,204].includes(r.status))throw Error('Upload failed '+name+' '+r.status);
- const after=await req(name);if(after.status!==200)throw Error('Authoring readback failed');
- // Pagelove serializes HTML; compare critical source identity and references separately below.
- if(!name.endsWith('.html')&&!after.bytes.equals(bytes))throw Error('Readback byte mismatch '+name);
- return{path:name,status:r.status,sourceSha256:hash(bytes),authoringSha256:hash(after.bytes)};
-}
-export async function deploy(){
- if(!key||!backupPath)throw Error('Authenticate and back up first');
- const release=JSON.parse(await fs.readFile(path.join(root,'dist/release.json'),'utf8'));
- const dir='/releases/'+release.id+'/';for(const d of ['/releases/',dir,dir+'content/']){const r=await req(d,{method:'MKCOL'});if(![201,405].includes(r.status))throw Error('Collection creation failed');}
- const written=[];for(const f of release.files.filter(f=>f.path!=='index.html')){const bytes=await fs.readFile(path.join(root,'dist',f.path));if(hash(bytes)!==f.sha256)throw Error('Candidate hash changed');written.push(await upload('/'+f.path,bytes));}
- for(const f of release.files.filter(f=>f.path!=='index.html')){const r=await req('/'+f.path,{},true);const bytes=await fs.readFile(path.join(root,'dist',f.path));if(r.status!==200||(!f.path.endsWith('.html')&&!r.bytes.equals(bytes)))throw Error('Public dependency mismatch '+f.path);if(f.path.endsWith('.html')&&!r.bytes.toString().includes('mg-level-060'))throw Error('Public content incomplete');}
- const index=await fs.readFile(path.join(root,'dist/index.html'));written.push(await upload('/index.html',index));
- const live=await req('/',{},true);if(live.status!==200||!live.bytes.toString().includes(release.id)||!live.bytes.toString().includes('Mahjong Garden'))throw Error('Public release identity mismatch');
- const receipt={utc:new Date().toISOString(),origin,dav,release:release.id,verifiedPublicFiles:release.files.length,publication:'Dependencies staged and publicly verified before entry promotion',sourceEntrySha256:hash(index),servedEntrySha256:hash(live.bytes),htmlSerializationObserved:!index.equals(live.bytes),written,credentialStored:false};
- await fs.writeFile(path.join(root,'audit/deployment.json'),JSON.stringify(receipt,null,2));return{deployed:true,origin,release:release.id,verifiedPublicFiles:release.files.length};
-}
+const publisher=createPublisher();export const backup=publisher.backup,deploy=publisher.deploy;

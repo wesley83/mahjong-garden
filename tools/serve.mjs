@@ -1,7 +1,9 @@
-import http from 'node:http';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-const root=fileURLToPath(new URL(process.argv.includes('--dist')?'../dist/':'../',import.meta.url)),port=Number(process.env.PORT||4173);
-const types={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.json':'application/json'};
-http.createServer(async(req,res)=>{try{const pathname=decodeURIComponent(new URL(req.url,'http://local').pathname);const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));if(!file.startsWith(root)||pathname.split('/').some(p=>p.startsWith('.')&&p))throw Error('Invalid path');const bytes=await fs.readFile(file);res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(bytes);}catch{res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');}}).listen(port,'127.0.0.1',()=>console.log(`Local: http://127.0.0.1:${port}`));
+import http from 'node:http';import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const source=path.resolve(fileURLToPath(new URL('../',import.meta.url))),dist=path.join(source,'dist'),root=process.argv.includes('--dist')?dist:source,port=Number(process.env.PORT||4173);let fault='';
+const types={'.html':'text/html; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.json':'application/json'};
+http.createServer(async(req,res)=>{try{const pathname=decodeURIComponent(new URL(req.url,'http://local').pathname);
+ if(pathname==='/__qa-manifest.json'){res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'});return res.end(await fs.readFile(path.join(dist,'release.json')));}
+ if(pathname==='/__qa/fault'&&req.method==='POST'){let body='';for await(const chunk of req){body+=chunk;if(body.length>100)throw Error('Oversize');}if(!['','library','module'].includes(body))throw Error('Unknown fixture');fault=body;res.writeHead(204);return res.end();}
+ const moduleFail=fault==='module'&&pathname.endsWith('/app.mjs'),libraryFail=fault==='library'&&pathname.endsWith('/content/levels.html');if(moduleFail||libraryFail){fault='';res.writeHead(503,{'Content-Type':'text/plain','Cache-Control':'no-store'});return res.end('Deliberate local-only resource failure');}
+ const preview=pathname.startsWith('/preview/'),base=preview?dist:root,relative=preview?pathname.slice(8):pathname,file=path.resolve(base,'.'+(relative==='/'?'/index.html':relative));if(!file.startsWith(base+path.sep)||relative.split('/').some(p=>p.startsWith('.')&&p))throw Error('Invalid path');const bytes=await fs.readFile(file);res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(bytes);
+ }catch{res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');}}).listen(port,'127.0.0.1',()=>console.log(`Local: http://127.0.0.1:${port}; built candidate: /preview/`));

@@ -68,3 +68,44 @@
 - Why: Leave only the delivered game and durable recovery/evidence artifacts.
 - Affected: GitHub repository metadata; task-owned local processes and tabs; this audit and source manifest.
 - Verification: Deployment console exited 0; all three preview processes exited after interrupt. Public match/undo/reload and live release identity already passed. Credential scan and source manifest regenerated before final evidence commit; final push is verified by the returned Git/GitHub result. Private backup and local screenshot remain ignored. No gameplay source changed after mg-604629dc35a167 passed its gates.
+
+## MG-008 — handbook comparison and remediation plan
+- UTC: 2026-10-17T22:00:00Z
+- Actor: Codex
+- Request: Wesley asked to compare the completed game to the specified handbook, identify/address gaps, commit/push, deploy, then commit/push again.
+- Change: Recorded the baseline, applicable handbook sections, nine concrete gap groups, acceptance checks and ordered release/recovery plan in audit/HANDBOOK-REVIEW.md before implementation.
+- Why: Prioritize data-loss/async ownership, validation, accessibility and publication evidence over unrelated optional features.
+- Affected: audit/HANDBOOK-REVIEW.md, audit/CHANGELOG.md. Runtime/server untouched at this entry.
+- Verification: Clean baseline 0cbfa62865e0e270a5ee967052c25e257199a787 observed; source/guide inspected. Honcho tools remain unavailable. Fixes/tests/deployment pending. Existing credential and deployment authorization persist from this chat; normal update will retain previous releases and will not repeat the initial wipe.
+
+## MG-009 — contracts, recovery, accessibility and release controls
+- UTC: 2026-10-17T22:26:56Z
+- Actor: Codex
+- Reference: MG-008, GAP-01–09 and Wesley's requested handbook comparison.
+- Change: Shared strict profile/campaign parsing; bounded cancellable image work/header checks; whole-draft undo; generation-owned saves/restores; save-and-leave locking; coherent elapsed/assistance; preserved text/editor focus; safe insets, rem text and 44px actions; visible loading retry and audio ownership. Added original social/touch exports and role inventory. Added locked development parser, build/source identities, a machine receipt gate, conditionally immutable publisher, strong backed-up entry promotion and mocked rollback. Reconciled the original plan/README with the actual contract.
+- Why: Close the nine recorded reliability/evidence gaps while keeping the original save/rules/content versions and sixty levels.
+- Affected: app/core/storage plus new profile/operations/image-input/boot modules, index/style/favicon/assets, package/lock/runtime pin, build/deploy/gate/check/server tools, contract/release/browser fixtures, plan/README and this audit.
+- Verification: 18 Node groups pass, including 720 seeded deals, old-reader compatibility, missing-asset/receipt refusal, partial backup/concurrent entry refusal, ambiguous write reconciliation and rollback without dependency deletion. First browser pass confirms layout, quota/conflict retry, failed-save retention, delayed saves/cancellation/image undo, enlarged text/insets and resource recovery. Final exact-candidate browser/native gates remain pending. No production update yet.
+- Corrected attempts: Three new test failures came from a fixture sharing and mutating campaign positions; cloning fixture positions fixed them. The old core import moved from a data URI to an ignored local fixture to keep diagnostic stacks bounded. Two optional PNG authoring imports used an incorrect bundled sharp entry before loading its package entry successfully. Two patch-context attempts did not mutate files. Local preview initially rejected paths because its directory root retained a trailing separator; resolved the root before containment checking. A studio browser assertion expected the old error wording; changed it to the explicit preserved-draft message, retaining the failed observation in browser-attempts.json. An early waiter expired before the asynchronous layout result was ready; the actual completed result passed.
+- Asset inspection: Original 1200×630 social card and 16px favicon rendered and visually inspected. Optional authoring uses bundled sharp 0.35.5; production/build use frozen PNGs and verify their dimensions.
+- Limits: Chromium/tool-visible scenarios only; no claim of physical-device coverage, enjoyment or complete accessibility certification. Progression geometry/rubric recorded separately.
+
+## MG-010 — measured cold audio cost
+- UTC: 2026-10-17T22:30:00Z
+- Actor: Codex
+- Reference: MG-008/GAP-06 and the 100ms board-dispatch target.
+- Finding/plan before correction: All ten browser groups passed their functional checks on mg-90c53eabad898a, but the instrumented first match measured 416.1ms (earlier aggregate 736ms), exceeding the target. The first enabled match constructs AudioContext synchronously; later matches are much faster. Move optional sound into an owned, cancellable effect scheduled after board feedback, then rerun the exact candidate and enforce the board-dispatch threshold. Preserve the timing outlier as a failed performance observation rather than label the whole candidate ready.
+- Affected: app.mjs audio scheduling, tests/browser.mjs performance acceptance, audit/current intermediate evidence.
+- Verification: Pending measurement after the change. Functional source remains unchanged until this entry.
+
+## MG-011 — exact-candidate acceptance and source release
+- UTC: 2026-10-17T22:34:21Z
+- Actor: Codex
+- Reference: MG-008–010.
+- Change: Completed ten built-control browser groups and real native keyboard/focus/modal checks; bound each browser result to its actual release meta and made the gate reject mixed candidates. Recorded progression/asset/dependency evidence and updated the comparison with verified corrections.
+- Why: Establish the requested fixes against the actual candidate before committing, pushing or promoting production.
+- Affected: browser/gate fixtures, audit/current receipts, comparison/README/plan and source manifest. Runtime final change is the owned deferred optional-audio effect from MG-010.
+- Verification: Gate passes for mg-4fc596dd45616c, 14 artifacts/373,967 initial bytes, 18 Node groups, ten browser groups, required native checks all true. Native Enter/Space/H cleared all 24 tiles; mismatch retained 24, text match 24→22 retained text focus, grid edit retained column/row focus, Escape returned help focus and clock remained 00:15 in the dialog. Node suite includes 720 seeded deals and old/new v1 reader compatibility. Frozen-lock offline reinstall passed; 15 development dependencies have zero registry-reported advisories. No production dependencies.
+- Performance correction: Final board max 6.3ms, p95 5.5ms after deferring AudioContext setup; the 416.1ms old match sample remains in failed-performance evidence.
+- Corrected evidence attempts: Direct iframe DOM inspection is unavailable in the browser tool, so the local fixture itself reads each child's meta identity and the gate verifies every result. Before current receipts existed, the real gate refused missing browser/native evidence; it passed only after executed receipts were written. Historical failed candidates/observations are retained, not reused as current acceptance.
+- Backup: Complete current application backup observed at ignored .local/server-backup/2026-10-17T22-30-22-376Z, eight files/three directories/348,722 bytes. Deployment console closed before loading final publisher code. Production unchanged; source commit/push and a fresh backup/promotion next.

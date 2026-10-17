@@ -1,21 +1,19 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import {createHash} from 'node:crypto';
-import {validatePositions,deal,isFree} from '../core.mjs';
-const root=new URL('../',import.meta.url),hash=b=>createHash('sha256').update(b).digest('hex');
-const files=['app.mjs','core.mjs','faces.mjs','storage.mjs','style.css','favicon.svg','content/levels.html'];
-const source=await fs.readFile(new URL('content/levels.html',root),'utf8');
-const articles=[...source.matchAll(/<article id="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)];
-if(articles.length!==60)throw Error('Release requires exactly 60 campaign levels.');
-const signatures=new Set();for(const [i,a]of articles.entries()){
- if(a[1]!==`mg-level-${String(i+1).padStart(3,'0')}`)throw Error('Invalid permanent level identity');
- if(!a[0].includes(`data-number="${i+1}"`)||!a[0].includes('data-revision="1"')||!a[0].includes(`data-chapter="${Math.floor(i/10)+1}"`))throw Error('Invalid content metadata');
- const positions=[...a[2].matchAll(/<li data-tile="([^"]+)" data-x="(\d+)" data-y="(\d+)" data-z="(\d+)"/g)].map(m=>({id:m[1],x:+m[2],y:+m[3],z:+m[4]}));validatePositions(positions);
- const signature=positions.map(p=>p.id).sort().join('|');if(signatures.has(signature))throw Error('Duplicate campaign geometry');signatures.add(signature);
- const d=deal(positions,12345);let remaining=d.tiles;for(const [a,b]of d.solution){const ta=remaining.find(t=>t.id===a),tb=remaining.find(t=>t.id===b);if(!ta||!tb||ta.face!==tb.face||!isFree(ta,remaining)||!isFree(tb,remaining))throw Error('Solution validation failed');remaining=remaining.filter(t=>t.id!==a&&t.id!==b);}if(remaining.length)throw Error('Incomplete solution');
+import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {DOMParser} from 'linkedom';
+import {parseCampaign,deal,isFree} from '../core.mjs';import {RUNTIME,ASSETS,ORIGIN,hash,sourceIdentity,pngSize} from './contracts.mjs';
+export const ROOT=fileURLToPath(new URL('../',import.meta.url));
+export async function buildProject({root=ROOT,output=path.join(root,'dist')}={}){
+ const source=await fs.readFile(path.join(root,'content/levels.html'),'utf8'),levels=parseCampaign(new DOMParser().parseFromString(source,'text/html'));
+ const signatures=new Set();for(const level of levels){const signature=level.positions.map(p=>p.id).sort().join('|');if(signatures.has(signature))throw Error('Duplicate campaign geometry');signatures.add(signature);const result=deal(level.positions,12345);let remaining=result.tiles;for(const [a,b]of result.solution){const ta=remaining.find(t=>t.id===a),tb=remaining.find(t=>t.id===b);if(!ta||!tb||ta.face!==tb.face||!isFree(ta,remaining)||!isFree(tb,remaining))throw Error('Solution validation failed');remaining=remaining.filter(t=>t.id!==a&&t.id!==b);}if(remaining.length)throw Error('Incomplete solution');}
+ for(const asset of ASSETS){await fs.access(path.join(root,asset.source));const size=pngSize(await fs.readFile(path.join(root,asset.path)));if(size.width!==asset.width||size.height!==asset.height)throw Error('Wrong export dimensions for '+asset.role);}
+ const identity=await sourceIdentity(root),id='mg-'+identity.digest.slice(0,14),files=[];
+ for(const name of [...RUNTIME,...ASSETS.map(a=>a.path)]){const target=`releases/${id}/${name}`,bytes=await fs.readFile(path.join(root,name));await fs.mkdir(path.dirname(path.join(output,target)),{recursive:true});await fs.writeFile(path.join(output,target),bytes);files.push({path:target,sha256:hash(bytes),bytes:bytes.length,initial:RUNTIME.includes(name)});}
+ let html=await fs.readFile(path.join(root,'index.html'),'utf8');html=html.replace('content="development"',`content="${id}"`);
+ for(const name of [...RUNTIME,...ASSETS.map(a=>a.path)])html=html.replaceAll(`./${name}`,`./releases/${id}/${name}`).replaceAll(`${ORIGIN}/${name}`,`${ORIGIN}/releases/${id}/${name}`);
+ const doc=new DOMParser().parseFromString(html,'text/html');for(const property of ['og:title','og:type','og:url','og:image'])if(!doc.querySelector(`meta[property="${property}"]`)?.getAttribute('content'))throw Error('Missing share property '+property);
+ if(doc.querySelector('meta[property="og:image"]').getAttribute('content')!==`${ORIGIN}/releases/${id}/assets/social-card.png`)throw Error('Share asset is not pinned to the candidate');
+ await fs.writeFile(path.join(output,'index.html'),html);files.push({path:'index.html',sha256:hash(html),bytes:Buffer.byteLength(html),initial:true});
+ const initialBytes=files.filter(f=>f.initial).reduce((n,f)=>n+f.bytes,0);if(initialBytes>400000)throw Error('Gameplay pack exceeds its adopted 400 KB budget: '+initialBytes);
+ const release={id,version:'1.1.0',rules:'mg-rules-1',contentRevision:1,saveVersion:1,levels:60,sourceDigest:identity.digest,sourceFiles:identity.files,node:process.versions.node,initialBytes,files};
+ await fs.mkdir(output,{recursive:true});await fs.writeFile(path.join(output,'release.json'),JSON.stringify(release,null,2));return release;
 }
-const bytes=await Promise.all(files.map(f=>fs.readFile(new URL(f,root))));const index=await fs.readFile(new URL('index.html',root),'utf8');const id='mg-'+hash(Buffer.concat([...bytes,Buffer.from(index)])).slice(0,14);
-const output=new URL('dist/',root);await fs.mkdir(new URL(`releases/${id}/content/`,output),{recursive:true});const manifest=[];
-for(let i=0;i<files.length;i++){const name=`releases/${id}/${files[i]}`;await fs.writeFile(new URL(name,output),bytes[i]);manifest.push({path:name,sha256:hash(bytes[i]),bytes:bytes[i].length});}
-const published=index.replace('content="development"',`content="${id}"`).replaceAll('./style.css',`./releases/${id}/style.css`).replaceAll('./app.mjs',`./releases/${id}/app.mjs`).replaceAll('./favicon.svg',`./releases/${id}/favicon.svg`);await fs.writeFile(new URL('index.html',output),published);manifest.push({path:'index.html',sha256:hash(published),bytes:Buffer.byteLength(published)});
-const release={id,version:'1.0.0',rules:'mg-rules-1',contentRevision:1,levels:60,files:manifest};await fs.writeFile(new URL('release.json',output),JSON.stringify(release,null,2));console.log(JSON.stringify({release:id,levels:60,files:manifest.length,initialBytes:manifest.reduce((n,f)=>n+f.bytes,0)}));
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{const r=await buildProject();console.log(JSON.stringify({release:r.id,levels:r.levels,files:r.files.length,initialBytes:r.initialBytes}));}catch(error){console.error(error.message);process.exitCode=1;}}

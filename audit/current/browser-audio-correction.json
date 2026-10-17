@@ -1,0 +1,400 @@
+{
+  "candidate": "mg-85ef20098e02c5",
+  "utc": "2026-10-17T22:31:50.596Z",
+  "results": [
+    {
+      "utc": "2026-10-17T22:30:01.559Z",
+      "name": "responsive layout matrix",
+      "status": "passed",
+      "observations": [
+        {
+          "width": 320,
+          "height": 568,
+          "documentWidth": 305,
+          "tiles": 64,
+          "minTileWidth": 28,
+          "minTileHeight": 36,
+          "controlsInViewport": true,
+          "dialogs": []
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "documentWidth": 375,
+          "tiles": 64,
+          "minTileWidth": 28,
+          "minTileHeight": 36,
+          "controlsInViewport": true,
+          "dialogs": []
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "documentWidth": 553,
+          "tiles": 64,
+          "minTileWidth": 40,
+          "minTileHeight": 51,
+          "controlsInViewport": true,
+          "dialogs": []
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "documentWidth": 829,
+          "tiles": 64,
+          "minTileWidth": 43,
+          "minTileHeight": 55,
+          "controlsInViewport": true,
+          "dialogs": []
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "documentWidth": 1265,
+          "tiles": 64,
+          "minTileWidth": 66,
+          "minTileHeight": 84,
+          "controlsInViewport": true,
+          "dialogs": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "documentWidth": 1425,
+          "tiles": 64,
+          "minTileWidth": 66,
+          "minTileHeight": 84,
+          "controlsInViewport": true,
+          "dialogs": []
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-17T22:30:02.544Z",
+      "name": "atomic storage conflict, failure and next action",
+      "status": "passed",
+      "observations": {
+        "staleWriteRefused": true,
+        "quotaFailurePreservedPrevious": true,
+        "nextWriteSucceeded": true
+      }
+    },
+    {
+      "utc": "2026-10-17T22:30:08.355Z",
+      "name": "studio editing, personal image conversion and failed import preservation",
+      "status": "passed",
+      "observations": {
+        "undoRedo": true,
+        "currentNameSaved": true,
+        "imagesConvertedAndSaved": 2,
+        "customTheme": true,
+        "badImportPreservedDraft": true,
+        "playtest": true
+      }
+    },
+    {
+      "utc": "2026-10-17T22:30:10.301Z",
+      "name": "studio failed save stays recoverable, retry then close",
+      "status": "passed",
+      "observations": {
+        "previousRevisionPreserved": true,
+        "failedCloseRetainedDraft": true,
+        "retrySavedCurrentDraft": true,
+        "normalCloseAfterRecovery": true
+      }
+    },
+    {
+      "utc": "2026-10-17T22:30:21.403Z",
+      "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
+      "status": "passed",
+      "observations": {
+        "startTiles": 24,
+        "win": true,
+        "undo": true,
+        "shuffle": true,
+        "checkpointResume": true,
+        "nextLevel": true,
+        "iterations": 12,
+        "dispatchSamples": 34,
+        "dispatchP95ms": 5.400000035762787,
+        "dispatchMaxMs": 7.899999976158142,
+        "actionSamples": [
+          {
+            "selector": "[data-open=\"levels-dialog\"]",
+            "milliseconds": 7.899999976158142
+          },
+          {
+            "selector": "#level-library .chapter-group:first-child .level-card:first-child",
+            "milliseconds": 1.300000011920929
+          },
+          {
+            "selector": "#restart",
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#confirm-ok",
+            "milliseconds": 2.799999952316284
+          },
+          {
+            "selector": "#hint",
+            "milliseconds": 2.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
+            "milliseconds": 3.400000035762787
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 3.100000023841858
+          },
+          {
+            "selector": "#undo",
+            "milliseconds": 2.599999964237213
+          },
+          {
+            "selector": "#shuffle",
+            "milliseconds": 4.300000011920929
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 2.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-3-0\"]",
+            "milliseconds": 2.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 2.300000011920929
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-2-0\"]",
+            "milliseconds": 2.700000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
+            "milliseconds": 2
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 2.400000035762787
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-1-0\"]",
+            "milliseconds": 2.199999988079071
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-3-0\"]",
+            "milliseconds": 2.399999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
+            "milliseconds": 2
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-1-0\"]",
+            "milliseconds": 2.300000011920929
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "milliseconds": 1.7000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-1-0\"]",
+            "milliseconds": 2.700000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.600000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 1.9000000357627869
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 1.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 2.600000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 1.5999999642372131
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-2-0\"]",
+            "milliseconds": 1.7999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-2-0\"]",
+            "milliseconds": 1.300000011920929
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-3-0\"]",
+            "milliseconds": 1.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 1.199999988079071
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-3-0\"]",
+            "milliseconds": 1.100000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-2-0\"]",
+            "milliseconds": 1.4000000357627869
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "milliseconds": 5.400000035762787
+          },
+          {
+            "selector": "#next-level",
+            "milliseconds": 1.0999999642372131
+          }
+        ],
+        "boardDispatchMaxMs": 5.400000035762787
+      }
+    },
+    {
+      "utc": "2026-10-17T22:30:21.466Z",
+      "name": "game backup export/import round-trip",
+      "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "status": "passed",
+      "observations": {
+        "activeTilesPreserved": true,
+        "progressPreserved": true,
+        "imagesAndDraftPreserved": true,
+        "explicitConfirmation": true
+      }
+    },
+    {
+      "utc": "2026-10-17T22:30:23.431Z",
+      "name": "delayed saves, stale restores, cancellation and image undo",
+      "observations": {
+        "laterEditPreserved": true,
+        "saveAndLeaveLocked": true,
+        "nextActionUnlocked": true,
+        "imageUndoRedo": true,
+        "canceledBitmapDisposed": true,
+        "closedRestoreIgnored": true,
+        "latestOverlappingRestoreWins": true
+      },
+      "status": "passed"
+    },
+    {
+      "utc": "2026-10-17T22:30:32.029Z",
+      "name": "text enlargement, safe insets, long labels and focus",
+      "observations": [
+        {
+          "width": 320,
+          "height": 568,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 305,
+          "frequentControls": 9
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 375,
+          "frequentControls": 9
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 553,
+          "frequentControls": 9
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 829,
+          "frequentControls": 9
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 1265,
+          "frequentControls": 9
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "textScale": 2,
+          "insets": [
+            10,
+            16,
+            18,
+            12
+          ],
+          "pageWidth": 1425,
+          "frequentControls": 9
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "utc": "2026-10-17T22:30:36.243Z",
+      "name": "loading, image and audio failure recovery",
+      "observations": {
+        "libraryFailureRetry": true,
+        "moduleFailureRetry": true,
+        "oversizedImageRejectedBeforeDecode": true,
+        "audioRejectionHandled": true,
+        "voicesStopped": true,
+        "normalActionAfterFailure": true
+      },
+      "status": "passed"
+    },
+    {
+      "utc": "2026-10-17T22:30:44.808Z",
+      "name": "version-one checkpoint compatibility",
+      "observations": {
+        "saveVersion": 1,
+        "rules": "mg-rules-1",
+        "checkpointConsumed": true,
+        "studioPreserved": true,
+        "nextActionSucceeded": true,
+        "nodeFixtureAlsoUsesBaselineReader": true
+      },
+      "status": "passed"
+    }
+  ]
+}

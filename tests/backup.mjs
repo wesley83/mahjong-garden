@@ -1,7 +1,7 @@
 import {openStore,readProfile} from '../storage.mjs';
 const frame=document.querySelector('#app'),out=document.querySelector('#results'),wait=ms=>new Promise(r=>setTimeout(r,ms));
 document.querySelector('#backup').onclick=async()=>{
- const result={utc:new Date().toISOString(),name:'game backup export/import round-trip',environment:navigator.userAgent};
+ const result={utc:new Date().toISOString(),candidate:frame.contentDocument.querySelector('meta[name="mg-release"]').content,name:'game backup export/import round-trip',environment:navigator.userAgent};
  const doc=()=>frame.contentDocument,click=async s=>{const b=doc().querySelector(s);if(!b)throw Error('Missing '+s);b.click();await wait(300);};
  try{
   await click('[data-open="settings-dialog"]');let exported;const urls=frame.contentWindow.URL,create=urls.createObjectURL;urls.createObjectURL=function(blob){exported=blob;return create.call(this,blob);};const stop=e=>{if(e.target.closest('a[download]'))e.preventDefault();};doc().addEventListener('click',stop);await click('#export-profile');urls.createObjectURL=create;doc().removeEventListener('click',stop);if(!exported)throw Error('No game export produced');
