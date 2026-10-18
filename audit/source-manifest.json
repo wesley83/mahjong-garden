@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-18T00:45:03.370Z",
+  "utc": "2026-10-18T00:49:10.194Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -59,6 +59,11 @@
       "sha256": "837b4a3dd76ed46b164633884a233352f1b2e021780f609086020c748ddfa434"
     },
     {
+      "path": "audit/audio/deployment-journal.json",
+      "bytes": 1819,
+      "sha256": "f253d90eda2bb1f5797401159119ff645a2438f5050188243535dab2b8e8391b"
+    },
+    {
       "path": "audit/audio/fixture-attempt1.json",
       "bytes": 283,
       "sha256": "ea8b85b458387bbf2ed0c12bcdb1629fe719a318bbb2a29fff05b25b960bb310"
@@ -94,6 +99,11 @@
       "sha256": "7119e0fa617c9808bf1eb13570cabeb209fd26d8dc2f343616c91b3db07eab07"
     },
     {
+      "path": "audit/audio/legacy-after-promotion.json",
+      "bytes": 2453,
+      "sha256": "6f39a969169e56249d6d9fcf3a33ecc3dbe061e54542aa34abde361b3c02fc80"
+    },
+    {
       "path": "audit/audio/native-raw.json",
       "bytes": 1038,
       "sha256": "8d17b7850a958799269a01c97fda56ebef565aaa001d5836080cff670388892a"
@@ -109,9 +119,14 @@
       "sha256": "e8ab88ca5e1a3c2b5e773dfbf4dd4f4f09bf4998bebc63e3438f03c31e480e73"
     },
     {
+      "path": "audit/audio/public.json",
+      "bytes": 1225,
+      "sha256": "398f8051876501cc65e10015a68f1eb1fcb32ee9573b2b6a609f951b16d12a9c"
+    },
+    {
       "path": "audit/audio/REVIEW.md",
-      "bytes": 5687,
-      "sha256": "ff079c1649ddf36822ad376f2c1fa6f3e394cbbe5b2dd4ce854fbe581b5f3e0d"
+      "bytes": 6775,
+      "sha256": "14c394b4fc08a89cab477e139f5c0bde05b19f7aae2675dd71ba939c14594efc"
     },
     {
       "path": "audit/browser-final.json",
@@ -130,8 +145,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 49497,
-      "sha256": "ed2ad876e10fa6d386b9962c08d5d7250d02905e54c30659a679f87fd99179c8"
+      "bytes": 51230,
+      "sha256": "25c6f25fd72eec528828ee8420bfdfc690ceafb4795bbdcedea1a78d3cd0aca4"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -170,8 +185,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 4007,
-      "sha256": "eaca077077c4bd2f5aa26185058a0b0e8edabda9b24ce467d160df1ec7e6ce6f"
+      "bytes": 4185,
+      "sha256": "7b481eef2928a1dbe24fe3f4b843976b1245798ab442faab9b11eb50a31e20b0"
     },
     {
       "path": "audit/current/legacy-public.json",
@@ -210,13 +225,13 @@
     },
     {
       "path": "audit/current/public.json",
-      "bytes": 674,
-      "sha256": "8f35e6f3d96a389e5c99b6409df8de62fbdecccea23b9d881d6700c912aae387"
+      "bytes": 1455,
+      "sha256": "e2fcfb52bc3b96daad50812348883b08534bd167968b22da6184c5cae939371a"
     },
     {
       "path": "audit/current/README.md",
-      "bytes": 4998,
-      "sha256": "0287bf9e914b52f171d5fbd2539a6ff43f0049fe77ca3805ed3365dab2c3be80"
+      "bytes": 5055,
+      "sha256": "141cab5a7fc3647cba5301e05c88d3f0891348d1dbcc8ace8d340e2a3e2144d0"
     },
     {
       "path": "audit/current/release.json",

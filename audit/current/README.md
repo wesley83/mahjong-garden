@@ -29,4 +29,4 @@ The latest Node/browser/native receipts identify this increment, with 24 named N
 
 
 ## Audio1.3 evidence
-Current node/browser/native receipts now identify the audio candidate, with30 Node groups,13 browser groups, six required audio outcomes and native audio-control flags. See ../audio/PLAN.md and REVIEW.md for separate coverage/evidence decisions, controlled app versus real native interaction and offline signal limits. Older deployment observations remain historical until this increment is actually promoted.
+Current node/browser/native receipts now identify the audio candidate, with30 Node groups,13 browser groups, six required audio outcomes and native audio-control flags. See ../audio/PLAN.md and REVIEW.md for separate coverage/evidence decisions, controlled app versus real native interaction and offline signal limits. The audio deployment/public receipts now record successful promotion and actual live checks; prior observations retain their historical identities.

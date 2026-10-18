@@ -1,0 +1,50 @@
+[
+  {
+    "utc": "2026-10-18T00:45:21.707Z",
+    "phase": "pre-promotion-accepted",
+    "candidate": "mg-32a8c86f56cf8f",
+    "pushedCommit": "13b5e98",
+    "decision": "Separate coverage/evidence decisions and exact-candidate gate passed; live checks remain pending."
+  },
+  {
+    "utc": "2026-10-18T00:45:38.816Z",
+    "phase": "backup-requested",
+    "scope": "Complete current DAV tree; preserve prior releases and local browser data."
+  },
+  {
+    "utc": "2026-10-18T00:46:23.870Z",
+    "phase": "backup-verified",
+    "files": 76,
+    "directories": 18,
+    "bytes": 2526921,
+    "backupPath": ".local/server-backup/2026-10-18T00-45-42-837Z"
+  },
+  {
+    "utc": "2026-10-18T00:46:23.870Z",
+    "phase": "promotion-requested",
+    "candidate": "mg-32a8c86f56cf8f",
+    "policy": "Verify immutable dependencies including compacted campaign before conditional root promotion; retain older resources."
+  },
+  {
+    "utc": "2026-10-18T00:47:04.422Z",
+    "phase": "promoted-and-resource-readback-verified",
+    "candidate": "mg-32a8c86f56cf8f",
+    "verifiedPublicFiles": 18,
+    "note": "Publisher returned successful conditional promotion and completed owner/public readback together; live UI observation follows."
+  },
+  {
+    "utc": "2026-10-18T00:49:05.375Z",
+    "phase": "live-ui-verified",
+    "candidate": "mg-32a8c86f56cf8f",
+    "checks": [
+      "old client retained same24 tiles",
+      "new graph restored logical checkpoint",
+      "native defaults35/65 enabled",
+      "independent mute36/64 persisted across reload",
+      "turning music back on unlocked immediately",
+      "native celebration preview accepted",
+      "match24 to22 and undo24 preserved IDs/faces"
+    ],
+    "limits": "Desktop browser/native and offline signal evidence; physical Pixel/Edge and speaker/listening unverified."
+  }
+]

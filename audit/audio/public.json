@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-18T00:48:35.522Z",
+  "candidate": "mg-32a8c86f56cf8f",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "checks": {
+    "oldClientPreserved": true,
+    "checkpointRestored": true,
+    "defaultMusicAndEffects": true,
+    "nativeAudioReady": true,
+    "independentPreferencesRestored": true,
+    "reenableWithoutExtraTap": true,
+    "previewAndFinalDefaults": true,
+    "nativeMatchAndUndo": true
+  },
+  "observations": {
+    "defaults": {
+      "candidate": "mg-32a8c86f56cf8f",
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65",
+      "status": "Audio ready."
+    },
+    "restored": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "final": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65",
+      "status": "Audio ready."
+    },
+    "counts": [
+      24,
+      22,
+      24
+    ],
+    "boundedErrorLog": [],
+    "comparisonCorrection": "Initial ordered DOM comparison refused; logical tile ID/face comparison is identical. Undo changes insertion order, not board state.",
+    "limits": "No physical Pixel/Edge or speaker/listening claim."
+  }
+}

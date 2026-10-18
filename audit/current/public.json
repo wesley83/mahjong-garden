@@ -1,26 +1,51 @@
 {
-  "utc": "2026-10-18T00:23:27.169Z",
-  "candidate": "mg-21265889f3f24d",
+  "utc": "2026-10-18T00:48:35.522Z",
+  "candidate": "mg-32a8c86f56cf8f",
   "origin": "https://grab-lead-8328.onpagelove.com/",
   "checks": {
-    "oldTabPreserved": true,
+    "oldClientPreserved": true,
     "checkpointRestored": true,
-    "nativeMatch": true,
-    "undoRestored": true
+    "defaultMusicAndEffects": true,
+    "nativeAudioReady": true,
+    "independentPreferencesRestored": true,
+    "reenableWithoutExtraTap": true,
+    "previewAndFinalDefaults": true,
+    "nativeMatchAndUndo": true
   },
   "observations": {
+    "defaults": {
+      "candidate": "mg-32a8c86f56cf8f",
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65",
+      "status": "Audio ready."
+    },
+    "restored": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "final": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65",
+      "status": "Audio ready."
+    },
     "counts": [
       24,
       22,
       24
     ],
-    "sourceWidth": "48px",
-    "oldCandidate": "mg-6262dac5695bf4",
-    "physicalAndroidEdge": "unverified"
+    "boundedErrorLog": [],
+    "comparisonCorrection": "Initial ordered DOM comparison refused; logical tile ID/face comparison is identical. Undo changes insertion order, not board state.",
+    "limits": "No physical Pixel/Edge or speaker/listening claim."
   },
-  "sourceDigest": "21265889f3f24de07b61bacefbad3e4cf922686bd6beaff21d193d48f5220e61",
+  "sourceDigest": "32a8c86f56cf8fb42d81bfad6285029271783d818766b75886c6481146130ee7",
   "rawEvidence": {
-    "path": "audit/touch/public.json",
-    "sha256": "eff41779a8d80094b5d08d05988dc9794c86516324c31be3ff773364920c160e"
+    "path": "audit/audio/public.json",
+    "sha256": "398f8051876501cc65e10015a68f1eb1fcb32ee9573b2b6a609f951b16d12a9c"
   }
 }
