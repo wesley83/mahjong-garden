@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-18T01:05:22.119Z",
+  "candidate": "mg-be015f22ce0061",
+  "checks": {
+    "leaderboardName": true,
+    "leaderboardFocus": true,
+    "audioUnlocked": true,
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "name": {
+      "focused": true,
+      "value": "Garden Native"
+    },
+    "volumeKeys": {
+      "music": "36",
+      "sound": "64"
+    },
+    "savedMixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "win": "12 pairs · 00:29 · 12 hints · 0 reshuffles"
+  }
+}

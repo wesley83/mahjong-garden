@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-18T01:05:22.119Z",
-  "candidate": "mg-be015f22ce0061",
+  "utc": "2026-10-18T01:09:50.141Z",
+  "candidate": "mg-806ff54a7b968a",
   "checks": {
     "leaderboardName": true,
     "leaderboardFocus": true,
@@ -44,6 +44,6 @@
       2,
       0
     ],
-    "win": "12 pairs · 00:29 · 12 hints · 0 reshuffles"
+    "win": "12 pairs · 00:16 · 12 hints · 0 reshuffles"
   }
 }

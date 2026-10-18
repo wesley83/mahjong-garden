@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-18T01:05:22.119Z",
-  "candidate": "mg-be015f22ce0061",
+  "utc": "2026-10-18T01:09:50.141Z",
+  "candidate": "mg-806ff54a7b968a",
   "checks": {
     "leaderboardName": true,
     "leaderboardFocus": true,
@@ -44,11 +44,11 @@
       2,
       0
     ],
-    "win": "12 pairs · 00:29 · 12 hints · 0 reshuffles"
+    "win": "12 pairs · 00:16 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "be015f22ce00618d530a315ba4ce088ad1b2a0e6104d27a62c8545050d28c04c",
+  "sourceDigest": "806ff54a7b968a63ab7fb9e5346eaf58e465ae973a17927a94ff3edacb7745cd",
   "rawEvidence": {
     "path": "audit/leaderboard/native-raw.json",
-    "sha256": "930edf2ce37197a7ffecfb30b38eb6c61111ab09e9019c3f12cbbb4460e8e64b"
+    "sha256": "093d7434ea0fa79606a32c093d41913278eb3529c2a7d9a01338be06f58c203e"
   }
 }
