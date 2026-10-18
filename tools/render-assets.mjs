@@ -6,3 +6,5 @@ await sharp(path.join(root,'assets/social-card.svg')).png().toFile(path.join(roo
 await sharp(path.join(root,'favicon.svg')).resize(180,180).png().toFile(path.join(root,'assets/apple-touch-icon.png'));
 await fs.mkdir(path.join(root,'.local/icons'),{recursive:true});for(const size of[16,32,48])await sharp(path.join(root,'favicon.svg')).resize(size,size).png().toFile(path.join(root,`.local/icons/favicon-${size}.png`));
 console.log(JSON.stringify({renderer:'sharp 0.35.5',social:[1200,630],touch:[180,180],favicon:[16,32,48]}));
+
+for(const size of [192,512])await sharp(path.join(root,'favicon.svg')).resize(size,size).png().toFile(path.join(root,`assets/icon-${size}.png`));

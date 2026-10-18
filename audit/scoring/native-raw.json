@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-18T02:29:34.206Z",
+  "candidate": "mg-d496d772a6bc11",
+  "checks": {
+    "leaderboardName": true,
+    "leaderboardFocus": true,
+    "audioUnlocked": true,
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "restoredWin": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles",
+    "balancedResult": "Your clear: level 1, 6000 points · 2 stars · 16s (time does not affect rank).",
+    "volumeKeys": {
+      "music": "36",
+      "sound": "64"
+    },
+    "savedMixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "repeatedHintMessage": "This pair is already highlighted. No extra hint cost.",
+    "win": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles"
+  }
+}

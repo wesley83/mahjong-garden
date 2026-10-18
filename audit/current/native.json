@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-18T01:09:50.141Z",
-  "candidate": "mg-806ff54a7b968a",
+  "utc": "2026-10-18T02:29:34.206Z",
+  "candidate": "mg-d496d772a6bc11",
   "checks": {
     "leaderboardName": true,
     "leaderboardFocus": true,
@@ -15,10 +15,8 @@
     "keyboardClear": true
   },
   "observations": {
-    "name": {
-      "focused": true,
-      "value": "Garden Native"
-    },
+    "restoredWin": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles",
+    "balancedResult": "Your clear: level 1, 6000 points · 2 stars · 16s (time does not affect rank).",
     "volumeKeys": {
       "music": "36",
       "sound": "64"
@@ -44,11 +42,12 @@
       2,
       0
     ],
-    "win": "12 pairs · 00:16 · 12 hints · 0 reshuffles"
+    "repeatedHintMessage": "This pair is already highlighted. No extra hint cost.",
+    "win": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "806ff54a7b968a63ab7fb9e5346eaf58e465ae973a17927a94ff3edacb7745cd",
+  "sourceDigest": "d496d772a6bc1175853636a5be520df5f983f161fe1abf25b691d3c3b519cde1",
   "rawEvidence": {
-    "path": "audit/leaderboard/native-raw.json",
-    "sha256": "093d7434ea0fa79606a32c093d41913278eb3529c2a7d9a01338be06f58c203e"
+    "path": "audit/scoring/native-raw.json",
+    "sha256": "a4f476d85eb1abb727952500a7914196c63aa77b16469dc0e9f1a37506206ac1"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-18T02:23:48.978Z",
+  "policySha256": "dbf0b2a1090535797533a2b5305ce17248082697e18275673a291a8efb5b635f",
+  "resource": "/mahjong-scores-v2.html",
+  "backup": {
+    "files": 112,
+    "directories": 24,
+    "bytes": 3483887,
+    "verified": true
+  },
+  "isolatedAttempts": [
+    {
+      "utc": "2026-10-18T02:23:42.214Z",
+      "post": 206,
+      "duplicate": 422,
+      "malicious": 422,
+      "bounds": 422,
+      "wrongPoints": 422,
+      "wrongPairs": 422,
+      "wrongSelector": 401,
+      "put": 401,
+      "delete": 401,
+      "rowsBefore": 0,
+      "rowsAfter": 1,
+      "exactAccepted": true,
+      "publicReadback": true,
+      "passed": true
+    }
+  ],
+  "fixtureRemoved": true,
+  "production": {
+    "post": 206,
+    "duplicate": 422,
+    "malicious": 422,
+    "bounds": 422,
+    "wrongPoints": 422,
+    "wrongPairs": 422,
+    "wrongSelector": 401,
+    "put": 401,
+    "delete": 401,
+    "rowsBefore": 0,
+    "rowsAfter": 1,
+    "exactAccepted": true,
+    "publicReadback": true,
+    "passed": true
+  },
+  "syntheticRemoved": true,
+  "credentialStored": false,
+  "trust": "Client-reported casual scores; no anti-cheat or server quota claim"
+}

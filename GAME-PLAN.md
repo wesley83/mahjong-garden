@@ -2,6 +2,8 @@
 
 Plan MG-001, consolidated by review MG-008, presentation MG-019, touch MG-024 and audio MG-029 on 2026-10-17. Actor: Codex. Requested by Wesley. Basis: Pagelove Web Game Development Handbook, edition 2.9.0, `games/prism-breaker/GAME-DEVELOPMENT-BEST-PRACTICES.md`, especially sections 1–7, 10–17, puzzle/board modules in 18, Pagelove adapter in 19 and evidence templates in 21.
 
+Current scoring/update increment MG-036 adopts handbook2.11.0 and audit/scoring/PLAN.md. Points normalize hint costs by original pair count, charge reshuffles gradually, keep free Undo and omit speed from rank. Separate V2/V1 boards preserve previous results. The network-required PWA adds safe explicit updates and in-app discovery; no OS push/offline promise.
+
 Current leaderboard increment MG-033 adopts handbook edition 2.11.0, pinned in audit/leaderboard/PLAN.md with its complete retained snapshot. Its named outcome inventory adds shared records, safe typed aliases, exact submission recovery and scoped board response ownership. Earlier guidance remains historical.
 
 Current increment guidance: touch MG-024 adopts edition 2.10.0, pinned with canonical path, digest and retained snapshot in `audit/touch/guidance.json`. The earlier 2.9.0 adoption is historical. Added obligations and coverage/evidence decisions are reconciled in `audit/touch/PLAN.md` and REVIEW.md.
@@ -59,7 +61,7 @@ Performance goals: dependency-free production JS, under 400,000 bytes initial co
 | OPS-01 | Complete local backup before publication | Recursive local hashes and unchanged strong entry baseline; refuse partial backup/concurrent change. Original one-time wipe remains historical. |
 | RELEASE-01 | Public repo, commit/push and specified Pagelove deployment | GitHub live read, remote HEAD, DAV/public readback and deployed interaction |
 
-Offline installation, multiplayer, monetization, external image libraries and shared editing are excluded. The requested native shared leaderboard is adopted by MG-033. Cached-tab play may continue without a network, but offline reload/install is not promised. No service worker is installed. Personal images are never sent to this server by the game. Checkpoints are local, not cross-device cloud sync.
+Offline gameplay, multiplayer, monetization, external image libraries and shared editing are excluded. The requested native shared leaderboard is adopted by MG-033. Cached-tab play may continue without a network, but offline reload/install is not promised. A network-only service worker/manifest and in-app update discovery are adopted by MG-036; no offline caching is installed. Personal images are never sent to this server by the game. Checkpoints are local, not cross-device cloud sync.
 
 ## Review 1.1.0 acceptance additions
 
@@ -67,3 +69,6 @@ GAP-01–09 and the full handbook applicability matrix are in `audit/HANDBOOK-RE
 
 
 Shared leaderboard 1.4.0: audit/leaderboard/PLAN.md owns the new acceptance inventory and trust boundaries. Semantic HTML native server records are the shared authority; IndexedDB stores only a separate version1 name/pending/accepted-receipt convenience record. Existing game/run1 and portable backup2 formats remain unchanged. Runtime loads leaderboard.mjs on demand, preserving the400000-byte initial budget. Existing server data/resources are retained across every ordinary release.
+
+
+Scoring/PWA1.5.0: audit/scoring/PLAN.md and REVIEW.md own the current acceptance inventory. Existing stars/game-profile/run1/backup2 remain compatible. New points are derived from original size and assistance, not stored move-event earnings. Shared V2/V1 records are separately scoped, with immutable legacy retries. Updater code, manifest and worker count toward the unchanged400000-byte initial budget; install icon exports are separate optional assets. Optional li end-tag removal joins safe unquoted attributes in the generated campaign transform; full parsed equivalence is mandatory.

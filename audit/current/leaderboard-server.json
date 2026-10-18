@@ -1,20 +1,22 @@
 {
-  "utc": "2026-10-18T01:03:48.921Z",
-  "policySha256": "93062a308454e556330ddbf75422861f1547882e013237c82c4881702594bc46",
-  "resource": "/mahjong-scores.html",
+  "utc": "2026-10-18T02:23:48.978Z",
+  "policySha256": "dbf0b2a1090535797533a2b5305ce17248082697e18275673a291a8efb5b635f",
+  "resource": "/mahjong-scores-v2.html",
   "backup": {
-    "files": 93,
-    "directories": 21,
-    "bytes": 2994379,
+    "files": 112,
+    "directories": 24,
+    "bytes": 3483887,
     "verified": true
   },
   "isolatedAttempts": [
     {
-      "utc": "2026-10-18T01:03:44.324Z",
+      "utc": "2026-10-18T02:23:42.214Z",
       "post": 206,
       "duplicate": 422,
       "malicious": 422,
       "bounds": 422,
+      "wrongPoints": 422,
+      "wrongPairs": 422,
       "wrongSelector": 401,
       "put": 401,
       "delete": 401,
@@ -31,6 +33,8 @@
     "duplicate": 422,
     "malicious": 422,
     "bounds": 422,
+    "wrongPoints": 422,
+    "wrongPairs": 422,
     "wrongSelector": 401,
     "put": 401,
     "delete": 401,
