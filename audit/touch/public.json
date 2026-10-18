@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-18T00:23:27.169Z",
+  "candidate": "mg-21265889f3f24d",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "checks": {
+    "oldTabPreserved": true,
+    "checkpointRestored": true,
+    "nativeMatch": true,
+    "undoRestored": true
+  },
+  "observations": {
+    "counts": [
+      24,
+      22,
+      24
+    ],
+    "sourceWidth": "48px",
+    "oldCandidate": "mg-6262dac5695bf4",
+    "physicalAndroidEdge": "unverified"
+  }
+}

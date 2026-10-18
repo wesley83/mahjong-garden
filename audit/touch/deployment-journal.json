@@ -1,0 +1,47 @@
+[
+  {
+    "utc": "2026-10-18T00:21:41.106Z",
+    "phase": "pre-promotion-accepted",
+    "candidate": "mg-21265889f3f24d",
+    "pushedCommit": "6578f77",
+    "decision": "Coverage and exact-candidate evidence passed; live publication remains pending."
+  },
+  {
+    "utc": "2026-10-18T00:21:41.116Z",
+    "phase": "backup-requested",
+    "scope": "Full current DAV tree; retain old resources and browser saves."
+  },
+  {
+    "utc": "2026-10-18T00:22:10.984Z",
+    "phase": "backup-verified",
+    "files": 60,
+    "directories": 15,
+    "bytes": 2070171,
+    "backupPath": ".local/server-backup/2026-10-18T00-21-44-536Z"
+  },
+  {
+    "utc": "2026-10-18T00:22:10.984Z",
+    "phase": "promotion-requested",
+    "candidate": "mg-21265889f3f24d",
+    "policy": "Verified immutable dependencies before conditional live entry promotion; retain previous resources."
+  },
+  {
+    "utc": "2026-10-18T00:22:53.413Z",
+    "phase": "promoted-and-resource-readback-verified",
+    "candidate": "mg-21265889f3f24d",
+    "verifiedPublicFiles": 17,
+    "note": "Publisher returned successful conditional entry promotion and completed owner/public resource readback together. Live UI checks follow."
+  },
+  {
+    "utc": "2026-10-18T00:23:50.468Z",
+    "phase": "live-ui-verified",
+    "candidate": "mg-21265889f3f24d",
+    "checks": [
+      "old client retained same 24 tiles through promotion",
+      "reload restored same checkpoint on new graph",
+      "native matching pair 24 to 22",
+      "undo restored original 24 IDs/faces"
+    ],
+    "limits": "Desktop browser observations; physical Pixel 10 Pro / Edge and hardware multi-touch remain unverified."
+  }
+]

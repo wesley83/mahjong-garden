@@ -1,17 +1,26 @@
 {
-  "utc": "2026-10-17T23:57:39.758Z",
-  "candidate": "mg-6262dac5695bf4",
+  "utc": "2026-10-18T00:23:27.169Z",
+  "candidate": "mg-21265889f3f24d",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
   "checks": {
-    "actualOldTabHeld": true,
-    "oldCheckpointPreserved": true,
-    "titleScreen": true,
-    "publicMatch": true,
-    "publicUndo": true,
-    "threeCollections": true,
-    "studio": true,
-    "sixtyLevels": true,
-    "threeD": true
+    "oldTabPreserved": true,
+    "checkpointRestored": true,
+    "nativeMatch": true,
+    "undoRestored": true
   },
-  "sourceDigest": "6262dac5695bf493343cc2c23605bf4b59ddf4608d9438f697a2966f6373a746",
-  "limits": "Chromium-visible public interactions; no physical-device or other-engine certification"
+  "observations": {
+    "counts": [
+      24,
+      22,
+      24
+    ],
+    "sourceWidth": "48px",
+    "oldCandidate": "mg-6262dac5695bf4",
+    "physicalAndroidEdge": "unverified"
+  },
+  "sourceDigest": "21265889f3f24de07b61bacefbad3e4cf922686bd6beaff21d193d48f5220e61",
+  "rawEvidence": {
+    "path": "audit/touch/public.json",
+    "sha256": "eff41779a8d80094b5d08d05988dc9794c86516324c31be3ff773364920c160e"
+  }
 }

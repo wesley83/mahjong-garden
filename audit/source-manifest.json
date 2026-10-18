@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-18T00:21:07.883Z",
+  "utc": "2026-10-18T00:23:53.250Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 44383,
-      "sha256": "0b203df66a5bdbc0700b1e5e61b190248734df4b0e644163df5a4abe5dd36aab"
+      "bytes": 45616,
+      "sha256": "53c99c26ecc248a627a3f9686a82592c6b6fef4e8673913b699aaa769c8d4f93"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -100,8 +100,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 3824,
-      "sha256": "813e12bcb9e69e5097090d023bd2d4eb9e226349d43402c928fcbf9d4691b759"
+      "bytes": 4007,
+      "sha256": "eaca077077c4bd2f5aa26185058a0b0e8edabda9b24ce467d160df1ec7e6ce6f"
     },
     {
       "path": "audit/current/legacy-public.json",
@@ -140,8 +140,8 @@
     },
     {
       "path": "audit/current/public.json",
-      "bytes": 516,
-      "sha256": "1c64357b2f0de39dbde261f1f6e94dc96e8d2f6585a2192ea613e24eaf51eab8"
+      "bytes": 674,
+      "sha256": "8f35e6f3d96a389e5c99b6409df8de62fbdecccea23b9d881d6700c912aae387"
     },
     {
       "path": "audit/current/README.md",
@@ -269,6 +269,11 @@
       "sha256": "aeb2e52c5c7dd2a1b37afac13895f9d2ffb767ba6bcfd69bcdf0d125d9013f2b"
     },
     {
+      "path": "audit/touch/deployment-journal.json",
+      "bytes": 1644,
+      "sha256": "e5664998e62f8cc1867271eb73b922288468921f948ca86f4145c51aa2e12ec0"
+    },
+    {
       "path": "audit/touch/fixture-qualified.json",
       "bytes": 2012,
       "sha256": "e34467d665b4f3ccb05b4ca270d15b0faeaa51bb39ad8bb5ef82031018f2cfca"
@@ -294,6 +299,11 @@
       "sha256": "fcc83cfd36861741ab25608726d4f7252fe7d36630f3b203c5b9179e048f2f57"
     },
     {
+      "path": "audit/touch/legacy-after-promotion.json",
+      "bytes": 2453,
+      "sha256": "7db29e3509cd16dd883934b1fed385b3b1e42232526d6caba7b7cb6327efb086"
+    },
+    {
       "path": "audit/touch/native-raw.json",
       "bytes": 1023,
       "sha256": "0c64d415a1d524e823385c25ceb6c097825a4f2f9e1f1d048a81abe51ba84335"
@@ -309,9 +319,14 @@
       "sha256": "6c71cddb502d7aea334c9cf8939b895304dbc84333b7427aa251e916c7e83719"
     },
     {
+      "path": "audit/touch/public.json",
+      "bytes": 444,
+      "sha256": "eff41779a8d80094b5d08d05988dc9794c86516324c31be3ff773364920c160e"
+    },
+    {
       "path": "audit/touch/REVIEW.md",
-      "bytes": 4648,
-      "sha256": "eb03397e8ffbc24b8c6521587ed5396d2bf44b1036d17757df472f7ecc1aec4f"
+      "bytes": 5371,
+      "sha256": "29fdd111818b3efb4fe9acf4052fba1a01007206f26ef52c1f7bdd495981e24d"
     },
     {
       "path": "audit/wipe.json",
