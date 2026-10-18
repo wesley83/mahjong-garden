@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-18T00:20:30.190Z",
+  "utc": "2026-10-18T00:21:07.883Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -60,8 +60,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 44383,
+      "sha256": "0b203df66a5bdbc0700b1e5e61b190248734df4b0e644163df5a4abe5dd36aab"
     },
     {
       "path": "audit/current/browser-attempts.json",
