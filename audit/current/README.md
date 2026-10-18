@@ -22,3 +22,7 @@ Final publication: mg-1cb39865bf468b, code commit 8a2aa4d5f8cf64f176755b5c72e5b0
 
 ## Presentation 1.2 evidence
 Current candidate mg-6262dac5695bf4 uses the newly executed Node, browser and native receipts. The browser group count is eleven and presentation/ contains the required outcome inventory, raw observations and separate coverage/evidence review. Other older receipts retain their original candidate/time provenance and are not relabeled as new runs. See ../presentation/REVIEW.md for scope and publication status.
+
+
+## Touch 1.2.1 evidence
+The latest Node/browser/native receipts identify this increment, with 24 named Node groups, 12 browser groups, and four required touch outcomes. See ../touch/PLAN.md and REVIEW.md. Earlier presentation/deployment observations retain historical identities. Physical Pixel 10 Pro / Edge is the reported environment and remains unverified by these desktop tools.

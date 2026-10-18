@@ -1,0 +1,9 @@
+[
+  {
+    "name": "rapid taps and independent tile contacts",
+    "utc": "2026-10-18T00:09:14.239Z",
+    "candidate": "mg-6262dac5695bf4",
+    "status": "failed",
+    "error": "Rapid tap target replaced: second pre-existing tile reference rejected"
+  }
+]

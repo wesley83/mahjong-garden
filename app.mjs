@@ -5,6 +5,7 @@ import {openStore,readProfile,writeProfile} from './storage.mjs';
 import {validateProfile,parseGameBackup} from './profile.mjs';
 import {LatestTask,StudioHistory,bounded,advanceElapsed,abortError} from './operations.mjs';
 import {imageDimensions} from './image-input.mjs';
+import {tileInput} from './tile-input.mjs';
 
 const $=id=>document.getElementById(id),$$=s=>[...document.querySelectorAll(s)];
 const chapters=['The first path','By the water','Above the clouds','Autumn whispers','Under the stars','The hidden garden'];
@@ -15,8 +16,9 @@ const freshProfile=()=>({version:1,revision:0,settings:{theme:'traditional',soun
 let levels=[],profile=freshProfile(),run=null,selected=null,hintIds=[],db=null,storageError=false,saveChain=Promise.resolve(true),saveTimer,editorReady=false,layer=0,editorImages=[],editorGeneration=0,editorBusy=false,confirmAction=null,lastTick=performance.now(),clockSave=0,audio,originalRecovery=null,memoryOnly=false;
 let workingGeneration=0,contextGeneration=0,transitionBusy=false,ready=false,clockActive=false,pendingSaves=0,hasRecovery=false,boardRevision=0;
 const imageTask=new LatestTask(),restoreTask=new LatestTask(),history=new StudioHistory(),voices=new Set();
-let soundFrame=0,soundTimer=0,screen='title',sceneChapter=0;
-function showScreen(next,{focus=true}={}){updateElapsed();stopAudio();screen=next;document.body.dataset.screen=next;$('title-screen').hidden=next!=='title';$('play-screen').hidden=next!=='play';$('app-header').hidden=next!=='play';if(next==='play')fitBoard();syncClock();if(focus)(next==='title'?$('continue-game'):$('board').querySelector('.tile[aria-disabled="false"]'))?.focus({preventScroll:true});}
+let soundFrame=0,soundTimer=0,screen='title',sceneChapter=0,renderedOriginal;
+let cancelTileContacts=()=>{};
+function showScreen(next,{focus=true}={}){cancelTileContacts();updateElapsed();stopAudio();screen=next;document.body.dataset.screen=next;$('title-screen').hidden=next!=='title';$('play-screen').hidden=next!=='play';$('app-header').hidden=next!=='play';if(next==='play')fitBoard();syncClock();if(focus)(next==='title'?$('continue-game'):$('board').querySelector('.tile[aria-disabled="false"]'))?.focus({preventScroll:true});}
 function renderScene(chapter){if(sceneChapter===chapter)return;sceneChapter=chapter;document.body.dataset.chapter=String(chapter);$('world-backdrop').innerHTML=gardenSVG(chapter);$('world-backdrop').dataset.scene=String(chapter);$('scene-label').textContent=gardens[chapter-1].place.toUpperCase();}
 const activeImages=()=>editorReady?editorImages:profile.studio.images;
 function message(text){$('game-message').textContent=text;}
@@ -40,6 +42,7 @@ function persistNow({retry=false,replaceRecovery=false}={}){
 }
 function scheduleSave(){workingGeneration++;contextGeneration++;saveState(memoryOnly?'Temporary play · export a backup to keep it':'Changes waiting to save');clearTimeout(saveTimer);saveTimer=setTimeout(()=>{if(!storageError&&!transitionBusy)void persistNow();},200);}
 async function transition(action){
+ cancelTileContacts();
  if(transitionBusy)return false;updateElapsed();transitionBusy=true;restoreTask.cancel();contextGeneration++;
  const focus=document.activeElement,roots=[$('app-header'),$('game-shell'),...$$('dialog')],previous=roots.map(el=>el.inert);roots.forEach(el=>{el.inert=true;});$('operation-state').hidden=false;clockActive=false;
  try{return await action();}catch(error){if($('studio-dialog').open)status(error.message);else message(error.message);return false;}
@@ -49,25 +52,27 @@ async function transition(action){
 function syncClock(){clockActive=ready&&screen==='play'&&!!run&&!run.complete&&!document.hidden&&!transitionBusy&&!document.querySelector('dialog[open]');}
 function updateElapsed(){const now=performance.now(),diff=(now-lastTick)/1000;lastTick=now;if(clockActive)run=advanceElapsed(run,diff);syncClock();}
 function stopAudio(){cancelAnimationFrame(soundFrame);clearTimeout(soundTimer);soundFrame=soundTimer=0;for(const voice of voices){try{voice.oscillator.stop();}catch{}voice.oscillator.disconnect();voice.gain.disconnect();}voices.clear();if(audio?.state==='running')void audio.suspend().catch(()=>{});}
-function openDialog(id){updateElapsed();const d=$(id);if(!d.open)d.showModal();stopAudio();syncClock();}
+function openDialog(id){cancelTileContacts();updateElapsed();const d=$(id);if(!d.open)d.showModal();stopAudio();syncClock();}
 function closeDialog(d){updateElapsed();d.close();lastTick=performance.now();syncClock();}
 function confirm(title,description,action){$('confirm-title').textContent=title;$('confirm-description').textContent=description;confirmAction=action;openDialog('confirm-dialog');}
 function formatTime(seconds){const n=Math.floor(seconds);return `${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`;}
 function activeLevel(){return run.custom||levels.find(l=>l.id===run.levelId);}
 function applySettings(){const s=profile.settings;document.body.classList.toggle('reduced-motion',s.reduceMotion);$('sound').checked=s.sound;$('large-tiles').checked=s.largeTiles;$('reduce-motion').checked=s.reduceMotion;}
-function makeFaceButton(tile,textView=false){
- const revision=boardRevision,b=document.createElement('button');b.dataset.tile=tile.id;const free=isFree(tile,run.tiles),name=faceName(tile.face,profile.settings.theme,activeImages());
+function makeFaceButton(tile,textView=false,existing){
+ const b=existing||document.createElement('button');b.dataset.tile=tile.id;const free=isFree(tile,run.tiles),name=faceName(tile.face,profile.settings.theme,activeImages());
  b.setAttribute('aria-label',`${name}, column ${tile.x+1}, row ${tile.y+1}, layer ${tile.z+1}, ${free?'open':'blocked'}`);b.setAttribute('aria-pressed',String(selected===tile.id));b.setAttribute('aria-disabled',String(!free));
  if(textView)b.textContent=`${name} · ${tile.x+1},${tile.y+1},${tile.z+1}${free?' · open':' · blocked'}`;
- else{b.className='tile'+(free?'':' tile-blocked')+(hintIds.includes(tile.id)?' hinted':'');b.style.left=`calc(${tile.x} * (var(--tilew) + 4px) + ${tile.z*3}px)`;b.style.top=`calc(${tile.y} * (var(--tileh) + 4px) - ${tile.z*4}px + 10px)`;b.style.zIndex=String(tile.z*10+1);b.style.setProperty('--layer',tile.z);for(const side of ['back','right','bottom','left']){const plane=document.createElement('span');plane.className='tile-plane tile-'+side;plane.setAttribute('aria-hidden','true');b.append(plane);}const top=document.createElement('span');top.className='tile-plane tile-top';const f=document.createElement('span');f.className='tile-face';renderFace(f,tile.face,profile.settings.theme,activeImages());top.append(f);b.append(top);b.title=b.getAttribute('aria-label');}
- b.addEventListener('click',()=>{if(revision===boardRevision)choose(tile.id);});
- if(!textView)b.addEventListener('keydown',e=>{if(!e.key.startsWith('Arrow'))return;e.preventDefault();const axis=['ArrowLeft','ArrowRight'].includes(e.key)?'x':'y',direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const candidates=run.tiles.filter(t=>t.id!==tile.id&&Math.sign(t[axis]-tile[axis])===direction).sort((a,b)=>{const cost=t=>Math.abs(t[axis]-tile[axis])+Math.abs(t[axis==='x'?'y':'x']-tile[axis==='x'?'y':'x'])*5+Math.abs(t.z-tile.z);return cost(a)-cost(b);});if(candidates[0])$('board').querySelector(`[data-tile="${candidates[0].id}"]`)?.focus();});return b;
+ else{b.className='tile'+(free?'':' tile-blocked')+(hintIds.includes(tile.id)?' hinted':'');b.style.left=`calc(${tile.x} * (var(--tilew) + 4px) + ${tile.z*3}px)`;b.style.top=`calc(${tile.y} * (var(--tileh) + 4px) - ${tile.z*4}px + 10px)`;b.style.zIndex=String(tile.z*10+1);b.style.setProperty('--layer',tile.z);
+  if(!existing){for(const side of ['back','right','bottom','left']){const plane=document.createElement('span');plane.className='tile-plane tile-'+side;plane.setAttribute('aria-hidden','true');b.append(plane);}const top=document.createElement('span');top.className='tile-plane tile-top';const f=document.createElement('span');f.className='tile-face';top.append(f);b.append(top);}
+  if(b._face!==tile.face||b._theme!==profile.settings.theme||b._images!==activeImages()){renderFace(b.querySelector('.tile-face'),tile.face,profile.settings.theme,activeImages());b._face=tile.face;b._theme=profile.settings.theme;b._images=activeImages();}b.title=b.getAttribute('aria-label');}
+ if(!existing&&textView)b.addEventListener('click',()=>{if(b.isConnected)choose(tile.id);});
+ if(!existing&&!textView)b.addEventListener('keydown',e=>{if(!e.key.startsWith('Arrow'))return;e.preventDefault();const axis=['ArrowLeft','ArrowRight'].includes(e.key)?'x':'y',direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const candidates=run.tiles.filter(t=>t.id!==tile.id&&Math.sign(t[axis]-tile[axis])===direction).sort((a,b)=>{const cost=t=>Math.abs(t[axis]-tile[axis])+Math.abs(t[axis==='x'?'y':'x']-tile[axis==='x'?'y':'x'])*5+Math.abs(t.z-tile.z);return cost(a)-cost(b);});if(candidates[0])$('board').querySelector(`[data-tile="${candidates[0].id}"]`)?.focus();});return b;
 }
 function renderBoard(){
  boardRevision++;
  const focused=document.activeElement?.closest('[data-tile]'),focus=focused?.dataset.tile,view=focused?.closest('#text-tiles')?'text-tiles':'board';
- $('board').replaceChildren(...run.tiles.map(t=>makeFaceButton(t)));
- $('text-tiles').replaceChildren(...run.tiles.map(t=>makeFaceButton(t,true)));
+ if(renderedOriginal!==run.original){cancelTileContacts();$('board').replaceChildren();$('text-tiles').replaceChildren();renderedOriginal=run.original;}
+ for(const [id,textView]of [['board',false],['text-tiles',true]]){const root=$(id),existing=new Map([...root.children].map(b=>[b.dataset.tile,b]));for(const t of run.tiles){const b=makeFaceButton(t,textView,existing.get(t.id));existing.delete(t.id);if(!b.parentNode)root.append(b);}for(const b of existing.values())b.remove();}
  $('remaining').textContent=run.tiles.length;const n=pairs(run.tiles).length;$('pair-count').textContent=n===1?'1 open pair':`${n} open pairs`;
  $('undo').disabled=!run.history.length;$('hint').disabled=run.complete;$('shuffle').disabled=run.complete;$('clock').textContent=formatTime(run.elapsed);
  fitBoard();if(focus){const same=$(view).querySelector(`[data-tile="${focus}"]`),next=$(view).querySelector('[data-tile][aria-disabled="false"]');(same||next)?.focus({preventScroll:true});}
@@ -76,7 +81,8 @@ function fitBoard(){
  if(!run||$('play-screen').hidden)return;
  const positions=run.original,cols=Math.max(...positions.map(t=>t.x))+1,rows=Math.max(...positions.map(t=>t.y))+1;
  const viewport=$('board-scroll'),available=Math.max(1,viewport.clientWidth-46),heightAvailable=Math.max(80,viewport.clientHeight-42);
- const width=profile.settings.largeTiles?74:Math.max(30,Math.min(74,Math.floor((available-16)/cols)-4,Math.floor((heightAvailable-22)/rows/1.28)-4)),height=Math.round(width*1.28),board=$('board');
+ const width=profile.settings.largeTiles?74:Math.max(48,Math.min(74,Math.floor((available-16)/cols)-4,Math.floor((heightAvailable-22)/rows/1.28)-4)),height=Math.round(width*1.28),board=$('board');
+ if(board.style.getPropertyValue('--tilew')!==width+'px')cancelTileContacts();
  board.style.setProperty('--tilew',width+'px');board.style.setProperty('--tileh',height+'px');board.style.width=(cols*(width+4)+16)+'px';board.style.height=(rows*(height+4)+30)+'px';
  $('board-size-label').textContent=board.offsetWidth>available?'Scroll to explore the full garden.':'No rush. One pair at a time.';
 }
@@ -94,9 +100,9 @@ function choose(id){if(!canPlay()||run.complete)return;const tile=run.tiles.find
  updateElapsed();const next=match(run,selected,id);if(next===run){selected=id;message('Different symbols. This tile is selected; find its exact match.');renderBoard();return;}
  run=next;selected=null;renderBoard();queueSound();scheduleSave();if(run.complete)complete();else if(!pairs(run.tiles).length)message('No open pairs. Undo a move or reshuffle to find a fresh path.');else message(`${run.matches} ${run.matches===1?'pair':'pairs'} cleared. Keep going, one pair at a time.`);}
 function complete(){const rating=stars(run);if(!run.custom)profile.progress[run.levelId]=Math.max(profile.progress[run.levelId]||0,rating);renderJourney();$('win-description').textContent=`${activeLevel().name} is complete. Take a breath; you earned it.`;$('win-stars').textContent='★'.repeat(rating)+'☆'.repeat(3-rating);$('win-stars').setAttribute('aria-label',`${rating} of 3 stars`);$('win-stats').textContent=`${run.matches} pairs · ${formatTime(run.elapsed)} · ${run.hints} hints · ${run.shuffles} reshuffles`;$('next-level').textContent=activeLevel().number===60?'Explore the gardens again →':run.custom?'Return to the main garden →':'On to the next garden →';message('Garden cleared. A little more space to breathe.');openDialog('win-dialog');void persistNow();}
-function doHint(){if(!canPlay()||run.complete)return;const options=pairs(run.tiles);if(!options.length){message('No open pairs. Undo or reshuffle to open a fresh path.');return;}run={...run,hints:Math.min(100000,run.hints+1)};selected=null;hintIds=options[0].map(t=>t.id);renderBoard();message(`Try the two highlighted ${faceName(options[0][0].face,profile.settings.theme,activeImages())} tiles. Using a hint limits this run to two stars.`);scheduleSave();}
-function doUndo(){if(!canPlay())return;updateElapsed();const next=undo(run);if(next===run){message('No moves to undo yet.');return;}run=next;selected=null;hintIds=[];renderBoard();message('Your last move is restored. Hint and reshuffle use still counts toward stars.');scheduleSave();}
-function doShuffle(){if(!canPlay()||run.complete)return;try{updateElapsed();run=reshuffle(run);selected=null;hintIds=[];renderBoard();message('A fresh, solvable arrangement. This run can earn one star.');scheduleSave();}catch(e){message(e.message+' Undo your last move, or restart this garden.');}}
+function doHint(){cancelTileContacts();if(!canPlay()||run.complete)return;const options=pairs(run.tiles);if(!options.length){message('No open pairs. Undo or reshuffle to open a fresh path.');return;}run={...run,hints:Math.min(100000,run.hints+1)};selected=null;hintIds=options[0].map(t=>t.id);renderBoard();message(`Try the two highlighted ${faceName(options[0][0].face,profile.settings.theme,activeImages())} tiles. Using a hint limits this run to two stars.`);scheduleSave();}
+function doUndo(){cancelTileContacts();if(!canPlay())return;updateElapsed();const next=undo(run);if(next===run){message('No moves to undo yet.');return;}run=next;selected=null;hintIds=[];renderBoard();message('Your last move is restored. Hint and reshuffle use still counts toward stars.');scheduleSave();}
+function doShuffle(){cancelTileContacts();if(!canPlay()||run.complete)return;try{updateElapsed();run=reshuffle(run);selected=null;hintIds=[];renderBoard();message('A fresh, solvable arrangement. This run can earn one star.');scheduleSave();}catch(e){message(e.message+' Undo your last move, or restart this garden.');}}
 function writeEditor(layout,{resetHistory=false}={}) {
  const source=$('studio-source');source.dataset.id=layout.id;source.querySelector('h2').textContent=layout.name;$('layout-name').value=layout.name;
  source.querySelector('ul').replaceChildren(...layout.positions.map(p=>{const li=document.createElement('li');li.dataset.tile=p.id;li.dataset.x=p.x;li.dataset.y=p.y;li.dataset.z=p.z;li.textContent=`Column ${p.x+1}, row ${p.y+1}, layer ${p.z+1}`;return li;}));
@@ -160,7 +166,7 @@ function bind(){
  $('hint').onclick=doHint;$('undo').onclick=doUndo;$('shuffle').onclick=doShuffle;
  $('restart').onclick=()=>{if(canPlay())confirm('Start this garden afresh?','The clock, hints and moves for this board will reset. Your completed gardens and studio stay saved.',()=>startLevel(activeLevel()));};
  $('next-level').onclick=()=>void startLevel(levels[(activeLevel().number||0)%60]);
- document.addEventListener('keydown',event=>{if(!ready||transitionBusy||document.hidden||document.querySelector('dialog[open]')||event.ctrlKey||event.metaKey||event.altKey||event.repeat||/INPUT|TEXTAREA|SELECT/.test(event.target.tagName)||event.target.isContentEditable)return;if(event.key.toLowerCase()==='h'){event.preventDefault();doHint();}else if(event.key.toLowerCase()==='u'){event.preventDefault();doUndo();}else if(event.key==='Escape'){selected=null;hintIds=[];renderBoard();message('Selection cleared.');}});
+ document.addEventListener('keydown',event=>{if(!ready||transitionBusy||document.hidden||document.querySelector('dialog[open]')||event.ctrlKey||event.metaKey||event.altKey||event.repeat||/INPUT|TEXTAREA|SELECT/.test(event.target.tagName)||event.target.isContentEditable)return;if(event.key.toLowerCase()==='h'){event.preventDefault();doHint();}else if(event.key.toLowerCase()==='u'){event.preventDefault();doUndo();}else if(event.key==='Escape'){cancelTileContacts();selected=null;hintIds=[];renderBoard();message('Selection cleared.');}});
  for(const [id,key]of [['sound','sound'],['large-tiles','largeTiles'],['reduce-motion','reduceMotion']])$(id).onchange=()=>{if(transitionBusy)return;profile.settings[key]=$(id).checked;if(key==='sound'&&!profile.settings.sound)stopAudio();applySettings();fitBoard();scheduleSave();};
  $('retry-save').onclick=()=>{if(hasRecovery)confirm('Save a fresh game?','The old record is incompatible. Export its original backup first. Saving fresh replaces it with your current temporary game.',()=>transition(async()=>{if(await persistNow({retry:true,replaceRecovery:true})){hasRecovery=false;originalRecovery=null;$('retry-save').textContent='Retry save';return true;}return false;}));else void transition(()=>persistNow({retry:true}));};
  $('recovery-export').onclick=()=>download('mahjong-garden-recovery.json',{format:'mahjong-garden-backup',version:1,profile:hasRecovery?originalRecovery:snapshot()});
@@ -186,7 +192,7 @@ function bind(){
   finally{if(restoreTask.current(ticket))$('import-profile').value='';}
  };
  $$('[data-layer]').forEach(b=>b.onclick=()=>{if(!editorBusy&&!transitionBusy){layer=+b.dataset.layer;renderEditor();}});
- $('layout-name').oninput=()=>{if(editorBusy||transitionBusy)return;$('studio-source').querySelector('h2').textContent=$('layout-name').value;editorGeneration++;scheduleSave();};
+ $('layout-name').oninput=()=>{if(editorBusy||transitionBusy)return;$('studio-source').querySelector('h2').textContent=$('layout-name').value;editorGeneration++;renderEditor();scheduleSave();};
  const restoreStudio=draft=>{if(!draft)return;editorImages=draft.images;writeEditor(draft.layout);imageChanged();status('The layout and personal image collection have been restored.');};
  $('editor-undo').onclick=()=>{if(!editorBusy&&!transitionBusy)restoreStudio(history.undo(draftFromDOM()));};$('editor-redo').onclick=()=>{if(!editorBusy&&!transitionBusy)restoreStudio(history.redo(draftFromDOM()));};
  $('editor-template').onclick=()=>changeEditor(layout=>{layout.positions=template();});
@@ -201,11 +207,15 @@ function bind(){
  });
  $('use-images').onclick=()=>{if(editorBusy||transitionBusy||editorImages.length<2)return;profile.settings.theme='custom';renderThemes();renderBoard();status('Your personal images are now the active tile collection.');scheduleSave();};
  $('clear-images').onclick=()=>{if(editorBusy||transitionBusy)return;confirm('Clear your personal images?','This removes the collection from this browser. Export a studio file first to keep a copy.',()=>{history.push(draftFromDOM());editorImages=[];imageChanged();status('Personal image collection cleared. Undo can restore it.');});};
- const observer=typeof ResizeObserver==='function'?new ResizeObserver(()=>fitBoard()):null;observer?.observe($('board-scroll'));if(!observer)window.addEventListener('resize',fitBoard);
+ cancelTileContacts=tileInput($('board'),{activate:choose,enabled:canPlay});
+ window.addEventListener('blur',()=>cancelTileContacts());
+ $('board-scroll').addEventListener('scroll',()=>cancelTileContacts(),{passive:true});
+ window.addEventListener('resize',()=>cancelTileContacts());
+ const observer=typeof ResizeObserver==='function'?new ResizeObserver(()=>{cancelTileContacts();fitBoard();}):null;observer?.observe($('board-scroll'));if(!observer)window.addEventListener('resize',fitBoard);
  let timer;const startTimer=()=>{if(!timer)timer=setInterval(()=>{updateElapsed();if(run)$('clock').textContent=formatTime(run.elapsed);if(clockActive&&!transitionBusy&&++clockSave>=15){clockSave=0;if(!storageError)void persistNow();}},1000);};startTimer();
- window.addEventListener('pagehide',()=>{updateElapsed();stopAudio();imageTask.cancel();restoreTask.cancel();contextGeneration++;clearInterval(timer);timer=null;observer?.disconnect();if(!transitionBusy)void persistNow();});
+ window.addEventListener('pagehide',()=>{cancelTileContacts();updateElapsed();stopAudio();imageTask.cancel();restoreTask.cancel();contextGeneration++;clearInterval(timer);timer=null;observer?.disconnect();if(!transitionBusy)void persistNow();});
  window.addEventListener('pageshow',()=>{if(editorBusy)setEditorBusy(false);lastTick=performance.now();syncClock();observer?.observe($('board-scroll'));startTimer();});
- document.addEventListener('visibilitychange',()=>{updateElapsed();if(document.hidden){stopAudio();selected=null;hintIds=[];imageTask.cancel();restoreTask.cancel();contextGeneration++;if(editorBusy)setEditorBusy(false);if(!transitionBusy)void persistNow();}else if(ready)renderBoard();syncClock();});
+ document.addEventListener('visibilitychange',()=>{updateElapsed();if(document.hidden){cancelTileContacts();stopAudio();selected=null;hintIds=[];imageTask.cancel();restoreTask.cancel();contextGeneration++;if(editorBusy)setEditorBusy(false);if(!transitionBusy)void persistNow();}else if(ready)renderBoard();syncClock();});
 }
 async function loadLibrary(){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);

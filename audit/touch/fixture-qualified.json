@@ -1,0 +1,87 @@
+[
+  {
+    "name": "rapid taps and independent tile contacts",
+    "utc": "2026-10-18T00:16:32.738Z",
+    "candidate": "mg-01bf6a063ab9d1",
+    "observations": {
+      "outcomes": {
+        "TOUCH-RAPID": "passed",
+        "TOUCH-MULTI": "passed",
+        "TOUCH-CANCEL": "passed",
+        "TOUCH-HIT": "passed"
+      },
+      "stableSecondTarget": true,
+      "before": 22,
+      "orders": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cancellations": [
+        "pointercancel",
+        "lostpointercapture",
+        "drag",
+        "outside",
+        "scroll",
+        "blur",
+        "resize",
+        "menu",
+        "dialog",
+        "pagehide",
+        "undo",
+        "shuffle"
+      ],
+      "geometry": [
+        {
+          "width": 320,
+          "height": 568,
+          "visibleFaces": 13,
+          "minWidth": 46.97684860229492,
+          "scrollWidth": 358,
+          "clientWidth": 290
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "visibleFaces": 22,
+          "minWidth": 46.912147521972656,
+          "scrollWidth": 370,
+          "clientWidth": 370
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "visibleFaces": 6,
+          "minWidth": 46.90099334716797,
+          "scrollWidth": 538,
+          "clientWidth": 538
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "visibleFaces": 11,
+          "minWidth": 46.05155563354492,
+          "scrollWidth": 723,
+          "clientWidth": 723
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "visibleFaces": 22,
+          "minWidth": 54.52197265625,
+          "scrollWidth": 1174,
+          "clientWidth": 1174
+        }
+      ],
+      "edgeSamples": 88,
+      "sideSamples": 44,
+      "method": "Synthetic PointerEvents on actual app + rendered hit testing; not trusted hardware multi-touch or Android Edge certification"
+    },
+    "status": "passed"
+  }
+]

@@ -1,14 +1,13 @@
 {
-  "utc": "2026-10-17T23:47:57.562Z",
-  "candidate": "mg-6262dac5695bf4",
+  "utc": "2026-10-18T00:17:55.498Z",
+  "candidate": "mg-21265889f3f24d",
   "checks": {
     "mismatchRefused": true,
     "textFocus": true,
     "editorFocus": true,
-    "titleMenuFocus": true,
     "modalReturn": true,
-    "continueFocus": true,
-    "keyboardClear": true
+    "keyboardClear": true,
+    "nativeFaceEdge": true
   },
   "observations": {
     "keyboardCounts": [
@@ -26,11 +25,33 @@
       2,
       0
     ],
-    "reshuffles": 0
+    "reshuffles": 0,
+    "mismatch": {
+      "message": "Different symbols. This tile is selected; find its exact match.",
+      "n": 24
+    },
+    "textFocus": {
+      "gameMessage": "Selection cleared.",
+      "id": "layout-name",
+      "value": "My little gardenhhh"
+    },
+    "editorFocus": {
+      "count": 31,
+      "label": "Column 1, row 1, layer 1, empty"
+    },
+    "modalReturn": {
+      "active": "Settings",
+      "open": false
+    },
+    "nativeFaceEdge": {
+      "message": "4 circles selected. Find its open match.",
+      "remaining": "24",
+      "selected": "t-0-0-0"
+    }
   },
-  "sourceDigest": "6262dac5695bf493343cc2c23605bf4b59ddf4608d9438f697a2966f6373a746",
+  "sourceDigest": "21265889f3f24de07b61bacefbad3e4cf922686bd6beaff21d193d48f5220e61",
   "rawEvidence": {
-    "path": "audit/presentation/native-raw.json",
-    "sha256": "b208ea4b0a506cd4f37aaed1436d2fcabb6a2ad1fc85a6c88b2c18741086b040"
+    "path": "audit/touch/native-raw.json",
+    "sha256": "0c64d415a1d524e823385c25ceb6c097825a4f2f9e1f1d048a81abe51ba84335"
   }
 }

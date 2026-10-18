@@ -1,0 +1,8 @@
+{
+  "edition": "2.10.0",
+  "utc": "2026-10-18T00:08:48.1148289Z",
+  "sha256": "b805bc8e89e61d567fac2d26d5e8bcc33e75e57964924a0b7aa6a3be7105c0f4",
+  "requirementMap": "audit/touch/PLAN.md revision 1",
+  "canonical": "C:\\Users\\Wesley\\Documents\\Codex\\Pagelove\\games\\prism-breaker\\GAME-DEVELOPMENT-BEST-PRACTICES.md",
+  "snapshot": "audit/touch/handbook-2.10.0.md"
+}

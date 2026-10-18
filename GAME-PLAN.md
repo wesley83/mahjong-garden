@@ -1,6 +1,8 @@
 # Mahjong Garden — development plan
 
-Plan MG-001, consolidated by review MG-008 and presentation plan MG-019 on 2026-10-17. Actor: Codex. Requested by Wesley. Basis: Pagelove Web Game Development Handbook, edition 2.9.0, `games/prism-breaker/GAME-DEVELOPMENT-BEST-PRACTICES.md`, especially sections 1–7, 10–17, puzzle/board modules in 18, Pagelove adapter in 19 and evidence templates in 21.
+Plan MG-001, consolidated by review MG-008, presentation MG-019 and touch MG-024 on 2026-10-17. Actor: Codex. Requested by Wesley. Basis: Pagelove Web Game Development Handbook, edition 2.9.0, `games/prism-breaker/GAME-DEVELOPMENT-BEST-PRACTICES.md`, especially sections 1–7, 10–17, puzzle/board modules in 18, Pagelove adapter in 19 and evidence templates in 21.
+
+Current increment guidance: touch MG-024 adopts edition 2.10.0, pinned with canonical path, digest and retained snapshot in `audit/touch/guidance.json`. The earlier 2.9.0 adoption is historical. Added obligations and coverage/evidence decisions are reconciled in `audit/touch/PLAN.md` and REVIEW.md.
 
 ## Player and delivery contract
 
@@ -26,7 +28,7 @@ IndexedDB stores one versioned profile record with revision checks. Serialize tr
 
 ## Inputs, layout, accessibility and budgets
 
-Mouse/touch click and native Enter/Space activation dispatch identical commands. Arrow keys move tile focus spatially; H hints, U undoes, Escape deselects; shortcuts ignore text fields and dialogs. Tab visits every native control. Dialogs trap focus through native modal behavior and return it to the opener. Essential gameplay has an alternative compact accessible tile list. Menus target 44 CSS pixels, board tiles at least 28 CSS pixels; a size control permits larger tiles with scrollable spatial play. Surrounding UI reflows at 320 CSS pixels and 200% text enlargement; portrait and landscape remain usable. Honor safe insets and normal page zoom.
+Native mouse/keyboard/assistive click and independent touch/pen release dispatch the same validated selection command. Surviving tile buttons and visible face nodes stay connected through selection and matching. Touch ownership, movement/cancellation, compatibility-click deduplication and exact evidence are specified in `audit/touch/PLAN.md`. Arrow keys move tile focus spatially; H hints, U undoes, Escape deselects; shortcuts ignore text fields and dialogs. Tab visits every native control. Dialogs trap focus through native modal behavior and return it to the opener. Essential gameplay has an alternative compact accessible tile list. Menus target 44 CSS pixels, board source widths at least 48 CSS pixels (measured rendered bounds exceed 44 pixels in accepted fixtures); a size control permits larger tiles with scrollable spatial play. Surrounding UI reflows at 320 CSS pixels and 200% text enlargement; portrait and landscape remain usable. Honor safe insets and normal page zoom.
 
 Target: current Chromium desktop, responsive layouts at 320×568, 390×844, 844×390, 1280×720 and 1440×900, pointer and keyboard. Actual available browser/version evidence will be named. Other engines/physical phones remain unverified, not claimed certified. WCAG AA is an engineering target, not a conformance claim. Meaningful labels, focus, selection text, live status, no color-only matching, no flashing, reduced motion. Sound is optional and failure does not block play.
 

@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-18T00:17:55.498Z",
+  "candidate": "mg-21265889f3f24d",
+  "checks": {
+    "mismatchRefused": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "modalReturn": true,
+    "keyboardClear": true,
+    "nativeFaceEdge": true
+  },
+  "observations": {
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "reshuffles": 0,
+    "mismatch": {
+      "message": "Different symbols. This tile is selected; find its exact match.",
+      "n": 24
+    },
+    "textFocus": {
+      "gameMessage": "Selection cleared.",
+      "id": "layout-name",
+      "value": "My little gardenhhh"
+    },
+    "editorFocus": {
+      "count": 31,
+      "label": "Column 1, row 1, layer 1, empty"
+    },
+    "modalReturn": {
+      "active": "Settings",
+      "open": false
+    },
+    "nativeFaceEdge": {
+      "message": "4 circles selected. Find its open match.",
+      "remaining": "24",
+      "selected": "t-0-0-0"
+    }
+  }
+}

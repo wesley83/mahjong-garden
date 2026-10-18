@@ -54,7 +54,7 @@ body[data-screen="play"] .world-vignette{background:linear-gradient(180deg,#1026
 .board-scroll{min-height:0;flex:1;overflow:auto;padding:26px 18px 25px;align-items:center;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#74866a55 transparent;perspective:1700px;isolation:isolate}
 .board{margin:auto;position:relative;flex:none;transform-style:preserve-3d;transform:rotateX(23deg) rotateY(-9deg) rotateZ(-1deg);transform-origin:50% 54%;--tiledepth:clamp(7px,calc(var(--tilew)*.21),15px)}
 .tile{display:block;padding:0;border:0;border-radius:6px;background:transparent;box-shadow:none;color:#274936;transform-style:preserve-3d;transform:translateZ(calc(var(--layer)*16px));transition:transform .16s ease;filter:none!important;outline:none}
-.tile-plane{position:absolute;display:block;pointer-events:none;backface-visibility:hidden;box-sizing:border-box}
+.tile-plane{position:absolute;display:block;pointer-events:auto;backface-visibility:hidden;box-sizing:border-box}
 .tile-top{inset:0;padding:5px;border:1px solid #f7f1d8;border-radius:6px;transform:translateZ(var(--tiledepth));background:linear-gradient(135deg,#fffced 2%,#f4efd9 70%,#e1dcc5);box-shadow:inset 1px 1px 1px #fffef4,inset -1px -2px 2px #b9b69e80}
 .tile-top:after{content:"";position:absolute;inset:0;border-radius:5px;pointer-events:none;box-shadow:inset 0 0 0 2px #d1cbb633}
 .tile-right{left:100%;top:0;width:var(--tiledepth);height:100%;transform-origin:0 50%;transform:translateZ(var(--tiledepth)) rotateY(90deg);border-radius:0 3px 3px 0;background:linear-gradient(90deg,#d0cbb2 0%,#c1bea0 51%,#63856e 53%,#3b6151 82%,#284b3e);border-bottom:1px solid #243e33}
@@ -66,7 +66,7 @@ body[data-screen="play"] .world-vignette{background:linear-gradient(180deg,#1026
 .tile-face img{object-fit:cover;max-width:100%;max-height:100%;border-radius:3px}
 .tile-blocked .tile-top{background:linear-gradient(135deg,#eee9d7,#d5d4bf);border-color:#d9d8c0}
 .tile-blocked .tile-top:after{background:#193d2812}
-.tile:not(.tile-blocked):hover{transform:translate3d(0,-3px,calc(var(--layer)*16px + 5px));box-shadow:none}
+@media(hover:hover) and (pointer:fine){.tile:not(.tile-blocked):hover{transform:translate3d(0,-3px,calc(var(--layer)*16px + 5px));box-shadow:none}}
 .tile[aria-pressed="true"]{transform:translate3d(0,-5px,calc(var(--layer)*16px + 11px));outline:none;box-shadow:none}
 .tile[aria-pressed="true"] .tile-top{outline:2px solid #edd49b;outline-offset:3px;background:linear-gradient(135deg,#fffbea,#f8e6b8)}
 .tile.hinted{outline:none}
@@ -123,3 +123,5 @@ dialog .theme-choice{min-height:70px}
 @media(max-width:360px){.title-content h1{font-size:min(5.5rem,23vw)}.title-content h1>span{letter-spacing:7px}.title-description{font-size:.9rem}.title-actions{width:250px}.app-header{gap:6px;padding-inline:9px}.app-header .level-title h2{font-size:1.05rem}.header-tools{gap:2px}.header-tools .icon-button{width:44px}.game-actions button{padding-inline:5px}.clock{font-size:.58rem}.clock svg{display:none}}
 @media(prefers-reduced-motion:reduce){.tile,.continue-button{transition:none}}
 .reduced-motion .tile,.reduced-motion .continue-button{transition:none!important}
+
+.tile[data-contact]{transition:none;transform:var(--contact-transform)!important}.tile[data-contact] .tile-top{outline:2px solid #fff1c6}
