@@ -1,0 +1,16 @@
+[
+  {
+    "name": "music mixer celebration and audio lifecycle",
+    "utc": "2026-10-18T00:36:28.007Z",
+    "candidate": "mg-4a56cd1f0fa785",
+    "status": "failed",
+    "error": "Hidden/missing #confirm-ok",
+    "observations": {
+      "outcomes": {
+        "AUDIO-DEFAULTS": "passed",
+        "AUDIO-CONTROLS": "passed",
+        "AUDIO-MUSIC": "passed"
+      }
+    }
+  }
+]

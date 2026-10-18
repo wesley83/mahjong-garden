@@ -1,0 +1,32 @@
+# Audio release1.3 — coverage and evidence decisions
+
+Candidate mg-32a8c86f56cf8f, source32a8c86f56cf8fb42d81bfad6285029271783d818766b75886c6481146130ee7. Actor: Codex, October17,2026 local time. Canonical handbook2.10.0 was rechecked and its content digest still matches PLAN.md and the retained touch snapshot.
+
+## Coverage decision before promotion
+
+Reviewed the user request, original game/presentation/touch contracts and handbook audio, state, input, accessibility, resource and release obligations independently of test counts. PLAN.md represents default-on music/effects, separate switches/volume/zero behavior, remembered preferences, original music, newly completed-level celebration, first eligible interaction, visible retry, hidden/transition cancellation, bounded scheduling/polyphony, signal headroom, strict migration/backup boundaries, layout/control reach and publication. Reset is explicitly conditional and cannot bypass malformed-game recovery. Both game and mixer revisions are checked before one atomic save. The legacy game profile/run stayv1; portable envelope2 includes mixer and envelope1 remains importable. Canonical campaign authority remains quoted source HTML; release compaction is validated against its complete parsed content.
+
+The music continues across menus and stops when hidden or transitioning. A restored completed board opens its result without replaying celebration. Mixer mute/zero stops its channel's generation; already permitted browser audio can resume on returning, and a blocked/interrupted context has an eligible-interaction/Preview retry. No audio work gates matching, saves or wins. Physical Pixel/Edge, speaker output, listening enjoyment and hardware audio/input latency remain unverified. No rhythm calibration, remote media, telemetry or new game rules are introduced. No previously adopted requirement is waived.
+
+Coverage decision: complete for the scoped increment. AUDIO-PUBLISH remains a post-promotion outcome at this barrier.
+
+## Evidence decision before promotion
+
+| Required outcome | Exact-candidate evidence | Decision |
+| --- | --- | --- |
+| AUDIO-DEFAULTS | Actual fixture removes only its disposable mixer record, retains legacy false sound flag and observes both new controls enabled35%/65%; strict Node malformed/future/range checks; four44px control regions measured | Passed |
+| AUDIO-CONTROLS | App bus settings17%/81% remain independent, mute/zero generates no notes; native keyboard sliders35→36 and65→64; real preview accepted; narrow390×844 screenshot and existing200%/safe-inset/layout checks | Passed in named desktop/render fixtures |
+| AUDIO-MUSIC | Real native eligible interaction reports Audio ready after checking context running; controlled app observes generation, full hide cleanup and resume; Node600 scheduling steps/dense effects remain bounded20 voices with one music timer, no late catch-up storm | Passed; no physical speaker claim |
+| AUDIO-CELEBRATE | Actual app under controlled context clears12 pairs:11 ordinary two-note cues, exactly one seven-note cue after win opens; completed backup restore generates no new effect; production cue shared with real synthesis/preview | Passed |
+| AUDIO-SIGNAL | OfflineAudioContext48000Hz/stereo/26s shared production loop and cues: all finite, peak0.205298, zero clipped samples, onset0.025021s, tail25.074708s; effects25%/75% peaks scale3:1, durationabout1.8s; zero render silent | Passed signal/resource scope; no perceptual listening claim |
+| AUDIO-RECOVERY | Native explicit mutes and36/64 volumes survive reload, re-enable music starts without another tap; controlled denied retry, bounded/stale resume, envelope2 restores different mixer values, dual-revision conflict aborts profile too, malformed mixer stays intact until explicit reset preserving board | Passed |
+| AUDIO-REGRESSION | 30 named Node groups including720 campaign deals,13 browser groups, all prior presentation/touch outcomes, native mismatch/text/editor/modal checks and keyboard clear24→0 with zero reshuffles; complete authored/compiled campaign equality | Passed |
+| Preflight/budget | Shared gate refuses missing AUDIO-CELEBRATE despite prior passes; real host entry/CSS serialization passes, unique fixture conditionally removed with root unchanged;18 artifacts/386317 initial bytes below400000 | Passed |
+
+Raw final observations are browser-raw.json and native-raw.json; current receipts identify their hashes and exact candidate. Intermediate attempts retain their own identities. Synchronous board dispatch maximum7.2ms is software work, not end-to-end latency. The measured board path remains below its100ms budget; native cold AudioContext startup is a separate, unmeasured boundary. Ordinary entry unlocks audio before tile play, and effects remain deferred from matching. The fixture's completed-save entry was qualified with an explicit win-modal dismissal and background-action assertion. Final44px controls were followed by new exact-candidate Node/browser/native runs. The guide digest and game/check dependencies are unchanged after these observations.
+
+Evidence decision: local outcomes and host preflight pass. Fresh verified backup, clean pushed source and conditional promotion may proceed under existing authorization. Resource readback must verify the compacted campaign and every dependency before entry promotion. Publication is not claimed by this barrier.
+
+## Publication
+
+Pending. public-before.json records the existing mg-21265889f3f24d client and its24 tiles. Preserve its checkpoint and prior dependency graphs; record actual live defaults, independent controls/preview, reload and checkpoint observations only after promotion.

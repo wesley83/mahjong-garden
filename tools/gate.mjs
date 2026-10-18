@@ -3,7 +3,8 @@ import {RUNTIME,ASSETS,hash,sourceIdentity,pngSize} from './contracts.mjs';impor
 export const REQUIRED_BROWSER=['responsive layout matrix','atomic storage conflict, failure and next action','studio editing, personal image conversion and failed import preservation','studio failed save stays recoverable, retry then close','ordinary controls through match, undo, shuffle, win, retry and reload','game backup export/import round-trip','delayed saves, stale restores, cancellation and image undo','text enlargement, safe insets, long labels and focus','loading, image and audio failure recovery','version-one checkpoint compatibility'];
 const rootDefault=fileURLToPath(new URL('../',import.meta.url));
 export const PRESENTATION_OUTCOMES=['PRESENT-3D','PRESENT-SCENES','PRESENT-SCREENS','PRESENT-MENUS','PRESENT-FACES','PRESENT-LAYOUT','PRESENT-MOTION','PRESENT-RECOVERY'];
-REQUIRED_BROWSER.push('CSS 3D presentation and game screen lifecycle','rapid taps and independent tile contacts');
+REQUIRED_BROWSER.push('CSS 3D presentation and game screen lifecycle','rapid taps and independent tile contacts','music mixer celebration and audio lifecycle');
+export const AUDIO_OUTCOMES=['AUDIO-DEFAULTS','AUDIO-CONTROLS','AUDIO-MUSIC','AUDIO-CELEBRATE','AUDIO-SIGNAL','AUDIO-RECOVERY'];
 export const TOUCH_OUTCOMES=['TOUCH-RAPID','TOUCH-MULTI','TOUCH-CANCEL','TOUCH-HIT'];
 export async function requiredNodeTests(root=rootDefault){const names=[];for(const file of (await fs.readdir(path.join(root,'tests'))).filter(f=>f.endsWith('.test.mjs')).sort()){const text=await fs.readFile(path.join(root,'tests',file),'utf8');names.push(...[...text.matchAll(/^test\('([^']+)'/gm)].map(m=>m[1]));}if(!names.length||new Set(names).size!==names.length)throw Error('Invalid Node scenario inventory');return names;}
 export async function verifyGate({root=rootDefault,output=path.join(root,'dist'),receiptDirectory=path.join(root,'audit/current')}={}){
@@ -26,7 +27,9 @@ export async function verifyGate({root=rootDefault,output=path.join(root,'dist')
  if(PRESENTATION_OUTCOMES.some(id=>presentation?.observations?.outcomes?.[id]!=='passed'))throw Error('Required presentation outcome is missing');
  const touch=browser.results.find(r=>r.name==='rapid taps and independent tile contacts');
  if(TOUCH_OUTCOMES.some(id=>touch?.observations?.outcomes?.[id]!=='passed'))throw Error('Required touch outcome is missing');
- for(const key of ['keyboardClear','textFocus','editorFocus','modalReturn','mismatchRefused'])if(native.checks?.[key]!==true)throw Error('Native input evidence missing: '+key);
+ const audio=browser.results.find(r=>r.name==='music mixer celebration and audio lifecycle');
+ if(AUDIO_OUTCOMES.some(id=>audio?.observations?.outcomes?.[id]!=='passed'))throw Error('Required audio outcome is missing');
+ for(const key of ['keyboardClear','textFocus','editorFocus','modalReturn','mismatchRefused','audioUnlocked','audioVolumeKeys','audioPreferences','celebrationPreview'])if(native.checks?.[key]!==true)throw Error('Native input evidence missing: '+key);
  return{passed:true,candidate:release.id,sourceDigest:release.sourceDigest,files:release.files.length,initialBytes:initial,nodeTests:node.tests,browserGroups:REQUIRED_BROWSER.length,release};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{const result=await verifyGate();console.log(JSON.stringify({...result,release:undefined}));}catch(error){console.error('Release refused: '+error.message);process.exitCode=1;}}

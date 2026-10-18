@@ -1,0 +1,12 @@
+[
+  {
+    "name": "music mixer celebration and audio lifecycle",
+    "utc": "2026-10-18T00:33:43.485Z",
+    "candidate": "mg-9603a9657ba7d1",
+    "status": "failed",
+    "error": "Hidden/missing [data-open=\"settings-dialog\"]",
+    "observations": {
+      "outcomes": {}
+    }
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "music mixer celebration and audio lifecycle",
+    "utc": "2026-10-18T00:37:54.244Z",
+    "candidate": "mg-384bf531a98817",
+    "observations": {
+      "outcomes": {
+        "AUDIO-DEFAULTS": "passed",
+        "AUDIO-CONTROLS": "passed",
+        "AUDIO-MUSIC": "passed",
+        "AUDIO-CELEBRATE": "passed",
+        "AUDIO-RECOVERY": "passed",
+        "AUDIO-SIGNAL": "passed"
+      },
+      "celebrationCount": 1,
+      "ordinaryMatchCues": 11,
+      "signal": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "seconds": 26,
+        "peak": 0.2052977830171585,
+        "clips": 0,
+        "rms": 0.024803926345014493,
+        "onsetSeconds": 0.025020833333333332,
+        "lastSignalSeconds": 25.074708333333334,
+        "zeroRenderSilent": true,
+        "effectVolumeRenders": [
+          {
+            "volume": 0.25,
+            "peak": 0.03528491407632828,
+            "duration": 1.79875
+          },
+          {
+            "volume": 0.75,
+            "peak": 0.10585474967956543,
+            "duration": 1.7995208333333332
+          }
+        ],
+        "scope": "Shared production synthesis, not perceptual listening or speaker output"
+      },
+      "deniedRetry": true,
+      "atomicAudioConflictRefused": true,
+      "legacyFalseDefaultsEnabled": true,
+      "preferencesRestored": true,
+      "syntheticAppMethod": "Controlled fake context for app sequencing/lifecycle; native real audio unlock is recorded separately"
+    },
+    "status": "passed"
+  }
+]

@@ -1,155 +1,191 @@
 TAP version 13
-# Subtest: semantic campaign accessors accept reordered attributes and reject ambiguous definitions
-ok 1 - semantic campaign accessors accept reordered attributes and reject ambiguous definitions
+# Subtest: audio preferences default on and strictly validate independent switches volumes and versions
+ok 1 - audio preferences default on and strictly validate independent switches volumes and versions
   ---
-  duration_ms: 424.6372
+  duration_ms: 3.0965
+  type: 'test'
+  ...
+# Subtest: music and effects use independent buses and stop generation at mute zero and pause
+ok 2 - music and effects use independent buses and stop generation at mute zero and pause
+  ---
+  duration_ms: 2.9392
+  type: 'test'
+  ...
+# Subtest: audio scheduling stays bounded during dense effects and recovers without a late backlog
+ok 3 - audio scheduling stays bounded during dense effects and recovers without a late backlog
+  ---
+  duration_ms: 31.0815
+  type: 'test'
+  ...
+# Subtest: denied unavailable and stale audio resume cannot revive paused work and can retry
+ok 4 - denied unavailable and stale audio resume cannot revive paused work and can retry
+  ---
+  duration_ms: 7.7942
+  type: 'test'
+  ...
+# Subtest: portable mixer backups preserve v1 game contracts and reject invalid mixer before import
+ok 5 - portable mixer backups preserve v1 game contracts and reject invalid mixer before import
+  ---
+  duration_ms: 114.2709
+  type: 'test'
+  ...
+# Subtest: release campaign attribute compaction preserves the entire authored DOM-derived game inventory
+ok 6 - release campaign attribute compaction preserves the entire authored DOM-derived game inventory
+  ---
+  duration_ms: 593.6134
+  type: 'test'
+  ...
+# Subtest: semantic campaign accessors accept reordered attributes and reject ambiguous definitions
+ok 7 - semantic campaign accessors accept reordered attributes and reject ambiguous definitions
+  ---
+  duration_ms: 532.8386
   type: 'test'
   ...
 # Subtest: profile and unfinished studio round trips preserve live values and strictly reject future data
-ok 2 - profile and unfinished studio round trips preserve live values and strictly reject future data
+ok 8 - profile and unfinished studio round trips preserve live values and strictly reject future data
   ---
-  duration_ms: 35.0459
+  duration_ms: 38.8873
   type: 'test'
   ...
 # Subtest: image headers enforce format, bytes and pixel bounds before a browser decoder runs
-ok 3 - image headers enforce format, bytes and pixel bounds before a browser decoder runs
+ok 9 - image headers enforce format, bytes and pixel bounds before a browser decoder runs
   ---
-  duration_ms: 1.0801
+  duration_ms: 2.3012
   type: 'test'
   ...
 # Subtest: cancellation and timeouts dispose late image results and do not revive older jobs
-ok 4 - cancellation and timeouts dispose late image results and do not revive older jobs
+ok 10 - cancellation and timeouts dispose late image results and do not revive older jobs
   ---
-  duration_ms: 5.8385
+  duration_ms: 7.5446
   type: 'test'
   ...
 # Subtest: studio history includes layout and images and remains bounded
-ok 5 - studio history includes layout and images and remains bounded
+ok 11 - studio history includes layout and images and remains bounded
   ---
-  duration_ms: 1.5719
+  duration_ms: 4.1606
   type: 'test'
   ...
 # Subtest: elapsed time is incorporated before matching and cannot advance a complete or invalid interval
-ok 6 - elapsed time is incorporated before matching and cannot advance a complete or invalid interval
+ok 12 - elapsed time is incorporated before matching and cannot advance a complete or invalid interval
   ---
-  duration_ms: 1.3898
+  duration_ms: 2.0026
   type: 'test'
   ...
 # Subtest: baseline version-one checkpoints and rollback reader remain compatible
-ok 7 - baseline version-one checkpoints and rollback reader remain compatible
+ok 13 - baseline version-one checkpoints and rollback reader remain compatible
   ---
-  duration_ms: 158.3268
+  duration_ms: 183.9723
   type: 'test'
   ...
-# Measured max initial-deal ms: 2.12
+# Measured max initial-deal ms: 2.57
 # Subtest: independent free-tile rules: sides, covers and different rows/layers
-ok 8 - independent free-tile rules: sides, covers and different rows/layers
+ok 14 - independent free-tile rules: sides, covers and different rows/layers
   ---
-  duration_ms: 1.1833
+  duration_ms: 2.0854
   type: 'test'
   ...
 # Subtest: 60 unique layouts; 12 seeds each complete with only legal identical pairs
-ok 9 - 60 unique layouts; 12 seeds each complete with only legal identical pairs
+ok 15 - 60 unique layouts; 12 seeds each complete with only legal identical pairs
   ---
-  duration_ms: 1355.1349
+  duration_ms: 1556.4354
   type: 'test'
   ...
 # Subtest: deterministic deal, illegal and duplicate matches do not mutate
-ok 10 - deterministic deal, illegal and duplicate matches do not mutate
+ok 16 - deterministic deal, illegal and duplicate matches do not mutate
   ---
-  duration_ms: 1.266
+  duration_ms: 1.9821
   type: 'test'
   ...
 # Subtest: reshuffle preserves positions/count, undo and assistance scoring
-ok 11 - reshuffle preserves positions/count, undo and assistance scoring
+ok 17 - reshuffle preserves positions/count, undo and assistance scoring
   ---
-  duration_ms: 1.9164
+  duration_ms: 2.259
   type: 'test'
   ...
 # Subtest: bounded solver distinguishes impossible and budget exhaustion
-ok 12 - bounded solver distinguishes impossible and budget exhaustion
+ok 18 - bounded solver distinguishes impossible and budget exhaustion
   ---
-  duration_ms: 0.1892
+  duration_ms: 0.3994
   type: 'test'
   ...
 # Subtest: import validates before mutation and refuses markup, future data and unsupported geometry
-ok 13 - import validates before mutation and refuses markup, future data and unsupported geometry
+ok 19 - import validates before mutation and refuses markup, future data and unsupported geometry
   ---
-  duration_ms: 1.107
+  duration_ms: 2.1444
   type: 'test'
   ...
 # Subtest: checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
-ok 14 - checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
+ok 20 - checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
   ---
-  duration_ms: 2.4647
+  duration_ms: 3.2684
   type: 'test'
   ...
 # Subtest: gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
-ok 15 - gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
+ok 21 - gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
   ---
-  duration_ms: 1046.8984
+  duration_ms: 1450.318
   type: 'test'
   ...
 # Subtest: semantic HTML verification catches content changes while allowing serialization
-ok 16 - semantic HTML verification catches content changes while allowing serialization
+ok 22 - semantic HTML verification catches content changes while allowing serialization
   ---
-  duration_ms: 11.1854
+  duration_ms: 11.7418
   type: 'test'
   ...
 # Subtest: HTML SVG attribute name serialization preserves semantics but changed values are refused
-ok 17 - HTML SVG attribute name serialization preserves semantics but changed values are refused
+ok 23 - HTML SVG attribute name serialization preserves semantics but changed values are refused
   ---
-  duration_ms: 0.6353
+  duration_ms: 0.9543
   type: 'test'
   ...
 # Subtest: public HTML comparison handles omitted head without mutation and allows only the exact host footer
-ok 18 - public HTML comparison handles omitted head without mutation and allows only the exact host footer
+ok 24 - public HTML comparison handles omitted head without mutation and allows only the exact host footer
   ---
-  duration_ms: 1.6137
+  duration_ms: 3.0843
   type: 'test'
   ...
 # Subtest: publisher requires completed backup and refuses a concurrent live-entry change
-ok 19 - publisher requires completed backup and refuses a concurrent live-entry change
+ok 25 - publisher requires completed backup and refuses a concurrent live-entry change
   ---
-  duration_ms: 21.2149
+  duration_ms: 30.7518
   type: 'test'
   ...
 # Subtest: publisher reconciles an ambiguous dependency write and rolls back only its entry
-ok 20 - publisher reconciles an ambiguous dependency write and rolls back only its entry
+ok 26 - publisher reconciles an ambiguous dependency write and rolls back only its entry
   ---
-  duration_ms: 19.6069
+  duration_ms: 22.3446
   type: 'test'
   ...
 # Subtest: independent secondary contacts activate once in either release order
-ok 21 - independent secondary contacts activate once in either release order
+ok 27 - independent secondary contacts activate once in either release order
   ---
-  duration_ms: 13.1087
+  duration_ms: 15.4157
   type: 'test'
   ...
 # Subtest: drag outside cancellation and lost capture leave other contacts usable
-ok 22 - drag outside cancellation and lost capture leave other contacts usable
+ok 28 - drag outside cancellation and lost capture leave other contacts usable
   ---
-  duration_ms: 2.965
+  duration_ms: 5.754
   type: 'test'
   ...
 # Subtest: reset disabled state and removed targets refuse stale activation then accept fresh input
-ok 23 - reset disabled state and removed targets refuse stale activation then accept fresh input
+ok 29 - reset disabled state and removed targets refuse stale activation then accept fresh input
   ---
-  duration_ms: 1.6924
+  duration_ms: 3.5565
   type: 'test'
   ...
 # Subtest: compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
-ok 24 - compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
+ok 30 - compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
   ---
-  duration_ms: 0.7724
+  duration_ms: 0.8648
   type: 'test'
   ...
-1..24
-# tests 24
+1..30
+# tests 30
 # suites 0
-# pass 24
+# pass 30
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1537.2511
+# duration_ms 2102.6212

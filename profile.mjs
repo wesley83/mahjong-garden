@@ -1,4 +1,5 @@
 import {validateImages,validateRun} from './core.mjs';
+import {validateAudio} from './audio.mjs';
 
 export function fields(value,names,label='data') {
  if(!value||typeof value!=='object'||Array.isArray(value)||![Object.prototype,null].includes(Object.getPrototypeOf(value))||Object.keys(value).length!==names.length||names.some(k=>!Object.hasOwn(value,k))||Object.keys(value).some(k=>!names.includes(k)))throw Error(`Unsupported or missing ${label} fields.`);
@@ -22,8 +23,11 @@ export function validateProfile(profile,levels) {
  if(profile.run!==null)validateRun(profile.run,levels);return structuredClone(profile);
 }
 export function parseGameBackup(text,levels) {
+ return parseBackup(text,levels).profile;
+}
+export function parseBackup(text,levels) {
  if(typeof text!=='string'||new TextEncoder().encode(text).length>18000000)throw Error('Game backup exceeds 18 MB.');
- const envelope=JSON.parse(text);fields(envelope,['format','version','profile'],'backup envelope');
- if(envelope.format!=='mahjong-garden-backup'||envelope.version!==1)throw Error('Unsupported game backup.');
- return validateProfile(envelope.profile,levels);
+ const envelope=JSON.parse(text);fields(envelope,envelope?.version===2?['format','version','profile','audio']:['format','version','profile'],'backup envelope');
+ if(envelope.format!=='mahjong-garden-backup'||![1,2].includes(envelope.version))throw Error('Unsupported game backup.');
+ return{profile:validateProfile(envelope.profile,levels),audio:envelope.version===2?validateAudio(envelope.audio):null};
 }

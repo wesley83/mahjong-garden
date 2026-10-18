@@ -125,3 +125,7 @@ dialog .theme-choice{min-height:70px}
 .reduced-motion .tile,.reduced-motion .continue-button{transition:none!important}
 
 .tile[data-contact]{transition:none;transform:var(--contact-transform)!important}.tile[data-contact] .tile-top{outline:2px solid #fff1c6}
+
+.audio-settings{border:0;padding:0;margin:20px 0}.audio-settings legend{font:1.3rem Georgia,serif}.volume-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 14px;margin:10px 0 18px;font-size:.82rem}.volume-row input{grid-column:1/-1;width:100%;min-width:0;height:44px;accent-color:#53745b}.volume-row output{font-variant-numeric:tabular-nums}.audio-settings .setting-row{padding:12px 0}.audio-settings .secondary-button{margin-top:4px}
+
+.audio-settings .setting-row input[type="checkbox"]{width:44px;height:44px;flex:none}

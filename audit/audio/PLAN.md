@@ -1,0 +1,36 @@
+# Default music, effects and level-clear celebration — MG-029
+
+Requested October 17, 2026 local time. Plan recorded before implementation. Existing authorization covers commit, push, fresh backup and deployment to the same game host; retain previous resources and user data.
+
+Guidance: canonical Pagelove GAME-DEVELOPMENT-BEST-PRACTICES.md, edition 2.10.0, digest b805bc8e89e61d567fac2d26d5e8bcc33e75e57964924a0b7aa6a3be7105c0f4, retained snapshot ../touch/handbook-2.10.0.md. Adopt sections 1, 3–6, 10–14, 16–17, existing puzzle/release scope and especially section12's audio ownership, gesture, independent controls, mute generation, signal/polyphony and lifecycle checks. Available evidence: Node, desktop Chromium155/Windows browser, OfflineAudioContext signal rendering and authorized host probes. Physical Pixel10 Pro/Edge and perceptual listening remain unverified.
+
+## Contract and sources
+
+An original calm instrumental phrase loops after an eligible interaction. Music and effects initially enabled, music35%/effects65%. The first launch of this mixer enables both channels as requested, including existing profiles; subsequent explicit mute and volume values persist. Never autoplay before a browser-eligible gesture or require audio for play. Settings exposes named independent switches, 0–100% native sliders with visible/live percentages, and Preview celebration. Volume zero is silent without discarding the on/off preference. Mute/zero stops avoidable generation and existing channel voices. Music continues across menus; hidden/pagehide/transition pauses all sound and cancels pending work. Returning may resume the remembered music after successful unlock; rejected or unavailable audio leaves play usable, shows status and permits an explicit retry.
+
+Each ordinary match has a short two-note cue. Only the newly completed user match requests a distinct rising celebration after the win dialog opens; restoring/reloading an already completed level must not replay it. Sound effects mute/volume applies to both cues. Rapid matching cannot schedule unbounded voices. Bound scheduling horizon, live nodes and timer ownership; async resume must not revive obsolete scenes or muted work. Timed generation runs on the audio clock with bounded lookahead, no late backlog after interruption. Use independent gain buses and conservative headroom.
+
+Keep game profile/run format1 and old-reader compatibility. Store new version1 mixer preferences under a separate `audio` key in the existing IndexedDB store; this is the sole current audio authority. Legacy profile.settings.sound remains untouched compatibility data for old clients. Save profile and mixer atomically with both revision checks; existing old clients leave the mixer key alone. New portable game-backup envelope2 includes profile plus validated mixer; continue importing envelope1 without overwriting current mixer preferences. Invalid/future imports preserve current state. Existing game checkpoints, progression, layouts, personal images and touch behavior persist.
+
+Keep the adopted400000 initial-byte budget. If needed strip only whitespace between validated campaign HTML tags during build, retaining formatted canonical source and proving full parsed campaign equality. This is a source-to-release transform, not a competing definition. Original synthesized audio introduces no external media dependency or download.
+
+## Required acceptance inventory (revision1)
+
+| ID | Executable check and failure response |
+| --- | --- |
+| AUDIO-DEFAULTS | Fresh/missing mixer record yields both enabled/default volumes; an existing legacy false sound flag does not suppress new defaults. Muted/custom mixer survives reload. Strict malformed/unknown/future/range validation and failed atomic write preserve prior data. |
+| AUDIO-CONTROLS | Actual settings switches/sliders update their own buses independently, 0/mute silences generation, visible percentages and native keyboard adjustments remain reachable at narrow/landscape/200% layouts. Explicit retry after denied audio recovers. |
+| AUDIO-MUSIC | Eligible native interaction starts the real audio context/loop; bounded timer/lookahead/node counts, independent mute and hidden/pause/resume cleanup pass in controlled fixtures. Synthetic events are not labeled trusted gesture evidence. |
+| AUDIO-CELEBRATE | Actual last-pair win requests one celebration after dialog opening, ordinary pair gets match cue; completed restore/reload requests none. Effects mute/zero prevents both; rapid input and stale work do not replay. |
+| AUDIO-SIGNAL | Shared production note/envelope rendering through OfflineAudioContext at48000Hz/stereo: finite samples, peak below1, no clipping, onset/duration and independent bus/mute behavior; voice bounds verified separately. No perceptual quality or hardware-latency claim. |
+| AUDIO-RECOVERY | V1 game checkpoints/legacy backup and envelope2 full audio/game round-trip; malformed mixer/import, denied/suspended/unavailable audio, stale resume and canceled lifecycle followed by usable next action. |
+| AUDIO-REGRESSION | Full exact-candidate Node/browser/native inventory, all60 levels, existing presentation/touch outcomes, budget and campaign transform equivalence. A missing new audio outcome must refuse promotion despite all old passes. |
+| AUDIO-PUBLISH | Clean pushed source, fresh verified backup, actual-host serialization preflight, resource readback, conditional promotion, public old-checkpoint preservation and native settings/default/volume/preview checks. Mark passed only after observation. |
+
+Before promotion record coverage and evidence decisions separately in REVIEW.md. All six new local audio outcomes are required by the shared gate, plus the existing regression inventory. Publication checks follow actual promotion. Keep raw attempt evidence distinct from accepted receipts. No audio-start exception waives gameplay response budgets or makes a failed playback a successful sound claim.
+
+Build-budget refinement before implementation: the campaign is already compact and inter-tag whitespace yields only about126 bytes. Instead remove quotes solely from validated safe data-tile/data-x/data-y/data-z attribute values in the generated release copy (legal unquoted HTML tokens). Preserve quoted canonical source and prove complete parsed campaign equality before writing output. This measured alternative replaces the ineffective whitespace-only optimization; the400000-byte budget remains unchanged.
+
+Recovery refinement before verification: Reset audio settings is an explicit recovery control. Malformed/future mixer data remains untouched on load; reset conditionally replaces only the observed audio record while atomically preserving the validated game profile. If a malformed game-profile recovery is pending, audio reset remains in memory and cannot bypass the existing Save fresh game confirmation. Audio resume has a3500ms bound, explicit retry and generation cancellation; visible context interruptions retry on the next eligible interaction.
+
+Final independent layout review: the new native audio checkboxes receive44×44 CSS-pixel targets, matching the slider height; the actual-app fixture asserts all four new control regions before acceptance. Dialog scrolling remains available.

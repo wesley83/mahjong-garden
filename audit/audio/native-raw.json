@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-18T00:42:11.115Z",
+  "candidate": "mg-32a8c86f56cf8f",
+  "checks": {
+    "audioUnlocked": true,
+    "audioVolumeKeys": true,
+    "celebrationPreview": true,
+    "audioPreferences": true,
+    "modalReturn": true,
+    "mismatchRefused": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "reshuffles": 0,
+    "volumeKeys": {
+      "music": "36",
+      "musicOutput": "36%",
+      "sound": "64",
+      "soundOutput": "64%"
+    },
+    "restoredAudio": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "reenabled": "Audio ready.",
+    "mismatch": {
+      "message": "Different symbols. This tile is selected; find its exact match.",
+      "n": 24
+    },
+    "editor": {
+      "count": 31,
+      "label": "Column 1, row 1, layer 1, empty"
+    }
+  }
+}

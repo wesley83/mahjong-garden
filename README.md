@@ -12,7 +12,7 @@ All 60 levels are open from the beginning. Earn one star for completion, two wit
 
 Begin or continue from the title screen. Menu returns to the title without resetting your board. Tile collections, all sixty levels and the personal studio remain available through game menus. Each tile uses front, back and side planes with CSS perspective.
 
-Use mouse/touch, Tab and Enter/Space. Arrow keys move tile focus. **H** reveals a pair; **U** undoes; **Escape** clears selection. A text tile view exposes the same actions. Settings offer larger tiles, reduced motion and optional synthesized match sounds. The clock pauses on the title screen, while a dialog is open or the tab is hidden. There is no time limit.
+Use mouse/touch, Tab and Enter/Space. Arrow keys move tile focus. **H** reveals a pair; **U** undoes; **Escape** clears selection. A text tile view exposes the same actions. Settings offer larger tiles, reduced motion, background music and match/celebration effects. Music and effects start enabled (35%/65%) after your first interaction. Each has its own switch and volume slider; choices are remembered. Preview celebration plays the level-clear cue. The clock pauses on the title screen, while a dialog is open or the tab is hidden. There is no time limit.
 
 ## Your tile studio
 
@@ -57,9 +57,12 @@ The original local backup is deliberately excluded from this public repository. 
 
 ## License and asset provenance
 
-MIT. Traditional tile SVG illustrations, favicon, interface icons and CSS botanical artwork were created for this game. Animal and emoji faces use Unicode characters rendered by the operating system; no emoji font or artwork files are redistributed. Display fonts are system fonts. Optional sound is synthesized with Web Audio. User-imported images remain the user's responsibility and are absent from the repository and distribution.
+MIT. Traditional tile SVG illustrations, favicon, interface icons and CSS botanical artwork were created for this game. Animal and emoji faces use Unicode characters rendered by the operating system; no emoji font or artwork files are redistributed. Display fonts are system fonts. The original instrumental loop and sound effects are synthesized with Web Audio; no music files or external media are loaded. User-imported images remain the user's responsibility and are absent from the repository and distribution.
 
 The [handbook comparison](audit/HANDBOOK-REVIEW.md) records the nine resolved gap groups, exact-candidate evidence and environment limits. `pnpm check` builds and writes a unit receipt; browser/native receipts require actually executing their respective journeys before `pnpm gate` can pass. Tests never manufacture production acceptance receipts. The gate also checks required asset roles, the 400,000-byte initial gameplay budget and source/artifact hashes. See [asset provenance](assets/ASSETS.md) for optional, reproducible image authoring.
 
 
 Rapid touch update (1.2.1): surviving tile buttons keep their identity, visible 3D planes accept hits, and touch/pen contacts select independently on release, including secondary fingers. Movement beyond 14 CSS pixels or a browser-canceled gesture does not select a tile. Scroll and pinch zoom remain enabled. The smallest source width is 48 pixels; boards scroll when necessary. Mouse, keyboard and text tiles remain available. `tests/touch.mjs` runs qualified synthetic app input and rendered hit geometry; `audit/touch/` distinguishes this from native desktop and unverified Pixel/Edge behavior.
+
+
+Audio update1.3.0: game profile/run formats remain1. A separately versioned mixer record is saved atomically with progress, and portable game-backup envelope2 includes both. Older envelope1 backups still import; their game state restores while current mixer preferences remain. First launch of the new mixer enables both channels even if the old default sound flag was false. Later explicit mutes/volumes persist. Reset audio settings also recovers an invalid mixer record without replacing a valid game save. Hidden pages/transitions stop audio; interrupted audio can retry from an eligible gesture or Preview celebration. A completed save restore stays quiet. The build compacts only validated safe campaign data attributes and asserts complete content equality; canonical authored HTML remains quoted/readable. Evidence and scope: audit/audio/.
