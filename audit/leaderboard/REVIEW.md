@@ -37,3 +37,12 @@ A committed-blob check found ten pre-existing or edited text files with CRLF byt
 
 
 Canonical-candidate coverage/evidence decision: passed for mg-806ff54a7b968a / 806ff54a7b968a63ab7fb9e5346eaf58e465ae973a17927a94ff3edacb7745cd. All35 Node groups,14 browser groups, all11 native checks and exact-host entry/style preflight were newly executed on this candidate. The unchanged backend policy retains its separately pinned successful live probe. No adopted outcome is missing before promotion. Fresh full backup, committed-source comparison, conditional publication and actual public UI checks follow; BOARD-PUBLISH remains pending until those observations.
+
+
+## Publication — BOARD-PUBLISH passed
+
+Source 5167b0a0ea03cd66f155e8d0f9cf90264cb0ccf6 was committed, pushed and checked byte-for-byte against every built source before publication. Fresh full verified backup:94 files/21 directories/2998271 bytes in the ignored backup recorded by deployment-journal.json. Candidate mg-806ff54a7b968a was conditionally promoted at2026-10-18T01:13:26.825Z; all19 public resources and the root passed readback, with prior graph/data resources retained. No wipe or shared-score reseed. Hidden publisher exited0.
+
+Actual public client stayed on its original24 tiles through promotion; reload loaded this candidate with identical logical tile IDs/faces. Native name entry Garden Visitor retained text focus, all60 options were present, first/last-level queries succeeded, returning to level1 loaded confirmed empty standings (synthetic server test rows had been removed), and closing returned focus to the title opener. Submission correctly remains disabled for this user's unfinished board. The complete submission journey is covered by the controlled exact-app fixture and the separately verified real native service, rather than clearing the user's current game for a public UI POST test. Public match24→22 and Undo→24 restored all IDs/faces. Music/effects remained enabled35/65 with Audio ready. Bounded public browser error log empty. Screenshot saved privately as .local/leaderboard-public.png.
+
+Final source/evidence manifest and commit/push follow. Existing physical phone/browser/perceptual limits remain unchanged.

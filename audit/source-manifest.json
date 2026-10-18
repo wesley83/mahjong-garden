@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-18T01:12:11.319Z",
+  "utc": "2026-10-18T01:15:11.284Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -145,8 +145,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 53905,
-      "sha256": "2a61ca6c7952504d929c2d6d03f86b66c4cebf5346ad20d4e32d450cde2f37c6"
+      "bytes": 55054,
+      "sha256": "4c9ceb919cb9fce75aa7e9425eb68110f2fe8618bc09a4f6b93a2dd8b31fdbbb"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -185,8 +185,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 4185,
-      "sha256": "7b481eef2928a1dbe24fe3f4b843976b1245798ab442faab9b11eb50a31e20b0"
+      "bytes": 4369,
+      "sha256": "ef336dc35d16cd8697a7641704d155a699fb6706c4ab5c833302f8cc9122f8c4"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -269,6 +269,11 @@
       "sha256": "c13a3ebcb7b3480b02f5c19641ac7b5f4c7c51fa4a85d3c288764555459dfa22"
     },
     {
+      "path": "audit/leaderboard/deployment-journal.json",
+      "bytes": 967,
+      "sha256": "d68e583a4e72fc15331fcbd8adb6407cef601f2d00b4a12ee38de79ea5d437e3"
+    },
+    {
       "path": "audit/leaderboard/handbook-2.11.0.md",
       "bytes": 284804,
       "sha256": "1b32feff2af6ec4042283e8ce21a1cfa32e6516ce48da834cce98ff065c11054"
@@ -314,9 +319,14 @@
       "sha256": "8d96db094d9038887d10dcb7d3808c4568895d82b10481dcc872690f781f90cc"
     },
     {
+      "path": "audit/leaderboard/public.json",
+      "bytes": 689,
+      "sha256": "439d0a2db54fa93cf4c2efad19c0350ce2d624d581ea50de4a1813c4bd61ef5f"
+    },
+    {
       "path": "audit/leaderboard/REVIEW.md",
-      "bytes": 7962,
-      "sha256": "285f2a0d9cd73b1338409cf2a8fc3fe383174aafba4f13b53a4c821023287d21"
+      "bytes": 9523,
+      "sha256": "9fb5ee5b856b32335fb8a6056b2ceb712f640c93fa63ca5432d8a580486505bf"
     },
     {
       "path": "audit/leaderboard/server.json",

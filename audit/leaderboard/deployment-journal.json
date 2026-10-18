@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-18T01:15:11.141Z",
+  "candidate": "mg-806ff54a7b968a",
+  "sourceCommit": "5167b0a0ea03cd66f155e8d0f9cf90264cb0ccf6",
+  "phases": [
+    {
+      "state": "source-committed-pushed-and-byte-verified",
+      "commit": "5167b0a0ea03cd66f155e8d0f9cf90264cb0ccf6"
+    },
+    {
+      "state": "fresh-full-backup-verified",
+      "files": 94,
+      "directories": 21,
+      "bytes": 2998271,
+      "location": "Ignored .local/server-backup/2026-10-18T01-12-41-326Z"
+    },
+    {
+      "state": "conditional-promotion-and-public-resource-readback-completed",
+      "utc": "2026-10-18T01:13:26.825Z",
+      "files": 19,
+      "note": "Publisher returns promotion/readback as one completed observation; no per-resource durable phase is inferred."
+    },
+    {
+      "state": "public-native-view-and-gameplay-verified",
+      "receipt": "public.json"
+    }
+  ],
+  "previousReleasesRetained": true,
+  "serverRecordsPreserved": true,
+  "credentialStored": false
+}

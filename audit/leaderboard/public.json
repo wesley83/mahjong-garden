@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-18T01:13:53.945Z",
+  "candidate": "mg-806ff54a7b968a",
+  "oldClientStable": true,
+  "checkpointPreserved": true,
+  "nativeName": {
+    "focused": true,
+    "value": "Garden Visitor"
+  },
+  "nameEntry": true,
+  "submissionRequiresClear": true,
+  "levelOptions": 60,
+  "lastLevel": "Level 60 · all-time top 25",
+  "publicLoad": "Up to date. Equal stars and seconds share a rank.",
+  "syntheticScoresAbsent": true,
+  "focusReturned": true,
+  "afterMatch": 22,
+  "afterUndo": 24,
+  "undoRestoredCheckpoint": true,
+  "audio": {
+    "music": true,
+    "musicVolume": "35",
+    "sound": true,
+    "soundVolume": "65",
+    "status": "Audio ready."
+  },
+  "browserErrors": []
+}
