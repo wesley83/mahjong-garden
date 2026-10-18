@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-18T02:38:16.579Z",
+  "candidate": "mg-d496d772a6bc11",
+  "sourceCommit": "c2a49e065d405643dc5e9529a90aa14618b426d8",
+  "phases": [
+    {
+      "state": "source-committed-pushed-and-all-source-blobs-verified",
+      "commit": "c2a49e065d405643dc5e9529a90aa14618b426d8"
+    },
+    {
+      "state": "full-backup-verified",
+      "files": 113,
+      "directories": 24,
+      "bytes": 3489669,
+      "location": "Ignored .local/server-backup/2026-10-18T02-34-10-650Z"
+    },
+    {
+      "state": "conditional-entry-and-public-graph-controls-verified",
+      "utc": "2026-10-18T02:35:26.345Z",
+      "files": 25,
+      "note": "Publisher reports completed promotion/resource/control readback together; root manifest/worker follow entry and use conditional writes."
+    },
+    {
+      "state": "public-native-board-and-PWA-active-verified",
+      "receipt": "public.json"
+    },
+    {
+      "state": "read-only-public-diagnostics-conditionally-removed",
+      "resources": 2,
+      "readback404": true
+    }
+  ],
+  "previousGraphsAndBothScoreResourcesPreserved": true,
+  "credentialStored": false
+}

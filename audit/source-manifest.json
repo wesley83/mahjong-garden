@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-18T02:33:11.265Z",
+  "utc": "2026-10-18T02:38:17.156Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -155,8 +155,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 57431,
-      "sha256": "1af0692b7e10029bd7ee41dde30b333aa017275dd28376c925c78f0ca05d6164"
+      "bytes": 58541,
+      "sha256": "93bcfc23167b1b97305aa95c6f5235fba49a9fc19bb5b74a482c2fc9c19cf7e1"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -195,8 +195,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 4369,
-      "sha256": "ef336dc35d16cd8697a7641704d155a699fb6706c4ab5c833302f8cc9122f8c4"
+      "bytes": 5398,
+      "sha256": "bc49a415800d063c63d8c88d5c1b25ee31345d43b500784d4ca377b170bad7c1"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -424,6 +424,11 @@
       "sha256": "4c393fe25a1c26a385ce8563e2e6dd2587553766fce314dbdfa5a2f07d9be0df"
     },
     {
+      "path": "audit/scoring/deployment-journal.json",
+      "bytes": 1111,
+      "sha256": "bcb8d8b8dbdfe3f7f6e4069932bc82c69f8fa9c15de4fa49e5cc4c2436053ec8"
+    },
+    {
       "path": "audit/scoring/host-preflight-command.txt",
       "bytes": 3414,
       "sha256": "47f3eebce7e3396d818509cb71540ae26301ed83c39c18b5c2f539de542d1b60"
@@ -444,9 +449,19 @@
       "sha256": "8b507d19901cc68ccee833fe22d0c5c5f32ca3c2f2ce080e699d185492add6b9"
     },
     {
+      "path": "audit/scoring/public-before.json",
+      "bytes": 2432,
+      "sha256": "ced15e1f46c9bc739cbe8be6bcfeb2a3edbf372dba689d6688ed12c28766b857"
+    },
+    {
       "path": "audit/scoring/public-worker-command.txt",
       "bytes": 3885,
       "sha256": "b1dfe48feb57f17877d9f13b270a8f9ca452fcefb68305c2bcf39346968729da"
+    },
+    {
+      "path": "audit/scoring/public.json",
+      "bytes": 1080,
+      "sha256": "b4ace04edc99c3932ddd7570de332f4854fbc21062b9c45a2fceafde6037f46a"
     },
     {
       "path": "audit/scoring/pwa-native.json",
@@ -455,8 +470,8 @@
     },
     {
       "path": "audit/scoring/REVIEW.md",
-      "bytes": 6937,
-      "sha256": "754b00f8e4476bff7303a8927c49d666f524a3e512dd06f8c3135b3b0728d77e"
+      "bytes": 8923,
+      "sha256": "aa1840bc8f2408d38853069598b0ef0a5a9e5db9e13edde6d46dbae16541a039"
     },
     {
       "path": "audit/scoring/server.json",

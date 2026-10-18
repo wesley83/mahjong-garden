@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-18T02:36:11.225Z",
+  "candidate": "mg-d496d772a6bc11",
+  "oldClientStable": true,
+  "checkpointPreserved": true,
+  "balancedLive": true,
+  "legacyLive": true,
+  "updateCheck": "You have the newest version.",
+  "pwa": {
+    "scope": "https://grab-lead-8328.onpagelove.com/",
+    "active": "activated",
+    "activeVersion": "mg-d496d772a6bc11",
+    "waitingVersion": null,
+    "manifest": {
+      "status": 200,
+      "type": "application/manifest+json",
+      "display": "standalone",
+      "start_url": "/",
+      "id": "/",
+      "scope": "/"
+    },
+    "icons": [
+      {
+        "size": "192x192",
+        "status": 200,
+        "type": "image/png"
+      },
+      {
+        "size": "512x512",
+        "status": 200,
+        "type": "image/png"
+      }
+    ],
+    "cachePolicy": "Network required; worker does not cache responses"
+  },
+  "afterMatch": 22,
+  "afterUndo": 24,
+  "undoPreserved": true,
+  "audio": {
+    "music": true,
+    "musicVolume": "35",
+    "sound": true,
+    "soundVolume": "65",
+    "status": "Audio ready."
+  },
+  "browserErrors": []
+}
