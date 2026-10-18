@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-18T00:41:42.036Z",
-  "candidate": "mg-32a8c86f56cf8f",
-  "sourceDigest": "32a8c86f56cf8fb42d81bfad6285029271783d818766b75886c6481146130ee7",
+  "utc": "2026-10-18T01:04:15.203Z",
+  "candidate": "mg-be015f22ce0061",
+  "sourceDigest": "be015f22ce00618d530a315ba4ce088ad1b2a0e6104d27a62c8545050d28c04c",
   "node": "24.19.0",
   "command": [
     "node",
@@ -10,10 +10,11 @@
     "tests/audio.test.mjs",
     "tests/contracts.test.mjs",
     "tests/core.test.mjs",
+    "tests/leaderboard.test.mjs",
     "tests/release.test.mjs",
     "tests/touch.test.mjs"
   ],
-  "tests": 30,
+  "tests": 35,
   "exitCode": 0,
-  "outputSha256": "404b2aa42e571446b6543a248e1667530c78212b96339b1e2708c34f54ba6156"
+  "outputSha256": "34cdf3a7fa2656c79d7cdc4d5d8f6f8109c673aa0f1ed919d477f2c40a31e7cc"
 }

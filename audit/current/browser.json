@@ -1,303 +1,308 @@
 {
-  "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "utc": "2026-10-18T01:07:29.868Z",
+  "candidate": "mg-be015f22ce0061",
+  "sourceDigest": "be015f22ce00618d530a315ba4ce088ad1b2a0e6104d27a62c8545050d28c04c",
+  "environment": "Native in-app Chromium on Windows; exact UI/environment observations in retained raw receipts",
   "results": [
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:26.984Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "responsive layout matrix",
+      "status": "passed",
       "observations": [
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 320,
+          "width": 320,
           "height": 568,
-          "minTileHeight": 58.7445068359375,
+          "documentWidth": 320,
+          "tiles": 64,
           "minTileWidth": 46.069053649902344,
-          "tiles": 64,
-          "width": 320
+          "minTileHeight": 58.7445068359375,
+          "controlsInViewport": true,
+          "dialogs": []
         },
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 390,
+          "width": 390,
           "height": 844,
-          "minTileHeight": 58.1463623046875,
+          "documentWidth": 390,
+          "tiles": 64,
           "minTileWidth": 45.99395751953125,
-          "tiles": 64,
-          "width": 390
+          "minTileHeight": 58.1463623046875,
+          "controlsInViewport": true,
+          "dialogs": []
         },
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 568,
+          "width": 568,
           "height": 320,
-          "minTileHeight": 59.13151168823242,
+          "documentWidth": 568,
+          "tiles": 64,
           "minTileWidth": 46.227272033691406,
-          "tiles": 64,
-          "width": 568
+          "minTileHeight": 59.13151168823242,
+          "controlsInViewport": true,
+          "dialogs": []
         },
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 829,
+          "width": 844,
           "height": 390,
+          "documentWidth": 829,
+          "tiles": 64,
+          "minTileWidth": 45.105224609375,
           "minTileHeight": 56.31231689453125,
-          "minTileWidth": 45.105224609375,
-          "tiles": 64,
-          "width": 844
+          "controlsInViewport": true,
+          "dialogs": []
         },
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 1280,
+          "width": 1280,
           "height": 720,
-          "minTileHeight": 55.43723678588867,
-          "minTileWidth": 45.105224609375,
+          "documentWidth": 1280,
           "tiles": 64,
-          "width": 1280
+          "minTileWidth": 45.105224609375,
+          "minTileHeight": 55.43723678588867,
+          "controlsInViewport": true,
+          "dialogs": []
         },
         {
-          "controlsInViewport": true,
-          "dialogs": [],
-          "documentWidth": 1440,
+          "width": 1440,
           "height": 900,
-          "minTileHeight": 68.1748275756836,
-          "minTileWidth": 55.86393356323242,
+          "documentWidth": 1440,
           "tiles": 64,
-          "width": 1440
+          "minTileWidth": 55.86393356323242,
+          "minTileHeight": 68.1748275756836,
+          "controlsInViewport": true,
+          "dialogs": []
         }
-      ],
-      "status": "passed",
-      "utc": "2026-10-18T00:41:56.663Z"
+      ]
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:27.983Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "atomic storage conflict, failure and next action",
+      "status": "passed",
       "observations": {
-        "nextWriteSucceeded": true,
+        "staleWriteRefused": true,
         "quotaFailurePreservedPrevious": true,
-        "staleWriteRefused": true
-      },
-      "status": "passed",
-      "utc": "2026-10-18T00:41:57.615Z"
+        "nextWriteSucceeded": true
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:33.897Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "studio editing, personal image conversion and failed import preservation",
+      "status": "passed",
       "observations": {
-        "badImportPreservedDraft": true,
+        "undoRedo": true,
         "currentNameSaved": true,
-        "customTheme": true,
         "imagesConvertedAndSaved": 2,
-        "playtest": true,
-        "undoRedo": true
-      },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:03.578Z"
+        "customTheme": true,
+        "badImportPreservedDraft": true,
+        "playtest": true
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:35.743Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "studio failed save stays recoverable, retry then close",
-      "observations": {
-        "failedCloseRetainedDraft": true,
-        "normalCloseAfterRecovery": true,
-        "previousRevisionPreserved": true,
-        "retrySavedCurrentDraft": true
-      },
       "status": "passed",
-      "utc": "2026-10-18T00:42:05.460Z"
+      "observations": {
+        "previousRevisionPreserved": true,
+        "failedCloseRetainedDraft": true,
+        "retrySavedCurrentDraft": true,
+        "normalCloseAfterRecovery": true
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:46.724Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
+      "status": "passed",
       "observations": {
+        "startTiles": 24,
+        "win": true,
+        "undo": true,
+        "shuffle": true,
+        "checkpointResume": true,
+        "nextLevel": true,
+        "iterations": 12,
+        "dispatchSamples": 34,
+        "dispatchP95ms": 9.399999976158142,
+        "dispatchMaxMs": 11.100000023841858,
         "actionSamples": [
           {
-            "milliseconds": 6.199999988079071,
-            "selector": "[data-open=\"levels-dialog\"]"
+            "selector": "[data-open=\"levels-dialog\"]",
+            "milliseconds": 11.100000023841858
           },
           {
-            "milliseconds": 1.399999976158142,
-            "selector": "#level-library .chapter-group:first-child .level-card:first-child"
+            "selector": "#level-library .chapter-group:first-child .level-card:first-child",
+            "milliseconds": 0.7999999523162842
           },
           {
-            "milliseconds": 2.699999988079071,
-            "selector": "#restart"
+            "selector": "#restart",
+            "milliseconds": 6.600000023841858
           },
           {
-            "milliseconds": 3.699999988079071,
-            "selector": "#confirm-ok"
+            "selector": "#confirm-ok",
+            "milliseconds": 5.299999952316284
           },
           {
-            "milliseconds": 1.600000023841858,
-            "selector": "#hint"
+            "selector": "#hint",
+            "milliseconds": 2.5
           },
           {
-            "milliseconds": 1.5,
-            "selector": "#board [data-tile=\"t-0-0-0\"]"
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 5.200000047683716
           },
           {
-            "milliseconds": 1.9000000357627869,
-            "selector": "#board [data-tile=\"t-0-2-0\"]"
+            "selector": "#board [data-tile=\"t-5-2-0\"]",
+            "milliseconds": 2.599999964237213
           },
           {
-            "milliseconds": 2,
-            "selector": "#undo"
+            "selector": "#undo",
+            "milliseconds": 2.5
           },
           {
-            "milliseconds": 2.5,
-            "selector": "#shuffle"
+            "selector": "#shuffle",
+            "milliseconds": 5.5
           },
           {
-            "milliseconds": 1.5999999642372131,
-            "selector": "#board [data-tile=\"t-0-0-0\"]"
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 2.100000023841858
           },
           {
-            "milliseconds": 1.7999999523162842,
-            "selector": "#board [data-tile=\"t-0-2-0\"]"
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
+            "milliseconds": 2.100000023841858
           },
           {
-            "milliseconds": 0.8999999761581421,
-            "selector": "#board [data-tile=\"t-1-0-0\"]"
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
+            "milliseconds": 2.300000011920929
           },
           {
-            "milliseconds": 1.7999999523162842,
-            "selector": "#board [data-tile=\"t-1-2-0\"]"
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 2.599999964237213
           },
           {
-            "milliseconds": 1.100000023841858,
-            "selector": "#board [data-tile=\"t-5-0-0\"]"
+            "selector": "#board [data-tile=\"t-1-1-0\"]",
+            "milliseconds": 1.899999976158142
           },
           {
-            "milliseconds": 1.699999988079071,
-            "selector": "#board [data-tile=\"t-0-1-0\"]"
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 3.199999988079071
           },
           {
-            "milliseconds": 1.100000023841858,
-            "selector": "#board [data-tile=\"t-4-0-0\"]"
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 1.9000000357627869
           },
           {
-            "milliseconds": 1.4000000357627869,
-            "selector": "#board [data-tile=\"t-0-3-0\"]"
+            "selector": "#board [data-tile=\"t-2-1-0\"]",
+            "milliseconds": 2.200000047683716
           },
           {
-            "milliseconds": 1.199999988079071,
-            "selector": "#board [data-tile=\"t-3-0-0\"]"
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 1.800000011920929
           },
           {
-            "milliseconds": 1.4000000357627869,
-            "selector": "#board [data-tile=\"t-1-1-0\"]"
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 2.100000023841858
           },
           {
-            "milliseconds": 1.4000000357627869,
-            "selector": "#board [data-tile=\"t-2-0-0\"]"
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.600000023841858
           },
           {
-            "milliseconds": 1.4000000357627869,
-            "selector": "#board [data-tile=\"t-2-1-0\"]"
+            "selector": "#board [data-tile=\"t-0-3-0\"]",
+            "milliseconds": 1.800000011920929
           },
           {
-            "milliseconds": 1.100000023841858,
-            "selector": "#board [data-tile=\"t-2-2-0\"]"
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "milliseconds": 1.2999999523162842
           },
           {
-            "milliseconds": 1.5,
-            "selector": "#board [data-tile=\"t-1-3-0\"]"
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 2
           },
           {
-            "milliseconds": 1.399999976158142,
-            "selector": "#board [data-tile=\"t-5-2-0\"]"
+            "selector": "#board [data-tile=\"t-3-1-0\"]",
+            "milliseconds": 1.2999999523162842
           },
           {
-            "milliseconds": 1.5,
-            "selector": "#board [data-tile=\"t-5-3-0\"]"
+            "selector": "#board [data-tile=\"t-5-3-0\"]",
+            "milliseconds": 2.600000023841858
           },
           {
-            "milliseconds": 0.800000011920929,
-            "selector": "#board [data-tile=\"t-5-1-0\"]"
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 2
           },
           {
-            "milliseconds": 1.199999988079071,
-            "selector": "#board [data-tile=\"t-4-2-0\"]"
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "milliseconds": 2.199999988079071
           },
           {
-            "milliseconds": 1.100000023841858,
-            "selector": "#board [data-tile=\"t-3-1-0\"]"
+            "selector": "#board [data-tile=\"t-2-2-0\"]",
+            "milliseconds": 1.300000011920929
           },
           {
-            "milliseconds": 1.699999988079071,
-            "selector": "#board [data-tile=\"t-4-1-0\"]"
+            "selector": "#board [data-tile=\"t-3-3-0\"]",
+            "milliseconds": 2.199999988079071
           },
           {
-            "milliseconds": 1.100000023841858,
-            "selector": "#board [data-tile=\"t-3-2-0\"]"
+            "selector": "#board [data-tile=\"t-3-2-0\"]",
+            "milliseconds": 1.5
           },
           {
-            "milliseconds": 2.100000023841858,
-            "selector": "#board [data-tile=\"t-4-3-0\"]"
+            "selector": "#board [data-tile=\"t-2-3-0\"]",
+            "milliseconds": 2.700000047683716
           },
           {
-            "milliseconds": 1.5,
-            "selector": "#board [data-tile=\"t-2-3-0\"]"
+            "selector": "#board [data-tile=\"t-4-2-0\"]",
+            "milliseconds": 1.2000000476837158
           },
           {
-            "milliseconds": 7.199999988079071,
-            "selector": "#board [data-tile=\"t-3-3-0\"]"
+            "selector": "#board [data-tile=\"t-5-2-0\"]",
+            "milliseconds": 9.399999976158142
           },
           {
-            "milliseconds": 1.600000023841858,
-            "selector": "#next-level"
+            "selector": "#next-level",
+            "milliseconds": 1.699999988079071
           }
         ],
-        "boardDispatchMaxMs": 7.199999988079071,
-        "checkpointResume": true,
-        "dispatchMaxMs": 7.199999988079071,
-        "dispatchP95ms": 6.199999988079071,
-        "dispatchSamples": 34,
-        "iterations": 12,
-        "nextLevel": true,
-        "shuffle": true,
-        "startTiles": 24,
-        "undo": true,
-        "win": true
-      },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:16.406Z"
+        "boardDispatchMaxMs": 9.399999976158142
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
-      "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "utc": "2026-10-18T01:04:46.805Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "game backup export/import round-trip",
+      "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "status": "passed",
       "observations": {
         "activeTilesPreserved": true,
-        "explicitConfirmation": true,
+        "progressPreserved": true,
         "imagesAndDraftPreserved": true,
-        "progressPreserved": true
-      },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:16.438Z"
+        "explicitConfirmation": true
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:48.810Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "delayed saves, stale restores, cancellation and image undo",
       "observations": {
+        "laterEditPreserved": true,
+        "saveAndLeaveLocked": true,
+        "nextActionUnlocked": true,
+        "imageUndoRedo": true,
         "canceledBitmapDisposed": true,
         "closedRestoreIgnored": true,
-        "imageUndoRedo": true,
-        "laterEditPreserved": true,
-        "latestOverlappingRestoreWins": true,
-        "nextActionUnlocked": true,
-        "saveAndLeaveLocked": true
+        "latestOverlappingRestoreWins": true
       },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:18.490Z"
+      "status": "passed"
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:04:57.366Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "text enlargement, safe insets, long labels and focus",
       "observations": [
         {
-          "frequentControls": 8,
+          "width": 320,
           "height": 568,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -305,12 +310,12 @@
             12
           ],
           "pageWidth": 320,
-          "textScale": 2,
-          "width": 320
+          "frequentControls": 8
         },
         {
-          "frequentControls": 8,
+          "width": 390,
           "height": 844,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -318,12 +323,12 @@
             12
           ],
           "pageWidth": 390,
-          "textScale": 2,
-          "width": 390
+          "frequentControls": 8
         },
         {
-          "frequentControls": 8,
+          "width": 568,
           "height": 320,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -331,12 +336,12 @@
             12
           ],
           "pageWidth": 553,
-          "textScale": 2,
-          "width": 568
+          "frequentControls": 8
         },
         {
-          "frequentControls": 8,
+          "width": 844,
           "height": 390,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -344,12 +349,12 @@
             12
           ],
           "pageWidth": 829,
-          "textScale": 2,
-          "width": 844
+          "frequentControls": 8
         },
         {
-          "frequentControls": 8,
+          "width": 1280,
           "height": 720,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -357,12 +362,12 @@
             12
           ],
           "pageWidth": 1265,
-          "textScale": 2,
-          "width": 1280
+          "frequentControls": 8
         },
         {
-          "frequentControls": 8,
+          "width": 1440,
           "height": 900,
+          "textScale": 2,
           "insets": [
             10,
             16,
@@ -370,102 +375,54 @@
             12
           ],
           "pageWidth": 1425,
-          "textScale": 2,
-          "width": 1440
+          "frequentControls": 8
         }
       ],
-      "status": "passed",
-      "utc": "2026-10-18T00:42:26.993Z"
+      "status": "passed"
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:05:01.594Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "loading, image and audio failure recovery",
       "observations": {
-        "audioRejectionHandled": true,
-        "deniedAudioGeneratesNoVoices": true,
         "libraryFailureRetry": true,
         "moduleFailureRetry": true,
-        "normalActionAfterFailure": true,
-        "oversizedImageRejectedBeforeDecode": true
+        "oversizedImageRejectedBeforeDecode": true,
+        "audioRejectionHandled": true,
+        "deniedAudioGeneratesNoVoices": true,
+        "normalActionAfterFailure": true
       },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:31.284Z"
+      "status": "passed"
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
+      "utc": "2026-10-18T01:05:10.525Z",
+      "candidate": "mg-be015f22ce0061",
       "name": "version-one checkpoint compatibility",
       "observations": {
-        "checkpointConsumed": true,
-        "nextActionSucceeded": true,
-        "nodeFixtureAlsoUsesBaselineReader": true,
-        "rules": "mg-rules-1",
         "saveVersion": 1,
-        "studioPreserved": true
+        "rules": "mg-rules-1",
+        "checkpointConsumed": true,
+        "studioPreserved": true,
+        "nextActionSucceeded": true,
+        "nodeFixtureAlsoUsesBaselineReader": true
       },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:40.204Z"
+      "status": "passed"
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
       "name": "CSS 3D presentation and game screen lifecycle",
+      "utc": "2026-10-18T01:05:11.894Z",
+      "candidate": "mg-be015f22ce0061",
+      "status": "passed",
       "observations": {
-        "clockSamples": [
-          "00:04",
-          "00:04"
-        ],
-        "collections": [
-          "Traditional tile collection",
-          "Animals tile collection",
-          "Emoji tile collection",
-          "My images tile collection"
-        ],
-        "layouts": [
-          {
-            "height": 568,
-            "targets": 8,
-            "tiles": 60,
-            "width": 320
-          },
-          {
-            "height": 844,
-            "targets": 8,
-            "tiles": 60,
-            "width": 390
-          },
-          {
-            "height": 320,
-            "targets": 8,
-            "tiles": 60,
-            "width": 568
-          },
-          {
-            "height": 390,
-            "targets": 8,
-            "tiles": 60,
-            "width": 844
-          },
-          {
-            "height": 720,
-            "targets": 8,
-            "tiles": 60,
-            "width": 1280
-          },
-          {
-            "height": 900,
-            "targets": 8,
-            "tiles": 60,
-            "width": 1440
-          }
-        ],
         "outcomes": {
+          "PRESENT-SCREENS": "passed",
           "PRESENT-3D": "passed",
+          "PRESENT-SCENES": "passed",
           "PRESENT-FACES": "passed",
+          "PRESENT-MOTION": "passed",
           "PRESENT-LAYOUT": "passed",
           "PRESENT-MENUS": "passed",
-          "PRESENT-MOTION": "passed",
-          "PRESENT-RECOVERY": "passed",
-          "PRESENT-SCENES": "passed",
-          "PRESENT-SCREENS": "passed"
+          "PRESENT-RECOVERY": "passed"
         },
         "scenes": [
           "DAWN AT THE PAVILION",
@@ -475,25 +432,89 @@
           "THE MOONLIT COURTYARD",
           "BEYOND THE GARDEN GATE"
         ],
+        "collections": [
+          "Traditional tile collection",
+          "Animals tile collection",
+          "Emoji tile collection",
+          "My images tile collection"
+        ],
+        "layouts": [
+          {
+            "width": 320,
+            "height": 568,
+            "targets": 8,
+            "tiles": 60
+          },
+          {
+            "width": 390,
+            "height": 844,
+            "targets": 8,
+            "tiles": 60
+          },
+          {
+            "width": 568,
+            "height": 320,
+            "targets": 8,
+            "tiles": 60
+          },
+          {
+            "width": 844,
+            "height": 390,
+            "targets": 8,
+            "tiles": 60
+          },
+          {
+            "width": 1280,
+            "height": 720,
+            "targets": 8,
+            "tiles": 60
+          },
+          {
+            "width": 1440,
+            "height": 900,
+            "targets": 8,
+            "tiles": 60
+          }
+        ],
+        "clockSamples": [
+          "00:04",
+          "00:04"
+        ],
         "threeD": {
-          "perspective": "1700px",
           "planes": [
             "top",
             "back",
             "right",
             "bottom",
             "left"
-          ]
+          ],
+          "perspective": "1700px"
         }
-      },
-      "status": "passed",
-      "utc": "2026-10-18T00:42:41.525Z"
+      }
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
       "name": "rapid taps and independent tile contacts",
+      "utc": "2026-10-18T01:05:32.624Z",
+      "candidate": "mg-be015f22ce0061",
       "observations": {
+        "outcomes": {
+          "TOUCH-RAPID": "passed",
+          "TOUCH-MULTI": "passed",
+          "TOUCH-CANCEL": "passed",
+          "TOUCH-HIT": "passed"
+        },
+        "stableSecondTarget": true,
         "before": 24,
+        "orders": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
         "cancellations": [
           "pointercancel",
           "lostpointercapture",
@@ -508,125 +529,175 @@
           "undo",
           "shuffle"
         ],
-        "edgeSamples": 96,
         "geometry": [
           {
-            "clientWidth": 290,
+            "width": 320,
             "height": 568,
+            "visibleFaces": 15,
             "minWidth": 46.97684860229492,
             "scrollWidth": 358,
-            "visibleFaces": 15,
-            "width": 320
+            "clientWidth": 290
           },
           {
-            "clientWidth": 370,
+            "width": 390,
             "height": 844,
+            "visibleFaces": 24,
             "minWidth": 46.912147521972656,
             "scrollWidth": 370,
-            "visibleFaces": 24,
-            "width": 390
+            "clientWidth": 370
           },
           {
-            "clientWidth": 538,
+            "width": 568,
             "height": 320,
+            "visibleFaces": 6,
             "minWidth": 46.90099334716797,
             "scrollWidth": 538,
-            "visibleFaces": 6,
-            "width": 568
+            "clientWidth": 538
           },
           {
-            "clientWidth": 723,
+            "width": 844,
             "height": 390,
+            "visibleFaces": 12,
             "minWidth": 46.05155563354492,
             "scrollWidth": 723,
-            "visibleFaces": 12,
-            "width": 844
+            "clientWidth": 723
           },
           {
-            "clientWidth": 1174,
+            "width": 1280,
             "height": 720,
+            "visibleFaces": 24,
             "minWidth": 54.52197265625,
             "scrollWidth": 1174,
-            "visibleFaces": 24,
-            "width": 1280
+            "clientWidth": 1174
           }
         ],
-        "method": "Synthetic PointerEvents on actual app + rendered hit testing; not trusted hardware multi-touch or Android Edge certification",
-        "orders": [
-          [
-            0,
-            1
-          ],
-          [
-            1,
-            0
-          ]
-        ],
-        "outcomes": {
-          "TOUCH-CANCEL": "passed",
-          "TOUCH-HIT": "passed",
-          "TOUCH-MULTI": "passed",
-          "TOUCH-RAPID": "passed"
-        },
+        "edgeSamples": 96,
         "sideSamples": 48,
-        "stableSecondTarget": true
+        "method": "Synthetic PointerEvents on actual app + rendered hit testing; not trusted hardware multi-touch or Android Edge certification"
       },
-      "status": "passed",
-      "utc": "2026-10-18T00:43:02.021Z"
+      "status": "passed"
     },
     {
-      "candidate": "mg-32a8c86f56cf8f",
       "name": "music mixer celebration and audio lifecycle",
+      "utc": "2026-10-18T01:05:43.490Z",
+      "candidate": "mg-be015f22ce0061",
       "observations": {
-        "atomicAudioConflictRefused": true,
-        "celebrationCount": 1,
-        "deniedRetry": true,
-        "legacyFalseDefaultsEnabled": true,
-        "ordinaryMatchCues": 11,
         "outcomes": {
-          "AUDIO-CELEBRATE": "passed",
-          "AUDIO-CONTROLS": "passed",
           "AUDIO-DEFAULTS": "passed",
+          "AUDIO-CONTROLS": "passed",
           "AUDIO-MUSIC": "passed",
+          "AUDIO-CELEBRATE": "passed",
           "AUDIO-RECOVERY": "passed",
           "AUDIO-SIGNAL": "passed"
         },
-        "preferencesRestored": true,
+        "celebrationCount": 1,
+        "ordinaryMatchCues": 11,
         "signal": {
+          "sampleRate": 48000,
           "channels": 2,
+          "seconds": 26,
+          "peak": 0.2052977830171585,
           "clips": 0,
+          "rms": 0.024803926342427993,
+          "onsetSeconds": 0.025020833333333332,
+          "lastSignalSeconds": 25.074708333333334,
+          "zeroRenderSilent": true,
           "effectVolumeRenders": [
             {
-              "duration": 1.79875,
+              "volume": 0.25,
               "peak": 0.03528491407632828,
-              "volume": 0.25
+              "duration": 1.79875
             },
             {
-              "duration": 1.7995208333333332,
-              "peak": 0.10585474222898485,
-              "volume": 0.75
+              "volume": 0.75,
+              "peak": 0.10585474967956543,
+              "duration": 1.7995208333333332
             }
           ],
-          "lastSignalSeconds": 25.074708333333337,
-          "onsetSeconds": 0.025020833333333332,
-          "peak": 0.2052977830171585,
-          "rms": 0.02480392634268907,
-          "sampleRate": 48000,
-          "scope": "Shared production synthesis, not perceptual listening or speaker output",
-          "seconds": 26,
-          "zeroRenderSilent": true
+          "scope": "Shared production synthesis, not perceptual listening or speaker output"
         },
+        "deniedRetry": true,
+        "atomicAudioConflictRefused": true,
+        "legacyFalseDefaultsEnabled": true,
+        "preferencesRestored": true,
         "syntheticAppMethod": "Controlled fake context for app sequencing/lifecycle; native real audio unlock is recorded separately"
       },
+      "status": "passed"
+    },
+    {
+      "utc": "2026-10-18T01:05:58.008Z",
+      "candidate": "mg-be015f22ce0061",
+      "name": "named shared leaderboard and submission recovery",
       "status": "passed",
-      "utc": "2026-10-18T00:43:13.015Z"
+      "observations": {
+        "outcomes": {
+          "BOARD-RANK": "passed",
+          "BOARD-OWNERSHIP": "passed",
+          "BOARD-SUBMIT": "passed",
+          "BOARD-NAMES": "passed"
+        },
+        "posts": 1,
+        "lossReconciled": true,
+        "offlineRetry": true,
+        "quotaNoSend": true,
+        "abaOwnership": true,
+        "closeReopen": true,
+        "sizes": [
+          {
+            "width": 320,
+            "height": 568,
+            "text": "100%",
+            "dialog": {
+              "x": 12,
+              "y": 12,
+              "width": 296,
+              "height": 544
+            },
+            "nameHeight": 48
+          },
+          {
+            "width": 390,
+            "height": 844,
+            "text": "100%",
+            "dialog": {
+              "x": 12,
+              "y": 12,
+              "width": 366,
+              "height": 820
+            },
+            "nameHeight": 48
+          },
+          {
+            "width": 844,
+            "height": 390,
+            "text": "100%",
+            "dialog": {
+              "x": 124.33333587646484,
+              "y": 12,
+              "width": 580,
+              "height": 366
+            },
+            "nameHeight": 48
+          },
+          {
+            "width": 390,
+            "height": 844,
+            "text": "200%",
+            "dialog": {
+              "x": 12,
+              "y": 12,
+              "width": 366,
+              "height": 820
+            },
+            "nameHeight": 48
+          }
+        ],
+        "adapter": "Controlled fetch fixture; real public native enforcement is recorded separately"
+      }
     }
   ],
-  "utc": "2026-10-18T00:43:28.971Z",
-  "candidate": "mg-32a8c86f56cf8f",
-  "sourceDigest": "32a8c86f56cf8fb42d81bfad6285029271783d818766b75886c6481146130ee7",
   "rawEvidence": {
-    "path": "audit/audio/browser-raw.json",
-    "sha256": "837b4a3dd76ed46b164633884a233352f1b2e021780f609086020c748ddfa434"
+    "path": "audit/leaderboard/browser-raw.json",
+    "sha256": "3414cf739cf394204e7462acc1b427716a22d1d86fa770cf114695d77f0c7026"
   }
 }

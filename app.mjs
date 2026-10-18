@@ -21,6 +21,8 @@ let mixer=defaultAudio(),pagePresent=true,audioRecovery;
 const soundscape=new GardenAudio({status:text=>{$('audio-status').textContent=text;}});
 let soundFrame=0,soundTimer=0,screen='title',sceneChapter=0,renderedOriginal;
 let cancelTileContacts=()=>{};
+let leaderboardUI,leaderboardLoading=false;
+async function openLeaderboard(){if(transitionBusy||leaderboardLoading)return;openDialog('leaderboard-dialog');$('leaderboard-status').textContent='Loading leaderboard…';leaderboardLoading=true;try{if(!leaderboardUI){const module=await import('./leaderboard.mjs');leaderboardUI=module.mountLeaderboard({levels,getRun:()=>run});}if($('leaderboard-dialog').open)leaderboardUI.open();}catch(error){$('leaderboard-status').textContent='Leaderboard could not load. Close and reopen to retry. '+error.message;}finally{leaderboardLoading=false;}}
 function showScreen(next,{focus=true}={}){cancelTileContacts();updateElapsed();stopEffects();screen=next;document.body.dataset.screen=next;$('title-screen').hidden=next!=='title';$('play-screen').hidden=next!=='play';$('app-header').hidden=next!=='play';if(next==='play')fitBoard();syncClock();if(focus)(next==='title'?$('continue-game'):$('board').querySelector('.tile[aria-disabled="false"]'))?.focus({preventScroll:true});}
 function renderScene(chapter){if(sceneChapter===chapter)return;sceneChapter=chapter;document.body.dataset.chapter=String(chapter);$('world-backdrop').innerHTML=gardenSVG(chapter);$('world-backdrop').dataset.scene=String(chapter);$('scene-label').textContent=gardens[chapter-1].place.toUpperCase();}
 const activeImages=()=>editorReady?editorImages:profile.studio.images;
@@ -162,6 +164,7 @@ async function closeStudio(){
 function studioPlayable(){const data=draftFromDOM();try{const layout=validateLayout(data.layout),solved=solveGeometry(layout.positions);if(solved.status!=='solved')throw Error(solved.status==='budget'?'Search limit reached. Simplify this layout before playing.':'This layout cannot be cleared. Open the upper layers or outside edges.');$('layout-name').removeAttribute('aria-invalid');return layout;}catch(error){$('layout-name').setAttribute('aria-invalid',String(!data.layout.name.trim()));throw error;}}
 
 function bind(){
+ $$('[data-leaderboard]').forEach(b=>b.onclick=()=>void openLeaderboard());
  $$('[data-open]').forEach(b=>b.onclick=()=>{if(!transitionBusy)openDialog(b.dataset.open);});$$('[data-close]').forEach(b=>b.onclick=()=>{if(!transitionBusy)closeDialog(b.closest('dialog'));});
  $$('dialog').forEach(d=>{const title=d.querySelector('h2');if(title){title.id||=d.id+'-title';d.setAttribute('aria-labelledby',title.id);d.removeAttribute('aria-label');}d.addEventListener('close',()=>{lastTick=performance.now();if(d.id==='settings-dialog')restoreTask.cancel();if(d.id==='confirm-dialog')confirmAction=null;syncClock();});});
  $('studio-dialog').addEventListener('cancel',event=>{event.preventDefault();void closeStudio();});$('studio-close').onclick=()=>void closeStudio();$('cancel-import').onclick=()=>cancelImageWork();

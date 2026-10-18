@@ -1,18 +1,34 @@
 {
-  "utc": "2026-10-18T00:42:11.115Z",
-  "candidate": "mg-32a8c86f56cf8f",
+  "utc": "2026-10-18T01:05:22.119Z",
+  "candidate": "mg-be015f22ce0061",
   "checks": {
+    "leaderboardName": true,
+    "leaderboardFocus": true,
     "audioUnlocked": true,
     "audioVolumeKeys": true,
-    "celebrationPreview": true,
     "audioPreferences": true,
+    "celebrationPreview": true,
     "modalReturn": true,
-    "mismatchRefused": true,
     "textFocus": true,
     "editorFocus": true,
+    "mismatchRefused": true,
     "keyboardClear": true
   },
   "observations": {
+    "name": {
+      "focused": true,
+      "value": "Garden Native"
+    },
+    "volumeKeys": {
+      "music": "36",
+      "sound": "64"
+    },
+    "savedMixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
     "keyboardCounts": [
       24,
       22,
@@ -28,32 +44,11 @@
       2,
       0
     ],
-    "reshuffles": 0,
-    "volumeKeys": {
-      "music": "36",
-      "musicOutput": "36%",
-      "sound": "64",
-      "soundOutput": "64%"
-    },
-    "restoredAudio": {
-      "music": false,
-      "musicVolume": "36",
-      "sound": false,
-      "soundVolume": "64"
-    },
-    "reenabled": "Audio ready.",
-    "mismatch": {
-      "message": "Different symbols. This tile is selected; find its exact match.",
-      "n": 24
-    },
-    "editor": {
-      "count": 31,
-      "label": "Column 1, row 1, layer 1, empty"
-    }
+    "win": "12 pairs · 00:29 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "32a8c86f56cf8fb42d81bfad6285029271783d818766b75886c6481146130ee7",
+  "sourceDigest": "be015f22ce00618d530a315ba4ce088ad1b2a0e6104d27a62c8545050d28c04c",
   "rawEvidence": {
-    "path": "audit/audio/native-raw.json",
-    "sha256": "8d17b7850a958799269a01c97fda56ebef565aaa001d5836080cff670388892a"
+    "path": "audit/leaderboard/native-raw.json",
+    "sha256": "930edf2ce37197a7ffecfb30b38eb6c61111ab09e9019c3f12cbbb4460e8e64b"
   }
 }

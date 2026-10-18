@@ -14,13 +14,21 @@ Begin or continue from the title screen. Menu returns to the title without reset
 
 Use mouse/touch, Tab and Enter/Space. Arrow keys move tile focus. **H** reveals a pair; **U** undoes; **Escape** clears selection. A text tile view exposes the same actions. Settings offer larger tiles, reduced motion, background music and match/celebration effects. Music and effects start enabled (35%/65%) after your first interaction. Each has its own switch and volume slider; choices are remembered. Preview celebration plays the level-clear cue. The clock pauses on the title screen, while a dialog is open or the tab is hidden. There is no time limit.
 
+## Shared leaderboard
+
+Open **Leaderboard** from the title, Settings, or the level-clear screen. Choose any of the 60 official gardens to see its all-time top 25. Most stars ranks first, then fastest active whole-second time. Equal results share competition ranks (1, 1, 3). Custom studio layouts are practice; changing tile artwork does not change eligibility.
+
+After clearing an official level, type your public name and choose **Submit my result**. Names accept 1–24 ASCII letters/digits, spaces, period, apostrophe, dash or underscore. The game remembers the last submitted name. One immutable entry is accepted per seeded deal; importing the same deal does not create a new result identity. These are casual, client-reported scores, without authoritative anti-cheat or offensive-name moderation. No full save or photos are submitted.
+
+The immutable pending result is committed locally before sending. **Retry saved result** checks the original identity before posting, including after a lost response. Errors retain the pending result. **Remove local retry** removes only that device's retry; an uncertain earlier request may already be public. A failed refresh keeps older confirmed results only for the same selected level. No automatic background uploads. Leaderboard name/retry/receipts are separate from portable game backups; clearing site data removes this local convenience state. Retained acceptance IDs are bounded to 100 and cached board responses to two scopes. Public records remain until owner removal. Large/invalid collections fail explicitly rather than display misleading partial rankings.
+
 ## Your tile studio
 
 Create a layout on an 8 × 6 grid with up to three layers. Use an even number of tiles; upper tiles need support below. Undo/redo layout and image edits, save an unfinished draft, and validate/play a completed layout.
 
 Add 2–36 of your own PNG, JPEG or WebP images (5 MB maximum each). Images are resized locally to at most 160 × 160. Repeated photos carry a small mark number, so visually repeated photos still have distinct matching identities. Export/import a studio file to share a completed layout and its images. The game backup export also preserves unfinished drafts, active runs, preferences and progress.
 
-Everything is stored in IndexedDB in your browser. Photos are never uploaded by this game. No accounts, analytics, backend database or third-party requests. Saves are device/origin specific; clearing browser site data removes them. Export a backup to transfer or keep your work. Quota failures and cross-tab conflicts preserve the previous accepted save and expose retry/export/temporary play. Temporary play does not promise persistence.
+Progress, settings, drafts and photos are stored in IndexedDB in your browser. Photos are never uploaded by this game. Submitted leaderboard names and results are public shared records on the same Pagelove host. No accounts, analytics or third-party requests. Saves are device/origin specific; clearing browser site data removes them. Export a backup to transfer or keep your work. Quota failures and cross-tab conflicts preserve the previous accepted save and expose retry/export/temporary play. Temporary play does not promise persistence.
 
 ## Run and verify
 
@@ -37,7 +45,7 @@ pnpm gate
 
 The baseline compatibility test reads the original released rules from Git commit `0cbfa62865e0e270a5ee967052c25e257199a787`; run the suite from a full Git clone. Set `PORT` to select an unused preview origin. Avoid an origin where an unrelated service worker is installed. For the local browser acceptance harness, open `/tests/browser.html` on a separate disposable preview origin. Its synthetic input/storage tests are explicitly separated from real native pointer/keyboard observations in `audit/`.
 
-Production output lives in ignored `dist/`: an entry page plus immutable, content-addressed release assets. Styles remain editable in style.css/game.css; build freezes their bytes into the entry for deterministic first paint. Deploy only the paths in dist/release.json to a static server that serves `.mjs` as JavaScript. No service worker is installed and offline reload is not promised.
+Production output lives in ignored `dist/`: an entry page plus immutable, content-addressed release assets. Styles remain editable in style.css/game.css; build freezes their bytes into the entry for deterministic first paint. The game itself remains static; its optional shared board requires the native score document described below. Deploy only the paths in dist/release.json to a static server that serves `.mjs` as JavaScript. No service worker is installed and offline reload is not promised.
 
 ## Content and architecture
 
@@ -66,3 +74,6 @@ Rapid touch update (1.2.1): surviving tile buttons keep their identity, visible 
 
 
 Audio update1.3.0: game profile/run formats remain1. A separately versioned mixer record is saved atomically with progress, and portable game-backup envelope2 includes both. Older envelope1 backups still import; their game state restores while current mixer preferences remain. First launch of the new mixer enables both channels even if the old default sound flag was false. Later explicit mutes/volumes persist. Reset audio settings also recovers an invalid mixer record without replacing a valid game save. Hidden pages/transitions stop audio; interrupted audio can retry from an eligible gesture or Preview celebration. A completed save restore stays quiet. The build compacts only validated safe campaign data attributes and asserts complete content equality; canonical authored HTML remains quoted/readable. Evidence and scope: audit/audio/.
+
+
+Leaderboard update 1.4.0: the requested shared service is /mahjong-scores.html, an independent semantic HTML resource with a native POST grant scoped to #scores, exact request grammar, schema cardinality/types and unique run key. No public PUT or DELETE. Source policy: tools/leaderboard-policy.mjs; owner-only hidden-stdin installation/probe: tools/leaderboard-console.mjs. The installer takes a verified full backup, uses disposable fixtures, installs production create-only, checks public enforcement and removes its exact synthetic entry using a strong conditional write while preserving unrelated rows. Ordinary publishing never overwrites this resource. Public shape/unique controls do not establish honest play, total request-rate/quota limits or moderation. Accountless public aliases can be impersonated; they are display names, not identity proof. Owner moderation requires an exact row identity and conditional DAV maintenance; no browser owner key is present. See audit/leaderboard/PLAN.md, server.json and REVIEW.md for contracts, evidence and provider limits. The on-demand module is excluded from the unchanged 400000-byte initial pack budget.
