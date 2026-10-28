@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T13:46:46.840Z",
+  "utc": "2026-10-28T13:55:55.327Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -184,6 +184,16 @@
       "sha256": "8062727cc8b41567d04024d5169f6ed953e15e701850d3a9e56f14353f225983"
     },
     {
+      "path": "audit/autosave/public-auto-save.png",
+      "bytes": 35320,
+      "sha256": "26f2c857306ea916bf452e18a347d91f2c307e6a702a24239118fb1fc097e151"
+    },
+    {
+      "path": "audit/autosave/public.json",
+      "bytes": 1588,
+      "sha256": "437b57b078e859e3c2b6af5ee199acf09fe9d635d239294ba9c2c31f3c4d9584"
+    },
+    {
       "path": "audit/autosave/pwa-before-validation.json",
       "bytes": 15949,
       "sha256": "fc03789f1e29a7c174beb008fa952e675f4378e35f4eee238a6f39d75fefd02a"
@@ -195,8 +205,8 @@
     },
     {
       "path": "audit/autosave/REVIEW.md",
-      "bytes": 6100,
-      "sha256": "2f7f9c5f6257179b1dacbd3ec60e9c5673bedade9cd7f5bb19f99e6571cda706"
+      "bytes": 8025,
+      "sha256": "9b59a72b92aefb38c8f7ff4c2461da2e0c35a6afa9c64c04dd68728a9a47b931"
     },
     {
       "path": "audit/browser-final.json",
@@ -215,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 63575,
-      "sha256": "b07a87769ac3cdc0703c3ab08c2cf65e6e28c51f708ab2d01c872ac0977822b3"
+      "bytes": 64994,
+      "sha256": "e3066e8bf28d799dfbcff1f5b5f02cb801d754cf51d1a0a2f120d4cd9de39e3a"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -256,7 +266,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 5398,
-      "sha256": "2112abd164017de4107a139b9918b98ee34cd982abc6a168e4b3a879d53400fe"
+      "sha256": "4e175fcd8bc8abc6fa4b29eec40b2186df066a47db051e9eb94911b99efdf363"
     },
     {
       "path": "audit/current/leaderboard-server.json",

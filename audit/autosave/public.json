@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-28T13:55:00.476Z",
+  "candidate": "mg-ff019a9b6515b9",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "initialClientRelease": "mg-9bb7f2ca5b1202",
+  "notice": "A new version is available. Your current game is still open.",
+  "later": {
+    "count": 24,
+    "release": "mg-9bb7f2ca5b1202"
+  },
+  "oldClientUpdateRefused": true,
+  "reason": "Progress is in memory only. Another tab saved changes. Export your work, then reload to continue.",
+  "oldWorkingCopyLeftOpenByAgent": true,
+  "exportRequested": true,
+  "exportFileVerified": false,
+  "latestSavedCheckpoint": {
+    "release": "mg-ff019a9b6515b9",
+    "level": "Bamboo walk",
+    "remainingTiles": 0,
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "save": "Saved on this device",
+    "warning": false
+  },
+  "acknowledgedResultVisible": true,
+  "winNameFormHidden": true,
+  "sheet": {
+    "moreOpen": false,
+    "nameFormInSheet": false,
+    "ownRows": 1,
+    "scope": "Level 6 · Bamboo walk",
+    "status": ""
+  },
+  "publicScreenshot": "audit/autosave/public-auto-save.png",
+  "finalBrowserState": "All browser tabs became unavailable before an additional reload check. No tab was force-reloaded over the stale conflict; the accepted saved level 6 was observed in a separate new client.",
+  "limits": "No synthetic public score/name submitted. Fresh automatic multi-level submission and reload deduplication are independently exercised by the controlled app fixture. No physical installed-phone or closed-app OS-push claim."
+}
