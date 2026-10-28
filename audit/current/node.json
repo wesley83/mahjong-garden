@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-28T15:55:22.356Z",
-  "candidate": "mg-8a78db25e8116b",
-  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
+  "utc": "2026-10-28T17:40:14.298Z",
+  "candidate": "mg-86fcd6b194c7fd",
+  "sourceDigest": "86fcd6b194c7fdae4062e1f363dc8e61061863b1d65fdc56fa6ee85a3e1f0ee4",
   "node": "24.19.0",
   "command": [
     "node",
@@ -14,12 +14,13 @@
     "tests/leaderboard.test.mjs",
     "tests/parallax.test.mjs",
     "tests/release.test.mjs",
+    "tests/score-cache.test.mjs",
     "tests/scoring-pwa.test.mjs",
     "tests/simple-sheet.test.mjs",
     "tests/totals.test.mjs",
     "tests/touch.test.mjs"
   ],
-  "tests": 50,
+  "tests": 53,
   "exitCode": 0,
-  "outputSha256": "58d0ab80bf4c71ba03923cdb7ace4d7a9b8839a6787dfd6f61e43074dcea2cc0"
+  "outputSha256": "fc5d98b296e1713e7f01dc812e5af3c61fa449c82cf5649e324e39e4ea3857e6"
 }

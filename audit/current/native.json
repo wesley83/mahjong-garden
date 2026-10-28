@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-28T15:59:07.935Z",
-  "candidate": "mg-8a78db25e8116b",
+  "utc": "2026-10-28T17:44:22.627Z",
+  "candidate": "mg-86fcd6b194c7fd",
   "checks": {
-    "audioVolumeKeys": true,
     "audioPreferences": true,
-    "audioUnlocked": true,
+    "audioVolumeKeys": true,
     "celebrationPreview": true,
+    "audioUnlocked": true,
     "modalReturn": true,
     "textFocus": true,
     "editorFocus": true,
@@ -28,35 +28,37 @@
       "soundVolume": "64"
     },
     "audio": "Audio ready.",
-    "editor": {
-      "count": "31 tiles · add one for an even pair count",
-      "focus": "Column 1, row 1, layer 1, empty"
-    },
-    "keyboardCounts": [
-      24,
-      22,
-      20,
-      18,
-      16,
-      14,
-      12,
-      10,
-      8,
-      6,
-      4,
-      2,
-      0
+    "modal": "Settings",
+    "openBefore": "24",
+    "afterMismatch": "24",
+    "actions": [
+      "22",
+      "20",
+      "18",
+      "16",
+      "14",
+      "12",
+      "10",
+      "8",
+      "6",
+      "4",
+      "2",
+      "0"
     ],
-    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
-    "nameReturn": {
+    "nameFocus": {
       "focus": "View leaderboard",
-      "name": "Garden Player"
+      "value": "Garden Player"
     },
-    "win": "6000 points · 12 pairs · 01:30 · 12 hints · 0 reshuffles"
+    "editorFocus": {
+      "checked": null,
+      "label": "Column 1, row 1, layer 1, empty",
+      "pressed": "false",
+      "text": true
+    }
   },
-  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
+  "sourceDigest": "86fcd6b194c7fdae4062e1f363dc8e61061863b1d65fdc56fa6ee85a3e1f0ee4",
   "rawEvidence": {
-    "path": "audit/totals/native-raw.json",
-    "sha256": "a23860c5e6d19661d7a8ef3b96dae4592f00af0789a26b4b3e28a9de6a350c16"
+    "path": "audit/leaderboard-speed/native-raw.json",
+    "sha256": "2ea5ca98742bbbf7e8f91d2c88cc73026c98d2574a41f6ba01f1ce64a6ba82ba"
   }
 }

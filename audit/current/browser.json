@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-28T16:00:26.292Z",
-  "candidate": "mg-8a78db25e8116b",
+  "utc": "2026-10-28T17:45:08.033Z",
+  "candidate": "mg-86fcd6b194c7fd",
   "results": [
     {
-      "utc": "2026-10-28T15:56:59.548Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:34.212Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "responsive layout matrix",
       "status": "passed",
       "observations": [
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "utc": "2026-10-28T15:57:00.551Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:35.177Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "atomic storage conflict, failure and next action",
       "status": "passed",
       "observations": {
@@ -82,8 +82,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:57:06.587Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:41.096Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "studio editing, personal image conversion and failed import preservation",
       "status": "passed",
       "observations": {
@@ -96,8 +96,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:57:08.454Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:43.015Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "studio failed save stays recoverable, retry then close",
       "status": "passed",
       "observations": {
@@ -108,8 +108,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:57:19.51Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:53.961Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
       "status": "passed",
       "observations": {
@@ -121,152 +121,152 @@
         "nextLevel": true,
         "iterations": 12,
         "dispatchSamples": 34,
-        "dispatchP95ms": 10.900000095367432,
-        "dispatchMaxMs": 16,
+        "dispatchP95ms": 7.399999976158142,
+        "dispatchMaxMs": 8.5,
         "actionSamples": [
           {
             "selector": "[data-open=\"levels-dialog\"]",
-            "milliseconds": 16
+            "milliseconds": 8.5
           },
           {
             "selector": "#level-library .chapter-group:first-child .level-card:first-child",
-            "milliseconds": 1.399999976158142
+            "milliseconds": 1.3000000715255737
           },
           {
             "selector": "#restart",
-            "milliseconds": 6
+            "milliseconds": 4.899999976158142
           },
           {
             "selector": "#confirm-ok",
-            "milliseconds": 6.399999976158142
+            "milliseconds": 4.899999976158142
           },
           {
             "selector": "#hint",
-            "milliseconds": 3.399999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 3.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-2-0\"]",
-            "milliseconds": 4.100000023841858
-          },
-          {
-            "selector": "#undo",
-            "milliseconds": 3.799999952316284
-          },
-          {
-            "selector": "#shuffle",
-            "milliseconds": 6.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-1-0\"]",
-            "milliseconds": 2.899999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-3-0\"]",
-            "milliseconds": 2.8000000715255737
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 1.899999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-1-0\"]",
-            "milliseconds": 3
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-0-0\"]",
-            "milliseconds": 2.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-3-0\"]",
-            "milliseconds": 3.4000000953674316
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-1-0\"]",
-            "milliseconds": 1.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-2-0\"]",
-            "milliseconds": 2.399999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 2.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-2-0\"]",
-            "milliseconds": 3.0999999046325684
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-1-0\"]",
-            "milliseconds": 2.5999999046325684
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-1-0\"]",
-            "milliseconds": 2.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-0-0\"]",
-            "milliseconds": 2.100000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-1-0\"]",
-            "milliseconds": 2.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-2-0\"]",
-            "milliseconds": 2.100000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-3-0\"]",
-            "milliseconds": 2.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-0-0\"]",
             "milliseconds": 1.7000000476837158
           },
           {
-            "selector": "#board [data-tile=\"t-1-2-0\"]",
-            "milliseconds": 2.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-2-0\"]",
-            "milliseconds": 2.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-3-0\"]",
-            "milliseconds": 2.899999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
             "milliseconds": 1.7999999523162842
           },
           {
-            "selector": "#board [data-tile=\"t-4-3-0\"]",
-            "milliseconds": 2.5
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
+            "milliseconds": 2.299999952316284
           },
           {
-            "selector": "#board [data-tile=\"t-3-2-0\"]",
-            "milliseconds": 1.399999976158142
+            "selector": "#undo",
+            "milliseconds": 2.1999999284744263
+          },
+          {
+            "selector": "#shuffle",
+            "milliseconds": 3.299999952316284
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 2.100000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
+            "milliseconds": 2.6999999284744263
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-1-0\"]",
+            "milliseconds": 1.7999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 1.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 1.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 2
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-1-0\"]",
+            "milliseconds": 1.6999999284744263
           },
           {
             "selector": "#board [data-tile=\"t-5-3-0\"]",
-            "milliseconds": 10.900000095367432
+            "milliseconds": 1.7999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 1.1999999284744263
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-2-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
+            "milliseconds": 1.2000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-2-0\"]",
+            "milliseconds": 3.399999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 2.6999999284744263
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.2000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-1-0\"]",
+            "milliseconds": 2.799999952316284
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-2-0\"]",
+            "milliseconds": 1.2000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-3-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 1.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-2-0\"]",
+            "milliseconds": 1.100000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-3-0\"]",
+            "milliseconds": 1.6999999284744263
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-3-0\"]",
+            "milliseconds": 1.399999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "milliseconds": 7.399999976158142
           },
           {
             "selector": "#next-level",
-            "milliseconds": 2.399999976158142
+            "milliseconds": 1.2999999523162842
           }
         ],
-        "boardDispatchMaxMs": 10.900000095367432
+        "boardDispatchMaxMs": 7.399999976158142
       }
     },
     {
-      "utc": "2026-10-28T15:57:19.511Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:54.059Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "game backup export/import round-trip",
       "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
       "status": "passed",
@@ -278,8 +278,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:57:21.569Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:42:56.118Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "delayed saves, stale restores, cancellation and image undo",
       "observations": {
         "laterEditPreserved": true,
@@ -293,8 +293,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:57:30.191Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:43:04.721Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "text enlargement, safe insets, long labels and focus",
       "observations": [
         {
@@ -379,8 +379,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:57:34.543Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:43:09.008Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "loading, image and audio failure recovery",
       "observations": {
         "libraryFailureRetry": true,
@@ -393,8 +393,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:57:43.599Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:43:18.010Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "version-one checkpoint compatibility",
       "observations": {
         "saveVersion": 1,
@@ -408,8 +408,8 @@
     },
     {
       "name": "CSS 3D presentation and game screen lifecycle",
-      "utc": "2026-10-28T15:57:44.938Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:43:19.411Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "status": "passed",
       "observations": {
         "outcomes": {
@@ -543,8 +543,8 @@
           }
         ],
         "clockSamples": [
-          "00:04",
-          "00:04"
+          "00:05",
+          "00:05"
         ],
         "threeD": {
           "planes": [
@@ -560,8 +560,8 @@
     },
     {
       "name": "rapid taps and independent tile contacts",
-      "utc": "2026-10-28T15:58:14.95Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:43:49.016Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "observations": {
         "outcomes": {
           "TOUCH-RAPID": "passed",
@@ -645,8 +645,8 @@
     },
     {
       "name": "music mixer celebration and audio lifecycle",
-      "utc": "2026-10-28T15:58:26.402Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:44:00.196Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "observations": {
         "outcomes": {
           "AUDIO-DEFAULTS": "passed",
@@ -664,19 +664,19 @@
           "seconds": 26,
           "peak": 0.2052977830171585,
           "clips": 0,
-          "rms": 0.02480392633969591,
+          "rms": 0.024803926346967126,
           "onsetSeconds": 0.025020833333333332,
           "lastSignalSeconds": 25.074708333333334,
           "zeroRenderSilent": true,
           "effectVolumeRenders": [
             {
               "volume": 0.25,
-              "peak": 0.03528491407632828,
+              "peak": 0.035284917801618576,
               "duration": 1.79875
             },
             {
               "volume": 0.75,
-              "peak": 0.10585474967956543,
+              "peak": 0.10585474222898483,
               "duration": 1.7995208333333332
             }
           ],
@@ -691,8 +691,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:58:41.313Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:44:14.607Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "named shared leaderboard and submission recovery",
       "status": "passed",
       "observations": {
@@ -701,12 +701,15 @@
           "SIMPLE-VIEW": "passed",
           "SIMPLE-WIN": "passed",
           "TOTAL-MATH": "passed",
+          "SPEED-CACHE": "passed",
           "TOTAL-VIEW": "passed",
           "TOTAL-RECOVERY": "passed",
           "BOARD-OWNERSHIP": "passed",
+          "SPEED-RECOVERY": "passed",
           "BOARD-SUBMIT": "passed",
           "SIMPLE-RANK": "passed",
           "SIMPLE-ACCESS": "passed",
+          "SPEED-RANK": "passed",
           "BOARD-NAMES": "passed",
           "SIMPLE-RECOVERY": "passed"
         },
@@ -719,26 +722,35 @@
         "top10PlusOwned": true,
         "lateSendPreservedNewGame": true,
         "lazyLoadRetry": true,
+        "warmSwitchMs": 0.8000000715255737,
+        "readRequests": 22,
+        "sharedDataset": true,
+        "noStoragePaintWait": true,
+        "ackDisplayReadAvoided": true,
         "totalSizes": [
           {
             "width": 320,
-            "height": 544,
-            "text": "100%"
+            "height": 568,
+            "text": "100%",
+            "dialogHeight": 544
           },
           {
             "width": 390,
-            "height": 645.0104370117188,
-            "text": "100%"
+            "height": 844,
+            "text": "100%",
+            "dialogHeight": 623.6771240234375
           },
           {
             "width": 844,
-            "height": 366,
-            "text": "100%"
+            "height": 390,
+            "text": "100%",
+            "dialogHeight": 366
           },
           {
             "width": 390,
-            "height": 820,
-            "text": "200%"
+            "height": 844,
+            "text": "200%",
+            "dialogHeight": 820
           }
         ],
         "nameSizes": [
@@ -817,8 +829,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:58:51.633Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:44:25.151Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "balanced scoring and safe PWA update notification",
       "status": "passed",
       "observations": {
@@ -839,8 +851,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:58:57.329Z",
-      "candidate": "mg-8a78db25e8116b",
+      "utc": "2026-10-28T17:44:30.771Z",
+      "candidate": "mg-86fcd6b194c7fd",
       "name": "automatic named scores and durable multi-level outbox",
       "status": "passed",
       "observations": {
@@ -868,9 +880,9 @@
       }
     }
   ],
-  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
+  "sourceDigest": "86fcd6b194c7fdae4062e1f363dc8e61061863b1d65fdc56fa6ee85a3e1f0ee4",
   "rawEvidence": {
-    "path": "audit/totals/browser-raw.json",
-    "sha256": "e27a35922f19ddcec964b528a4471475f23cc87fa4c2b04a70aec4814cedfae5"
+    "path": "audit/leaderboard-speed/browser-raw.json",
+    "sha256": "731936ae34e4c3f9a86f2fd8837b217366084dd633d99074a8964e1e2324f0c4"
   }
 }

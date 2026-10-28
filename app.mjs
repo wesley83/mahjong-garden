@@ -26,6 +26,7 @@ let cancelTileContacts=()=>{};
 let homeMotion;
 let leaderboardUI,leaderboardPromise;
 function ensureLeaderboard(){if(leaderboardUI)return Promise.resolve(leaderboardUI);leaderboardPromise??=import('./leaderboard.mjs').then(module=>{leaderboardUI=module.mountLeaderboard({levels,getRun:()=>run,showBoard:()=>openDialog('leaderboard-dialog')});return leaderboardUI;}).catch(error=>{leaderboardPromise=null;throw error;});return leaderboardPromise;}
+function warmLeaderboard(){if(ready)void ensureLeaderboard().then(ui=>ui.warm()).catch(()=>{});}
 async function openLeaderboard(){if(transitionBusy)return;openDialog('leaderboard-dialog');$('leaderboard-status').textContent='Loading scores…';$('leaderboard-load-retry').hidden=true;try{const ui=await ensureLeaderboard();if($('leaderboard-dialog').open)ui.open();}catch{$('leaderboard-status').textContent='Scores could not load. Try again.';$('leaderboard-load-retry').hidden=false;}}
 async function prepareWinScore(){const owner=run;$('leaderboard-entry').hidden=true;$('win-score-retry').hidden=true;$('leaderboard-result').hidden=false;$('leaderboard-result').textContent='Preparing your score…';try{const ui=await ensureLeaderboard();ui.prepareResult(owner);}catch{if(run===owner){$('leaderboard-result').textContent='Your score could not be prepared. You can keep playing.';$('win-score-retry').hidden=false;}}}
 function showScreen(next,{focus=true}={}){cancelTileContacts();updateElapsed();stopEffects();screen=next;document.body.dataset.screen=next;$('title-screen').hidden=next!=='title';$('play-screen').hidden=next!=='play';$('app-header').hidden=next!=='play';if(next==='play')fitBoard();syncClock();if(focus)(next==='title'?$('continue-game'):$('board').querySelector('.tile[aria-disabled="false"]'))?.focus({preventScroll:true});}
@@ -171,7 +172,7 @@ function studioPlayable(){const data=draftFromDOM();try{const layout=validateLay
 function bind(){
  $('win-score-retry').onclick=()=>void prepareWinScore();$('leaderboard-load-retry').onclick=()=>void openLeaderboard();
  $('leaderboard-dialog').addEventListener('close',()=>{const win=$('win-dialog'),focus=document.activeElement;if(win.open&&(!win.contains(focus)||focus.disabled||!focus.getClientRects().length))$('next-level').focus();});
- $$('[data-leaderboard]').forEach(b=>b.onclick=()=>void openLeaderboard());
+ $$('[data-leaderboard]').forEach(b=>{b.onclick=()=>void openLeaderboard();for(const event of ['pointerenter','pointerdown','focus'])b.addEventListener(event,warmLeaderboard,{passive:true});});
  $$('[data-open]').forEach(b=>b.onclick=()=>{if(!transitionBusy)openDialog(b.dataset.open);});$$('[data-close]').forEach(b=>b.onclick=()=>{if(!transitionBusy)closeDialog(b.closest('dialog'));});
  $$('dialog').forEach(d=>{const title=d.querySelector('h2');if(title){title.id||=d.id+'-title';d.setAttribute('aria-labelledby',title.id);d.removeAttribute('aria-label');}d.addEventListener('close',()=>{lastTick=performance.now();if(d.id==='settings-dialog')restoreTask.cancel();if(d.id==='confirm-dialog')confirmAction=null;syncClock();});});
  $('studio-dialog').addEventListener('cancel',event=>{event.preventDefault();void closeStudio();});$('studio-close').onclick=()=>void closeStudio();$('cancel-import').onclick=()=>cancelImageWork();

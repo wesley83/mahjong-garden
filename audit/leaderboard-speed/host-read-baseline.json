@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-28T17:32:45.614Z",
+  "environment": "Windows Node 24, actual public current-score GET plus strict client parse; not physical-phone or rendered-browser latency",
+  "samples": [
+    {
+      "milliseconds": 647.9,
+      "status": 200,
+      "rows": 7
+    },
+    {
+      "milliseconds": 197.2,
+      "status": 200,
+      "rows": 7
+    },
+    {
+      "milliseconds": 331.4,
+      "status": 200,
+      "rows": 7
+    }
+  ]
+}

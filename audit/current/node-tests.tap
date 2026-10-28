@@ -2,310 +2,328 @@ TAP version 13
 # Subtest: audio preferences default on and strictly validate independent switches volumes and versions
 ok 1 - audio preferences default on and strictly validate independent switches volumes and versions
   ---
-  duration_ms: 3.6457
+  duration_ms: 3.186
   type: 'test'
   ...
 # Subtest: music and effects use independent buses and stop generation at mute zero and pause
 ok 2 - music and effects use independent buses and stop generation at mute zero and pause
   ---
-  duration_ms: 6.4092
+  duration_ms: 2.8487
   type: 'test'
   ...
 # Subtest: audio scheduling stays bounded during dense effects and recovers without a late backlog
 ok 3 - audio scheduling stays bounded during dense effects and recovers without a late backlog
   ---
-  duration_ms: 54.3445
+  duration_ms: 36.0542
   type: 'test'
   ...
 # Subtest: denied unavailable and stale audio resume cannot revive paused work and can retry
 ok 4 - denied unavailable and stale audio resume cannot revive paused work and can retry
   ---
-  duration_ms: 15.6801
+  duration_ms: 7.3931
   type: 'test'
   ...
 # Subtest: portable mixer backups preserve v1 game contracts and reject invalid mixer before import
 ok 5 - portable mixer backups preserve v1 game contracts and reject invalid mixer before import
   ---
-  duration_ms: 204.0661
+  duration_ms: 113.1773
   type: 'test'
   ...
 # Subtest: release campaign attribute compaction preserves the entire authored DOM-derived game inventory
 ok 6 - release campaign attribute compaction preserves the entire authored DOM-derived game inventory
   ---
-  duration_ms: 870.7668
+  duration_ms: 659.8867
   type: 'test'
   ...
 # Subtest: score outbox migrates version one without changing its remembered name or legacy payload
 ok 7 - score outbox migrates version one without changing its remembered name or legacy payload
   ---
-  duration_ms: 15.1995
+  duration_ms: 5.3778
   type: 'test'
   ...
 # Subtest: durable score outbox deduplicates frozen clears and acknowledges only its head while retaining newer levels
 ok 8 - durable score outbox deduplicates frozen clears and acknowledges only its head while retaining newer levels
   ---
-  duration_ms: 2.6018
+  duration_ms: 2.0343
   type: 'test'
   ...
 # Subtest: full score outbox refuses an additional clear without evicting any pending result
 ok 9 - full score outbox refuses an additional clear without evicting any pending result
   ---
-  duration_ms: 6.4504
+  duration_ms: 5.6965
   type: 'test'
   ...
 # Subtest: semantic campaign accessors accept reordered attributes and reject ambiguous definitions
 ok 10 - semantic campaign accessors accept reordered attributes and reject ambiguous definitions
   ---
-  duration_ms: 854.6469
+  duration_ms: 590.0121
   type: 'test'
   ...
 # Subtest: profile and unfinished studio round trips preserve live values and strictly reject future data
 ok 11 - profile and unfinished studio round trips preserve live values and strictly reject future data
   ---
-  duration_ms: 39.3904
+  duration_ms: 32.4801
   type: 'test'
   ...
 # Subtest: image headers enforce format, bytes and pixel bounds before a browser decoder runs
 ok 12 - image headers enforce format, bytes and pixel bounds before a browser decoder runs
   ---
-  duration_ms: 3.8917
+  duration_ms: 1.5861
   type: 'test'
   ...
 # Subtest: cancellation and timeouts dispose late image results and do not revive older jobs
 ok 13 - cancellation and timeouts dispose late image results and do not revive older jobs
   ---
-  duration_ms: 10.1016
+  duration_ms: 6.3066
   type: 'test'
   ...
 # Subtest: studio history includes layout and images and remains bounded
 ok 14 - studio history includes layout and images and remains bounded
   ---
-  duration_ms: 1.7356
+  duration_ms: 1.629
   type: 'test'
   ...
 # Subtest: elapsed time is incorporated before matching and cannot advance a complete or invalid interval
 ok 15 - elapsed time is incorporated before matching and cannot advance a complete or invalid interval
   ---
-  duration_ms: 1.363
+  duration_ms: 1.0686
   type: 'test'
   ...
 # Subtest: baseline version-one checkpoints and rollback reader remain compatible
 ok 16 - baseline version-one checkpoints and rollback reader remain compatible
   ---
-  duration_ms: 223.6584
+  duration_ms: 146.7461
   type: 'test'
   ...
-# Measured max initial-deal ms: 5.34
+# Measured max initial-deal ms: 2.14
 # Subtest: independent free-tile rules: sides, covers and different rows/layers
 ok 17 - independent free-tile rules: sides, covers and different rows/layers
   ---
-  duration_ms: 2.0681
+  duration_ms: 1.6541
   type: 'test'
   ...
 # Subtest: 60 unique layouts; 12 seeds each complete with only legal identical pairs
 ok 18 - 60 unique layouts; 12 seeds each complete with only legal identical pairs
   ---
-  duration_ms: 2205.1621
+  duration_ms: 1740.9732
   type: 'test'
   ...
 # Subtest: deterministic deal, illegal and duplicate matches do not mutate
 ok 19 - deterministic deal, illegal and duplicate matches do not mutate
   ---
-  duration_ms: 1.7028
+  duration_ms: 1.5853
   type: 'test'
   ...
 # Subtest: reshuffle preserves positions/count, undo and assistance scoring
 ok 20 - reshuffle preserves positions/count, undo and assistance scoring
   ---
-  duration_ms: 2.1031
+  duration_ms: 2.3887
   type: 'test'
   ...
 # Subtest: bounded solver distinguishes impossible and budget exhaustion
 ok 21 - bounded solver distinguishes impossible and budget exhaustion
   ---
-  duration_ms: 0.3936
+  duration_ms: 0.2473
   type: 'test'
   ...
 # Subtest: import validates before mutation and refuses markup, future data and unsupported geometry
 ok 22 - import validates before mutation and refuses markup, future data and unsupported geometry
   ---
-  duration_ms: 1.1129
+  duration_ms: 1.4648
   type: 'test'
   ...
 # Subtest: checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
 ok 23 - checkpoint rejects a late invalid field, missing IDs, future rules and nonfinite state
   ---
-  duration_ms: 2.1224
+  duration_ms: 2.6593
   type: 'test'
   ...
 # Subtest: leaderboard names fields and local records reject invalid future and executable values
 ok 24 - leaderboard names fields and local records reject invalid future and executable values
   ---
-  duration_ms: 7.4609
+  duration_ms: 4.4398
   type: 'test'
   ...
 # Subtest: leaderboard HTML round trips strictly without mounting markup and ranks all rows before top25
 ok 25 - leaderboard HTML round trips strictly without mounting markup and ranks all rows before top25
   ---
-  duration_ms: 50.3999
+  duration_ms: 35.5141
   type: 'test'
   ...
 # Subtest: official completed deal identity survives restore and tile ordering while studio and unfinished runs refuse
 ok 26 - official completed deal identity survives restore and tile ordering while studio and unfinished runs refuse
   ---
-  duration_ms: 273.1312
+  duration_ms: 152.5349
   type: 'test'
   ...
 # Subtest: submission reconciles lost responses and exact duplicates and refuses identity conflicts
 ok 27 - submission reconciles lost responses and exact duplicates and refuses identity conflicts
   ---
-  duration_ms: 106.9028
+  duration_ms: 44.8612
   type: 'test'
   ...
 # Subtest: native backend grammar rejects unsafe names times unknown rules fields and multiple records
 ok 28 - native backend grammar rejects unsafe names times unknown rules fields and multiple records
   ---
-  duration_ms: 139.2544
+  duration_ms: 105.8139
   type: 'test'
   ...
 # Subtest: home parallax has bounded independent depth and no idle frame work across disabled lifecycle states
 ok 29 - home parallax has bounded independent depth and no idle frame work across disabled lifecycle states
   ---
-  duration_ms: 11.7103
+  duration_ms: 7.8322
   type: 'test'
   ...
 # Subtest: home touch ownership resize and scene replacement refuse stale contacts without capturing or preventing gestures
 ok 30 - home touch ownership resize and scene replacement refuse stale contacts without capturing or preventing gestures
   ---
-  duration_ms: 4.6378
+  duration_ms: 2.3197
   type: 'test'
   ...
 # Subtest: gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
 ok 31 - gate refuses missing receipts, missing required assets, mismatched receipts and changed candidates
   ---
-  duration_ms: 2730.8971
+  duration_ms: 2127.5055
   type: 'test'
   ...
 # Subtest: semantic HTML verification catches content changes while allowing serialization
 ok 32 - semantic HTML verification catches content changes while allowing serialization
   ---
-  duration_ms: 16.7938
+  duration_ms: 9.6799
   type: 'test'
   ...
 # Subtest: HTML SVG attribute name serialization preserves semantics but changed values are refused
 ok 33 - HTML SVG attribute name serialization preserves semantics but changed values are refused
   ---
-  duration_ms: 1.7429
+  duration_ms: 0.5468
   type: 'test'
   ...
 # Subtest: public HTML comparison handles omitted head without mutation and allows only the exact host footer
 ok 34 - public HTML comparison handles omitted head without mutation and allows only the exact host footer
   ---
-  duration_ms: 2.8777
+  duration_ms: 1.2832
   type: 'test'
   ...
 # Subtest: publisher requires completed backup and refuses a concurrent live-entry change
 ok 35 - publisher requires completed backup and refuses a concurrent live-entry change
   ---
-  duration_ms: 35.0302
+  duration_ms: 22.5549
   type: 'test'
   ...
 # Subtest: publisher reconciles an ambiguous dependency write and rolls back only its entry
 ok 36 - publisher reconciles an ambiguous dependency write and rolls back only its entry
   ---
-  duration_ms: 32.0016
+  duration_ms: 20.0457
+  type: 'test'
+  ...
+# Subtest: score cache shares pending reads and fresh complete datasets across views while keeping editions separate
+ok 37 - score cache shares pending reads and fresh complete datasets across views while keeping editions separate
+  ---
+  duration_ms: 6.3444
+  type: 'test'
+  ...
+# Subtest: forced refresh and acknowledged seed reject superseded reads even when the transport ignores cancellation
+ok 38 - forced refresh and acknowledged seed reject superseded reads even when the transport ignores cancellation
+  ---
+  duration_ms: 3.0556
+  type: 'test'
+  ...
+# Subtest: failed or timed-out score reads retain stale rows and allow a fresh forced next action
+ok 39 - failed or timed-out score reads retain stale rows and allow a fresh forced next action
+  ---
+  duration_ms: 31.7237
   type: 'test'
   ...
 # Subtest: balanced points scale across all60 levels are monotone bounded and ignore speed
-ok 37 - balanced points scale across all60 levels are monotone bounded and ignore speed
+ok 40 - balanced points scale across all60 levels are monotone bounded and ignore speed
   ---
-  duration_ms: 287.6521
+  duration_ms: 161.8905
   type: 'test'
   ...
 # Subtest: undo rematch cannot farm points or refund assistance and equal points ignore different durations
-ok 38 - undo rematch cannot farm points or refund assistance and equal points ignore different durations
+ok 41 - undo rematch cannot farm points or refund assistance and equal points ignore different durations
   ---
-  duration_ms: 190.261
+  duration_ms: 126.9931
   type: 'test'
   ...
 # Subtest: legacy pending submissions keep their original endpoint payload and ranking scope
-ok 39 - legacy pending submissions keep their original endpoint payload and ranking scope
+ok 42 - legacy pending submissions keep their original endpoint payload and ranking scope
   ---
-  duration_ms: 104.6902
+  duration_ms: 55.7985
   type: 'test'
   ...
 # Subtest: PWA discovery is bounded accepts reordered identity and never reloads without a confirmed save
-ok 40 - PWA discovery is bounded accepts reordered identity and never reloads without a confirmed save
+ok 43 - PWA discovery is bounded accepts reordered identity and never reloads without a confirmed save
   ---
-  duration_ms: 5.1893
+  duration_ms: 4.3237
   type: 'test'
   ...
 # Subtest: another tab activating a PWA worker cannot reload a client that has not accepted
-ok 41 - another tab activating a PWA worker cannot reload a client that has not accepted
+ok 44 - another tab activating a PWA worker cannot reload a client that has not accepted
   ---
-  duration_ms: 26.9632
+  duration_ms: 25.2675
   type: 'test'
   ...
 # Subtest: simple sheet ranks the full collection then shows ten plus the latest owned result without duplicates
-ok 42 - simple sheet ranks the full collection then shows ten plus the latest owned result without duplicates
+ok 45 - simple sheet ranks the full collection then shows ten plus the latest owned result without duplicates
   ---
-  duration_ms: 26.3106
+  duration_ms: 22.9976
   type: 'test'
   ...
 # Subtest: simple sheet identity uses acknowledged run keys rather than matching display names and keeps history separate
-ok 43 - simple sheet identity uses acknowledged run keys rather than matching display names and keeps history separate
+ok 46 - simple sheet identity uses acknowledged run keys rather than matching display names and keeps history separate
   ---
-  duration_ms: 0.4991
+  duration_ms: 0.5428
   type: 'test'
   ...
 # Subtest: combined totals count only the best current result per case-insensitive name and board with shared ranks
-ok 44 - combined totals count only the best current result per case-insensitive name and board with shared ranks
+ok 47 - combined totals count only the best current result per case-insensitive name and board with shared ranks
   ---
-  duration_ms: 37.1169
+  duration_ms: 20.5046
   type: 'test'
   ...
 # Subtest: overall sheet ranks all names before truncation and associates acknowledged names without alias-only ownership
-ok 45 - overall sheet ranks all names before truncation and associates acknowledged names without alias-only ownership
+ok 48 - overall sheet ranks all names before truncation and associates acknowledged names without alias-only ownership
   ---
-  duration_ms: 2.1693
+  duration_ms: 2.1117
   type: 'test'
   ...
 # Subtest: combined totals have a six-hundred-thousand maximum across sixty boards and names cannot collide with object prototypes
-ok 46 - combined totals have a six-hundred-thousand maximum across sixty boards and names cannot collide with object prototypes
+ok 49 - combined totals have a six-hundred-thousand maximum across sixty boards and names cannot collide with object prototypes
   ---
-  duration_ms: 0.8884
+  duration_ms: 0.7646
   type: 'test'
   ...
 # Subtest: independent secondary contacts activate once in either release order
-ok 47 - independent secondary contacts activate once in either release order
+ok 50 - independent secondary contacts activate once in either release order
   ---
-  duration_ms: 16.2661
+  duration_ms: 14.7991
   type: 'test'
   ...
 # Subtest: drag outside cancellation and lost capture leave other contacts usable
-ok 48 - drag outside cancellation and lost capture leave other contacts usable
+ok 51 - drag outside cancellation and lost capture leave other contacts usable
   ---
-  duration_ms: 15.4357
+  duration_ms: 3.3053
   type: 'test'
   ...
 # Subtest: reset disabled state and removed targets refuse stale activation then accept fresh input
-ok 49 - reset disabled state and removed targets refuse stale activation then accept fresh input
+ok 52 - reset disabled state and removed targets refuse stale activation then accept fresh input
   ---
-  duration_ms: 5.6059
+  duration_ms: 3.7368
   type: 'test'
   ...
 # Subtest: compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
-ok 50 - compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
+ok 53 - compatibility clicks are deduplicated while keyboard mouse and assistive clicks remain native
   ---
-  duration_ms: 1.3512
+  duration_ms: 1.0452
   type: 'test'
   ...
-1..50
-# tests 50
+1..53
+# tests 53
 # suites 0
-# pass 50
+# pass 53
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 3764.4287
+# duration_ms 2879.9393

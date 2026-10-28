@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-28T17:44:22.627Z",
+  "candidate": "mg-86fcd6b194c7fd",
+  "checks": {
+    "audioPreferences": true,
+    "audioVolumeKeys": true,
+    "celebrationPreview": true,
+    "audioUnlocked": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true
+  },
+  "observations": {
+    "overallKey": {
+      "filtersHidden": true,
+      "pressed": "true",
+      "scope": "All 60 boards"
+    },
+    "boardKey": "Level 1 · First light",
+    "mixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "audio": "Audio ready.",
+    "modal": "Settings",
+    "openBefore": "24",
+    "afterMismatch": "24",
+    "actions": [
+      "22",
+      "20",
+      "18",
+      "16",
+      "14",
+      "12",
+      "10",
+      "8",
+      "6",
+      "4",
+      "2",
+      "0"
+    ],
+    "nameFocus": {
+      "focus": "View leaderboard",
+      "value": "Garden Player"
+    },
+    "editorFocus": {
+      "checked": null,
+      "label": "Column 1, row 1, layer 1, empty",
+      "pressed": "false",
+      "text": true
+    }
+  }
+}

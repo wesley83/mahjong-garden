@@ -10,6 +10,7 @@ REQUIRED_BROWSER.push('named shared leaderboard and submission recovery','balanc
 export const SCORE_PWA_OUTCOMES=['SCORE-MATH','SCORE-UI','SCORE-COMPAT','PWA-DISCOVERY','PWA-SAFE'];
 export const SIMPLE_OUTCOMES=['SIMPLE-VIEW','SIMPLE-WIN','SIMPLE-RANK','SIMPLE-RECOVERY','SIMPLE-ACCESS'];
 export const TOTAL_OUTCOMES=['TOTAL-MATH','TOTAL-VIEW','TOTAL-RECOVERY'];
+export const SPEED_OUTCOMES=['SPEED-RANK','SPEED-CACHE','SPEED-RECOVERY'];
 REQUIRED_BROWSER.push('automatic named scores and durable multi-level outbox');
 export const AUTO_OUTCOMES=['AUTO-CLEAR','AUTO-QUEUE','AUTO-RECOVERY'];
 export const BOARD_OUTCOMES=['BOARD-NAMES','BOARD-RANK','BOARD-OWNERSHIP','BOARD-SUBMIT'];
@@ -40,6 +41,7 @@ export async function verifyGate({root=rootDefault,output=path.join(root,'dist')
  const board=browser.results.find(r=>r.name==='named shared leaderboard and submission recovery');if(BOARD_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required leaderboard outcome is missing');
  if(SIMPLE_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required simple score sheet outcome is missing');
  if(TOTAL_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required combined total outcome is missing');
+ if(SPEED_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required leaderboard speed outcome is missing');
  const auto=browser.results.find(r=>r.name==='automatic named scores and durable multi-level outbox');if(AUTO_OUTCOMES.some(id=>auto?.observations?.outcomes?.[id]!=='passed'))throw Error('Required automatic score outcome is missing');
  const scoring=browser.results.find(r=>r.name==='balanced scoring and safe PWA update notification');if(SCORE_PWA_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required scoring or PWA outcome is missing');
  const pwa=JSON.parse(await fs.readFile(path.join(receiptDirectory,'pwa.json'),'utf8'));if(pwa.candidate!==release.id||!pwa.nativeWorkerUpdate||!pwa.nativeNotice||!pwa.saveFailureRefused||!pwa.checkpointPreserved)throw Error('Real PWA lifecycle evidence is missing');

@@ -31,8 +31,18 @@ export function rankedPlayerTotals(rows){
  const groups=new Map();for(const row of rows){if(row.rules!==SCORE_RULES)continue;const key=row.player.toLowerCase();let group=groups.get(key);if(!group){group={playerKey:key,player:row.player,firstKey:row.runKey,best:new Map()};groups.set(key,group);}if(row.runKey<group.firstKey){group.player=row.player;group.firstKey=row.runKey;}group.best.set(row.level,Math.max(group.best.get(row.level)??0,row.score));}
  const sorted=[...groups.values()].map(group=>({playerKey:group.playerKey,player:group.player,total:[...group.best.values()].reduce((sum,score)=>sum+score,0),boards:group.best.size})).sort((a,b)=>b.total-a.total||a.playerKey.localeCompare(b.playerKey));let rank=0;return sorted.map((row,i)=>{if(!i||row.total!==sorted[i-1].total)rank=i+1;return{...row,rank};});
 }
-export function overallSheetRows(rows,accepted=[]){
- const all=rankedPlayerTotals(rows),current=rows.filter(r=>r.rules===SCORE_RULES),byId=new Map(current.map(r=>[r.runKey,r.player.toLowerCase()])),owned=new Set(accepted.map(id=>byId.get(id)).filter(Boolean)),latest=accepted.map(id=>byId.get(id)).find(Boolean),top=all.slice(0,10),extra=all.find(r=>r.playerKey===latest);if(extra&&!top.some(r=>r.playerKey===latest))top.push(extra);return top.map((row,i)=>({...row,mine:owned.has(row.playerKey),extra:i===10}));
+export function overallSheetRows(rows,accepted=[],rankings=rankedPlayerTotals(rows)){
+ const all=rankings,current=rows.filter(r=>r.rules===SCORE_RULES),byId=new Map(current.map(r=>[r.runKey,r.player.toLowerCase()])),owned=new Set(accepted.map(id=>byId.get(id)).filter(Boolean)),latest=accepted.map(id=>byId.get(id)).find(Boolean),top=all.slice(0,10),extra=all.find(r=>r.playerKey===latest);if(extra&&!top.some(r=>r.playerKey===latest))top.push(extra);return top.map((row,i)=>({...row,mine:owned.has(row.playerKey),extra:i===10}));
+}
+export function createScoreCache({load,now=Date.now,maxAge=30000,timeoutMs=10000}){
+ const entries=new Map(),key=legacy=>legacy?'legacy':'current',peek=(legacy=false)=>entries.get(key(legacy))?.rows;
+ const fresh=(legacy=false)=>{const e=entries.get(key(legacy));return !!e?.rows&&now()-e.at<maxAge;};
+ function read({legacy=false,force=false}={}){const id=key(legacy),old=entries.get(id);if(!force&&old?.pending)return old.pending;if(!force&&fresh(legacy))return Promise.resolve(old.rows);old?.controller?.abort();const controller=new AbortController(),entry={rows:old?.rows,at:old?.at??-Infinity,controller,pending:null};entries.set(id,entry);let cancel;
+  const canceled=new Promise((resolve,reject)=>{cancel=()=>reject(new DOMException('Score request canceled or timed out.','AbortError'));controller.signal.addEventListener('abort',cancel,{once:true});}),timer=setTimeout(()=>controller.abort(),timeoutMs);
+  entry.pending=Promise.race([Promise.resolve().then(()=>load({legacy,signal:controller.signal})),canceled]).then(rows=>{if(entries.get(id)!==entry||controller.signal.aborted)throw new DOMException('Superseded score request.','AbortError');entry.rows=rows;entry.at=now();return rows;}).catch(error=>{if(entries.get(id)===entry)entry.at=-Infinity;throw error;}).finally(()=>{clearTimeout(timer);controller.signal.removeEventListener('abort',cancel);if(entries.get(id)===entry){entry.pending=null;entry.controller=null;}});return entry.pending;
+ }
+ function seed(rows,legacy=false){const id=key(legacy);entries.get(id)?.controller?.abort();entries.set(id,{rows,at:now(),pending:null,controller:null});}
+ return{peek,fresh,read,seed,loading:(legacy=false)=>!!entries.get(key(legacy))?.pending};
 }
 export async function resultFor(run,levels,crypto=globalThis.crypto){
  validateRun(run,levels);if(run.custom||!run.complete)throw Error('Clear an official garden to submit a result.');const level=levels.find(l=>l.id===run.levelId);
@@ -63,14 +73,14 @@ export async function fetchScores({fetcher=globalThis.fetch,document=globalThis.
 }
 export async function sendScore(row,{fetcher=globalThis.fetch,document=globalThis.document,signal}={}){
  validateScore(row);const lookup=()=>fetchScores({fetcher,document,signal,legacy:isLegacy(row)});const reconcile=rows=>{const found=rows.find(r=>r.runKey===row.runKey);if(found&&!sameScore(found,row))throw Error('This deal already has different public details. Its original entry was kept.');return !!found;};
- if(reconcile(await lookup()))return;
+ const existing=await lookup();if(reconcile(existing))return existing;
  let failure;try{const response=await fetcher(isLegacy(row)?LEGACY_ENDPOINT:ENDPOINT,{method:'POST',headers:{'Content-Type':'text/html; charset=utf-8',Range:'selector=#scores'},body:scoreHTML(row),redirect:'error',signal});if(!response.ok)failure=Error('Submission was not confirmed ('+response.status+'). Retry to check before sending again.');}catch(error){failure=error;}
  // A lost response or duplicate response may still represent a committed write.
- try{if(reconcile(await lookup()))return;}catch(error){if(error.message.includes('different public'))throw error;failure??=error;}
+ try{const confirmed=await lookup();if(reconcile(confirmed))return confirmed;}catch(error){if(error.message.includes('different public'))throw error;failure??=error;}
  throw failure||Error('Submission is not confirmed yet. Your result is kept for Retry.');
 }
 export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=globalThis.document}){
- const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog');let local=emptyLocal(),db,localOK=false,writeBusy=0,writeTail=Promise.resolve(),sendBusy=false,generation=0,readAbort=null,currentResult=null,preparedRun=null,currentLevel=1,cache=new Map(),loadGeneration=0,scoreError='',overall=false;
+ const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog'),cache=createScoreCache({load:options=>fetchScores({...options,document})}),summaries=new WeakMap();let local=emptyLocal(),db,localOK=false,writeBusy=0,writeTail=Promise.resolve(),sendBusy=false,generation=0,currentResult=null,preparedRun=null,currentLevel=1,loadGeneration=0,scoreError='',overall=false;
  const legacy=()=>$('leaderboard-edition').value==='legacy';
  const status=text=>{$('leaderboard-status').textContent=text;};
  const submission=text=>{$('leaderboard-submit-status').textContent=text;$('leaderboard-pending-status').textContent=text;};
@@ -87,26 +97,26 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   $('leaderboard-result').textContent=text;$('leaderboard-result').hidden=!text;
  }
  function render(rows){
-  const body=$('leaderboard-rows');body.replaceChildren();$('leaderboard-points-label').textContent=overall?'Total':legacy()?'Result':'Points';const totals=new Map(rankedPlayerTotals(rows).map(r=>[r.playerKey,r.total]));
-  for(const row of overall?overallSheetRows(rows,local.accepted):scoreSheetRows(rows,currentLevel,local.accepted,legacy())){const tr=document.createElement('tr');tr.classList.toggle('your-score',row.mine);tr.classList.toggle('extra-score',row.extra);if(overall)tr.dataset.playerKey=row.playerKey;else tr.dataset.runKey=row.runKey;
+  const body=$('leaderboard-rows');body.replaceChildren();$('leaderboard-points-label').textContent=overall?'Total':legacy()?'Result':'Points';let summary=summaries.get(rows);if(!summary){const rankings=rankedPlayerTotals(rows);summary={rankings,totals:new Map(rankings.map(r=>[r.playerKey,r.total]))};summaries.set(rows,summary);}const totals=summary.totals;
+  for(const row of overall?overallSheetRows(rows,local.accepted,summary.rankings):scoreSheetRows(rows,currentLevel,local.accepted,legacy())){const tr=document.createElement('tr');tr.classList.toggle('your-score',row.mine);tr.classList.toggle('extra-score',row.extra);if(overall)tr.dataset.playerKey=row.playerKey;else tr.dataset.runKey=row.runKey;
    for(const value of [row.rank,row.player+(row.mine?(overall?' · Your name':' · You'):''),overall?row.total.toLocaleString('en-US'):isLegacy(row)?`${row.stars}★ · ${row.seconds}s`:row.score.toLocaleString('en-US')]){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}if(overall||!isLegacy(row)){const detail=document.createElement('small');detail.className='player-total';detail.textContent=overall?`${row.boards} ${row.boards===1?'board':'boards'}`:`Total ${totals.get(row.player.toLowerCase()).toLocaleString('en-US')}`;tr.lastChild.append(detail);}body.append(tr);}
   $('leaderboard-empty').hidden=body.children.length!==0;$('leaderboard-table').hidden=body.children.length===0;
  }
  function viewControls(){for(const id of ['leaderboard-board','leaderboard-overall'])$(id).disabled=false;$('leaderboard-board').setAttribute('aria-pressed',String(!overall));$('leaderboard-overall').setAttribute('aria-pressed',String(overall));$('leaderboard-filters').hidden=overall;}
- async function refresh(){
-  const owner=++generation,level=Number($('leaderboard-level').value);currentLevel=level;const edition=legacy(),scope=overall?'overall':(edition?'legacy':'balanced')+':'+level;readAbort?.abort();readAbort=new AbortController();const controller=readAbort,timer=setTimeout(()=>controller.abort(),10000),name=levels.find(l=>l.number===level)?.name||'Garden';viewControls();
+ async function refresh({force=false}={}){
+  const owner=++generation,level=Number($('leaderboard-level').value);currentLevel=level;const edition=legacy(),name=levels.find(l=>l.number===level)?.name||'Garden';viewControls();
   $('score-sheet-note').textContent=overall?'Best score on each board · Current scores only':edition?'Earlier stars & time rankings':'Top 10 · Equal points share a rank';$('leaderboard-scope').textContent=overall?'All 60 boards':`${edition?'History · ':''}Level ${level} · ${name}`;$('leaderboard-empty').textContent=overall?'No totals yet. Clear a board to get started.':'Be the first to set a score.';$('leaderboard-table').caption.textContent=overall?'Combined best scores across boards, including your acknowledged name when available':'Scores for the selected garden, including your latest result when available';$('leaderboard-empty').hidden=true;$('leaderboard-table').hidden=true;$('leaderboard-refresh').hidden=true;
-  if(cache.has(scope))render(cache.get(scope));status(cache.has(scope)?'Refreshing…':'Loading scores…');dialog.setAttribute('aria-busy','true');
-  try{const rows=await fetchScores({document,signal:controller.signal,legacy:edition});if(owner!==generation||!dialog.open)return;cache.delete(scope);cache.set(scope,rows);if(cache.size>2)cache.delete(cache.keys().next().value);render(rows);status('');}
-  catch(error){if(owner!==generation||!dialog.open)return;status((cache.has(scope)?'Showing older scores. ':'')+'Scores could not load. Try again.');$('leaderboard-refresh').hidden=false;}
-  finally{clearTimeout(timer);if(owner===generation)dialog.setAttribute('aria-busy','false');}
+  const saved=cache.peek(edition);if(saved)render(saved);if(!force&&cache.fresh(edition)&&!cache.loading(edition)){status('');dialog.setAttribute('aria-busy','false');return;}status(saved?'Refreshing…':'Loading scores…');dialog.setAttribute('aria-busy','true');
+  try{const rows=await cache.read({legacy:edition,force});if(owner!==generation||!dialog.open)return;render(rows);status('');}
+  catch(error){if(owner!==generation||!dialog.open)return;status((cache.peek(edition)?'Showing older scores. ':'')+'Scores could not load. Try again.');$('leaderboard-refresh').hidden=false;}
+  finally{if(owner===generation)dialog.setAttribute('aria-busy','false');}
  }
  function change(transform){
   writeBusy++;controls();const task=writeTail.catch(()=>{}).then(async()=>{if(!db)db=await openStore();const saved=await readProfile(db,{key:'leaderboard'}),latest=saved===null?emptyLocal():validateLocal(saved),next=transform(latest);local=next===latest?latest:await writeLocal(db,next,latest.revision);localOK=true;return local;}).catch(error=>{localOK=false;throw error;}).finally(()=>{writeBusy--;controls();});writeTail=task;return task;
  }
  async function send(){
   if(sendBusy||!local.pending||!localOK)return;sendBusy=true;scoreError='';controls();
-  try{await change(v=>v);while(local.pending){const row=structuredClone(local.pending),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);submission('Sending saved scores…');try{await sendScore(row,{document,signal:controller.signal});await change(latest=>acknowledgeScore(latest,row));}finally{clearTimeout(timer);}if(dialog.open)void refresh();}submission('Score saved.');}
+  try{await change(v=>v);while(local.pending){const row=structuredClone(local.pending),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);submission('Sending saved scores…');try{const confirmed=await sendScore(row,{document,signal:controller.signal});await change(latest=>acknowledgeScore(latest,row));cache.seed(confirmed,isLegacy(row));}finally{clearTimeout(timer);}if(dialog.open)void refresh();}submission('Score saved.');}
   catch(error){scoreError='Your saved scores are kept here for Retry. '+(error.name==='AbortError'?'The request timed out.':error.message);submission(scoreError);}
   finally{sendBusy=false;controls();}
  }
@@ -119,9 +129,9 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
  }
  async function open(){
   overall=false;viewControls();$('leaderboard-options').open=false;$('leaderboard-level').value=String(levels.find(l=>l.id===getRun()?.levelId)?.number||1);$('leaderboard-edition').value='balanced';
-  await prepare();if(dialog.open)void refresh();
+  void refresh();await prepare();if(dialog.open){const rows=cache.peek(legacy());if(rows)render(rows);}
  }
- $('leaderboard-level').onchange=()=>void refresh();$('leaderboard-edition').onchange=()=>void refresh();$('leaderboard-refresh').onclick=()=>void refresh();$('leaderboard-reload').onclick=()=>void refresh();
+ $('leaderboard-level').onchange=()=>void refresh();$('leaderboard-edition').onchange=()=>void refresh();$('leaderboard-refresh').onclick=()=>void refresh({force:true});$('leaderboard-reload').onclick=()=>void refresh({force:true});
  $('leaderboard-board').onclick=()=>{if(!overall)return;overall=false;void refresh();};$('leaderboard-overall').onclick=()=>{if(overall)return;overall=true;$('leaderboard-edition').value='balanced';void refresh();};
  $('leaderboard-submit').onclick=async()=>{
   if(writeBusy||!currentResult||getRun()!==preparedRun||!localOK)return;
@@ -130,7 +140,7 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   catch(error){submission(error.message);if(!$('leaderboard-entry').hidden)$('leaderboard-name').focus();}
  };
  $('leaderboard-retry').onclick=async()=>{try{await change(v=>v);await send();}catch(error){submission(error.message);}};$('leaderboard-forget').onclick=async()=>{if(writeBusy||sendBusy)return;try{await change(latest=>({...latest,pending:latest.queue[0]??null,queue:latest.queue.slice(1)}));scoreError='';submission('Local retry removed. An earlier request may already be public.');controls();}catch(error){submission(error.message);}};
- dialog.addEventListener('close',()=>{generation++;readAbort?.abort();dialog.setAttribute('aria-busy','false');});
+ dialog.addEventListener('close',()=>{generation++;dialog.setAttribute('aria-busy','false');});
  document.defaultView?.addEventListener('online',()=>{void change(v=>v).then(send).catch(error=>submission(error.message));});
- return{open:()=>void open(),prepareResult:run=>void prepare(true,run)};
+ return{open:()=>void open(),prepareResult:run=>void prepare(true,run),warm:()=>{void cache.read().catch(()=>{});}};
 }
