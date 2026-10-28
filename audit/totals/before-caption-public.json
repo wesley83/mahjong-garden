@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-28T15:53:00.062Z",
+  "candidate": "mg-5472cbbe018b34",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "before": {
+    "level": "Lotus pond",
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-1d22d751f41726",
+    "tiles": [],
+    "win": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles"
+  },
+  "after": {
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-5472cbbe018b34",
+    "tiles": [],
+    "win": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles"
+  },
+  "notice": "A new version is available. Your current game is still open.",
+  "later": "mg-1d22d751f41726",
+  "explicitUpdate": true,
+  "checkpointPreserved": true,
+  "mixerBaselineMatches": false,
+  "mixerObservation": "The earlier baseline had music on; after update it was off, with both volume values and effects unchanged. The agent did not reset this later setting. Audio source is unchanged and the separate exact-candidate native mixer persistence checks passed; the long observation interval does not establish when the switch changed.",
+  "boardRows": "1\tWesley · You\t10,000\nTotal 47,666",
+  "overallRows": "1\tWesley · Your name\t47,666\n5 boards",
+  "overall": [
+    {
+      "boards": "5 boards",
+      "name": "Wesley · Your name",
+      "rank": "1",
+      "total": "47,666"
+    }
+  ],
+  "moreCollapsed": true,
+  "errors": [],
+  "limits": "Actual desktop public client and current submitted records; no synthetic public name/score created. No authenticated-user or physical-phone claim."
+}

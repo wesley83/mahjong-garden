@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-28T15:42:23.685Z",
-  "candidate": "mg-5472cbbe018b34",
+  "utc": "2026-10-28T16:00:26.292Z",
+  "candidate": "mg-8a78db25e8116b",
   "results": [
     {
-      "utc": "2026-10-28T15:37:24.957Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:56:59.548Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "responsive layout matrix",
       "status": "passed",
       "observations": [
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "utc": "2026-10-28T15:37:25.929Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:00.551Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "atomic storage conflict, failure and next action",
       "status": "passed",
       "observations": {
@@ -82,8 +82,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:37:31.918Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:06.587Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "studio editing, personal image conversion and failed import preservation",
       "status": "passed",
       "observations": {
@@ -96,8 +96,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:37:33.887Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:08.454Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "studio failed save stays recoverable, retry then close",
       "status": "passed",
       "observations": {
@@ -108,8 +108,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:37:44.953Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:19.51Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
       "status": "passed",
       "observations": {
@@ -121,152 +121,152 @@
         "nextLevel": true,
         "iterations": 12,
         "dispatchSamples": 34,
-        "dispatchP95ms": 9.900000095367432,
-        "dispatchMaxMs": 11.399999976158142,
+        "dispatchP95ms": 10.900000095367432,
+        "dispatchMaxMs": 16,
         "actionSamples": [
           {
             "selector": "[data-open=\"levels-dialog\"]",
-            "milliseconds": 11.399999976158142
+            "milliseconds": 16
           },
           {
             "selector": "#level-library .chapter-group:first-child .level-card:first-child",
-            "milliseconds": 2.100000023841858
+            "milliseconds": 1.399999976158142
           },
           {
             "selector": "#restart",
-            "milliseconds": 4.899999976158142
+            "milliseconds": 6
           },
           {
             "selector": "#confirm-ok",
-            "milliseconds": 5.300000071525574
+            "milliseconds": 6.399999976158142
           },
           {
             "selector": "#hint",
-            "milliseconds": 1.7999999523162842
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 2.399999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-3-0\"]",
             "milliseconds": 3.399999976158142
           },
           {
-            "selector": "#undo",
-            "milliseconds": 2.399999976158142
-          },
-          {
-            "selector": "#shuffle",
-            "milliseconds": 4.5
-          },
-          {
             "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 1.899999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-3-0\"]",
-            "milliseconds": 2.0999999046325684
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-0-0\"]",
-            "milliseconds": 1.399999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-2-0\"]",
-            "milliseconds": 2.3000000715255737
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-0-0\"]",
-            "milliseconds": 1.399999976158142
+            "milliseconds": 3.600000023841858
           },
           {
             "selector": "#board [data-tile=\"t-0-2-0\"]",
-            "milliseconds": 2.5999999046325684
+            "milliseconds": 4.100000023841858
           },
           {
-            "selector": "#board [data-tile=\"t-2-0-0\"]",
-            "milliseconds": 1.2999999523162842
+            "selector": "#undo",
+            "milliseconds": 3.799999952316284
           },
           {
-            "selector": "#board [data-tile=\"t-5-3-0\"]",
-            "milliseconds": 1.8000000715255737
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-0-0\"]",
-            "milliseconds": 1.9000000953674316
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-1-0\"]",
-            "milliseconds": 2.200000047683716
+            "selector": "#shuffle",
+            "milliseconds": 6.5
           },
           {
             "selector": "#board [data-tile=\"t-0-1-0\"]",
-            "milliseconds": 1.2999999523162842
+            "milliseconds": 2.899999976158142
           },
           {
-            "selector": "#board [data-tile=\"t-1-3-0\"]",
-            "milliseconds": 2.3000000715255737
+            "selector": "#board [data-tile=\"t-0-3-0\"]",
+            "milliseconds": 2.8000000715255737
           },
           {
             "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 2.299999952316284
+            "milliseconds": 1.899999976158142
           },
           {
             "selector": "#board [data-tile=\"t-1-1-0\"]",
             "milliseconds": 3
           },
           {
-            "selector": "#board [data-tile=\"t-2-1-0\"]",
-            "milliseconds": 1.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
             "milliseconds": 2.200000047683716
           },
           {
-            "selector": "#board [data-tile=\"t-4-1-0\"]",
-            "milliseconds": 1.3000000715255737
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 3.4000000953674316
           },
           {
-            "selector": "#board [data-tile=\"t-1-2-0\"]",
-            "milliseconds": 1.7999999523162842
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 1.600000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-2-0\"]",
+            "milliseconds": 2.399999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-2-0\"]",
+            "milliseconds": 3.0999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-1-0\"]",
+            "milliseconds": 2.5999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 2.100000023841858
           },
           {
             "selector": "#board [data-tile=\"t-3-1-0\"]",
-            "milliseconds": 1.3000000715255737
+            "milliseconds": 2.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 2.100000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-3-0\"]",
+            "milliseconds": 2.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.7000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 2.600000023841858
           },
           {
             "selector": "#board [data-tile=\"t-2-2-0\"]",
-            "milliseconds": 2.299999952316284
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-3-0\"]",
+            "milliseconds": 2.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "milliseconds": 1.7999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "milliseconds": 2.5
           },
           {
             "selector": "#board [data-tile=\"t-3-2-0\"]",
             "milliseconds": 1.399999976158142
           },
           {
-            "selector": "#board [data-tile=\"t-2-3-0\"]",
-            "milliseconds": 1.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-2-0\"]",
-            "milliseconds": 1.0999999046325684
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-3-0\"]",
-            "milliseconds": 9.900000095367432
+            "selector": "#board [data-tile=\"t-5-3-0\"]",
+            "milliseconds": 10.900000095367432
           },
           {
             "selector": "#next-level",
-            "milliseconds": 1.399999976158142
+            "milliseconds": 2.399999976158142
           }
         ],
-        "boardDispatchMaxMs": 9.900000095367432
+        "boardDispatchMaxMs": 10.900000095367432
       }
     },
     {
-      "utc": "2026-10-28T15:37:45.032Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:19.511Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "game backup export/import round-trip",
       "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
       "status": "passed",
@@ -278,8 +278,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:37:47.066Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:21.569Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "delayed saves, stale restores, cancellation and image undo",
       "observations": {
         "laterEditPreserved": true,
@@ -293,8 +293,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:37:55.655Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:30.191Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "text enlargement, safe insets, long labels and focus",
       "observations": [
         {
@@ -379,8 +379,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:37:59.946Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:34.543Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "loading, image and audio failure recovery",
       "observations": {
         "libraryFailureRetry": true,
@@ -393,8 +393,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:38:08.928Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:43.599Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "version-one checkpoint compatibility",
       "observations": {
         "saveVersion": 1,
@@ -408,8 +408,8 @@
     },
     {
       "name": "CSS 3D presentation and game screen lifecycle",
-      "utc": "2026-10-28T15:38:10.341Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:57:44.938Z",
+      "candidate": "mg-8a78db25e8116b",
       "status": "passed",
       "observations": {
         "outcomes": {
@@ -543,8 +543,8 @@
           }
         ],
         "clockSamples": [
-          "00:05",
-          "00:05"
+          "00:04",
+          "00:04"
         ],
         "threeD": {
           "planes": [
@@ -560,8 +560,8 @@
     },
     {
       "name": "rapid taps and independent tile contacts",
-      "utc": "2026-10-28T15:38:40.247Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:58:14.95Z",
+      "candidate": "mg-8a78db25e8116b",
       "observations": {
         "outcomes": {
           "TOUCH-RAPID": "passed",
@@ -645,8 +645,8 @@
     },
     {
       "name": "music mixer celebration and audio lifecycle",
-      "utc": "2026-10-28T15:38:51.514Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:58:26.402Z",
+      "candidate": "mg-8a78db25e8116b",
       "observations": {
         "outcomes": {
           "AUDIO-DEFAULTS": "passed",
@@ -664,7 +664,7 @@
           "seconds": 26,
           "peak": 0.2052977830171585,
           "clips": 0,
-          "rms": 0.02480392634354439,
+          "rms": 0.02480392633969591,
           "onsetSeconds": 0.025020833333333332,
           "lastSignalSeconds": 25.074708333333334,
           "zeroRenderSilent": true,
@@ -676,7 +676,7 @@
             },
             {
               "volume": 0.75,
-              "peak": 0.10585474222898483,
+              "peak": 0.10585474967956543,
               "duration": 1.7995208333333332
             }
           ],
@@ -691,8 +691,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T15:39:06.361Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:58:41.313Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "named shared leaderboard and submission recovery",
       "status": "passed",
       "observations": {
@@ -727,7 +727,7 @@
           },
           {
             "width": 390,
-            "height": 709.0104370117188,
+            "height": 645.0104370117188,
             "text": "100%"
           },
           {
@@ -817,8 +817,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:39:16.223Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:58:51.633Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "balanced scoring and safe PWA update notification",
       "status": "passed",
       "observations": {
@@ -839,8 +839,8 @@
       }
     },
     {
-      "utc": "2026-10-28T15:39:21.941Z",
-      "candidate": "mg-5472cbbe018b34",
+      "utc": "2026-10-28T15:58:57.329Z",
+      "candidate": "mg-8a78db25e8116b",
       "name": "automatic named scores and durable multi-level outbox",
       "status": "passed",
       "observations": {
@@ -868,9 +868,9 @@
       }
     }
   ],
-  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
+  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
   "rawEvidence": {
     "path": "audit/totals/browser-raw.json",
-    "sha256": "9e9bc8729125dd59666b06aafca828ce001a5a03fb21b7b355f53dd5b0358aef"
+    "sha256": "e27a35922f19ddcec964b528a4471475f23cc87fa4c2b04a70aec4814cedfae5"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-28T15:38:37.927Z",
-  "candidate": "mg-5472cbbe018b34",
+  "utc": "2026-10-28T15:59:07.935Z",
+  "candidate": "mg-8a78db25e8116b",
   "checks": {
     "audioVolumeKeys": true,
     "audioPreferences": true,
@@ -52,11 +52,11 @@
       "focus": "View leaderboard",
       "name": "Garden Player"
     },
-    "win": "6000 points · 12 pairs · 00:17 · 12 hints · 0 reshuffles"
+    "win": "6000 points · 12 pairs · 01:30 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
+  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
   "rawEvidence": {
     "path": "audit/totals/native-raw.json",
-    "sha256": "8f184229de41bca0bce287985e9a3df7e165d8759684ee61e6c96b13c4e3ac26"
+    "sha256": "a23860c5e6d19661d7a8ef3b96dae4592f00af0789a26b4b3e28a9de6a350c16"
   }
 }

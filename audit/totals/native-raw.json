@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-28T15:38:37.927Z",
-  "candidate": "mg-5472cbbe018b34",
+  "utc": "2026-10-28T15:59:07.935Z",
+  "candidate": "mg-8a78db25e8116b",
   "checks": {
     "audioVolumeKeys": true,
     "audioPreferences": true,
@@ -52,6 +52,6 @@
       "focus": "View leaderboard",
       "name": "Garden Player"
     },
-    "win": "6000 points · 12 pairs · 00:17 · 12 hints · 0 reshuffles"
+    "win": "6000 points · 12 pairs · 01:30 · 12 hints · 0 reshuffles"
   }
 }

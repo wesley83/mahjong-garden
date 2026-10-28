@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-28T15:35:24.902Z",
-  "candidate": "mg-5472cbbe018b34",
-  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
+  "utc": "2026-10-28T15:55:22.356Z",
+  "candidate": "mg-8a78db25e8116b",
+  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
   "node": "24.19.0",
   "command": [
     "node",
@@ -21,5 +21,5 @@
   ],
   "tests": 50,
   "exitCode": 0,
-  "outputSha256": "f793728ae294921f260eaa699ef5839cd1da81a4aa5f656002ce75b1ec1d6530"
+  "outputSha256": "58d0ab80bf4c71ba03923cdb7ace4d7a9b8839a6787dfd6f61e43074dcea2cc0"
 }
