@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-28T14:28:03.018Z",
-  "candidate": "mg-1d22d751f41726",
+  "utc": "2026-10-28T15:38:37.927Z",
+  "candidate": "mg-5472cbbe018b34",
   "checks": {
     "audioVolumeKeys": true,
     "audioPreferences": true,
@@ -15,36 +15,12 @@
     "leaderboardFocus": true
   },
   "observations": {
-    "left": [
-      {
-        "depth": "0.2",
-        "transform": "translate(2.75px, 0.893px)"
-      },
-      {
-        "depth": "0.55",
-        "transform": "translate(7.561px, 2.455px)"
-      },
-      {
-        "depth": "1",
-        "transform": "translate(13.748px, 4.463px)"
-      }
-    ],
-    "right": [
-      {
-        "depth": "0.2",
-        "transform": "translate(-2.322px, 0.932px)"
-      },
-      {
-        "depth": "0.55",
-        "transform": "translate(-6.384px, 2.563px)"
-      },
-      {
-        "depth": "1",
-        "transform": "translate(-11.608px, 4.661px)"
-      }
-    ],
-    "titleFixed": true,
-    "modalStatic": true,
+    "overallKey": {
+      "filtersHidden": true,
+      "pressed": "true",
+      "scope": "All 60 boards"
+    },
+    "boardKey": "Level 1 · First light",
     "mixer": {
       "music": false,
       "musicVolume": "36",
@@ -52,12 +28,10 @@
       "soundVolume": "64"
     },
     "audio": "Audio ready.",
-    "reducedStatic": true,
     "editor": {
       "count": "31 tiles · add one for an even pair count",
       "focus": "Column 1, row 1, layer 1, empty"
     },
-    "playStatic": true,
     "keyboardCounts": [
       24,
       22,
@@ -78,11 +52,11 @@
       "focus": "View leaderboard",
       "name": "Garden Player"
     },
-    "win": "6000 points · 12 pairs · 00:11 · 12 hints · 0 reshuffles"
+    "win": "6000 points · 12 pairs · 00:17 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "1d22d751f41726b7ff748860c7ae9d9a603935976eacba80ef6408e6a989cb0a",
+  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
   "rawEvidence": {
-    "path": "audit/parallax/native-raw.json",
-    "sha256": "0911ce800421c7b28c95198893ad48f92306038b02af2877eccebbcd123d8173"
+    "path": "audit/totals/native-raw.json",
+    "sha256": "8f184229de41bca0bce287985e9a3df7e165d8759684ee61e6c96b13c4e3ac26"
   }
 }

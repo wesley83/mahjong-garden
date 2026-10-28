@@ -1,0 +1,27 @@
+# Combined totals coverage and evidence review
+
+October 28, 2026. Version 1.7.0, candidate `mg-5472cbbe018b34`, source SHA256 `5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13`. Handbook 2.13.0 / digest and full retained snapshot are pinned in PLAN.md.
+
+## Coverage barrier
+
+| Outcome | Implemented contract |
+| --- | --- |
+| TOTAL-MATH | Sum each case-insensitive name's best current score per board over the complete validated collection; exclude old stars/time. Replays add no additional board contribution. Shared competition rank, deterministic spelling/order, board count, 600000 maximum and full rank before top ten. Append one latest acknowledged name outside ten. |
+| TOTAL-VIEW | Board standings remain with a secondary Total below points, retaining three columns. Visible This board / Overall buttons show selected state; Overall gives total and contributing boards. Default remains current board; irrelevant filters hide in Overall. History and explanation remain under More. Per-board You still uses run receipts; Overall Your name requires an acknowledged result in the alias group. |
+| TOTAL-RECOVERY | View is part of response/cache ownership. Old replies cannot relabel another view. Failed reads retain only labeled same-scope rows, with Retry; no zero from a failed read. Existing post-ack refresh updates the selected view. Outbox durability/retry/eligibility and new-game ownership are unchanged. |
+| TOTAL-PUBLISH | The three TOTAL IDs are mandatory in the named board group and negative refusal test. Exact-candidate regression, PWA, native input, pushed/raw-source identity, fresh backup, conditional promotion/public readback and live observation remain required. |
+
+The service already stores public names rather than account IDs. Names group without regard to case; their display spelling comes deterministically from an existing record. The help states the alias rule, replay rule and History exclusion. No account authentication/identity proof is implied. No historical progress backfill, record rewrite, score arithmetic change, new service permission, save migration or dependency. Game/run/profile 1, backup 2, outbox 2, audio, parallax and server policy remain unchanged.
+
+## Evidence barrier
+
+- `audit/current/node.json` / `node-tests.tap`: all 50 groups passed. Three new cases verify hard numeric totals, lower/better replays and name casing, stable order under reversed input, shared ranks, old rules exclusion, full-collection rank/owned-name append, no alias-only ownership, maximum across 60 boards and names such as __proto__. The gate refuses a missing TOTAL-MATH outcome.
+- `browser-raw.json`: all 16 required groups rerun on this candidate. The named-board fixture has two players at 20000 from two boards, duplicate/lower/case-varied replays, two 10000 totals sharing rank 3, and an excluded History record. It verifies total/count labels, unchanged board standings and three columns, board-side totals, History without point totals, and Overall returning to current rules. A name with 24 characters and 320×568 / 390×844 / landscape / 200% text cases remain bounded with 44px view controls. Mode A–B–A responses resolve out of order; failure retains labeled totals and switching back cannot present them as board points. Retry restores normal rows. Acknowledged name/total appears outside ten and returns to the owned board result. Existing send/reconcile/queue/game/parallax regressions pass.
+- `native-raw.json`: Return switches Overall / This board, updates pressed state/scope and hides unrelated filters. Typed name survives Overall and close with focus returned to View leaderboard. All 11 existing native checks rerun: audio keys 36/64, mutes after reload, reset/Audio ready/preview; modal/text/editor focus, mismatch refusal and full keyboard clear.
+- `pwa-native.json`: exact candidate graph with actual desktop Chromium worker on disposable localhost4180 and controlled A/B labels. Notice/Later preserve A; failed save refuses reload; Retry then explicit acceptance activates B and retains all 24 logical tile IDs/faces.
+- Actual-host isolated entry preflight is in `host-preflight.json`: semantic/MIME/style equivalence, conditional fixture cleanup and unchanged root before promotion.
+- `audit/current/leaderboard-server.json` retains its original `audit/scoring/server.json` identity. It is reused only for unchanged service source/policy hash, endpoints, grants, schema and request protocol, recomputed by the gate. Client aggregation/render/lifecycle evidence is new; no old raw receipt is relabeled.
+
+The preliminary unit output is retained: a test assumed Player 2 sorted inside the first ten, but lexical ordering puts Player 10 ahead of it. The implementation correctly appended that acknowledged name. The test now chooses the actual first name for its no-duplicate case. No failed result was promoted. The final source has 26 artifacts and 393372 initial gameplay bytes against 400000; optional score processing remains on demand.
+
+Coverage/evidence barriers pass locally. Publication, actual public totals and update/checkpoint observations follow separately. Limits: public aliases can be shared by different people; no authenticated user claim. Desktop Chromium and controlled touch/layout tests do not certify physical Pixel/Edge or complete accessibility conformance. Native PWA evidence is not closed-app push or offline reload support. The service's existing complete-collection size bound is retained; oversized/invalid reads fail rather than yield partial totals.

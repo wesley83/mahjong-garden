@@ -27,6 +27,13 @@ export function scoreSheetRows(rows,level,accepted=[],legacy=false){
  if(latest&&!top.some(r=>r.runKey===latest.runKey))top.push(latest);
  return top.map((r,i)=>({...r,mine:mine.has(r.runKey),extra:i===10}));
 }
+export function rankedPlayerTotals(rows){
+ const groups=new Map();for(const row of rows){if(row.rules!==SCORE_RULES)continue;const key=row.player.toLowerCase();let group=groups.get(key);if(!group){group={playerKey:key,player:row.player,firstKey:row.runKey,best:new Map()};groups.set(key,group);}if(row.runKey<group.firstKey){group.player=row.player;group.firstKey=row.runKey;}group.best.set(row.level,Math.max(group.best.get(row.level)??0,row.score));}
+ const sorted=[...groups.values()].map(group=>({playerKey:group.playerKey,player:group.player,total:[...group.best.values()].reduce((sum,score)=>sum+score,0),boards:group.best.size})).sort((a,b)=>b.total-a.total||a.playerKey.localeCompare(b.playerKey));let rank=0;return sorted.map((row,i)=>{if(!i||row.total!==sorted[i-1].total)rank=i+1;return{...row,rank};});
+}
+export function overallSheetRows(rows,accepted=[]){
+ const all=rankedPlayerTotals(rows),current=rows.filter(r=>r.rules===SCORE_RULES),byId=new Map(current.map(r=>[r.runKey,r.player.toLowerCase()])),owned=new Set(accepted.map(id=>byId.get(id)).filter(Boolean)),latest=accepted.map(id=>byId.get(id)).find(Boolean),top=all.slice(0,10),extra=all.find(r=>r.playerKey===latest);if(extra&&!top.some(r=>r.playerKey===latest))top.push(extra);return top.map((row,i)=>({...row,mine:owned.has(row.playerKey),extra:i===10}));
+}
 export async function resultFor(run,levels,crypto=globalThis.crypto){
  validateRun(run,levels);if(run.custom||!run.complete)throw Error('Clear an official garden to submit a result.');const level=levels.find(l=>l.id===run.levelId);
  const identity=JSON.stringify([SCORE_RULES,run.rules,run.levelRevision,run.levelId,run.seed,[...run.original].sort((a,b)=>a.id.localeCompare(b.id))]);const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(identity));
@@ -63,7 +70,7 @@ export async function sendScore(row,{fetcher=globalThis.fetch,document=globalThi
  throw failure||Error('Submission is not confirmed yet. Your result is kept for Retry.');
 }
 export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=globalThis.document}){
- const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog');let local=emptyLocal(),db,localOK=false,writeBusy=0,writeTail=Promise.resolve(),sendBusy=false,generation=0,readAbort=null,currentResult=null,preparedRun=null,currentLevel=1,cache=new Map(),loadGeneration=0,scoreError='';
+ const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog');let local=emptyLocal(),db,localOK=false,writeBusy=0,writeTail=Promise.resolve(),sendBusy=false,generation=0,readAbort=null,currentResult=null,preparedRun=null,currentLevel=1,cache=new Map(),loadGeneration=0,scoreError='',overall=false;
  const legacy=()=>$('leaderboard-edition').value==='legacy';
  const status=text=>{$('leaderboard-status').textContent=text;};
  const submission=text=>{$('leaderboard-submit-status').textContent=text;$('leaderboard-pending-status').textContent=text;};
@@ -80,14 +87,15 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   $('leaderboard-result').textContent=text;$('leaderboard-result').hidden=!text;
  }
  function render(rows){
-  const body=$('leaderboard-rows');body.replaceChildren();$('leaderboard-points-label').textContent=legacy()?'Result':'Points';
-  for(const row of scoreSheetRows(rows,currentLevel,local.accepted,legacy())){const tr=document.createElement('tr');tr.classList.toggle('your-score',row.mine);tr.classList.toggle('extra-score',row.extra);tr.dataset.runKey=row.runKey;
-   for(const value of [row.rank,row.player+(row.mine?' · You':''),isLegacy(row)?`${row.stars}★ · ${row.seconds}s`:row.score.toLocaleString('en-US')]){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}body.append(tr);}
+  const body=$('leaderboard-rows');body.replaceChildren();$('leaderboard-points-label').textContent=overall?'Total':legacy()?'Result':'Points';const totals=new Map(rankedPlayerTotals(rows).map(r=>[r.playerKey,r.total]));
+  for(const row of overall?overallSheetRows(rows,local.accepted):scoreSheetRows(rows,currentLevel,local.accepted,legacy())){const tr=document.createElement('tr');tr.classList.toggle('your-score',row.mine);tr.classList.toggle('extra-score',row.extra);if(overall)tr.dataset.playerKey=row.playerKey;else tr.dataset.runKey=row.runKey;
+   for(const value of [row.rank,row.player+(row.mine?(overall?' · Your name':' · You'):''),overall?row.total.toLocaleString('en-US'):isLegacy(row)?`${row.stars}★ · ${row.seconds}s`:row.score.toLocaleString('en-US')]){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}if(overall||!isLegacy(row)){const detail=document.createElement('small');detail.className='player-total';detail.textContent=overall?`${row.boards} ${row.boards===1?'board':'boards'}`:`Total ${totals.get(row.player.toLowerCase()).toLocaleString('en-US')}`;tr.lastChild.append(detail);}body.append(tr);}
   $('leaderboard-empty').hidden=body.children.length!==0;$('leaderboard-table').hidden=body.children.length===0;
  }
+ function viewControls(){for(const id of ['leaderboard-board','leaderboard-overall'])$(id).disabled=false;$('leaderboard-board').setAttribute('aria-pressed',String(!overall));$('leaderboard-overall').setAttribute('aria-pressed',String(overall));$('leaderboard-filters').hidden=overall;}
  async function refresh(){
-  const owner=++generation,level=Number($('leaderboard-level').value);currentLevel=level;const edition=legacy(),scope=(edition?'legacy':'balanced')+':'+level;readAbort?.abort();readAbort=new AbortController();const controller=readAbort,timer=setTimeout(()=>controller.abort(),10000),name=levels.find(l=>l.number===level)?.name||'Garden';
-  $('score-sheet-note').textContent=edition?'Earlier stars & time rankings':'Top 10 · Equal points share a rank';$('leaderboard-scope').textContent=`${edition?'History · ':''}Level ${level} · ${name}`;$('leaderboard-empty').hidden=true;$('leaderboard-table').hidden=true;$('leaderboard-refresh').hidden=true;
+  const owner=++generation,level=Number($('leaderboard-level').value);currentLevel=level;const edition=legacy(),scope=overall?'overall':(edition?'legacy':'balanced')+':'+level;readAbort?.abort();readAbort=new AbortController();const controller=readAbort,timer=setTimeout(()=>controller.abort(),10000),name=levels.find(l=>l.number===level)?.name||'Garden';viewControls();
+  $('score-sheet-note').textContent=overall?'Best score on each board · Current scores only':edition?'Earlier stars & time rankings':'Top 10 · Equal points share a rank';$('leaderboard-scope').textContent=overall?'All 60 boards':`${edition?'History · ':''}Level ${level} · ${name}`;$('leaderboard-empty').textContent=overall?'No totals yet. Clear a board to get started.':'Be the first to set a score.';$('leaderboard-table').caption.textContent=overall?'Combined best scores across boards, including your acknowledged name when available':'Scores for the selected garden, including your latest result when available';$('leaderboard-empty').hidden=true;$('leaderboard-table').hidden=true;$('leaderboard-refresh').hidden=true;
   if(cache.has(scope))render(cache.get(scope));status(cache.has(scope)?'Refreshing…':'Loading scores…');dialog.setAttribute('aria-busy','true');
   try{const rows=await fetchScores({document,signal:controller.signal,legacy:edition});if(owner!==generation||!dialog.open)return;cache.delete(scope);cache.set(scope,rows);if(cache.size>2)cache.delete(cache.keys().next().value);render(rows);status('');}
   catch(error){if(owner!==generation||!dialog.open)return;status((cache.has(scope)?'Showing older scores. ':'')+'Scores could not load. Try again.');$('leaderboard-refresh').hidden=false;}
@@ -110,14 +118,15 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   catch(error){if(current&&owner===loadGeneration&&getRun()===run){scoreError='Your score could not be saved. '+error.message+' Open the leaderboard to retry.';submission(scoreError);controls();}}
  }
  async function open(){
-  $('leaderboard-options').open=false;$('leaderboard-level').value=String(levels.find(l=>l.id===getRun()?.levelId)?.number||1);$('leaderboard-edition').value='balanced';
+  overall=false;viewControls();$('leaderboard-options').open=false;$('leaderboard-level').value=String(levels.find(l=>l.id===getRun()?.levelId)?.number||1);$('leaderboard-edition').value='balanced';
   await prepare();if(dialog.open)void refresh();
  }
  $('leaderboard-level').onchange=()=>void refresh();$('leaderboard-edition').onchange=()=>void refresh();$('leaderboard-refresh').onclick=()=>void refresh();$('leaderboard-reload').onclick=()=>void refresh();
+ $('leaderboard-board').onclick=()=>{if(!overall)return;overall=false;void refresh();};$('leaderboard-overall').onclick=()=>{if(overall)return;overall=true;$('leaderboard-edition').value='balanced';void refresh();};
  $('leaderboard-submit').onclick=async()=>{
   if(writeBusy||!currentResult||getRun()!==preparedRun||!localOK)return;
   try{const name=playerName($('leaderboard-name').value);$('leaderboard-name').value=name;const pending=validateScore({...currentResult,player:name}),owner=preparedRun;await change(latest=>enqueueScore({...latest,name},pending));
-   if(getRun()===owner&&$('win-dialog').open){showBoard();$('leaderboard-options').open=false;$('leaderboard-level').value=String(pending.level);$('leaderboard-edition').value='balanced';void refresh();}await send();}
+   if(getRun()===owner&&$('win-dialog').open){overall=false;viewControls();showBoard();$('leaderboard-options').open=false;$('leaderboard-level').value=String(pending.level);$('leaderboard-edition').value='balanced';void refresh();}await send();}
   catch(error){submission(error.message);if(!$('leaderboard-entry').hidden)$('leaderboard-name').focus();}
  };
  $('leaderboard-retry').onclick=async()=>{try{await change(v=>v);await send();}catch(error){submission(error.message);}};$('leaderboard-forget').onclick=async()=>{if(writeBusy||sendBusy)return;try{await change(latest=>({...latest,pending:latest.queue[0]??null,queue:latest.queue.slice(1)}));scoreError='';submission('Local retry removed. An earlier request may already be public.');controls();}catch(error){submission(error.message);}};

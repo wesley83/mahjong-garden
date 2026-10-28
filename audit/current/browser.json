@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-28T14:29:06.881Z",
-  "candidate": "mg-1d22d751f41726",
+  "utc": "2026-10-28T15:42:23.685Z",
+  "candidate": "mg-5472cbbe018b34",
   "results": [
     {
-      "utc": "2026-10-28T14:26:26.364Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:24.957Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "responsive layout matrix",
       "status": "passed",
       "observations": [
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "utc": "2026-10-28T14:26:27.314Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:25.929Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "atomic storage conflict, failure and next action",
       "status": "passed",
       "observations": {
@@ -82,8 +82,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:26:33.231Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:31.918Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "studio editing, personal image conversion and failed import preservation",
       "status": "passed",
       "observations": {
@@ -96,8 +96,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:26:35.131Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:33.887Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "studio failed save stays recoverable, retry then close",
       "status": "passed",
       "observations": {
@@ -108,8 +108,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:26:45.997Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:44.953Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
       "status": "passed",
       "observations": {
@@ -121,152 +121,152 @@
         "nextLevel": true,
         "iterations": 12,
         "dispatchSamples": 34,
-        "dispatchP95ms": 6.699999928474426,
-        "dispatchMaxMs": 6.700000047683716,
+        "dispatchP95ms": 9.900000095367432,
+        "dispatchMaxMs": 11.399999976158142,
         "actionSamples": [
           {
             "selector": "[data-open=\"levels-dialog\"]",
-            "milliseconds": 6.700000047683716
+            "milliseconds": 11.399999976158142
           },
           {
             "selector": "#level-library .chapter-group:first-child .level-card:first-child",
-            "milliseconds": 1.7000000476837158
+            "milliseconds": 2.100000023841858
           },
           {
             "selector": "#restart",
-            "milliseconds": 4
+            "milliseconds": 4.899999976158142
           },
           {
             "selector": "#confirm-ok",
-            "milliseconds": 3.399999976158142
+            "milliseconds": 5.300000071525574
           },
           {
             "selector": "#hint",
-            "milliseconds": 1.7000000476837158
+            "milliseconds": 1.7999999523162842
           },
           {
             "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 3.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-1-0\"]",
-            "milliseconds": 2.1999999284744263
-          },
-          {
-            "selector": "#undo",
-            "milliseconds": 2.299999952316284
-          },
-          {
-            "selector": "#shuffle",
-            "milliseconds": 3.1999999284744263
-          },
-          {
-            "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 3.100000023841858
+            "milliseconds": 2.399999976158142
           },
           {
             "selector": "#board [data-tile=\"t-0-3-0\"]",
-            "milliseconds": 2.5
+            "milliseconds": 3.399999976158142
           },
           {
-            "selector": "#board [data-tile=\"t-0-1-0\"]",
-            "milliseconds": 1.600000023841858
+            "selector": "#undo",
+            "milliseconds": 2.399999976158142
+          },
+          {
+            "selector": "#shuffle",
+            "milliseconds": 4.5
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 1.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-3-0\"]",
+            "milliseconds": 2.0999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 1.399999976158142
           },
           {
             "selector": "#board [data-tile=\"t-5-2-0\"]",
-            "milliseconds": 2.700000047683716
+            "milliseconds": 2.3000000715255737
           },
           {
-            "selector": "#board [data-tile=\"t-1-1-0\"]",
-            "milliseconds": 1.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-2-0\"]",
-            "milliseconds": 1.7000000476837158
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.399999976158142
           },
           {
             "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 2.5999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
             "milliseconds": 1.2999999523162842
           },
           {
             "selector": "#board [data-tile=\"t-5-3-0\"]",
-            "milliseconds": 1.5999999046325684
+            "milliseconds": 1.8000000715255737
           },
           {
-            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
+            "milliseconds": 1.9000000953674316
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-1-0\"]",
             "milliseconds": 1.2999999523162842
           },
           {
-            "selector": "#board [data-tile=\"t-4-3-0\"]",
-            "milliseconds": 1.600000023841858
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 2.3000000715255737
+          },
+          {
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 2.299999952316284
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-1-0\"]",
+            "milliseconds": 3
           },
           {
             "selector": "#board [data-tile=\"t-2-1-0\"]",
-            "milliseconds": 1.1999999284744263
+            "milliseconds": 1.5
           },
           {
-            "selector": "#board [data-tile=\"t-2-2-0\"]",
-            "milliseconds": 1.600000023841858
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
+            "milliseconds": 2.200000047683716
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 1.3000000715255737
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 1.7999999523162842
           },
           {
             "selector": "#board [data-tile=\"t-3-1-0\"]",
-            "milliseconds": 1.8000000715255737
+            "milliseconds": 1.3000000715255737
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-2-0\"]",
+            "milliseconds": 2.299999952316284
           },
           {
             "selector": "#board [data-tile=\"t-3-2-0\"]",
             "milliseconds": 1.399999976158142
           },
           {
-            "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 1.1999999284744263
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-1-0\"]",
-            "milliseconds": 2.3000000715255737
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-0-0\"]",
-            "milliseconds": 1.0999999046325684
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-3-0\"]",
-            "milliseconds": 1.2000000476837158
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-0-0\"]",
-            "milliseconds": 1.2000000476837158
-          },
-          {
             "selector": "#board [data-tile=\"t-2-3-0\"]",
-            "milliseconds": 2.899999976158142
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-0-0\"]",
             "milliseconds": 1.600000023841858
           },
           {
-            "selector": "#board [data-tile=\"t-3-0-0\"]",
-            "milliseconds": 1.7000000476837158
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-1-0\"]",
-            "milliseconds": 1.2999999523162842
+            "selector": "#board [data-tile=\"t-4-2-0\"]",
+            "milliseconds": 1.0999999046325684
           },
           {
             "selector": "#board [data-tile=\"t-3-3-0\"]",
-            "milliseconds": 6.699999928474426
+            "milliseconds": 9.900000095367432
           },
           {
             "selector": "#next-level",
-            "milliseconds": 1.5
+            "milliseconds": 1.399999976158142
           }
         ],
-        "boardDispatchMaxMs": 6.699999928474426
+        "boardDispatchMaxMs": 9.900000095367432
       }
     },
     {
-      "utc": "2026-10-28T14:26:46.047Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:45.032Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "game backup export/import round-trip",
       "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
       "status": "passed",
@@ -278,8 +278,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:26:48.065Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:47.066Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "delayed saves, stale restores, cancellation and image undo",
       "observations": {
         "laterEditPreserved": true,
@@ -293,8 +293,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T14:26:56.581Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:55.655Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "text enlargement, safe insets, long labels and focus",
       "observations": [
         {
@@ -379,8 +379,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T14:27:00.77Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:37:59.946Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "loading, image and audio failure recovery",
       "observations": {
         "libraryFailureRetry": true,
@@ -393,8 +393,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T14:27:09.713Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:38:08.928Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "version-one checkpoint compatibility",
       "observations": {
         "saveVersion": 1,
@@ -408,8 +408,8 @@
     },
     {
       "name": "CSS 3D presentation and game screen lifecycle",
-      "utc": "2026-10-28T14:27:11.082Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:38:10.341Z",
+      "candidate": "mg-5472cbbe018b34",
       "status": "passed",
       "observations": {
         "outcomes": {
@@ -560,8 +560,8 @@
     },
     {
       "name": "rapid taps and independent tile contacts",
-      "utc": "2026-10-28T14:27:40.618Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:38:40.247Z",
+      "candidate": "mg-5472cbbe018b34",
       "observations": {
         "outcomes": {
           "TOUCH-RAPID": "passed",
@@ -645,8 +645,8 @@
     },
     {
       "name": "music mixer celebration and audio lifecycle",
-      "utc": "2026-10-28T14:27:51.735Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:38:51.514Z",
+      "candidate": "mg-5472cbbe018b34",
       "observations": {
         "outcomes": {
           "AUDIO-DEFAULTS": "passed",
@@ -664,7 +664,7 @@
           "seconds": 26,
           "peak": 0.2052977830171585,
           "clips": 0,
-          "rms": 0.02480392634068992,
+          "rms": 0.02480392634354439,
           "onsetSeconds": 0.025020833333333332,
           "lastSignalSeconds": 25.074708333333334,
           "zeroRenderSilent": true,
@@ -691,8 +691,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T14:28:06.216Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:39:06.361Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "named shared leaderboard and submission recovery",
       "status": "passed",
       "observations": {
@@ -700,6 +700,9 @@
           "BOARD-RANK": "passed",
           "SIMPLE-VIEW": "passed",
           "SIMPLE-WIN": "passed",
+          "TOTAL-MATH": "passed",
+          "TOTAL-VIEW": "passed",
+          "TOTAL-RECOVERY": "passed",
           "BOARD-OWNERSHIP": "passed",
           "BOARD-SUBMIT": "passed",
           "SIMPLE-RANK": "passed",
@@ -716,6 +719,28 @@
         "top10PlusOwned": true,
         "lateSendPreservedNewGame": true,
         "lazyLoadRetry": true,
+        "totalSizes": [
+          {
+            "width": 320,
+            "height": 544,
+            "text": "100%"
+          },
+          {
+            "width": 390,
+            "height": 709.0104370117188,
+            "text": "100%"
+          },
+          {
+            "width": 844,
+            "height": 366,
+            "text": "100%"
+          },
+          {
+            "width": 390,
+            "height": 820,
+            "text": "200%"
+          }
+        ],
         "nameSizes": [
           {
             "width": 320,
@@ -760,9 +785,9 @@
             "text": "100%",
             "dialog": {
               "x": 12,
-              "y": 67.72917175292969,
+              "y": 32.72916793823242,
               "width": 366,
-              "height": 708.5416870117188
+              "height": 778.5416870117188
             }
           },
           {
@@ -792,8 +817,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:28:13.816Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:39:16.223Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "balanced scoring and safe PWA update notification",
       "status": "passed",
       "observations": {
@@ -814,8 +839,8 @@
       }
     },
     {
-      "utc": "2026-10-28T14:28:19.472Z",
-      "candidate": "mg-1d22d751f41726",
+      "utc": "2026-10-28T15:39:21.941Z",
+      "candidate": "mg-5472cbbe018b34",
       "name": "automatic named scores and durable multi-level outbox",
       "status": "passed",
       "observations": {
@@ -843,9 +868,9 @@
       }
     }
   ],
-  "sourceDigest": "1d22d751f41726b7ff748860c7ae9d9a603935976eacba80ef6408e6a989cb0a",
+  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
   "rawEvidence": {
-    "path": "audit/parallax/browser-raw.json",
-    "sha256": "0443b0695096b376de934273e5370797f28a8dafa6729e9e87ac98670a64e2db"
+    "path": "audit/totals/browser-raw.json",
+    "sha256": "9e9bc8729125dd59666b06aafca828ce001a5a03fb21b7b355f53dd5b0358aef"
   }
 }

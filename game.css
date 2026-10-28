@@ -9,6 +9,7 @@ body[data-screen="title"] .world-art{transform:scale(1.06)}
 .garden-layer{transform-box:view-box;transform-origin:center}
 .world-backdrop[data-parallax-motion="moving"] .garden-layer{will-change:transform}
 .reduced-motion .garden-layer{transform:none!important}
+.leaderboard-views{display:flex;gap:6px;margin:0 0 18px;padding:4px;border-radius:9px;background:#e6e9dd}.leaderboard-views button{flex:1;min-width:0;min-height:44px;padding:8px 12px;border-radius:6px;font:inherit;font-size:.85rem;color:#315d45}.leaderboard-views button[aria-pressed=true]{color:#fff9e9;background:#315d45}.player-total{display:block;margin-top:4px;font-size:.72rem;font-weight:400;color:#556b58}
 @media(prefers-reduced-motion:reduce){.garden-layer{transform:none!important}}
 .world-vignette{z-index:1;background:linear-gradient(180deg,#10261f80,transparent 28%,#122c2440 70%,#0e221fe0),radial-gradient(ellipse at center,transparent 12%,#0c241e65 100%)}
 body[data-screen="play"] .world-vignette{background:linear-gradient(180deg,#10261fbb,transparent 30%,#10261f40 70%,#0e221fed),radial-gradient(ellipse at 50% 53%,#122d2755,transparent 75%)}
