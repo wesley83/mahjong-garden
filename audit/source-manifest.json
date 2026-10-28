@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T14:31:14.217Z",
+  "utc": "2026-10-28T14:37:34.354Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 66523,
-      "sha256": "d0bc98cd5dcb31ba0405ebc850a350364fd97a6f56d8616832c9578942d13ed6"
+      "bytes": 67728,
+      "sha256": "377378e15336e78565a68b2a74392491a2e9d674f7a14422b51e358f11181c99"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -265,8 +265,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 5398,
-      "sha256": "4e175fcd8bc8abc6fa4b29eec40b2186df066a47db051e9eb94911b99efdf363"
+      "bytes": 5579,
+      "sha256": "3bd4281c26930efbddc19250a1a6a981f6762adaafede7572bf1ebb1b40e5450"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -464,14 +464,24 @@
       "sha256": "bc37bd784d2d500b5bddcbd494ea293ea4f96b465c9e50f5c455d1da34774f39"
     },
     {
+      "path": "audit/parallax/public-home.png",
+      "bytes": 54444,
+      "sha256": "33a326cb0b267ca186f6ad728a825dd97f836de9403573435ce28e98be4d6e8b"
+    },
+    {
+      "path": "audit/parallax/public.json",
+      "bytes": 1939,
+      "sha256": "dde86725cd293230a062453196964b51a1aac447005745435c41cc6cad686fca"
+    },
+    {
       "path": "audit/parallax/pwa-native.json",
       "bytes": 16017,
       "sha256": "d08a57fd050e9d2d09e475cbdecaa4afda7957797c3723bd88ba062923c1cf75"
     },
     {
       "path": "audit/parallax/REVIEW.md",
-      "bytes": 4971,
-      "sha256": "2fe4933cbe1a398dc4275778706e352bc524c224bc86001e384adde666aa7219"
+      "bytes": 6533,
+      "sha256": "2584e41511c2077a702136d562242854b7b7aeb8c1a6ef6af1370c233b5f952c"
     },
     {
       "path": "audit/presentation/browser-raw.json",

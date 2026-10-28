@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-28T14:36:20.886Z",
+  "candidate": "mg-1d22d751f41726",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "before": {
+    "level": "Bamboo walk",
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-ff019a9b6515b9",
+    "tiles": [],
+    "win": "8000 points · 29 pairs · 02:27 · 0 hints · 1 reshuffles"
+  },
+  "after": {
+    "level": "Bamboo walk",
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-1d22d751f41726",
+    "tiles": [],
+    "win": "8000 points · 29 pairs · 02:27 · 0 hints · 1 reshuffles"
+  },
+  "updateControlObserved": true,
+  "statusAtManualCheck": "Checking for updates…",
+  "explicitUpdate": true,
+  "checkpointPreserved": true,
+  "mixerPreserved": true,
+  "homePointer": {
+    "left": [
+      {
+        "depth": "0.2",
+        "transform": "translate(2.673px, 0.868px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(7.351px, 2.386px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(13.366px, 4.339px)"
+      }
+    ],
+    "right": [
+      {
+        "depth": "0.2",
+        "transform": "translate(-2.326px, 0.931px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(-6.397px, 2.559px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(-11.631px, 4.653px)"
+      }
+    ],
+    "titleFixed": true
+  },
+  "modalStatic": true,
+  "reducedMotionStatic": true,
+  "finalUpdateStatus": "You have the newest version.",
+  "errors": [],
+  "limits": "Actual desktop public client; no physical installed-phone or motion-sensor claim. No synthetic public name/score created. Existing completed checkpoint and mixer were preserved.",
+  "finalReducedMotion": false,
+  "finalHomeState": {
+    "motion": "ready",
+    "reduced": false
+  }
+}
