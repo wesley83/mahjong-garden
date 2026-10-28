@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-28T17:44:22.627Z",
-  "candidate": "mg-86fcd6b194c7fd",
+  "utc": "2026-10-28T18:12:20.931Z",
+  "candidate": "mg-fa72bef253399a",
   "checks": {
     "audioPreferences": true,
     "audioVolumeKeys": true,
@@ -15,22 +15,12 @@
     "leaderboardFocus": true
   },
   "observations": {
-    "overallKey": {
-      "filtersHidden": true,
-      "pressed": "true",
-      "scope": "All 60 boards"
-    },
-    "boardKey": "Level 1 · First light",
     "mixer": {
       "music": false,
       "musicVolume": "36",
       "sound": false,
       "soundVolume": "64"
     },
-    "audio": "Audio ready.",
-    "modal": "Settings",
-    "openBefore": "24",
-    "afterMismatch": "24",
     "actions": [
       "22",
       "20",
@@ -45,20 +35,18 @@
       "2",
       "0"
     ],
-    "nameFocus": {
+    "win": "✿\n\nA LITTLE MORE SPACE TO BREATHE\n\nA garden, cleared.\n\nFirst light is complete. Take a breath; you earned it.\n\n★★☆\n\n6545 points · 12 pairs · 00:12 · 12 hints · 0 reshuffles\n\n6,000 base + 545 time bonus\n\nName\n\nYour name and scores are public. Future clears save automatically.\n\nSave score\nView leaderboard\nOn to the next garden →",
+    "overall": "All 60 boards",
+    "name": {
       "focus": "View leaderboard",
-      "value": "Garden Player"
+      "name": "Garden Player"
     },
-    "editorFocus": {
-      "checked": null,
-      "label": "Column 1, row 1, layer 1, empty",
-      "pressed": "false",
-      "text": true
-    }
+    "removedStayOption": true,
+    "continued": "30"
   },
-  "sourceDigest": "86fcd6b194c7fdae4062e1f363dc8e61061863b1d65fdc56fa6ee85a3e1f0ee4",
+  "sourceDigest": "fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba",
   "rawEvidence": {
-    "path": "audit/leaderboard-speed/native-raw.json",
-    "sha256": "2ea5ca98742bbbf7e8f91d2c88cc73026c98d2574a41f6ba01f1ce64a6ba82ba"
+    "path": "audit/timed-score/native-raw.json",
+    "sha256": "60b0f5018104b2c008b88dedec40bf95d115ad8a941af23d39c9c88ee52a8ab6"
   }
 }

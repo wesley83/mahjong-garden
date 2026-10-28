@@ -1,0 +1,31 @@
+[
+  {
+    "utc": "2026-10-28T18:09:36.448Z",
+    "candidate": "mg-fa72bef253399a",
+    "name": "balanced scoring and safe PWA update notification",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "SCORE-MATH": "passed",
+        "SCORE-UI": "passed",
+        "TIME-MATH": "passed",
+        "TIME-VIEW": "passed",
+        "SCORE-COMPAT": "passed",
+        "TIME-COMPAT": "passed",
+        "PWA-DISCOVERY": "passed",
+        "PWA-SAFE": "passed"
+      },
+      "points": 10601,
+      "base": 9666,
+      "timeBonus": 935,
+      "seconds": 4,
+      "removedStayOption": true,
+      "stars": 2,
+      "hints": 1,
+      "pairs": 12,
+      "legacyReadOnly": true,
+      "saveFailureRefused": true,
+      "method": "Actual app scoring plus controlled updater contracts; separate required pwa.json observes real native worker A-to-B lifecycle."
+    }
+  }
+]

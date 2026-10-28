@@ -374,3 +374,11 @@
 - Pushed source c116bf498b5721b841fed7fe2f00a8e645ce75c3 promoted as mg-86fcd6b194c7fd; fresh full verified backup 543 files / 81 directories / 16596374 bytes. All 26 public artifacts verified. Prior graphs and both score services retained; no wipe or score-policy change.
 - Actual existing public client received notice, Later retained its current game, and explicit acceptance retained the completed Lotus pond checkpoint plus immediately sampled mixer off35/on65. Actual current board/Overall agree at combined125666 across13 boards. Native warm view changes and reopen show correct ready rows without loading status. Rank uses56px/nowrap, caption remains visually hidden, bounded public error log empty. Populated320/390px and200% reflow plus controlled request counts/latency passed before promotion. No physical-phone latency claim.
 - Hidden publisher exited. Final sanitized evidence and focused mobile preview are committed/pushed with source provenance unchanged.
+
+
+## MG-055 — time points and clear-screen plan
+- User removes Stay here and asks time to affect scoring. Plan before implementation in audit/timed-score/PLAN.md with handbook2.13.0 pinned. Adopt a smooth up-to10% bonus scaled by original pairs, active-time quantization, same rules on old/new balanced records, unchanged canonical payload/identity/server policy and no data reset.
+
+## MG-056 — timed scoring coverage and evidence barriers
+- Candidate mg-fa72bef253399a, source fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba, projection mg-time-points-1/version1.8.0.55 Node/16 browser/11 native and real-worker update evidence pass; TIME outcomes and missing-outcome refusal are required. 394923 initial bytes/26 artifacts. Separate review and raw/preliminary evidence retained.
+- Clear points/breakdown/no Stay, clock menu pause/resume, board/totals/old-record projection, best replay/alias/tie/ownership, raw payload compatibility and existing cache/outbox/PWA/game/editor/audio regressions checked. Actual server policy hash unchanged. Fresh full backup, pushed raw source, conditional promotion and live acceptance still precede completion.

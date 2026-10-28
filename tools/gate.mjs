@@ -7,6 +7,7 @@ export const PRESENTATION_OUTCOMES=['PRESENT-PARALLAX','PRESENT-3D','PRESENT-SCE
 REQUIRED_BROWSER.push('CSS 3D presentation and game screen lifecycle','rapid taps and independent tile contacts','music mixer celebration and audio lifecycle');
 export const AUDIO_OUTCOMES=['AUDIO-DEFAULTS','AUDIO-CONTROLS','AUDIO-MUSIC','AUDIO-CELEBRATE','AUDIO-SIGNAL','AUDIO-RECOVERY'];
 REQUIRED_BROWSER.push('named shared leaderboard and submission recovery','balanced scoring and safe PWA update notification');
+export const TIME_OUTCOMES=['TIME-MATH','TIME-VIEW','TIME-COMPAT'];
 export const SCORE_PWA_OUTCOMES=['SCORE-MATH','SCORE-UI','SCORE-COMPAT','PWA-DISCOVERY','PWA-SAFE'];
 export const SIMPLE_OUTCOMES=['SIMPLE-VIEW','SIMPLE-WIN','SIMPLE-RANK','SIMPLE-RECOVERY','SIMPLE-ACCESS'];
 export const TOTAL_OUTCOMES=['TOTAL-MATH','TOTAL-VIEW','TOTAL-RECOVERY'];
@@ -43,7 +44,8 @@ export async function verifyGate({root=rootDefault,output=path.join(root,'dist')
  if(TOTAL_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required combined total outcome is missing');
  if(SPEED_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required leaderboard speed outcome is missing');
  const auto=browser.results.find(r=>r.name==='automatic named scores and durable multi-level outbox');if(AUTO_OUTCOMES.some(id=>auto?.observations?.outcomes?.[id]!=='passed'))throw Error('Required automatic score outcome is missing');
- const scoring=browser.results.find(r=>r.name==='balanced scoring and safe PWA update notification');if(SCORE_PWA_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required scoring or PWA outcome is missing');
+ const scoring=browser.results.find(r=>r.name==='balanced scoring and safe PWA update notification');if(TIME_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required timed scoring outcome is missing');
+ if(SCORE_PWA_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required scoring or PWA outcome is missing');
  const pwa=JSON.parse(await fs.readFile(path.join(receiptDirectory,'pwa.json'),'utf8'));if(pwa.candidate!==release.id||!pwa.nativeWorkerUpdate||!pwa.nativeNotice||!pwa.saveFailureRefused||!pwa.checkpointPreserved)throw Error('Real PWA lifecycle evidence is missing');
  const server=JSON.parse(await fs.readFile(path.join(receiptDirectory,'leaderboard-server.json'),'utf8'));if(server.policySha256!==hash(scoreDocument())||!server.production?.passed||!server.syntheticRemoved||!server.fixtureRemoved||!server.backup?.verified)throw Error('Actual leaderboard server evidence is missing');
  for(const key of ['keyboardClear','textFocus','editorFocus','modalReturn','mismatchRefused','audioUnlocked','audioVolumeKeys','audioPreferences','celebrationPreview','leaderboardName','leaderboardFocus'])if(native.checks?.[key]!==true)throw Error('Native input evidence missing: '+key);

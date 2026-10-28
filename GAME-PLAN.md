@@ -83,3 +83,6 @@ Combined totals 1.7.0: `audit/totals/PLAN.md` and `REVIEW.md` add TOTAL-MATH / T
 
 
 Leaderboard responsiveness 1.7.2: `audit/leaderboard-speed/PLAN.md` and `REVIEW.md` adopt SPEED-RANK / SPEED-CACHE / SPEED-RECOVERY in the named-board gate. One bounded 30-second complete dataset per edition, shared pending reads, immediate cached view rendering, forced refresh, late-response ownership and stale failure recovery. Local bookkeeping cannot delay standings. Rank never wraps; populated 320/390px and enlarged-text acceptance precedes promotion. No score/save/service-policy changes.
+
+
+Time points and clear-screen simplification1.8.0: `audit/timed-score/PLAN.md` and `REVIEW.md` adopt TIME-MATH / TIME-VIEW / TIME-COMPAT in the scoring/PWA group. Remove Stay here; add a smooth board-size-adjusted bonus below10%, deriving identical final points in win/board/totals for all old/new balanced records. Projection mg-time-points-1 is versioned in the release manifest; canonical score-2 remains the validated assistance base, preserving native policy/requests/identity. No server-data rewrite, star change or save migration.

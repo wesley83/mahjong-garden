@@ -1,8 +1,8 @@
 {
-  "utc": "2026-10-28T17:44:22.632Z",
-  "candidate": "mg-86fcd6b194c7fd",
-  "environment": "Real desktop Chromium worker on isolated localhost4184, exact candidate modules and controlled A/B labels; not physical installed phone or OS push.",
-  "codeGraph": "/preview/releases/mg-86fcd6b194c7fd/boot.mjs",
+  "utc": "2026-10-28T18:12:20.932Z",
+  "candidate": "mg-fa72bef253399a",
+  "environment": "Real desktop Chromium worker on localhost4190 with exact candidate modules and controlled A/B metadata; not physical installed phone or OS push.",
+  "codeGraph": "/preview/releases/mg-fa72bef253399a/boot.mjs",
   "nativeWorkerUpdate": true,
   "nativeNotice": true,
   "saveFailureRefused": true,
@@ -10,547 +10,667 @@
   "laterPreserved": true,
   "observations": {
     "before": {
-      "scope": "http://127.0.0.1:4184/__mg-pwa-fixture/",
+      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
       "active": "activated",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": null,
       "frameVersion": "mg-11111111111111",
-      "count": 24,
+      "count": 30,
       "tiles": [
         {
-          "id": "t-0-0-0",
-          "label": "7 characters, column 1, row 1, layer 1, open"
-        },
-        {
           "id": "t-0-1-0",
-          "label": "green dragon, column 1, row 2, layer 1, open"
+          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
         },
         {
           "id": "t-0-2-0",
-          "label": "2 bamboo, column 1, row 3, layer 1, open"
+          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
         },
         {
-          "id": "t-0-3-0",
-          "label": "green dragon, column 1, row 4, layer 1, open"
+          "id": "t-0-4-0",
+          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "9 characters, column 2, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "7 characters, column 2, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "2 bamboo, column 2, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
         },
         {
           "id": "t-1-3-0",
-          "label": "9 bamboo, column 2, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-4-0",
+          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
         },
         {
           "id": "t-2-0-0",
-          "label": "9 bamboo, column 3, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "9 bamboo, column 3, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
         },
         {
           "id": "t-2-2-0",
-          "label": "2 bamboo, column 3, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "east wind, column 3, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "9 characters, column 4, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "east wind, column 4, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
         },
         {
           "id": "t-3-2-0",
-          "label": "9 characters, column 4, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "green dragon, column 4, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "9 bamboo, column 5, row 1, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "7 characters, column 5, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
         },
         {
           "id": "t-4-2-0",
-          "label": "2 bamboo, column 5, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "9 characters, column 5, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
         },
         {
           "id": "t-5-0-0",
-          "label": "7 characters, column 6, row 1, layer 1, open"
+          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
         },
         {
           "id": "t-5-1-0",
-          "label": "green dragon, column 6, row 2, layer 1, open"
+          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
         },
         {
           "id": "t-5-2-0",
-          "label": "east wind, column 6, row 3, layer 1, open"
+          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "east wind, column 6, row 4, layer 1, open"
+          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-0-0",
+          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+        },
+        {
+          "id": "t-6-1-0",
+          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-6-2-0",
+          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-6-3-0",
+          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-1-0",
+          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+        },
+        {
+          "id": "t-7-2-0",
+          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
         }
       ],
       "status": "You have the newest version."
     },
     "notice": {
-      "scope": "http://127.0.0.1:4184/__mg-pwa-fixture/",
+      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
       "active": "activated",
       "waiting": "installed",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": "mg-22222222222222",
       "frameVersion": "mg-11111111111111",
-      "count": 24,
+      "count": 30,
       "tiles": [
         {
-          "id": "t-0-0-0",
-          "label": "7 characters, column 1, row 1, layer 1, open"
-        },
-        {
           "id": "t-0-1-0",
-          "label": "green dragon, column 1, row 2, layer 1, open"
+          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
         },
         {
           "id": "t-0-2-0",
-          "label": "2 bamboo, column 1, row 3, layer 1, open"
+          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
         },
         {
-          "id": "t-0-3-0",
-          "label": "green dragon, column 1, row 4, layer 1, open"
+          "id": "t-0-4-0",
+          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "9 characters, column 2, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "7 characters, column 2, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "2 bamboo, column 2, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
         },
         {
           "id": "t-1-3-0",
-          "label": "9 bamboo, column 2, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-4-0",
+          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
         },
         {
           "id": "t-2-0-0",
-          "label": "9 bamboo, column 3, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "9 bamboo, column 3, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
         },
         {
           "id": "t-2-2-0",
-          "label": "2 bamboo, column 3, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "east wind, column 3, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "9 characters, column 4, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "east wind, column 4, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
         },
         {
           "id": "t-3-2-0",
-          "label": "9 characters, column 4, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "green dragon, column 4, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "9 bamboo, column 5, row 1, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "7 characters, column 5, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
         },
         {
           "id": "t-4-2-0",
-          "label": "2 bamboo, column 5, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "9 characters, column 5, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
         },
         {
           "id": "t-5-0-0",
-          "label": "7 characters, column 6, row 1, layer 1, open"
+          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
         },
         {
           "id": "t-5-1-0",
-          "label": "green dragon, column 6, row 2, layer 1, open"
+          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
         },
         {
           "id": "t-5-2-0",
-          "label": "east wind, column 6, row 3, layer 1, open"
+          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "east wind, column 6, row 4, layer 1, open"
+          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-0-0",
+          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+        },
+        {
+          "id": "t-6-1-0",
+          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-6-2-0",
+          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-6-3-0",
+          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-1-0",
+          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+        },
+        {
+          "id": "t-7-2-0",
+          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
         }
       ],
       "status": "A new version is available. Your current game is still open."
     },
     "later": {
-      "scope": "http://127.0.0.1:4184/__mg-pwa-fixture/",
+      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
       "active": "activated",
       "waiting": "installed",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": "mg-22222222222222",
       "frameVersion": "mg-11111111111111",
-      "count": 24,
+      "count": 30,
       "tiles": [
         {
-          "id": "t-0-0-0",
-          "label": "7 characters, column 1, row 1, layer 1, open"
-        },
-        {
           "id": "t-0-1-0",
-          "label": "green dragon, column 1, row 2, layer 1, open"
+          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
         },
         {
           "id": "t-0-2-0",
-          "label": "2 bamboo, column 1, row 3, layer 1, open"
+          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
         },
         {
-          "id": "t-0-3-0",
-          "label": "green dragon, column 1, row 4, layer 1, open"
+          "id": "t-0-4-0",
+          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "9 characters, column 2, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "7 characters, column 2, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "2 bamboo, column 2, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
         },
         {
           "id": "t-1-3-0",
-          "label": "9 bamboo, column 2, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-4-0",
+          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
         },
         {
           "id": "t-2-0-0",
-          "label": "9 bamboo, column 3, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "9 bamboo, column 3, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
         },
         {
           "id": "t-2-2-0",
-          "label": "2 bamboo, column 3, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "east wind, column 3, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "9 characters, column 4, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "east wind, column 4, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
         },
         {
           "id": "t-3-2-0",
-          "label": "9 characters, column 4, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "green dragon, column 4, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "9 bamboo, column 5, row 1, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "7 characters, column 5, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
         },
         {
           "id": "t-4-2-0",
-          "label": "2 bamboo, column 5, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "9 characters, column 5, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
         },
         {
           "id": "t-5-0-0",
-          "label": "7 characters, column 6, row 1, layer 1, open"
+          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
         },
         {
           "id": "t-5-1-0",
-          "label": "green dragon, column 6, row 2, layer 1, open"
+          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
         },
         {
           "id": "t-5-2-0",
-          "label": "east wind, column 6, row 3, layer 1, open"
+          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "east wind, column 6, row 4, layer 1, open"
+          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-0-0",
+          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+        },
+        {
+          "id": "t-6-1-0",
+          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-6-2-0",
+          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-6-3-0",
+          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-1-0",
+          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+        },
+        {
+          "id": "t-7-2-0",
+          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
         }
       ],
       "status": "A new version is available. Your current game is still open."
     },
     "failed": {
-      "scope": "http://127.0.0.1:4184/__mg-pwa-fixture/",
+      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
       "active": "activated",
       "waiting": "installed",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": "mg-22222222222222",
       "frameVersion": "mg-11111111111111",
-      "count": 24,
+      "count": 30,
       "tiles": [
         {
-          "id": "t-0-0-0",
-          "label": "7 characters, column 1, row 1, layer 1, open"
-        },
-        {
           "id": "t-0-1-0",
-          "label": "green dragon, column 1, row 2, layer 1, open"
+          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
         },
         {
           "id": "t-0-2-0",
-          "label": "2 bamboo, column 1, row 3, layer 1, open"
+          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
         },
         {
-          "id": "t-0-3-0",
-          "label": "green dragon, column 1, row 4, layer 1, open"
+          "id": "t-0-4-0",
+          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "9 characters, column 2, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "7 characters, column 2, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "2 bamboo, column 2, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
         },
         {
           "id": "t-1-3-0",
-          "label": "9 bamboo, column 2, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-4-0",
+          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
         },
         {
           "id": "t-2-0-0",
-          "label": "9 bamboo, column 3, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "9 bamboo, column 3, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
         },
         {
           "id": "t-2-2-0",
-          "label": "2 bamboo, column 3, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "east wind, column 3, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "9 characters, column 4, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "east wind, column 4, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
         },
         {
           "id": "t-3-2-0",
-          "label": "9 characters, column 4, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "green dragon, column 4, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "9 bamboo, column 5, row 1, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "7 characters, column 5, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
         },
         {
           "id": "t-4-2-0",
-          "label": "2 bamboo, column 5, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "9 characters, column 5, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
         },
         {
           "id": "t-5-0-0",
-          "label": "7 characters, column 6, row 1, layer 1, open"
+          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
         },
         {
           "id": "t-5-1-0",
-          "label": "green dragon, column 6, row 2, layer 1, open"
+          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
         },
         {
           "id": "t-5-2-0",
-          "label": "east wind, column 6, row 3, layer 1, open"
+          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "east wind, column 6, row 4, layer 1, open"
+          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-0-0",
+          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+        },
+        {
+          "id": "t-6-1-0",
+          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-6-2-0",
+          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-6-3-0",
+          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-1-0",
+          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+        },
+        {
+          "id": "t-7-2-0",
+          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
         }
       ],
       "status": "Your game could not be saved. Use Retry save or Export backup before updating. The game has not reloaded."
     },
     "after": {
-      "scope": "http://127.0.0.1:4184/__mg-pwa-fixture/",
+      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
       "active": "activated",
       "activeVersion": "mg-22222222222222",
       "waitingVersion": null,
       "frameVersion": "mg-22222222222222",
-      "count": 24,
+      "count": 30,
       "tiles": [
         {
-          "id": "t-0-0-0",
-          "label": "7 characters, column 1, row 1, layer 1, open"
-        },
-        {
           "id": "t-0-1-0",
-          "label": "green dragon, column 1, row 2, layer 1, open"
+          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
         },
         {
           "id": "t-0-2-0",
-          "label": "2 bamboo, column 1, row 3, layer 1, open"
+          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
         },
         {
-          "id": "t-0-3-0",
-          "label": "green dragon, column 1, row 4, layer 1, open"
+          "id": "t-0-4-0",
+          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "9 characters, column 2, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "7 characters, column 2, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "2 bamboo, column 2, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
         },
         {
           "id": "t-1-3-0",
-          "label": "9 bamboo, column 2, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-4-0",
+          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
         },
         {
           "id": "t-2-0-0",
-          "label": "9 bamboo, column 3, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "9 bamboo, column 3, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
         },
         {
           "id": "t-2-2-0",
-          "label": "2 bamboo, column 3, row 3, layer 1, blocked"
+          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "east wind, column 3, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "9 characters, column 4, row 1, layer 1, blocked"
+          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "east wind, column 4, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
         },
         {
           "id": "t-3-2-0",
-          "label": "9 characters, column 4, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "green dragon, column 4, row 4, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "9 bamboo, column 5, row 1, layer 1, blocked"
+          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "7 characters, column 5, row 2, layer 1, blocked"
+          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
         },
         {
           "id": "t-4-2-0",
-          "label": "2 bamboo, column 5, row 3, layer 1, blocked"
+          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "9 characters, column 5, row 4, layer 1, blocked"
+          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
         },
         {
           "id": "t-5-0-0",
-          "label": "7 characters, column 6, row 1, layer 1, open"
+          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
         },
         {
           "id": "t-5-1-0",
-          "label": "green dragon, column 6, row 2, layer 1, open"
+          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
         },
         {
           "id": "t-5-2-0",
-          "label": "east wind, column 6, row 3, layer 1, open"
+          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "east wind, column 6, row 4, layer 1, open"
+          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-0-0",
+          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+        },
+        {
+          "id": "t-6-1-0",
+          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-6-2-0",
+          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-6-3-0",
+          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-1-0",
+          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+        },
+        {
+          "id": "t-7-2-0",
+          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
         }
       ],
       "status": "You have the newest version."
     }
   },
-  "sourceDigest": "86fcd6b194c7fdae4062e1f363dc8e61061863b1d65fdc56fa6ee85a3e1f0ee4",
+  "sourceDigest": "fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba",
   "rawEvidence": {
-    "path": "audit/leaderboard-speed/pwa-native.json",
-    "sha256": "16e7535b6abe8d02ee2bf3d87f2f7b8cb6d96cdbeb11b2d382caca845a845464"
+    "path": "audit/timed-score/pwa-native.json",
+    "sha256": "2afe9d8260990f036cb3b33d78d410b02e545b1d0535495b5f907b0771559d79"
   }
 }

@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-28T17:59:18.936Z",
+  "candidate": "mg-f10ea437c00183",
+  "checks": {
+    "audioPreferences": true,
+    "audioVolumeKeys": true,
+    "celebrationPreview": true,
+    "audioUnlocked": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true
+  },
+  "observations": {
+    "overall": "All 60 boards",
+    "mixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "actions": [
+      "22",
+      "20",
+      "18",
+      "16",
+      "14",
+      "12",
+      "10",
+      "8",
+      "6",
+      "4",
+      "shuffle",
+      "2",
+      "0"
+    ],
+    "win": "✿\n\nA LITTLE MORE SPACE TO BREATHE\n\nA garden, cleared.\n\nFirst light is complete. Take a breath; you earned it.\n\n★☆☆\n\n4350 points · 12 pairs · 00:17 · 12 hints · 1 reshuffles\n\n4,000 base + 350 time bonus\n\nName\n\nYour name and scores are public. Future clears save automatically.\n\nSave score\nView leaderboard\nOn to the next garden →",
+    "name": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    },
+    "removedStayOption": true,
+    "continued": "30",
+    "initialMixerObservation": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": true,
+      "soundVolume": "64"
+    }
+  }
+}

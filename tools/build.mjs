@@ -1,3 +1,4 @@
+import {POINTS_VIEW} from '../scoring.mjs';
 import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {DOMParser} from 'linkedom';
 import {parseCampaign,deal,isFree} from '../core.mjs';import {RUNTIME,ASSETS,CONTROL,ORIGIN,hash,sourceIdentity,pngSize} from './contracts.mjs';
 export const ROOT=fileURLToPath(new URL('../',import.meta.url));
@@ -16,7 +17,7 @@ export async function buildProject({root=ROOT,output=path.join(root,'dist')}={})
  await fs.writeFile(path.join(output,'index.html'),html);files.push({path:'index.html',sha256:hash(html),bytes:Buffer.byteLength(html),initial:true});
  for(const name of CONTROL){let bytes;if(name==='sw.js')bytes=Buffer.from((await fs.readFile(path.join(root,'worker.mjs'),'utf8')).replace('__RELEASE__',id));else bytes=Buffer.from((await fs.readFile(path.join(root,name),'utf8')).replaceAll('./assets/',`./releases/${id}/assets/`));await fs.writeFile(path.join(output,name),bytes);files.push({path:name,sha256:hash(bytes),bytes:bytes.length,initial:true});}
  const initialBytes=files.filter(f=>f.initial).reduce((n,f)=>n+f.bytes,0);if(initialBytes>400000)throw Error('Gameplay pack exceeds its adopted 400 KB budget: '+initialBytes);
- const release={id,version:'1.7.2',rules:'mg-rules-1',contentRevision:1,saveVersion:1,levels:60,sourceDigest:identity.digest,sourceFiles:identity.files,node:process.versions.node,initialBytes,files};
+ const release={id,version:'1.8.0',pointsView:POINTS_VIEW,rules:'mg-rules-1',contentRevision:1,saveVersion:1,levels:60,sourceDigest:identity.digest,sourceFiles:identity.files,node:process.versions.node,initialBytes,files};
  await fs.mkdir(output,{recursive:true});await fs.writeFile(path.join(output,'release.json'),JSON.stringify(release,null,2));return release;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{const r=await buildProject();console.log(JSON.stringify({release:r.id,levels:r.levels,files:r.files.length,initialBytes:r.initialBytes}));}catch(error){console.error(error.message);process.exitCode=1;}}

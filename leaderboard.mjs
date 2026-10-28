@@ -1,6 +1,6 @@
 import {openStore,readProfile} from './storage.mjs';
 import {stars,validateRun} from './core.mjs';
-import {balancedScore,SCORE_RULES} from './scoring.mjs';
+import {balancedScore,timeAdjustedScore,SCORE_RULES} from './scoring.mjs';
 
 export const LEGACY_ENDPOINT='/mahjong-scores.html',ENDPOINT='/mahjong-scores-v2.html',LEGACY_TYPE='https://grab-lead-8328.onpagelove.com/MahjongResultV1',TYPE='https://grab-lead-8328.onpagelove.com/MahjongResultV2';
 const legacyKeys=['runKey','player','level','stars','seconds','rules'],keys=[...legacyKeys.slice(0,5),'score','pairs','hints','shuffles','rules'],MAX_BYTES=2000000;
@@ -19,7 +19,7 @@ export function parseScores(text,document){
 }
 export function rankedScores(rows,level,legacy=false,limit=25){
  if(!Number.isInteger(limit)||limit<1||limit>5000)throw Error('Invalid score limit.');
- const sorted=rows.filter(r=>r.level===level&&(legacy?isLegacy(r):r.rules===SCORE_RULES)).sort((a,b)=>legacy?b.stars-a.stars||a.seconds-b.seconds||a.runKey.localeCompare(b.runKey):b.score-a.score||a.runKey.localeCompare(b.runKey));let rank=0;
+ const sorted=rows.filter(r=>r.level===level&&(legacy?isLegacy(r):r.rules===SCORE_RULES)).map(r=>legacy?r:{...r,score:timeAdjustedScore(r)}).sort((a,b)=>legacy?b.stars-a.stars||a.seconds-b.seconds||a.runKey.localeCompare(b.runKey):b.score-a.score||a.runKey.localeCompare(b.runKey));let rank=0;
  return sorted.map((r,i)=>{if(!i||(legacy?r.stars!==sorted[i-1].stars||r.seconds!==sorted[i-1].seconds:r.score!==sorted[i-1].score))rank=i+1;return{...r,rank};}).slice(0,limit);
 }
 export function scoreSheetRows(rows,level,accepted=[],legacy=false){
@@ -28,7 +28,7 @@ export function scoreSheetRows(rows,level,accepted=[],legacy=false){
  return top.map((r,i)=>({...r,mine:mine.has(r.runKey),extra:i===10}));
 }
 export function rankedPlayerTotals(rows){
- const groups=new Map();for(const row of rows){if(row.rules!==SCORE_RULES)continue;const key=row.player.toLowerCase();let group=groups.get(key);if(!group){group={playerKey:key,player:row.player,firstKey:row.runKey,best:new Map()};groups.set(key,group);}if(row.runKey<group.firstKey){group.player=row.player;group.firstKey=row.runKey;}group.best.set(row.level,Math.max(group.best.get(row.level)??0,row.score));}
+ const groups=new Map();for(const row of rows){if(row.rules!==SCORE_RULES)continue;const key=row.player.toLowerCase();let group=groups.get(key);if(!group){group={playerKey:key,player:row.player,firstKey:row.runKey,best:new Map()};groups.set(key,group);}if(row.runKey<group.firstKey){group.player=row.player;group.firstKey=row.runKey;}group.best.set(row.level,Math.max(group.best.get(row.level)??0,timeAdjustedScore(row)));}
  const sorted=[...groups.values()].map(group=>({playerKey:group.playerKey,player:group.player,total:[...group.best.values()].reduce((sum,score)=>sum+score,0),boards:group.best.size})).sort((a,b)=>b.total-a.total||a.playerKey.localeCompare(b.playerKey));let rank=0;return sorted.map((row,i)=>{if(!i||row.total!==sorted[i-1].total)rank=i+1;return{...row,rank};});
 }
 export function overallSheetRows(rows,accepted=[],rankings=rankedPlayerTotals(rows)){
@@ -92,7 +92,7 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   $('leaderboard-name').disabled=!!writeBusy||!localOK||!!queued||!!accepted;
   $('leaderboard-pending').hidden=!pending;
   $('leaderboard-retry').disabled=!!writeBusy||sendBusy||!localOK;$('leaderboard-forget').disabled=!!writeBusy||sendBusy||!localOK;
-  $('leaderboard-pending-details').textContent=pending?`${local.queue.length?local.queue.length+1+' saved scores · Next: ':''}${pending.player} · Garden ${pending.level} · ${isLegacy(pending)?pending.stars+' stars':pending.score.toLocaleString('en-US')+' points'}`:'';
+  $('leaderboard-pending-details').textContent=pending?`${local.queue.length?local.queue.length+1+' saved scores · Next: ':''}${pending.player} · Garden ${pending.level} · ${isLegacy(pending)?pending.stars+' stars':timeAdjustedScore(pending).toLocaleString('en-US')+' points'}`:'';
   const text=scoreError||(accepted?'Score saved.':queued?(sendBusy?'Saving score…':'Score saved on this device. Open the leaderboard to retry.'):eligible&&local.name?`Scores save automatically as ${local.name}.`:'');
   $('leaderboard-result').textContent=text;$('leaderboard-result').hidden=!text;
  }
@@ -105,7 +105,7 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
  function viewControls(){for(const id of ['leaderboard-board','leaderboard-overall'])$(id).disabled=false;$('leaderboard-board').setAttribute('aria-pressed',String(!overall));$('leaderboard-overall').setAttribute('aria-pressed',String(overall));$('leaderboard-filters').hidden=overall;}
  async function refresh({force=false}={}){
   const owner=++generation,level=Number($('leaderboard-level').value);currentLevel=level;const edition=legacy(),name=levels.find(l=>l.number===level)?.name||'Garden';viewControls();
-  $('score-sheet-note').textContent=overall?'Best score on each board · Current scores only':edition?'Earlier stars & time rankings':'Top 10 · Equal points share a rank';$('leaderboard-scope').textContent=overall?'All 60 boards':`${edition?'History · ':''}Level ${level} · ${name}`;$('leaderboard-empty').textContent=overall?'No totals yet. Clear a board to get started.':'Be the first to set a score.';$('leaderboard-table').caption.textContent=overall?'Combined best scores across boards, including your acknowledged name when available':'Scores for the selected garden, including your latest result when available';$('leaderboard-empty').hidden=true;$('leaderboard-table').hidden=true;$('leaderboard-refresh').hidden=true;
+  $('score-sheet-note').textContent=overall?'Best time-adjusted score on each board':edition?'Earlier stars & time rankings':'Time bonus included · Equal points share a rank';$('leaderboard-scope').textContent=overall?'All 60 boards':`${edition?'History · ':''}Level ${level} · ${name}`;$('leaderboard-empty').textContent=overall?'No totals yet. Clear a board to get started.':'Be the first to set a score.';$('leaderboard-table').caption.textContent=overall?'Combined best scores across boards, including your acknowledged name when available':'Scores for the selected garden, including your latest result when available';$('leaderboard-empty').hidden=true;$('leaderboard-table').hidden=true;$('leaderboard-refresh').hidden=true;
   const saved=cache.peek(edition);if(saved)render(saved);if(!force&&cache.fresh(edition)&&!cache.loading(edition)){status('');dialog.setAttribute('aria-busy','false');return;}status(saved?'Refreshing…':'Loading scores…');dialog.setAttribute('aria-busy','true');
   try{const rows=await cache.read({legacy:edition,force});if(owner!==generation||!dialog.open)return;render(rows);status('');}
   catch(error){if(owner!==generation||!dialog.open)return;status((cache.peek(edition)?'Showing older scores. ':'')+'Scores could not load. Try again.');$('leaderboard-refresh').hidden=false;}
