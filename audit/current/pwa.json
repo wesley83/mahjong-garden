@@ -1,676 +1,5187 @@
 {
-  "utc": "2026-10-28T18:12:20.932Z",
-  "candidate": "mg-fa72bef253399a",
-  "environment": "Real desktop Chromium worker on localhost4190 with exact candidate modules and controlled A/B metadata; not physical installed phone or OS push.",
-  "codeGraph": "/preview/releases/mg-fa72bef253399a/boot.mjs",
+  "utc": "2026-10-28T23:29:29.256Z",
+  "candidate": "mg-0abe86a5419a54",
+  "environment": "Real desktop Chromium service worker on localhost4192; exact candidate graph with controlled A/B worker identities. No physical installed-phone or OS push claim.",
   "nativeWorkerUpdate": true,
   "nativeNotice": true,
   "saveFailureRefused": true,
   "checkpointPreserved": true,
-  "laterPreserved": true,
+  "challengeContextPreserved": true,
   "observations": {
     "before": {
-      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
+      "checkpoint": {
+        "version": 1,
+        "rules": "mg-rules-1",
+        "levelId": "mg-level-053",
+        "levelRevision": 1,
+        "seed": 726482932,
+        "tiles": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          }
+        ],
+        "original": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-6-0-0",
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-5-6-0",
+            "x": 5,
+            "y": 6,
+            "z": 0,
+            "face": 16
+          }
+        ],
+        "history": [
+          {
+            "tiles": [
+              {
+                "id": "t-1-0-0",
+                "x": 1,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-2-0-0",
+                "x": 2,
+                "y": 0,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-0-0",
+                "x": 3,
+                "y": 0,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-4-0-0",
+                "x": 4,
+                "y": 0,
+                "z": 0,
+                "face": 26
+              },
+              {
+                "id": "t-5-0-0",
+                "x": 5,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-6-0-0",
+                "x": 6,
+                "y": 0,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-0-1-0",
+                "x": 0,
+                "y": 1,
+                "z": 0,
+                "face": 8
+              },
+              {
+                "id": "t-1-1-0",
+                "x": 1,
+                "y": 1,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-2-1-0",
+                "x": 2,
+                "y": 1,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-3-1-0",
+                "x": 3,
+                "y": 1,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-4-1-0",
+                "x": 4,
+                "y": 1,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-5-1-0",
+                "x": 5,
+                "y": 1,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-6-1-0",
+                "x": 6,
+                "y": 1,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-7-1-0",
+                "x": 7,
+                "y": 1,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-2-0",
+                "x": 1,
+                "y": 2,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-2-2-0",
+                "x": 2,
+                "y": 2,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-3-2-0",
+                "x": 3,
+                "y": 2,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-4-2-0",
+                "x": 4,
+                "y": 2,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-5-2-0",
+                "x": 5,
+                "y": 2,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-6-2-0",
+                "x": 6,
+                "y": 2,
+                "z": 0,
+                "face": 24
+              },
+              {
+                "id": "t-0-3-0",
+                "x": 0,
+                "y": 3,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-3-0",
+                "x": 1,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-2-3-0",
+                "x": 2,
+                "y": 3,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-3-0",
+                "x": 3,
+                "y": 3,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-4-3-0",
+                "x": 4,
+                "y": 3,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-5-3-0",
+                "x": 5,
+                "y": 3,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-6-3-0",
+                "x": 6,
+                "y": 3,
+                "z": 0,
+                "face": 1
+              },
+              {
+                "id": "t-7-3-0",
+                "x": 7,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-1-4-0",
+                "x": 1,
+                "y": 4,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-2-4-0",
+                "x": 2,
+                "y": 4,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-3-4-0",
+                "x": 3,
+                "y": 4,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-4-4-0",
+                "x": 4,
+                "y": 4,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-5-4-0",
+                "x": 5,
+                "y": 4,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-6-4-0",
+                "x": 6,
+                "y": 4,
+                "z": 0,
+                "face": 22
+              },
+              {
+                "id": "t-0-5-0",
+                "x": 0,
+                "y": 5,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-1-5-0",
+                "x": 1,
+                "y": 5,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-2-5-0",
+                "x": 2,
+                "y": 5,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-3-5-0",
+                "x": 3,
+                "y": 5,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-4-5-0",
+                "x": 4,
+                "y": 5,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-5-5-0",
+                "x": 5,
+                "y": 5,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-6-5-0",
+                "x": 6,
+                "y": 5,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-7-5-0",
+                "x": 7,
+                "y": 5,
+                "z": 0,
+                "face": 0
+              },
+              {
+                "id": "t-2-1-1",
+                "x": 2,
+                "y": 1,
+                "z": 1,
+                "face": 8
+              },
+              {
+                "id": "t-3-1-1",
+                "x": 3,
+                "y": 1,
+                "z": 1,
+                "face": 0
+              },
+              {
+                "id": "t-4-1-1",
+                "x": 4,
+                "y": 1,
+                "z": 1,
+                "face": 24
+              },
+              {
+                "id": "t-5-1-1",
+                "x": 5,
+                "y": 1,
+                "z": 1,
+                "face": 1
+              },
+              {
+                "id": "t-3-1-2",
+                "x": 3,
+                "y": 1,
+                "z": 2,
+                "face": 26
+              },
+              {
+                "id": "t-4-1-2",
+                "x": 4,
+                "y": 1,
+                "z": 2,
+                "face": 22
+              },
+              {
+                "id": "t-4-6-0",
+                "x": 4,
+                "y": 6,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-5-6-0",
+                "x": 5,
+                "y": 6,
+                "z": 0,
+                "face": 16
+              }
+            ],
+            "matches": 0,
+            "complete": false
+          }
+        ],
+        "hints": 1,
+        "shuffles": 0,
+        "matches": 1,
+        "elapsed": 13.878600000023841,
+        "complete": false,
+        "custom": null
+      },
+      "garden": {
+        "version": 1,
+        "revision": 99,
+        "earned": [
+          1
+        ],
+        "decorations": [],
+        "chapter": 2,
+        "stamps": [],
+        "active": "d1-2026-10-28",
+        "returnRun": {
+          "version": 1,
+          "rules": "mg-rules-1",
+          "levelId": "mg-level-002",
+          "levelRevision": 1,
+          "seed": 1575424217,
+          "tiles": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "original": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "history": [],
+          "hints": 0,
+          "shuffles": 0,
+          "matches": 0,
+          "elapsed": 1.0331999999284744,
+          "complete": false,
+          "custom": null
+        },
+        "feedback": [
+          {
+            "key": "mg-level-053:726482932:1275810278",
+            "layers": []
+          },
+          {
+            "key": "mg-level-002:1575424217:1499944656",
+            "layers": []
+          }
+        ]
+      },
+      "scope": "http://127.0.0.1:4192/__mg-pwa-fixture/",
       "active": "activated",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": null,
       "frameVersion": "mg-11111111111111",
-      "count": 30,
+      "count": 48,
       "tiles": [
         {
           "id": "t-0-1-0",
-          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
+          "label": "9 circles, column 1, row 2, layer 1, open"
         },
         {
-          "id": "t-0-2-0",
-          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
+          "id": "t-0-3-0",
+          "label": "6 bamboo, column 1, row 4, layer 1, open"
         },
         {
-          "id": "t-0-4-0",
-          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
+          "id": "t-0-5-0",
+          "label": "8 circles, column 1, row 6, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
+          "label": "4 bamboo, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
+          "label": "8 characters, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
+          "label": "3 characters, column 2, row 3, layer 1, open"
         },
         {
           "id": "t-1-3-0",
-          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+          "label": "4 characters, column 2, row 4, layer 1, blocked"
         },
         {
           "id": "t-1-4-0",
-          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
+          "label": "green dragon, column 2, row 5, layer 1, open"
+        },
+        {
+          "id": "t-1-5-0",
+          "label": "white dragon, column 2, row 6, layer 1, blocked"
         },
         {
           "id": "t-2-0-0",
-          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
+          "label": "green dragon, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-1",
+          "label": "9 circles, column 3, row 2, layer 2, open"
         },
         {
           "id": "t-2-2-0",
-          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
+          "label": "1 characters, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-4-0",
+          "label": "3 characters, column 3, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-2-5-0",
+          "label": "3 circles, column 3, row 6, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
+          "label": "8 characters, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
+          "label": "6 circles, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-1",
+          "label": "1 circles, column 4, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-3-1-2",
+          "label": "9 characters, column 4, row 2, layer 3, open"
         },
         {
           "id": "t-3-2-0",
-          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
+          "label": "8 bamboo, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
+          "label": "7 bamboo, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-4-0",
+          "label": "white dragon, column 4, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-3-5-0",
+          "label": "north wind, column 4, row 6, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
+          "label": "9 characters, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
+          "label": "1 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-1",
+          "label": "7 characters, column 5, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-4-1-2",
+          "label": "5 characters, column 5, row 2, layer 3, open"
         },
         {
           "id": "t-4-2-0",
-          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
+          "label": "6 circles, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
+          "label": "2 characters, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-4-0",
+          "label": "north wind, column 5, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-4-5-0",
+          "label": "red dragon, column 5, row 6, layer 1, blocked"
+        },
+        {
+          "id": "t-4-6-0",
+          "label": "7 bamboo, column 5, row 7, layer 1, open"
         },
         {
           "id": "t-5-0-0",
-          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
+          "label": "4 bamboo, column 6, row 1, layer 1, open"
         },
         {
           "id": "t-5-1-0",
-          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
+          "label": "red dragon, column 6, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-5-1-1",
+          "label": "2 circles, column 6, row 2, layer 2, open"
         },
         {
           "id": "t-5-2-0",
-          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
+          "label": "8 circles, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+          "label": "3 circles, column 6, row 4, layer 1, blocked"
         },
         {
-          "id": "t-6-0-0",
-          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+          "id": "t-5-4-0",
+          "label": "5 bamboo, column 6, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-5-5-0",
+          "label": "8 bamboo, column 6, row 6, layer 1, blocked"
         },
         {
           "id": "t-6-1-0",
-          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+          "label": "2 characters, column 7, row 2, layer 1, blocked"
         },
         {
           "id": "t-6-2-0",
-          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+          "label": "7 characters, column 7, row 3, layer 1, open"
         },
         {
           "id": "t-6-3-0",
-          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+          "label": "2 circles, column 7, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-4-0",
+          "label": "5 characters, column 7, row 5, layer 1, open"
+        },
+        {
+          "id": "t-6-5-0",
+          "label": "5 bamboo, column 7, row 6, layer 1, blocked"
         },
         {
           "id": "t-7-1-0",
-          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+          "label": "6 bamboo, column 8, row 2, layer 1, open"
         },
         {
-          "id": "t-7-2-0",
-          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
+          "id": "t-7-3-0",
+          "label": "4 characters, column 8, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-5-0",
+          "label": "1 circles, column 8, row 6, layer 1, open"
         }
       ],
       "status": "You have the newest version."
     },
-    "notice": {
-      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
+    "refused": {
+      "checkpoint": {
+        "version": 1,
+        "rules": "mg-rules-1",
+        "levelId": "mg-level-053",
+        "levelRevision": 1,
+        "seed": 726482932,
+        "tiles": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          }
+        ],
+        "original": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-6-0-0",
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-5-6-0",
+            "x": 5,
+            "y": 6,
+            "z": 0,
+            "face": 16
+          }
+        ],
+        "history": [
+          {
+            "tiles": [
+              {
+                "id": "t-1-0-0",
+                "x": 1,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-2-0-0",
+                "x": 2,
+                "y": 0,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-0-0",
+                "x": 3,
+                "y": 0,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-4-0-0",
+                "x": 4,
+                "y": 0,
+                "z": 0,
+                "face": 26
+              },
+              {
+                "id": "t-5-0-0",
+                "x": 5,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-6-0-0",
+                "x": 6,
+                "y": 0,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-0-1-0",
+                "x": 0,
+                "y": 1,
+                "z": 0,
+                "face": 8
+              },
+              {
+                "id": "t-1-1-0",
+                "x": 1,
+                "y": 1,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-2-1-0",
+                "x": 2,
+                "y": 1,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-3-1-0",
+                "x": 3,
+                "y": 1,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-4-1-0",
+                "x": 4,
+                "y": 1,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-5-1-0",
+                "x": 5,
+                "y": 1,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-6-1-0",
+                "x": 6,
+                "y": 1,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-7-1-0",
+                "x": 7,
+                "y": 1,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-2-0",
+                "x": 1,
+                "y": 2,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-2-2-0",
+                "x": 2,
+                "y": 2,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-3-2-0",
+                "x": 3,
+                "y": 2,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-4-2-0",
+                "x": 4,
+                "y": 2,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-5-2-0",
+                "x": 5,
+                "y": 2,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-6-2-0",
+                "x": 6,
+                "y": 2,
+                "z": 0,
+                "face": 24
+              },
+              {
+                "id": "t-0-3-0",
+                "x": 0,
+                "y": 3,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-3-0",
+                "x": 1,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-2-3-0",
+                "x": 2,
+                "y": 3,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-3-0",
+                "x": 3,
+                "y": 3,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-4-3-0",
+                "x": 4,
+                "y": 3,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-5-3-0",
+                "x": 5,
+                "y": 3,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-6-3-0",
+                "x": 6,
+                "y": 3,
+                "z": 0,
+                "face": 1
+              },
+              {
+                "id": "t-7-3-0",
+                "x": 7,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-1-4-0",
+                "x": 1,
+                "y": 4,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-2-4-0",
+                "x": 2,
+                "y": 4,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-3-4-0",
+                "x": 3,
+                "y": 4,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-4-4-0",
+                "x": 4,
+                "y": 4,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-5-4-0",
+                "x": 5,
+                "y": 4,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-6-4-0",
+                "x": 6,
+                "y": 4,
+                "z": 0,
+                "face": 22
+              },
+              {
+                "id": "t-0-5-0",
+                "x": 0,
+                "y": 5,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-1-5-0",
+                "x": 1,
+                "y": 5,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-2-5-0",
+                "x": 2,
+                "y": 5,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-3-5-0",
+                "x": 3,
+                "y": 5,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-4-5-0",
+                "x": 4,
+                "y": 5,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-5-5-0",
+                "x": 5,
+                "y": 5,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-6-5-0",
+                "x": 6,
+                "y": 5,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-7-5-0",
+                "x": 7,
+                "y": 5,
+                "z": 0,
+                "face": 0
+              },
+              {
+                "id": "t-2-1-1",
+                "x": 2,
+                "y": 1,
+                "z": 1,
+                "face": 8
+              },
+              {
+                "id": "t-3-1-1",
+                "x": 3,
+                "y": 1,
+                "z": 1,
+                "face": 0
+              },
+              {
+                "id": "t-4-1-1",
+                "x": 4,
+                "y": 1,
+                "z": 1,
+                "face": 24
+              },
+              {
+                "id": "t-5-1-1",
+                "x": 5,
+                "y": 1,
+                "z": 1,
+                "face": 1
+              },
+              {
+                "id": "t-3-1-2",
+                "x": 3,
+                "y": 1,
+                "z": 2,
+                "face": 26
+              },
+              {
+                "id": "t-4-1-2",
+                "x": 4,
+                "y": 1,
+                "z": 2,
+                "face": 22
+              },
+              {
+                "id": "t-4-6-0",
+                "x": 4,
+                "y": 6,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-5-6-0",
+                "x": 5,
+                "y": 6,
+                "z": 0,
+                "face": 16
+              }
+            ],
+            "matches": 0,
+            "complete": false
+          }
+        ],
+        "hints": 1,
+        "shuffles": 0,
+        "matches": 1,
+        "elapsed": 13.878600000023841,
+        "complete": false,
+        "custom": null
+      },
+      "garden": {
+        "version": 1,
+        "revision": 99,
+        "earned": [
+          1
+        ],
+        "decorations": [],
+        "chapter": 2,
+        "stamps": [],
+        "active": "d1-2026-10-28",
+        "returnRun": {
+          "version": 1,
+          "rules": "mg-rules-1",
+          "levelId": "mg-level-002",
+          "levelRevision": 1,
+          "seed": 1575424217,
+          "tiles": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "original": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "history": [],
+          "hints": 0,
+          "shuffles": 0,
+          "matches": 0,
+          "elapsed": 1.0331999999284744,
+          "complete": false,
+          "custom": null
+        },
+        "feedback": [
+          {
+            "key": "mg-level-053:726482932:1275810278",
+            "layers": []
+          },
+          {
+            "key": "mg-level-002:1575424217:1499944656",
+            "layers": []
+          }
+        ]
+      },
+      "scope": "http://127.0.0.1:4192/__mg-pwa-fixture/",
       "active": "activated",
       "waiting": "installed",
       "activeVersion": "mg-11111111111111",
       "waitingVersion": "mg-22222222222222",
       "frameVersion": "mg-11111111111111",
-      "count": 30,
+      "count": 48,
       "tiles": [
         {
           "id": "t-0-1-0",
-          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
+          "label": "9 circles, column 1, row 2, layer 1, open"
         },
         {
-          "id": "t-0-2-0",
-          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
+          "id": "t-0-3-0",
+          "label": "6 bamboo, column 1, row 4, layer 1, open"
         },
         {
-          "id": "t-0-4-0",
-          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
-        },
-        {
-          "id": "t-1-0-0",
-          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
-        },
-        {
-          "id": "t-1-1-0",
-          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-1-2-0",
-          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-1-3-0",
-          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
-        },
-        {
-          "id": "t-1-4-0",
-          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
-        },
-        {
-          "id": "t-2-0-0",
-          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-2-1-0",
-          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-2-2-0",
-          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-2-3-0",
-          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-3-0-0",
-          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-3-1-0",
-          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-3-2-0",
-          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-3-3-0",
-          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-4-0-0",
-          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-4-1-0",
-          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-4-2-0",
-          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-4-3-0",
-          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-5-0-0",
-          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-5-1-0",
-          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-5-2-0",
-          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-5-3-0",
-          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-6-0-0",
-          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
-        },
-        {
-          "id": "t-6-1-0",
-          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-6-2-0",
-          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-6-3-0",
-          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
-        },
-        {
-          "id": "t-7-1-0",
-          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
-        },
-        {
-          "id": "t-7-2-0",
-          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
-        }
-      ],
-      "status": "A new version is available. Your current game is still open."
-    },
-    "later": {
-      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
-      "active": "activated",
-      "waiting": "installed",
-      "activeVersion": "mg-11111111111111",
-      "waitingVersion": "mg-22222222222222",
-      "frameVersion": "mg-11111111111111",
-      "count": 30,
-      "tiles": [
-        {
-          "id": "t-0-1-0",
-          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
-        },
-        {
-          "id": "t-0-2-0",
-          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
-        },
-        {
-          "id": "t-0-4-0",
-          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
+          "id": "t-0-5-0",
+          "label": "8 circles, column 1, row 6, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
+          "label": "4 bamboo, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
+          "label": "8 characters, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
+          "label": "3 characters, column 2, row 3, layer 1, open"
         },
         {
           "id": "t-1-3-0",
-          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+          "label": "4 characters, column 2, row 4, layer 1, blocked"
         },
         {
           "id": "t-1-4-0",
-          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
+          "label": "green dragon, column 2, row 5, layer 1, open"
+        },
+        {
+          "id": "t-1-5-0",
+          "label": "white dragon, column 2, row 6, layer 1, blocked"
         },
         {
           "id": "t-2-0-0",
-          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
+          "label": "green dragon, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-1",
+          "label": "9 circles, column 3, row 2, layer 2, open"
         },
         {
           "id": "t-2-2-0",
-          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
+          "label": "1 characters, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-4-0",
+          "label": "3 characters, column 3, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-2-5-0",
+          "label": "3 circles, column 3, row 6, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
+          "label": "8 characters, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
+          "label": "6 circles, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-1",
+          "label": "1 circles, column 4, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-3-1-2",
+          "label": "9 characters, column 4, row 2, layer 3, open"
         },
         {
           "id": "t-3-2-0",
-          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
+          "label": "8 bamboo, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
+          "label": "7 bamboo, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-4-0",
+          "label": "white dragon, column 4, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-3-5-0",
+          "label": "north wind, column 4, row 6, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
+          "label": "9 characters, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
+          "label": "1 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-1",
+          "label": "7 characters, column 5, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-4-1-2",
+          "label": "5 characters, column 5, row 2, layer 3, open"
         },
         {
           "id": "t-4-2-0",
-          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
+          "label": "6 circles, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
+          "label": "2 characters, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-4-0",
+          "label": "north wind, column 5, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-4-5-0",
+          "label": "red dragon, column 5, row 6, layer 1, blocked"
+        },
+        {
+          "id": "t-4-6-0",
+          "label": "7 bamboo, column 5, row 7, layer 1, open"
         },
         {
           "id": "t-5-0-0",
-          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
+          "label": "4 bamboo, column 6, row 1, layer 1, open"
         },
         {
           "id": "t-5-1-0",
-          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
+          "label": "red dragon, column 6, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-5-1-1",
+          "label": "2 circles, column 6, row 2, layer 2, open"
         },
         {
           "id": "t-5-2-0",
-          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
+          "label": "8 circles, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+          "label": "3 circles, column 6, row 4, layer 1, blocked"
         },
         {
-          "id": "t-6-0-0",
-          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+          "id": "t-5-4-0",
+          "label": "5 bamboo, column 6, row 5, layer 1, blocked"
         },
         {
-          "id": "t-6-1-0",
-          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-6-2-0",
-          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-6-3-0",
-          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
-        },
-        {
-          "id": "t-7-1-0",
-          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
-        },
-        {
-          "id": "t-7-2-0",
-          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
-        }
-      ],
-      "status": "A new version is available. Your current game is still open."
-    },
-    "failed": {
-      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
-      "active": "activated",
-      "waiting": "installed",
-      "activeVersion": "mg-11111111111111",
-      "waitingVersion": "mg-22222222222222",
-      "frameVersion": "mg-11111111111111",
-      "count": 30,
-      "tiles": [
-        {
-          "id": "t-0-1-0",
-          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
-        },
-        {
-          "id": "t-0-2-0",
-          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
-        },
-        {
-          "id": "t-0-4-0",
-          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
-        },
-        {
-          "id": "t-1-0-0",
-          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
-        },
-        {
-          "id": "t-1-1-0",
-          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-1-2-0",
-          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-1-3-0",
-          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
-        },
-        {
-          "id": "t-1-4-0",
-          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
-        },
-        {
-          "id": "t-2-0-0",
-          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-2-1-0",
-          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-2-2-0",
-          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-2-3-0",
-          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-3-0-0",
-          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-3-1-0",
-          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-3-2-0",
-          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-3-3-0",
-          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-4-0-0",
-          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-4-1-0",
-          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-4-2-0",
-          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-4-3-0",
-          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-5-0-0",
-          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
-        },
-        {
-          "id": "t-5-1-0",
-          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
-        },
-        {
-          "id": "t-5-2-0",
-          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
-        },
-        {
-          "id": "t-5-3-0",
-          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
-        },
-        {
-          "id": "t-6-0-0",
-          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+          "id": "t-5-5-0",
+          "label": "8 bamboo, column 6, row 6, layer 1, blocked"
         },
         {
           "id": "t-6-1-0",
-          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+          "label": "2 characters, column 7, row 2, layer 1, blocked"
         },
         {
           "id": "t-6-2-0",
-          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+          "label": "7 characters, column 7, row 3, layer 1, open"
         },
         {
           "id": "t-6-3-0",
-          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+          "label": "2 circles, column 7, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-4-0",
+          "label": "5 characters, column 7, row 5, layer 1, open"
+        },
+        {
+          "id": "t-6-5-0",
+          "label": "5 bamboo, column 7, row 6, layer 1, blocked"
         },
         {
           "id": "t-7-1-0",
-          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+          "label": "6 bamboo, column 8, row 2, layer 1, open"
         },
         {
-          "id": "t-7-2-0",
-          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
+          "id": "t-7-3-0",
+          "label": "4 characters, column 8, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-5-0",
+          "label": "1 circles, column 8, row 6, layer 1, open"
         }
       ],
       "status": "Your game could not be saved. Use Retry save or Export backup before updating. The game has not reloaded."
     },
     "after": {
-      "scope": "http://127.0.0.1:4190/__mg-pwa-fixture/",
+      "checkpoint": {
+        "version": 1,
+        "rules": "mg-rules-1",
+        "levelId": "mg-level-053",
+        "levelRevision": 1,
+        "seed": 726482932,
+        "tiles": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          }
+        ],
+        "original": [
+          {
+            "id": "t-1-0-0",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-2-0-0",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-0-0",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-4-0-0",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "face": 26
+          },
+          {
+            "id": "t-5-0-0",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "face": 12
+          },
+          {
+            "id": "t-6-0-0",
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-0-1-0",
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "face": 8
+          },
+          {
+            "id": "t-1-1-0",
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "face": 25
+          },
+          {
+            "id": "t-2-1-0",
+            "x": 2,
+            "y": 1,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-3-1-0",
+            "x": 3,
+            "y": 1,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-4-1-0",
+            "x": 4,
+            "y": 1,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-5-1-0",
+            "x": 5,
+            "y": 1,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-6-1-0",
+            "x": 6,
+            "y": 1,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-7-1-0",
+            "x": 7,
+            "y": 1,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-2-0",
+            "x": 1,
+            "y": 2,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-2-2-0",
+            "x": 2,
+            "y": 2,
+            "z": 0,
+            "face": 18
+          },
+          {
+            "id": "t-3-2-0",
+            "x": 3,
+            "y": 2,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-4-2-0",
+            "x": 4,
+            "y": 2,
+            "z": 0,
+            "face": 5
+          },
+          {
+            "id": "t-5-2-0",
+            "x": 5,
+            "y": 2,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-6-2-0",
+            "x": 6,
+            "y": 2,
+            "z": 0,
+            "face": 24
+          },
+          {
+            "id": "t-0-3-0",
+            "x": 0,
+            "y": 3,
+            "z": 0,
+            "face": 14
+          },
+          {
+            "id": "t-1-3-0",
+            "x": 1,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-2-3-0",
+            "x": 2,
+            "y": 3,
+            "z": 0,
+            "face": 9
+          },
+          {
+            "id": "t-3-3-0",
+            "x": 3,
+            "y": 3,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-4-3-0",
+            "x": 4,
+            "y": 3,
+            "z": 0,
+            "face": 19
+          },
+          {
+            "id": "t-5-3-0",
+            "x": 5,
+            "y": 3,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-6-3-0",
+            "x": 6,
+            "y": 3,
+            "z": 0,
+            "face": 1
+          },
+          {
+            "id": "t-7-3-0",
+            "x": 7,
+            "y": 3,
+            "z": 0,
+            "face": 21
+          },
+          {
+            "id": "t-1-4-0",
+            "x": 1,
+            "y": 4,
+            "z": 0,
+            "face": 32
+          },
+          {
+            "id": "t-2-4-0",
+            "x": 2,
+            "y": 4,
+            "z": 0,
+            "face": 20
+          },
+          {
+            "id": "t-3-4-0",
+            "x": 3,
+            "y": 4,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-4-4-0",
+            "x": 4,
+            "y": 4,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-5-4-0",
+            "x": 5,
+            "y": 4,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-6-4-0",
+            "x": 6,
+            "y": 4,
+            "z": 0,
+            "face": 22
+          },
+          {
+            "id": "t-0-5-0",
+            "x": 0,
+            "y": 5,
+            "z": 0,
+            "face": 7
+          },
+          {
+            "id": "t-1-5-0",
+            "x": 1,
+            "y": 5,
+            "z": 0,
+            "face": 33
+          },
+          {
+            "id": "t-2-5-0",
+            "x": 2,
+            "y": 5,
+            "z": 0,
+            "face": 2
+          },
+          {
+            "id": "t-3-5-0",
+            "x": 3,
+            "y": 5,
+            "z": 0,
+            "face": 30
+          },
+          {
+            "id": "t-4-5-0",
+            "x": 4,
+            "y": 5,
+            "z": 0,
+            "face": 31
+          },
+          {
+            "id": "t-5-5-0",
+            "x": 5,
+            "y": 5,
+            "z": 0,
+            "face": 16
+          },
+          {
+            "id": "t-6-5-0",
+            "x": 6,
+            "y": 5,
+            "z": 0,
+            "face": 13
+          },
+          {
+            "id": "t-7-5-0",
+            "x": 7,
+            "y": 5,
+            "z": 0,
+            "face": 0
+          },
+          {
+            "id": "t-2-1-1",
+            "x": 2,
+            "y": 1,
+            "z": 1,
+            "face": 8
+          },
+          {
+            "id": "t-3-1-1",
+            "x": 3,
+            "y": 1,
+            "z": 1,
+            "face": 0
+          },
+          {
+            "id": "t-4-1-1",
+            "x": 4,
+            "y": 1,
+            "z": 1,
+            "face": 24
+          },
+          {
+            "id": "t-5-1-1",
+            "x": 5,
+            "y": 1,
+            "z": 1,
+            "face": 1
+          },
+          {
+            "id": "t-3-1-2",
+            "x": 3,
+            "y": 1,
+            "z": 2,
+            "face": 26
+          },
+          {
+            "id": "t-4-1-2",
+            "x": 4,
+            "y": 1,
+            "z": 2,
+            "face": 22
+          },
+          {
+            "id": "t-4-6-0",
+            "x": 4,
+            "y": 6,
+            "z": 0,
+            "face": 15
+          },
+          {
+            "id": "t-5-6-0",
+            "x": 5,
+            "y": 6,
+            "z": 0,
+            "face": 16
+          }
+        ],
+        "history": [
+          {
+            "tiles": [
+              {
+                "id": "t-1-0-0",
+                "x": 1,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-2-0-0",
+                "x": 2,
+                "y": 0,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-0-0",
+                "x": 3,
+                "y": 0,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-4-0-0",
+                "x": 4,
+                "y": 0,
+                "z": 0,
+                "face": 26
+              },
+              {
+                "id": "t-5-0-0",
+                "x": 5,
+                "y": 0,
+                "z": 0,
+                "face": 12
+              },
+              {
+                "id": "t-6-0-0",
+                "x": 6,
+                "y": 0,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-0-1-0",
+                "x": 0,
+                "y": 1,
+                "z": 0,
+                "face": 8
+              },
+              {
+                "id": "t-1-1-0",
+                "x": 1,
+                "y": 1,
+                "z": 0,
+                "face": 25
+              },
+              {
+                "id": "t-2-1-0",
+                "x": 2,
+                "y": 1,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-3-1-0",
+                "x": 3,
+                "y": 1,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-4-1-0",
+                "x": 4,
+                "y": 1,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-5-1-0",
+                "x": 5,
+                "y": 1,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-6-1-0",
+                "x": 6,
+                "y": 1,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-7-1-0",
+                "x": 7,
+                "y": 1,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-2-0",
+                "x": 1,
+                "y": 2,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-2-2-0",
+                "x": 2,
+                "y": 2,
+                "z": 0,
+                "face": 18
+              },
+              {
+                "id": "t-3-2-0",
+                "x": 3,
+                "y": 2,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-4-2-0",
+                "x": 4,
+                "y": 2,
+                "z": 0,
+                "face": 5
+              },
+              {
+                "id": "t-5-2-0",
+                "x": 5,
+                "y": 2,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-6-2-0",
+                "x": 6,
+                "y": 2,
+                "z": 0,
+                "face": 24
+              },
+              {
+                "id": "t-0-3-0",
+                "x": 0,
+                "y": 3,
+                "z": 0,
+                "face": 14
+              },
+              {
+                "id": "t-1-3-0",
+                "x": 1,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-2-3-0",
+                "x": 2,
+                "y": 3,
+                "z": 0,
+                "face": 9
+              },
+              {
+                "id": "t-3-3-0",
+                "x": 3,
+                "y": 3,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-4-3-0",
+                "x": 4,
+                "y": 3,
+                "z": 0,
+                "face": 19
+              },
+              {
+                "id": "t-5-3-0",
+                "x": 5,
+                "y": 3,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-6-3-0",
+                "x": 6,
+                "y": 3,
+                "z": 0,
+                "face": 1
+              },
+              {
+                "id": "t-7-3-0",
+                "x": 7,
+                "y": 3,
+                "z": 0,
+                "face": 21
+              },
+              {
+                "id": "t-1-4-0",
+                "x": 1,
+                "y": 4,
+                "z": 0,
+                "face": 32
+              },
+              {
+                "id": "t-2-4-0",
+                "x": 2,
+                "y": 4,
+                "z": 0,
+                "face": 20
+              },
+              {
+                "id": "t-3-4-0",
+                "x": 3,
+                "y": 4,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-4-4-0",
+                "x": 4,
+                "y": 4,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-5-4-0",
+                "x": 5,
+                "y": 4,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-6-4-0",
+                "x": 6,
+                "y": 4,
+                "z": 0,
+                "face": 22
+              },
+              {
+                "id": "t-0-5-0",
+                "x": 0,
+                "y": 5,
+                "z": 0,
+                "face": 7
+              },
+              {
+                "id": "t-1-5-0",
+                "x": 1,
+                "y": 5,
+                "z": 0,
+                "face": 33
+              },
+              {
+                "id": "t-2-5-0",
+                "x": 2,
+                "y": 5,
+                "z": 0,
+                "face": 2
+              },
+              {
+                "id": "t-3-5-0",
+                "x": 3,
+                "y": 5,
+                "z": 0,
+                "face": 30
+              },
+              {
+                "id": "t-4-5-0",
+                "x": 4,
+                "y": 5,
+                "z": 0,
+                "face": 31
+              },
+              {
+                "id": "t-5-5-0",
+                "x": 5,
+                "y": 5,
+                "z": 0,
+                "face": 16
+              },
+              {
+                "id": "t-6-5-0",
+                "x": 6,
+                "y": 5,
+                "z": 0,
+                "face": 13
+              },
+              {
+                "id": "t-7-5-0",
+                "x": 7,
+                "y": 5,
+                "z": 0,
+                "face": 0
+              },
+              {
+                "id": "t-2-1-1",
+                "x": 2,
+                "y": 1,
+                "z": 1,
+                "face": 8
+              },
+              {
+                "id": "t-3-1-1",
+                "x": 3,
+                "y": 1,
+                "z": 1,
+                "face": 0
+              },
+              {
+                "id": "t-4-1-1",
+                "x": 4,
+                "y": 1,
+                "z": 1,
+                "face": 24
+              },
+              {
+                "id": "t-5-1-1",
+                "x": 5,
+                "y": 1,
+                "z": 1,
+                "face": 1
+              },
+              {
+                "id": "t-3-1-2",
+                "x": 3,
+                "y": 1,
+                "z": 2,
+                "face": 26
+              },
+              {
+                "id": "t-4-1-2",
+                "x": 4,
+                "y": 1,
+                "z": 2,
+                "face": 22
+              },
+              {
+                "id": "t-4-6-0",
+                "x": 4,
+                "y": 6,
+                "z": 0,
+                "face": 15
+              },
+              {
+                "id": "t-5-6-0",
+                "x": 5,
+                "y": 6,
+                "z": 0,
+                "face": 16
+              }
+            ],
+            "matches": 0,
+            "complete": false
+          }
+        ],
+        "hints": 1,
+        "shuffles": 0,
+        "matches": 1,
+        "elapsed": 14.904500000119208,
+        "complete": false,
+        "custom": null
+      },
+      "garden": {
+        "version": 1,
+        "revision": 103,
+        "earned": [
+          1
+        ],
+        "decorations": [],
+        "chapter": 2,
+        "stamps": [],
+        "active": "d1-2026-10-28",
+        "returnRun": {
+          "version": 1,
+          "rules": "mg-rules-1",
+          "levelId": "mg-level-002",
+          "levelRevision": 1,
+          "seed": 1575424217,
+          "tiles": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "original": [
+            {
+              "id": "t-1-0-0",
+              "x": 1,
+              "y": 0,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-2-0-0",
+              "x": 2,
+              "y": 0,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-0-0",
+              "x": 3,
+              "y": 0,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-0-0",
+              "x": 4,
+              "y": 0,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-0-0",
+              "x": 5,
+              "y": 0,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-0-0",
+              "x": 6,
+              "y": 0,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-0-1-0",
+              "x": 0,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-1-0",
+              "x": 1,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-2-1-0",
+              "x": 2,
+              "y": 1,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-3-1-0",
+              "x": 3,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-4-1-0",
+              "x": 4,
+              "y": 1,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-5-1-0",
+              "x": 5,
+              "y": 1,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-6-1-0",
+              "x": 6,
+              "y": 1,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-7-1-0",
+              "x": 7,
+              "y": 1,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-0-2-0",
+              "x": 0,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-1-2-0",
+              "x": 1,
+              "y": 2,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-2-2-0",
+              "x": 2,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-3-2-0",
+              "x": 3,
+              "y": 2,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-4-2-0",
+              "x": 4,
+              "y": 2,
+              "z": 0,
+              "face": 24
+            },
+            {
+              "id": "t-5-2-0",
+              "x": 5,
+              "y": 2,
+              "z": 0,
+              "face": 31
+            },
+            {
+              "id": "t-6-2-0",
+              "x": 6,
+              "y": 2,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-7-2-0",
+              "x": 7,
+              "y": 2,
+              "z": 0,
+              "face": 26
+            },
+            {
+              "id": "t-1-3-0",
+              "x": 1,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-2-3-0",
+              "x": 2,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-3-3-0",
+              "x": 3,
+              "y": 3,
+              "z": 0,
+              "face": 13
+            },
+            {
+              "id": "t-4-3-0",
+              "x": 4,
+              "y": 3,
+              "z": 0,
+              "face": 33
+            },
+            {
+              "id": "t-5-3-0",
+              "x": 5,
+              "y": 3,
+              "z": 0,
+              "face": 25
+            },
+            {
+              "id": "t-6-3-0",
+              "x": 6,
+              "y": 3,
+              "z": 0,
+              "face": 8
+            },
+            {
+              "id": "t-0-4-0",
+              "x": 0,
+              "y": 4,
+              "z": 0,
+              "face": 15
+            },
+            {
+              "id": "t-1-4-0",
+              "x": 1,
+              "y": 4,
+              "z": 0,
+              "face": 31
+            }
+          ],
+          "history": [],
+          "hints": 0,
+          "shuffles": 0,
+          "matches": 0,
+          "elapsed": 1.0331999999284744,
+          "complete": false,
+          "custom": null
+        },
+        "feedback": [
+          {
+            "key": "mg-level-053:726482932:1275810278",
+            "layers": []
+          },
+          {
+            "key": "mg-level-002:1575424217:1499944656",
+            "layers": []
+          }
+        ]
+      },
+      "scope": "http://127.0.0.1:4192/__mg-pwa-fixture/",
       "active": "activated",
       "activeVersion": "mg-22222222222222",
       "waitingVersion": null,
       "frameVersion": "mg-22222222222222",
-      "count": 30,
+      "count": 48,
       "tiles": [
         {
           "id": "t-0-1-0",
-          "label": "fixture-1, mark 10, column 1, row 2, layer 1, open"
+          "label": "9 circles, column 1, row 2, layer 1, open"
         },
         {
-          "id": "t-0-2-0",
-          "label": "fixture-0, mark 17, column 1, row 3, layer 1, open"
+          "id": "t-0-3-0",
+          "label": "6 bamboo, column 1, row 4, layer 1, open"
         },
         {
-          "id": "t-0-4-0",
-          "label": "fixture-0, mark 3, column 1, row 5, layer 1, open"
+          "id": "t-0-5-0",
+          "label": "8 circles, column 1, row 6, layer 1, open"
         },
         {
           "id": "t-1-0-0",
-          "label": "fixture-0, mark 17, column 2, row 1, layer 1, open"
+          "label": "4 bamboo, column 2, row 1, layer 1, open"
         },
         {
           "id": "t-1-1-0",
-          "label": "fixture-0, mark 15, column 2, row 2, layer 1, blocked"
+          "label": "8 characters, column 2, row 2, layer 1, blocked"
         },
         {
           "id": "t-1-2-0",
-          "label": "fixture-0, mark 21, column 2, row 3, layer 1, blocked"
+          "label": "3 characters, column 2, row 3, layer 1, open"
         },
         {
           "id": "t-1-3-0",
-          "label": "fixture-1, mark 10, column 2, row 4, layer 1, open"
+          "label": "4 characters, column 2, row 4, layer 1, blocked"
         },
         {
           "id": "t-1-4-0",
-          "label": "fixture-1, mark 20, column 2, row 5, layer 1, open"
+          "label": "green dragon, column 2, row 5, layer 1, open"
+        },
+        {
+          "id": "t-1-5-0",
+          "label": "white dragon, column 2, row 6, layer 1, blocked"
         },
         {
           "id": "t-2-0-0",
-          "label": "fixture-0, mark 21, column 3, row 1, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 1, layer 1, blocked"
         },
         {
           "id": "t-2-1-0",
-          "label": "fixture-0, mark 17, column 3, row 2, layer 1, blocked"
+          "label": "green dragon, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-1",
+          "label": "9 circles, column 3, row 2, layer 2, open"
         },
         {
           "id": "t-2-2-0",
-          "label": "fixture-0, mark 7, column 3, row 3, layer 1, blocked"
+          "label": "1 characters, column 3, row 3, layer 1, blocked"
         },
         {
           "id": "t-2-3-0",
-          "label": "fixture-0, mark 3, column 3, row 4, layer 1, blocked"
+          "label": "1 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-4-0",
+          "label": "3 characters, column 3, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-2-5-0",
+          "label": "3 circles, column 3, row 6, layer 1, blocked"
         },
         {
           "id": "t-3-0-0",
-          "label": "fixture-0, mark 15, column 4, row 1, layer 1, blocked"
+          "label": "8 characters, column 4, row 1, layer 1, blocked"
         },
         {
           "id": "t-3-1-0",
-          "label": "fixture-0, mark 21, column 4, row 2, layer 1, blocked"
+          "label": "6 circles, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-1",
+          "label": "1 circles, column 4, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-3-1-2",
+          "label": "9 characters, column 4, row 2, layer 3, open"
         },
         {
           "id": "t-3-2-0",
-          "label": "fixture-1, mark 20, column 4, row 3, layer 1, blocked"
+          "label": "8 bamboo, column 4, row 3, layer 1, blocked"
         },
         {
           "id": "t-3-3-0",
-          "label": "fixture-1, mark 10, column 4, row 4, layer 1, blocked"
+          "label": "7 bamboo, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-4-0",
+          "label": "white dragon, column 4, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-3-5-0",
+          "label": "north wind, column 4, row 6, layer 1, blocked"
         },
         {
           "id": "t-4-0-0",
-          "label": "fixture-1, mark 20, column 5, row 1, layer 1, blocked"
+          "label": "9 characters, column 5, row 1, layer 1, blocked"
         },
         {
           "id": "t-4-1-0",
-          "label": "fixture-0, mark 21, column 5, row 2, layer 1, blocked"
+          "label": "1 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-1",
+          "label": "7 characters, column 5, row 2, layer 2, blocked"
+        },
+        {
+          "id": "t-4-1-2",
+          "label": "5 characters, column 5, row 2, layer 3, open"
         },
         {
           "id": "t-4-2-0",
-          "label": "fixture-1, mark 10, column 5, row 3, layer 1, blocked"
+          "label": "6 circles, column 5, row 3, layer 1, blocked"
         },
         {
           "id": "t-4-3-0",
-          "label": "fixture-0, mark 23, column 5, row 4, layer 1, blocked"
+          "label": "2 characters, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-4-0",
+          "label": "north wind, column 5, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-4-5-0",
+          "label": "red dragon, column 5, row 6, layer 1, blocked"
+        },
+        {
+          "id": "t-4-6-0",
+          "label": "7 bamboo, column 5, row 7, layer 1, open"
         },
         {
           "id": "t-5-0-0",
-          "label": "fixture-0, mark 3, column 6, row 1, layer 1, blocked"
+          "label": "4 bamboo, column 6, row 1, layer 1, open"
         },
         {
           "id": "t-5-1-0",
-          "label": "fixture-0, mark 17, column 6, row 2, layer 1, blocked"
+          "label": "red dragon, column 6, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-5-1-1",
+          "label": "2 circles, column 6, row 2, layer 2, open"
         },
         {
           "id": "t-5-2-0",
-          "label": "fixture-0, mark 23, column 6, row 3, layer 1, blocked"
+          "label": "8 circles, column 6, row 3, layer 1, blocked"
         },
         {
           "id": "t-5-3-0",
-          "label": "fixture-1, mark 20, column 6, row 4, layer 1, blocked"
+          "label": "3 circles, column 6, row 4, layer 1, blocked"
         },
         {
-          "id": "t-6-0-0",
-          "label": "fixture-0, mark 23, column 7, row 1, layer 1, open"
+          "id": "t-5-4-0",
+          "label": "5 bamboo, column 6, row 5, layer 1, blocked"
+        },
+        {
+          "id": "t-5-5-0",
+          "label": "8 bamboo, column 6, row 6, layer 1, blocked"
         },
         {
           "id": "t-6-1-0",
-          "label": "fixture-0, mark 7, column 7, row 2, layer 1, blocked"
+          "label": "2 characters, column 7, row 2, layer 1, blocked"
         },
         {
           "id": "t-6-2-0",
-          "label": "fixture-0, mark 15, column 7, row 3, layer 1, blocked"
+          "label": "7 characters, column 7, row 3, layer 1, open"
         },
         {
           "id": "t-6-3-0",
-          "label": "fixture-0, mark 23, column 7, row 4, layer 1, open"
+          "label": "2 circles, column 7, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-6-4-0",
+          "label": "5 characters, column 7, row 5, layer 1, open"
+        },
+        {
+          "id": "t-6-5-0",
+          "label": "5 bamboo, column 7, row 6, layer 1, blocked"
         },
         {
           "id": "t-7-1-0",
-          "label": "fixture-0, mark 15, column 8, row 2, layer 1, open"
+          "label": "6 bamboo, column 8, row 2, layer 1, open"
         },
         {
-          "id": "t-7-2-0",
-          "label": "fixture-0, mark 3, column 8, row 3, layer 1, open"
+          "id": "t-7-3-0",
+          "label": "4 characters, column 8, row 4, layer 1, open"
+        },
+        {
+          "id": "t-7-5-0",
+          "label": "1 circles, column 8, row 6, layer 1, open"
         }
       ],
       "status": "You have the newest version."
     }
   },
-  "sourceDigest": "fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba",
+  "sourceDigest": "0abe86a5419a54ec5dc362d318e0d50e9f3f8e1356dd9bea20e1f15cb083c027",
   "rawEvidence": {
-    "path": "audit/timed-score/pwa-native.json",
-    "sha256": "2afe9d8260990f036cb3b33d78d410b02e545b1d0535495b5f907b0771559d79"
+    "path": "audit/engagement/pwa-raw.json",
+    "sha256": "ffd8dce3145de9835936733733e5a72ab93162cd6f2ed5c28be722b1e6648af6"
   }
 }

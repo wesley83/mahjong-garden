@@ -1,0 +1,121 @@
+[
+  {
+    "utc": "2026-10-28T23:22:49.596Z",
+    "candidate": "mg-e8b513674b3a7e",
+    "name": "garden atomic backup and recovery",
+    "status": "failed",
+    "error": "Save did not settle",
+    "observations": {
+      "outcomes": {}
+    }
+  },
+  {
+    "utc": "2026-10-28T23:23:13.437Z",
+    "candidate": "mg-e8b513674b3a7e",
+    "name": "daily gardens restoration variants sharing and tile feedback",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "DAILY-CALENDAR": "passed",
+        "DAILY-DEAL": "passed",
+        "DAILY-SCORES": "passed",
+        "ENGAGE-RESUME": "passed",
+        "FEEDBACK-FREED": "passed",
+        "FEEDBACK-LAYER": "passed",
+        "GARDEN-PROGRESS": "passed",
+        "FRIEND-SHARE": "passed",
+        "FRIEND-LINK": "passed",
+        "VARIANT-GOALS": "passed",
+        "ENGAGE-ACCESS": "passed"
+      },
+      "variants": [
+        {
+          "mode": "golden",
+          "remaining": 36,
+          "goalTiles": 4
+        },
+        {
+          "mode": "layer",
+          "remaining": 28,
+          "goalTiles": 8
+        },
+        {
+          "mode": "compact",
+          "remaining": 0,
+          "goalTiles": 0
+        }
+      ],
+      "sizes": [
+        {
+          "width": 320,
+          "height": 568,
+          "text": "100%",
+          "dialogHeight": 544
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "100%",
+          "dialogHeight": 820
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "text": "100%",
+          "dialogHeight": 366
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "200%",
+          "dialogHeight": 820
+        }
+      ],
+      "posts": [
+        {
+          "kind": "challenge",
+          "id": "d1-2026-10-28",
+          "key": "c3~d1-2026-10-28~garden explorer"
+        },
+        {
+          "kind": "journey",
+          "key": "fbaf283a52b1f2df1adbb2fae7776bc15987c9033d36dd76b115f31a501f4a29"
+        },
+        {
+          "kind": "journey",
+          "key": "cb4fdf763ac18aa43228c535a1cfb92cdc11c93dcb00028753c945ff1cb087ca"
+        },
+        {
+          "kind": "challenge",
+          "id": "f1-11-3049569459-11",
+          "key": "c3~f1-11-3049569459-11~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-golden",
+          "key": "c3~w1-2026-10-26-golden~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-layer",
+          "key": "c3~w1-2026-10-26-layer~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-compact",
+          "key": "c3~w1-2026-10-26-compact~garden explorer"
+        }
+      ],
+      "reads": 22,
+      "freedTiles": 161,
+      "nonfinalLayers": 2,
+      "layerUndoReloadNoReplay": true,
+      "card": {
+        "width": 1200,
+        "height": 630,
+        "method": "Actual canvas PNG intercepted at download anchor; no OS share or public upload claim"
+      },
+      "adapter": "Controlled same-origin fetch/IDB/calendar/clipboard fixtures on disposable localhost; real game commands, native input recorded separately."
+    }
+  }
+]

@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-28T18:09:17.117Z",
-  "candidate": "mg-fa72bef253399a",
-  "sourceDigest": "fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba",
+  "utc": "2026-10-28T23:25:42.704Z",
+  "candidate": "mg-0abe86a5419a54",
+  "sourceDigest": "0abe86a5419a54ec5dc362d318e0d50e9f3f8e1356dd9bea20e1f15cb083c027",
   "node": "24.19.0",
   "command": [
     "node",
@@ -11,6 +11,7 @@
     "tests/autosave.test.mjs",
     "tests/contracts.test.mjs",
     "tests/core.test.mjs",
+    "tests/garden.test.mjs",
     "tests/leaderboard.test.mjs",
     "tests/parallax.test.mjs",
     "tests/release.test.mjs",
@@ -21,7 +22,7 @@
     "tests/totals.test.mjs",
     "tests/touch.test.mjs"
   ],
-  "tests": 55,
+  "tests": 68,
   "exitCode": 0,
-  "outputSha256": "0b23413bb123199459953d1330a59cf72d9c5037e9e597f737ccdcb67c7f9d3d"
+  "outputSha256": "7d777c5d201f005ddd58f68d7be31102fc4d30bf0c57bba741d79990fd5ce535"
 }

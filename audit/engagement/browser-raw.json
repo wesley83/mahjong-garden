@@ -1,0 +1,1013 @@
+[
+  {
+    "utc": "2026-10-28T23:25:53.805Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "responsive layout matrix",
+    "status": "passed",
+    "observations": [
+      {
+        "width": 320,
+        "height": 568,
+        "documentWidth": 320,
+        "tiles": 64,
+        "minTileWidth": 46.069053649902344,
+        "minTileHeight": 58.7445068359375,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "documentWidth": 390,
+        "tiles": 64,
+        "minTileWidth": 45.99395751953125,
+        "minTileHeight": 58.1463623046875,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 568,
+        "height": 320,
+        "documentWidth": 568,
+        "tiles": 64,
+        "minTileWidth": 46.227272033691406,
+        "minTileHeight": 59.13151168823242,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "documentWidth": 829,
+        "tiles": 64,
+        "minTileWidth": 45.105224609375,
+        "minTileHeight": 56.31231689453125,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentWidth": 1280,
+        "tiles": 64,
+        "minTileWidth": 45.105224609375,
+        "minTileHeight": 55.43723678588867,
+        "controlsInViewport": true,
+        "dialogs": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "documentWidth": 1440,
+        "tiles": 64,
+        "minTileWidth": 55.86393356323242,
+        "minTileHeight": 68.1748275756836,
+        "controlsInViewport": true,
+        "dialogs": []
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-28T23:25:54.817Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "atomic storage conflict, failure and next action",
+    "status": "passed",
+    "observations": {
+      "staleWriteRefused": true,
+      "quotaFailurePreservedPrevious": true,
+      "nextWriteSucceeded": true
+    }
+  },
+  {
+    "utc": "2026-10-28T23:26:00.760Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "studio editing, personal image conversion and failed import preservation",
+    "status": "passed",
+    "observations": {
+      "undoRedo": true,
+      "currentNameSaved": true,
+      "imagesConvertedAndSaved": 2,
+      "customTheme": true,
+      "badImportPreservedDraft": true,
+      "playtest": true
+    }
+  },
+  {
+    "utc": "2026-10-28T23:26:02.722Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "studio failed save stays recoverable, retry then close",
+    "status": "passed",
+    "observations": {
+      "previousRevisionPreserved": true,
+      "failedCloseRetainedDraft": true,
+      "retrySavedCurrentDraft": true,
+      "normalCloseAfterRecovery": true
+    }
+  },
+  {
+    "utc": "2026-10-28T23:26:13.841Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
+    "status": "passed",
+    "observations": {
+      "startTiles": 24,
+      "win": true,
+      "undo": true,
+      "shuffle": true,
+      "checkpointResume": true,
+      "nextLevel": true,
+      "iterations": 12,
+      "dispatchSamples": 34,
+      "dispatchP95ms": 12.799999952316284,
+      "dispatchMaxMs": 18.700000047683716,
+      "actionSamples": [
+        {
+          "selector": "[data-open=\"levels-dialog\"]",
+          "milliseconds": 12.799999952316284
+        },
+        {
+          "selector": "#level-library .chapter-group:first-child .level-card:first-child",
+          "milliseconds": 1.899999976158142
+        },
+        {
+          "selector": "#restart",
+          "milliseconds": 4
+        },
+        {
+          "selector": "#confirm-ok",
+          "milliseconds": 5
+        },
+        {
+          "selector": "#hint",
+          "milliseconds": 1.7999999523162842
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-0-0\"]",
+          "milliseconds": 3.8000000715255737
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-3-0\"]",
+          "milliseconds": 2.299999952316284
+        },
+        {
+          "selector": "#undo",
+          "milliseconds": 6.300000071525574
+        },
+        {
+          "selector": "#shuffle",
+          "milliseconds": 7.600000023841858
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-0-0\"]",
+          "milliseconds": 3.1999999284744263
+        },
+        {
+          "selector": "#board [data-tile=\"t-0-2-0\"]",
+          "milliseconds": 3.5
+        },
+        {
+          "selector": "#board [data-tile=\"t-0-1-0\"]",
+          "milliseconds": 2.700000047683716
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-2-0\"]",
+          "milliseconds": 2.399999976158142
+        },
+        {
+          "selector": "#board [data-tile=\"t-0-0-0\"]",
+          "milliseconds": 2.299999952316284
+        },
+        {
+          "selector": "#board [data-tile=\"t-1-1-0\"]",
+          "milliseconds": 4.800000071525574
+        },
+        {
+          "selector": "#board [data-tile=\"t-1-0-0\"]",
+          "milliseconds": 2.700000047683716
+        },
+        {
+          "selector": "#board [data-tile=\"t-4-0-0\"]",
+          "milliseconds": 6.100000023841858
+        },
+        {
+          "selector": "#board [data-tile=\"t-2-1-0\"]",
+          "milliseconds": 5.200000047683716
+        },
+        {
+          "selector": "#board [data-tile=\"t-1-2-0\"]",
+          "milliseconds": 3
+        },
+        {
+          "selector": "#board [data-tile=\"t-3-1-0\"]",
+          "milliseconds": 3.100000023841858
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-3-0\"]",
+          "milliseconds": 2.5
+        },
+        {
+          "selector": "#board [data-tile=\"t-2-0-0\"]",
+          "milliseconds": 1.600000023841858
+        },
+        {
+          "selector": "#board [data-tile=\"t-4-3-0\"]",
+          "milliseconds": 4.199999928474426
+        },
+        {
+          "selector": "#board [data-tile=\"t-4-1-0\"]",
+          "milliseconds": 3.3000000715255737
+        },
+        {
+          "selector": "#board [data-tile=\"t-4-2-0\"]",
+          "milliseconds": 2.9000000953674316
+        },
+        {
+          "selector": "#board [data-tile=\"t-5-1-0\"]",
+          "milliseconds": 2
+        },
+        {
+          "selector": "#board [data-tile=\"t-0-3-0\"]",
+          "milliseconds": 4.200000047683716
+        },
+        {
+          "selector": "#board [data-tile=\"t-3-0-0\"]",
+          "milliseconds": 3.899999976158142
+        },
+        {
+          "selector": "#board [data-tile=\"t-1-3-0\"]",
+          "milliseconds": 4.299999952316284
+        },
+        {
+          "selector": "#board [data-tile=\"t-2-2-0\"]",
+          "milliseconds": 3.0999999046325684
+        },
+        {
+          "selector": "#board [data-tile=\"t-2-3-0\"]",
+          "milliseconds": 4.700000047683716
+        },
+        {
+          "selector": "#board [data-tile=\"t-3-2-0\"]",
+          "milliseconds": 2.799999952316284
+        },
+        {
+          "selector": "#board [data-tile=\"t-3-3-0\"]",
+          "milliseconds": 18.700000047683716
+        },
+        {
+          "selector": "#next-level",
+          "milliseconds": 3.899999976158142
+        }
+      ],
+      "boardDispatchMaxMs": 18.700000047683716
+    }
+  },
+  {
+    "utc": "2026-10-28T23:26:13.949Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "game backup export/import round-trip",
+    "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "status": "passed",
+    "observations": {
+      "activeTilesPreserved": true,
+      "progressPreserved": true,
+      "imagesAndDraftPreserved": true,
+      "explicitConfirmation": true
+    }
+  },
+  {
+    "utc": "2026-10-28T23:26:15.933Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "delayed saves, stale restores, cancellation and image undo",
+    "observations": {
+      "laterEditPreserved": true,
+      "saveAndLeaveLocked": true,
+      "nextActionUnlocked": true,
+      "imageUndoRedo": true,
+      "canceledBitmapDisposed": true,
+      "closedRestoreIgnored": true,
+      "latestOverlappingRestoreWins": true
+    },
+    "status": "passed"
+  },
+  {
+    "utc": "2026-10-28T23:26:24.570Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "text enlargement, safe insets, long labels and focus",
+    "observations": [
+      {
+        "width": 320,
+        "height": 568,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 320,
+        "frequentControls": 8
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 390,
+        "frequentControls": 8
+      },
+      {
+        "width": 568,
+        "height": 320,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 553,
+        "frequentControls": 8
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 829,
+        "frequentControls": 8
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 1265,
+        "frequentControls": 8
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "textScale": 2,
+        "insets": [
+          10,
+          16,
+          18,
+          12
+        ],
+        "pageWidth": 1425,
+        "frequentControls": 8
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "utc": "2026-10-28T23:26:28.737Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "loading, image and audio failure recovery",
+    "observations": {
+      "libraryFailureRetry": true,
+      "moduleFailureRetry": true,
+      "oversizedImageRejectedBeforeDecode": true,
+      "audioRejectionHandled": true,
+      "deniedAudioGeneratesNoVoices": true,
+      "normalActionAfterFailure": true
+    },
+    "status": "passed"
+  },
+  {
+    "utc": "2026-10-28T23:26:37.744Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "version-one checkpoint compatibility",
+    "observations": {
+      "saveVersion": 1,
+      "rules": "mg-rules-1",
+      "checkpointConsumed": true,
+      "studioPreserved": true,
+      "nextActionSucceeded": true,
+      "nodeFixtureAlsoUsesBaselineReader": true
+    },
+    "status": "passed"
+  },
+  {
+    "name": "CSS 3D presentation and game screen lifecycle",
+    "utc": "2026-10-28T23:26:39.128Z",
+    "candidate": "mg-0abe86a5419a54",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "PRESENT-PARALLAX": "passed",
+        "PRESENT-SCREENS": "passed",
+        "PRESENT-3D": "passed",
+        "PRESENT-SCENES": "passed",
+        "PRESENT-FACES": "passed",
+        "PRESENT-MOTION": "passed",
+        "PRESENT-LAYOUT": "passed",
+        "PRESENT-MENUS": "passed",
+        "PRESENT-RECOVERY": "passed"
+      },
+      "parallax": {
+        "depth": [
+          {
+            "x": -3.2,
+            "y": 1.44
+          },
+          {
+            "x": -8.8,
+            "y": 3.96
+          },
+          {
+            "x": -16,
+            "y": 7.2
+          }
+        ],
+        "titleFixed": true,
+        "idleStops": true,
+        "passiveTouch": true,
+        "secondaryRefused": true,
+        "controlTouchRefused": true,
+        "modalPause": true,
+        "pageReturnReset": true,
+        "reducedMotion": true,
+        "playStatic": true,
+        "sizes": [
+          {
+            "width": 320,
+            "height": 568,
+            "overscan": {
+              "left": -9.599996566772461,
+              "top": -17.03997802734375,
+              "right": 329.6000156402588,
+              "bottom": 585.0399780273438
+            }
+          },
+          {
+            "width": 390,
+            "height": 844,
+            "overscan": {
+              "left": -11.699992179870605,
+              "top": -25.319988250732422,
+              "right": 401.70000171661377,
+              "bottom": 869.3200263977051
+            }
+          },
+          {
+            "width": 844,
+            "height": 390,
+            "overscan": {
+              "left": -24.8599853515625,
+              "top": -11.699992179870605,
+              "right": 853.5267333984375,
+              "bottom": 401.70000171661377
+            }
+          },
+          {
+            "width": 1280,
+            "height": 720,
+            "overscan": {
+              "left": -37.93998336791992,
+              "top": -21.5999755859375,
+              "right": 1302.606647491455,
+              "bottom": 741.5999145507812
+            }
+          }
+        ]
+      },
+      "scenes": [
+        "DAWN AT THE PAVILION",
+        "THE LOTUS WATER GARDEN",
+        "THE MOUNTAIN SANCTUARY",
+        "THE AMBER MAPLE GROVE",
+        "THE MOONLIT COURTYARD",
+        "BEYOND THE GARDEN GATE"
+      ],
+      "collections": [
+        "Traditional tile collection",
+        "Animals tile collection",
+        "Emoji tile collection",
+        "My images tile collection"
+      ],
+      "layouts": [
+        {
+          "width": 320,
+          "height": 568,
+          "targets": 8,
+          "tiles": 60
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "targets": 8,
+          "tiles": 60
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "targets": 8,
+          "tiles": 60
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "targets": 8,
+          "tiles": 60
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "targets": 8,
+          "tiles": 60
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "targets": 8,
+          "tiles": 60
+        }
+      ],
+      "clockSamples": [
+        "00:04",
+        "00:04"
+      ],
+      "threeD": {
+        "planes": [
+          "top",
+          "back",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "perspective": "1700px"
+      }
+    }
+  },
+  {
+    "name": "rapid taps and independent tile contacts",
+    "utc": "2026-10-28T23:27:08.967Z",
+    "candidate": "mg-0abe86a5419a54",
+    "observations": {
+      "outcomes": {
+        "TOUCH-RAPID": "passed",
+        "TOUCH-MULTI": "passed",
+        "TOUCH-CANCEL": "passed",
+        "TOUCH-HIT": "passed"
+      },
+      "stableSecondTarget": true,
+      "before": 24,
+      "orders": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cancellations": [
+        "pointercancel",
+        "lostpointercapture",
+        "drag",
+        "outside",
+        "scroll",
+        "blur",
+        "resize",
+        "menu",
+        "dialog",
+        "pagehide",
+        "undo",
+        "shuffle"
+      ],
+      "geometry": [
+        {
+          "width": 320,
+          "height": 568,
+          "visibleFaces": 15,
+          "minWidth": 46.97684860229492,
+          "scrollWidth": 358,
+          "clientWidth": 290
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "visibleFaces": 24,
+          "minWidth": 46.912147521972656,
+          "scrollWidth": 370,
+          "clientWidth": 370
+        },
+        {
+          "width": 568,
+          "height": 320,
+          "visibleFaces": 6,
+          "minWidth": 46.90099334716797,
+          "scrollWidth": 538,
+          "clientWidth": 538
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "visibleFaces": 12,
+          "minWidth": 46.05155563354492,
+          "scrollWidth": 723,
+          "clientWidth": 723
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "visibleFaces": 24,
+          "minWidth": 54.52197265625,
+          "scrollWidth": 1174,
+          "clientWidth": 1174
+        }
+      ],
+      "edgeSamples": 96,
+      "sideSamples": 48,
+      "method": "Synthetic PointerEvents on actual app + rendered hit testing; not trusted hardware multi-touch or Android Edge certification"
+    },
+    "status": "passed"
+  },
+  {
+    "name": "music mixer celebration and audio lifecycle",
+    "utc": "2026-10-28T23:27:20.082Z",
+    "candidate": "mg-0abe86a5419a54",
+    "observations": {
+      "outcomes": {
+        "AUDIO-DEFAULTS": "passed",
+        "AUDIO-CONTROLS": "passed",
+        "AUDIO-MUSIC": "passed",
+        "AUDIO-CELEBRATE": "passed",
+        "AUDIO-RECOVERY": "passed",
+        "AUDIO-SIGNAL": "passed"
+      },
+      "celebrationCount": 1,
+      "ordinaryMatchCues": 11,
+      "signal": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "seconds": 26,
+        "peak": 0.2052977830171585,
+        "clips": 0,
+        "rms": 0.024803926342527285,
+        "onsetSeconds": 0.025020833333333332,
+        "lastSignalSeconds": 25.074708333333334,
+        "zeroRenderSilent": true,
+        "effectVolumeRenders": [
+          {
+            "volume": 0.25,
+            "peak": 0.03528491407632828,
+            "duration": 1.79875
+          },
+          {
+            "volume": 0.75,
+            "peak": 0.10585474222898483,
+            "duration": 1.7995208333333332
+          }
+        ],
+        "scope": "Shared production synthesis, not perceptual listening or speaker output"
+      },
+      "deniedRetry": true,
+      "atomicAudioConflictRefused": true,
+      "legacyFalseDefaultsEnabled": true,
+      "preferencesRestored": true,
+      "syntheticAppMethod": "Controlled fake context for app sequencing/lifecycle; native real audio unlock is recorded separately"
+    },
+    "status": "passed"
+  },
+  {
+    "utc": "2026-10-28T23:27:34.278Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "named shared leaderboard and submission recovery",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "BOARD-RANK": "passed",
+        "SIMPLE-VIEW": "passed",
+        "SIMPLE-WIN": "passed",
+        "TOTAL-MATH": "passed",
+        "SPEED-CACHE": "passed",
+        "TOTAL-VIEW": "passed",
+        "TOTAL-RECOVERY": "passed",
+        "BOARD-OWNERSHIP": "passed",
+        "SPEED-RECOVERY": "passed",
+        "BOARD-SUBMIT": "passed",
+        "SIMPLE-RANK": "passed",
+        "SIMPLE-ACCESS": "passed",
+        "SPEED-RANK": "passed",
+        "BOARD-NAMES": "passed",
+        "SIMPLE-RECOVERY": "passed"
+      },
+      "posts": 2,
+      "legacyPosts": 1,
+      "lossReconciled": true,
+      "quotaNoSend": true,
+      "abaOwnership": true,
+      "closeReopen": true,
+      "top10PlusOwned": true,
+      "lateSendPreservedNewGame": true,
+      "lazyLoadRetry": true,
+      "warmSwitchMs": 1.4000000953674316,
+      "readRequests": 22,
+      "sharedDataset": true,
+      "noStoragePaintWait": true,
+      "ackDisplayReadAvoided": true,
+      "totalSizes": [
+        {
+          "width": 320,
+          "height": 568,
+          "text": "100%",
+          "dialogHeight": 544
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "100%",
+          "dialogHeight": 623.6771240234375
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "text": "100%",
+          "dialogHeight": 366
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "200%",
+          "dialogHeight": 820
+        }
+      ],
+      "nameSizes": [
+        {
+          "width": 320,
+          "height": 568,
+          "text": "100%",
+          "nameHeight": 48
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "100%",
+          "nameHeight": 48
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "text": "100%",
+          "nameHeight": 48
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "200%",
+          "nameHeight": 48
+        }
+      ],
+      "sizes": [
+        {
+          "width": 320,
+          "height": 568,
+          "text": "100%",
+          "dialog": {
+            "x": 12,
+            "y": 12,
+            "width": 296,
+            "height": 544
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "100%",
+          "dialog": {
+            "x": 12,
+            "y": 32.72916793823242,
+            "width": 366,
+            "height": 778.5416870117188
+          }
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "text": "100%",
+          "dialog": {
+            "x": 134.33334350585938,
+            "y": 12,
+            "width": 560,
+            "height": 366
+          }
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "200%",
+          "dialog": {
+            "x": 4.333333492279053,
+            "y": 12,
+            "width": 366,
+            "height": 820
+          }
+        }
+      ],
+      "adapter": "Controlled fetch and storage fixtures on disposable localhost. Backend policy is unchanged and independently pinned."
+    }
+  },
+  {
+    "utc": "2026-10-28T23:27:45.671Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "balanced scoring and safe PWA update notification",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "SCORE-MATH": "passed",
+        "SCORE-UI": "passed",
+        "TIME-MATH": "passed",
+        "TIME-VIEW": "passed",
+        "SCORE-COMPAT": "passed",
+        "TIME-COMPAT": "passed",
+        "PWA-DISCOVERY": "passed",
+        "PWA-SAFE": "passed"
+      },
+      "points": 10593,
+      "base": 9666,
+      "timeBonus": 927,
+      "seconds": 5,
+      "removedStayOption": true,
+      "stars": 2,
+      "hints": 1,
+      "pairs": 12,
+      "legacyReadOnly": true,
+      "saveFailureRefused": true,
+      "method": "Actual app scoring plus controlled updater contracts; separate required pwa.json observes real native worker A-to-B lifecycle."
+    }
+  },
+  {
+    "utc": "2026-10-28T23:27:54.362Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "automatic named scores and durable multi-level outbox",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "AUTO-CLEAR": "passed",
+        "AUTO-QUEUE": "passed",
+        "AUTO-RECOVERY": "passed"
+      },
+      "posts": [
+        1,
+        2,
+        3
+      ],
+      "versionOneNameMigrated": true,
+      "quotaNoSend": true,
+      "completedRestoreAuto": true,
+      "noAutomaticDialog": true,
+      "multiLevelOfflineReload": true,
+      "onlineDrain": true,
+      "lostResponseReconciled": true,
+      "lateSendRetainedNewGame": true,
+      "latePreparationRetainedClear": true,
+      "customRefused": true,
+      "adapter": "Disposable localhost actual game/controller with controlled fetch/IDB faults; no public score created."
+    }
+  },
+  {
+    "utc": "2026-10-28T23:28:05.740Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "daily gardens restoration variants sharing and tile feedback",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "DAILY-CALENDAR": "passed",
+        "DAILY-DEAL": "passed",
+        "DAILY-SCORES": "passed",
+        "ENGAGE-RESUME": "passed",
+        "FEEDBACK-FREED": "passed",
+        "FEEDBACK-LAYER": "passed",
+        "GARDEN-PROGRESS": "passed",
+        "FRIEND-SHARE": "passed",
+        "FRIEND-LINK": "passed",
+        "VARIANT-GOALS": "passed",
+        "ENGAGE-ACCESS": "passed"
+      },
+      "variants": [
+        {
+          "mode": "golden",
+          "remaining": 36,
+          "goalTiles": 4
+        },
+        {
+          "mode": "layer",
+          "remaining": 28,
+          "goalTiles": 8
+        },
+        {
+          "mode": "compact",
+          "remaining": 0,
+          "goalTiles": 0
+        }
+      ],
+      "sizes": [
+        {
+          "width": 320,
+          "height": 568,
+          "text": "100%",
+          "dialogHeight": 544
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "100%",
+          "dialogHeight": 820
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "text": "100%",
+          "dialogHeight": 366
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "text": "200%",
+          "dialogHeight": 820
+        }
+      ],
+      "posts": [
+        {
+          "kind": "challenge",
+          "id": "d1-2026-10-28",
+          "key": "c3~d1-2026-10-28~garden explorer"
+        },
+        {
+          "kind": "journey",
+          "key": "fbaf283a52b1f2df1adbb2fae7776bc15987c9033d36dd76b115f31a501f4a29"
+        },
+        {
+          "kind": "journey",
+          "key": "ed01fc4639c152b759edd4b0a7341d9d74a1dcbbe86ad03633f850e6f7afd2cd"
+        },
+        {
+          "kind": "challenge",
+          "id": "f1-11-2826130393-11",
+          "key": "c3~f1-11-2826130393-11~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-golden",
+          "key": "c3~w1-2026-10-26-golden~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-layer",
+          "key": "c3~w1-2026-10-26-layer~garden explorer"
+        },
+        {
+          "kind": "challenge",
+          "id": "w1-2026-10-26-compact",
+          "key": "c3~w1-2026-10-26-compact~garden explorer"
+        }
+      ],
+      "reads": 22,
+      "freedTiles": 161,
+      "nonfinalLayers": 2,
+      "layerUndoReloadNoReplay": true,
+      "card": {
+        "width": 1200,
+        "height": 630,
+        "method": "Actual canvas PNG intercepted at download anchor; no OS share or public upload claim"
+      },
+      "adapter": "Controlled same-origin fetch/IDB/calendar/clipboard fixtures on disposable localhost; real game commands, native input recorded separately."
+    }
+  },
+  {
+    "utc": "2026-10-28T23:28:20.473Z",
+    "candidate": "mg-0abe86a5419a54",
+    "name": "garden atomic backup and recovery",
+    "status": "passed",
+    "observations": {
+      "outcomes": {
+        "GARDEN-SAVE": "passed",
+        "ENGAGE-RECOVERY": "passed"
+      },
+      "atomicTripleAbort": true,
+      "staleRevisionRefused": true,
+      "backup3": true,
+      "futurePreserved": true,
+      "temporaryPreserved": true,
+      "resetThenNextAction": true
+    }
+  }
+]

@@ -49,18 +49,18 @@ export function validateRun(run,levels){
  for(const h of run.history){exactKeys(h,['tiles','matches','complete']);check(h.tiles);if(!int(h.matches,0,72)||h.matches!==(source.size-h.tiles.length)/2||h.complete!==(h.tiles.length===0))throw Error('Invalid undo history.');}
  return structuredClone(run);
 }
-export function parseLevelElement(article){
+export function parseLevelElement(article,{packed=false}={}){
  const integer=(element,key)=>{const raw=element.getAttribute('data-'+key);if(raw===null||!/^(0|[1-9]\d*)$/.test(raw))throw Error('Missing or invalid '+key+' at '+(element.id||element.getAttribute('data-tile')||'tile'));return Number(raw);};
  const direct=tag=>[...article.children].filter(n=>n.localName===tag),headings=direct('h2'),paragraphs=direct('p').filter(p=>!p.classList.contains('chapter')),lists=direct('ul');
  const n=integer(article,'number'),revision=integer(article,'revision'),chapter=integer(article,'chapter');
  if(!int(n,1,60)||article.id!==`mg-level-${String(n).padStart(3,'0')}`||revision!==1||chapter!==Math.floor((n-1)/10)+1||headings.length!==1||paragraphs.length!==1||lists.length!==1||[...article.attributes].some(a=>a.name.startsWith('data-')&&!['data-number','data-revision','data-chapter'].includes(a.name)))throw Error('Invalid or ambiguous campaign level '+article.id);
  const name=headings[0].textContent,goal=paragraphs[0].textContent;if(!name.trim()||name.length>80||!goal.trim()||goal.length>300)throw Error('Missing or oversized level text.');
- const positions=[...lists[0].children].map(el=>{if(el.localName!=='li'||[...el.attributes].some(a=>!['data-tile','data-x','data-y','data-z'].includes(a.name)))throw Error('Invalid tile markup at '+article.id);return{id:el.getAttribute('data-tile'),x:integer(el,'x'),y:integer(el,'y'),z:integer(el,'z')};});
+ const positions=[...lists[0].children].map(el=>{if(el.localName!=='li'||[...el.attributes].some(a=>!(packed?['data-p']:['data-tile','data-x','data-y','data-z']).includes(a.name)))throw Error('Invalid tile markup at '+article.id);if(packed){const raw=el.getAttribute('data-p');if(!/^[0-9ab][0-9][0-2]$/.test(raw??''))throw Error('Invalid packed position at '+article.id);const [x,y,z]=[...raw].map(n=>parseInt(n,36));return{id:`t-${x}-${y}-${z}`,x,y,z};}return{id:el.getAttribute('data-tile'),x:integer(el,'x'),y:integer(el,'y'),z:integer(el,'z')};});
  return{id:article.id,number:n,revision,chapter,name,goal,positions:validatePositions(positions)};
 }
 export function parseCampaign(doc){
  const roots=doc.querySelectorAll('main[data-content-revision]');if(roots.length!==1||roots[0].getAttribute('data-content-revision')!=='1'||doc.querySelector('script,iframe,img,object,embed,link,base,style'))throw Error('Invalid campaign document.');
- const articles=[...roots[0].children].filter(e=>e.localName==='article'),levels=articles.map(parseLevelElement).sort((a,b)=>a.number-b.number);
+ const pack=roots[0].getAttribute('data-runtime-pack');if(pack!==null&&pack!=='1')throw Error('Unsupported runtime pack.');const articles=[...roots[0].children].filter(e=>e.localName==='article'),levels=articles.map(article=>parseLevelElement(article,{packed:pack==='1'})).sort((a,b)=>a.number-b.number);
  if(levels.length!==60||levels.some((l,i)=>l.number!==i+1))throw Error('The campaign requires exactly 60 permanent level identities.');
  return levels;
 }

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-28T23:28:13.746Z",
+  "target": "https://grab-lead-8328.onpagelove.com",
+  "path": "/__mg-preflight-1793230093746.html",
+  "candidate": "mg-0abe86a5419a54",
+  "entrySha256": "d7556179e590feafd3802bc1930937b77939abaf8734438b3499035f172679fd",
+  "originalPublicSha256": "4cccc961a205ab52feb7dbf442887594e3f1f451365dd09da77efc8dff8f20d5",
+  "authoringEquivalent": true,
+  "publicEquivalent": true,
+  "inlineStylesVerified": true,
+  "originalRootUnchanged": true,
+  "fixtureCleaned": true,
+  "status": "passed"
+}

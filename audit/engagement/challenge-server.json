@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-28T23:03:02.351Z",
+  "resource": "/mahjong-challenges.html",
+  "policySha256": "b03c971ad2dba34b49b77ce46511c3bb24fa99d8ceb2e53030238288bfe5d183",
+  "backup": {
+    "verified": true,
+    "files": 589,
+    "directories": 87,
+    "bytes": 17651234
+  },
+  "isolatedAttempts": [
+    {
+      "utc": "2026-10-28T23:02:57.501Z",
+      "accepted": 206,
+      "secondName": 206,
+      "duplicate": 422,
+      "aliasDuplicate": 422,
+      "bounds": 422,
+      "wrongPoints": 422,
+      "wrongPairs": 422,
+      "wrongIdentity": 422,
+      "wrongKey": 422,
+      "markup": 422,
+      "wrongSelector": 401,
+      "put": 401,
+      "delete": 401,
+      "rowsBefore": 0,
+      "rowsAfter": 2,
+      "twoDistinctNames": true,
+      "passed": true,
+      "syntheticRemoved": true
+    }
+  ],
+  "production": {
+    "accepted": 206,
+    "secondName": 206,
+    "duplicate": 422,
+    "aliasDuplicate": 422,
+    "bounds": 422,
+    "wrongPoints": 422,
+    "wrongPairs": 422,
+    "wrongIdentity": 422,
+    "wrongKey": 422,
+    "markup": 422,
+    "wrongSelector": 401,
+    "put": null,
+    "delete": null,
+    "rowsBefore": 0,
+    "rowsAfter": 2,
+    "twoDistinctNames": true,
+    "passed": true,
+    "syntheticRemoved": true
+  },
+  "fixtureRemoved": true,
+  "syntheticRemoved": true,
+  "credentialStored": false,
+  "scope": "Actual native POST/duplicate/case/key/score/layout/markup/selector checks. Public PUT/DELETE refusal tested only on the owned disposable exact-policy fixture; production records never exposed to a destructive probe. Old score services unchanged.",
+  "trust": "Public aliases/client-reported results; no account identity or anti-cheat claim"
+}

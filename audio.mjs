@@ -3,7 +3,7 @@ export const defaultAudio=()=>({version:1,revision:0,music:true,sound:true,music
 export function validateAudio(value){const keys=Object.keys(defaultAudio());if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).length!==keys.length||keys.some(k=>!Object.hasOwn(value,k))||value.version!==1||!Number.isSafeInteger(value.revision)||value.revision<0||typeof value.music!=='boolean'||typeof value.sound!=='boolean'||['musicVolume','soundVolume'].some(k=>!Number.isInteger(value[k])||value[k]<0||value[k]>100))throw Error('Unsupported audio settings.');return structuredClone(value);}
 const phrase=[60,64,67,72,71,67,64,62,57,60,64,69,67,64,62,60,53,57,60,65,64,60,57,55,55,59,62,67,65,62,59,55];
 export function musicNotes(step){const n=step%32,notes=[{midi:phrase[n],offset:0,duration:1.8,peak:.07}];if(n%4===0)notes.push({midi:[48,45,41,43][Math.floor(n/8)],offset:0,duration:3.8,peak:.045});return notes;}
-export function effectNotes(kind){return(kind==='celebrate'?[72,76,79,84,79,84,88]:[76,79]).map((midi,i)=>({midi,offset:i*(kind==='celebrate'?.14:.07),duration:kind==='celebrate'?.95:.27,peak:kind==='celebrate'?.10:.09}));}
+export function effectNotes(kind){return(kind==='celebrate'?[72,76,79,84,79,84,88]:kind==='layer'?[72,79,84]:[76,79]).map((midi,i)=>({midi,offset:i*(kind==='celebrate'?.14:.07),duration:kind==='celebrate'?.95:.27,peak:kind==='celebrate'?.10:.09}));}
 // Shared by real-time playback and offline signal verification.
 export function scheduleTone(context,bus,note,start){
  const oscillator=context.createOscillator(),gain=context.createGain(),end=start+note.duration;

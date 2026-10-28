@@ -16,12 +16,19 @@ export function readProfile(db,{milliseconds=timeout,key='local'}={}) {
   request.onsuccess=()=>{value=request.result;};transaction.oncomplete=()=>finish();transaction.onabort=()=>finish(transaction.error||Error('Read was interrupted.'));transaction.onerror=()=>{};
  });
 }
-export function writeProfile(db,value,expectedRevision,{milliseconds=timeout,baseline,audio,audioRevision,audioBaseline}={}) {
+export function writeProfile(db,value,expectedRevision,{milliseconds=timeout,baseline,audio,audioRevision,audioBaseline,garden,gardenRevision,gardenBaseline}={}) {
  return new Promise((resolve,reject)=>{
   const transaction=db.transaction('profiles','readwrite'),store=transaction.objectStore('profiles'),request=store.get('local');let failure,finished=false;
   const finish=error=>{if(finished)return;finished=true;clearTimeout(timer);error?reject(error):resolve(expectedRevision+1);};
   const timer=setTimeout(()=>{failure=Error('Saving local storage timed out. Your working copy is still available.');try{transaction.abort();}catch{}finish(failure);},milliseconds);
-  request.onsuccess=()=>{try{const conflict=baseline!==undefined?JSON.stringify(request.result)!==JSON.stringify(baseline):(request.result?.revision??0)!==expectedRevision;if(conflict)throw Error('Another tab saved changes. Export your work, then reload to continue.');if(!Number.isSafeInteger(expectedRevision)||expectedRevision<0)throw Error('Invalid save revision.');const commit=()=>store.put({...structuredClone(value),revision:expectedRevision+1},'local');if(audio){const mixer=store.get('audio');mixer.onsuccess=()=>{try{if(audioBaseline!==undefined?JSON.stringify(mixer.result)!==JSON.stringify(audioBaseline):(mixer.result?.revision??0)!==audioRevision)throw Error('Another tab changed audio settings. Reload to continue.');store.put({...structuredClone(audio),revision:audioRevision+1},'audio');commit();}catch(error){failure=error;transaction.abort();}};}else commit();}catch(error){failure=error;transaction.abort();}};
+  const fail=error=>{failure=error;try{transaction.abort();}catch{};};
+  request.onsuccess=()=>{try{
+   const conflict=baseline!==undefined?JSON.stringify(request.result)!==JSON.stringify(baseline):(request.result?.revision??0)!==expectedRevision;
+   if(conflict)throw Error('Another tab saved changes. Export your work, then reload to continue.');if(!Number.isSafeInteger(expectedRevision)||expectedRevision<0)throw Error('Invalid save revision.');
+   const extras=[...(audio?[{key:'audio',value:audio,revision:audioRevision,baseline:audioBaseline}]:[]),...(garden?[{key:'garden',value:garden,revision:gardenRevision,baseline:gardenBaseline}]:[])];
+   const check=index=>{if(index===extras.length){for(const extra of extras)store.put({...structuredClone(extra.value),revision:extra.revision+1},extra.key);store.put({...structuredClone(value),revision:expectedRevision+1},'local');return;}
+    const extra=extras[index];if(!Number.isSafeInteger(extra.revision)||extra.revision<0)throw Error('Invalid '+extra.key+' revision.');const read=store.get(extra.key);read.onsuccess=()=>{try{if(extra.baseline!==undefined?JSON.stringify(read.result)!==JSON.stringify(extra.baseline):(read.result?.revision??0)!==extra.revision)throw Error('Another tab changed '+extra.key+' settings. Reload to continue.');check(index+1);}catch(error){fail(error);}};};check(0);
+  }catch(error){fail(error);}};
   transaction.oncomplete=()=>finish();transaction.onabort=()=>finish(failure||transaction.error||Error('Save was interrupted.'));transaction.onerror=()=>{};
  });
 }

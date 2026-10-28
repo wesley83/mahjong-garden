@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {DOMParser} from 'linkedom';
 import {RUNTIME,ASSETS,CONTROL,hash,sourceIdentity,pngSize} from './contracts.mjs';import {parseCampaign} from '../core.mjs';
 import {scoreDocument} from './leaderboard-policy.mjs';
+import {challengeDocument} from './challenge-policy.mjs';
 export const REQUIRED_BROWSER=['responsive layout matrix','atomic storage conflict, failure and next action','studio editing, personal image conversion and failed import preservation','studio failed save stays recoverable, retry then close','ordinary controls through match, undo, shuffle, win, retry and reload','game backup export/import round-trip','delayed saves, stale restores, cancellation and image undo','text enlargement, safe insets, long labels and focus','loading, image and audio failure recovery','version-one checkpoint compatibility'];
 const rootDefault=fileURLToPath(new URL('../',import.meta.url));
 export const PRESENTATION_OUTCOMES=['PRESENT-PARALLAX','PRESENT-3D','PRESENT-SCENES','PRESENT-SCREENS','PRESENT-MENUS','PRESENT-FACES','PRESENT-LAYOUT','PRESENT-MOTION','PRESENT-RECOVERY'];
@@ -16,6 +17,9 @@ REQUIRED_BROWSER.push('automatic named scores and durable multi-level outbox');
 export const AUTO_OUTCOMES=['AUTO-CLEAR','AUTO-QUEUE','AUTO-RECOVERY'];
 export const BOARD_OUTCOMES=['BOARD-NAMES','BOARD-RANK','BOARD-OWNERSHIP','BOARD-SUBMIT'];
 export const TOUCH_OUTCOMES=['TOUCH-RAPID','TOUCH-MULTI','TOUCH-CANCEL','TOUCH-HIT'];
+export const ENGAGEMENT_OUTCOMES=['DAILY-CALENDAR','DAILY-DEAL','DAILY-SCORES','GARDEN-PROGRESS','VARIANT-GOALS','FRIEND-LINK','FRIEND-SHARE','FEEDBACK-FREED','FEEDBACK-LAYER','ENGAGE-RESUME','ENGAGE-ACCESS'];
+export const GARDEN_RECOVERY_OUTCOMES=['GARDEN-SAVE','ENGAGE-RECOVERY'];
+REQUIRED_BROWSER.push('daily gardens restoration variants sharing and tile feedback','garden atomic backup and recovery');
 export async function requiredNodeTests(root=rootDefault){const names=[];for(const file of (await fs.readdir(path.join(root,'tests'))).filter(f=>f.endsWith('.test.mjs')).sort()){const text=await fs.readFile(path.join(root,'tests',file),'utf8');names.push(...[...text.matchAll(/^test\('([^']+)'/gm)].map(m=>m[1]));}if(!names.length||new Set(names).size!==names.length)throw Error('Invalid Node scenario inventory');return names;}
 export async function verifyGate({root=rootDefault,output=path.join(root,'dist'),receiptDirectory=path.join(root,'audit/current')}={}){
  const release=JSON.parse(await fs.readFile(path.join(output,'release.json'),'utf8'));
@@ -46,9 +50,13 @@ export async function verifyGate({root=rootDefault,output=path.join(root,'dist')
  const auto=browser.results.find(r=>r.name==='automatic named scores and durable multi-level outbox');if(AUTO_OUTCOMES.some(id=>auto?.observations?.outcomes?.[id]!=='passed'))throw Error('Required automatic score outcome is missing');
  const scoring=browser.results.find(r=>r.name==='balanced scoring and safe PWA update notification');if(TIME_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required timed scoring outcome is missing');
  if(SCORE_PWA_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required scoring or PWA outcome is missing');
- const pwa=JSON.parse(await fs.readFile(path.join(receiptDirectory,'pwa.json'),'utf8'));if(pwa.candidate!==release.id||!pwa.nativeWorkerUpdate||!pwa.nativeNotice||!pwa.saveFailureRefused||!pwa.checkpointPreserved)throw Error('Real PWA lifecycle evidence is missing');
+ const pwa=JSON.parse(await fs.readFile(path.join(receiptDirectory,'pwa.json'),'utf8'));if(pwa.candidate!==release.id||!pwa.nativeWorkerUpdate||!pwa.nativeNotice||!pwa.saveFailureRefused||!pwa.checkpointPreserved||!pwa.challengeContextPreserved)throw Error('Real PWA lifecycle evidence is missing');
+ const engagement=browser.results.find(r=>r.name==='daily gardens restoration variants sharing and tile feedback'),garden=browser.results.find(r=>r.name==='garden atomic backup and recovery');
+ if(ENGAGEMENT_OUTCOMES.some(id=>engagement?.observations?.outcomes?.[id]!=='passed'))throw Error('Required engagement outcome is missing');
+ if(GARDEN_RECOVERY_OUTCOMES.some(id=>garden?.observations?.outcomes?.[id]!=='passed'))throw Error('Required garden recovery outcome is missing');
+ const challenge=JSON.parse(await fs.readFile(path.join(receiptDirectory,'challenge-server.json'),'utf8'));if(challenge.policySha256!==hash(challengeDocument())||!challenge.production?.passed||!challenge.syntheticRemoved||!challenge.fixtureRemoved||!challenge.backup?.verified)throw Error('Actual challenge server evidence is missing');
  const server=JSON.parse(await fs.readFile(path.join(receiptDirectory,'leaderboard-server.json'),'utf8'));if(server.policySha256!==hash(scoreDocument())||!server.production?.passed||!server.syntheticRemoved||!server.fixtureRemoved||!server.backup?.verified)throw Error('Actual leaderboard server evidence is missing');
- for(const key of ['keyboardClear','textFocus','editorFocus','modalReturn','mismatchRefused','audioUnlocked','audioVolumeKeys','audioPreferences','celebrationPreview','leaderboardName','leaderboardFocus'])if(native.checks?.[key]!==true)throw Error('Native input evidence missing: '+key);
+ for(const key of ['keyboardClear','textFocus','editorFocus','modalReturn','mismatchRefused','audioUnlocked','audioVolumeKeys','audioPreferences','celebrationPreview','leaderboardName','leaderboardFocus','dailyGarden','restorationGarden','friendChallenge','layerObjective'])if(native.checks?.[key]!==true)throw Error('Native input evidence missing: '+key);
  return{passed:true,candidate:release.id,sourceDigest:release.sourceDigest,files:release.files.length,initialBytes:initial,nodeTests:node.tests,browserGroups:REQUIRED_BROWSER.length,release};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{const result=await verifyGate();console.log(JSON.stringify({...result,release:undefined}));}catch(error){console.error('Release refused: '+error.message);process.exitCode=1;}}
