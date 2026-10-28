@@ -1,0 +1,350 @@
+{
+  "utc": "2026-10-28T13:14:55.935Z",
+  "candidate": "mg-9bb7f2ca5b1202",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "before": {
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-d496d772a6bc11",
+    "tiles": [
+      {
+        "id": "t-0-0-0",
+        "label": "5 bamboo, column 1, row 1, layer 1, open"
+      },
+      {
+        "id": "t-0-1-0",
+        "label": "3 characters, column 1, row 2, layer 1, open"
+      },
+      {
+        "id": "t-0-2-0",
+        "label": "6 circles, column 1, row 3, layer 1, open"
+      },
+      {
+        "id": "t-0-3-0",
+        "label": "red dragon, column 1, row 4, layer 1, open"
+      },
+      {
+        "id": "t-1-0-0",
+        "label": "7 circles, column 2, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-1-1-0",
+        "label": "red dragon, column 2, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-1-2-0",
+        "label": "7 circles, column 2, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-1-3-0",
+        "label": "6 circles, column 2, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-2-0-0",
+        "label": "5 bamboo, column 3, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-2-1-0",
+        "label": "6 circles, column 3, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-2-2-0",
+        "label": "4 circles, column 3, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-2-3-0",
+        "label": "5 bamboo, column 3, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-3-0-0",
+        "label": "4 circles, column 4, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-3-1-0",
+        "label": "red dragon, column 4, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-3-2-0",
+        "label": "6 circles, column 4, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-3-3-0",
+        "label": "3 characters, column 4, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-4-0-0",
+        "label": "4 circles, column 5, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-4-1-0",
+        "label": "7 circles, column 5, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-4-2-0",
+        "label": "5 bamboo, column 5, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-4-3-0",
+        "label": "4 circles, column 5, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-5-0-0",
+        "label": "3 characters, column 6, row 1, layer 1, open"
+      },
+      {
+        "id": "t-5-1-0",
+        "label": "3 characters, column 6, row 2, layer 1, open"
+      },
+      {
+        "id": "t-5-2-0",
+        "label": "red dragon, column 6, row 3, layer 1, open"
+      },
+      {
+        "id": "t-5-3-0",
+        "label": "7 circles, column 6, row 4, layer 1, open"
+      }
+    ]
+  },
+  "notice": {
+    "release": "mg-d496d772a6bc11",
+    "status": "A new version is available. Your current game is still open.",
+    "tiles": [
+      {
+        "id": "t-0-0-0",
+        "label": "5 bamboo, column 1, row 1, layer 1, open"
+      },
+      {
+        "id": "t-0-1-0",
+        "label": "3 characters, column 1, row 2, layer 1, open"
+      },
+      {
+        "id": "t-0-2-0",
+        "label": "6 circles, column 1, row 3, layer 1, open"
+      },
+      {
+        "id": "t-0-3-0",
+        "label": "red dragon, column 1, row 4, layer 1, open"
+      },
+      {
+        "id": "t-1-0-0",
+        "label": "7 circles, column 2, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-1-1-0",
+        "label": "red dragon, column 2, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-1-2-0",
+        "label": "7 circles, column 2, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-1-3-0",
+        "label": "6 circles, column 2, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-2-0-0",
+        "label": "5 bamboo, column 3, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-2-1-0",
+        "label": "6 circles, column 3, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-2-2-0",
+        "label": "4 circles, column 3, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-2-3-0",
+        "label": "5 bamboo, column 3, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-3-0-0",
+        "label": "4 circles, column 4, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-3-1-0",
+        "label": "red dragon, column 4, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-3-2-0",
+        "label": "6 circles, column 4, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-3-3-0",
+        "label": "3 characters, column 4, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-4-0-0",
+        "label": "4 circles, column 5, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-4-1-0",
+        "label": "7 circles, column 5, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-4-2-0",
+        "label": "5 bamboo, column 5, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-4-3-0",
+        "label": "4 circles, column 5, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-5-0-0",
+        "label": "3 characters, column 6, row 1, layer 1, open"
+      },
+      {
+        "id": "t-5-1-0",
+        "label": "3 characters, column 6, row 2, layer 1, open"
+      },
+      {
+        "id": "t-5-2-0",
+        "label": "red dragon, column 6, row 3, layer 1, open"
+      },
+      {
+        "id": "t-5-3-0",
+        "label": "7 circles, column 6, row 4, layer 1, open"
+      }
+    ]
+  },
+  "later": {
+    "count": 24,
+    "release": "mg-d496d772a6bc11"
+  },
+  "after": {
+    "mixer": {
+      "music": true,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-9bb7f2ca5b1202",
+    "tiles": [
+      {
+        "id": "t-0-0-0",
+        "label": "5 bamboo, column 1, row 1, layer 1, open"
+      },
+      {
+        "id": "t-0-1-0",
+        "label": "3 characters, column 1, row 2, layer 1, open"
+      },
+      {
+        "id": "t-0-2-0",
+        "label": "6 circles, column 1, row 3, layer 1, open"
+      },
+      {
+        "id": "t-0-3-0",
+        "label": "red dragon, column 1, row 4, layer 1, open"
+      },
+      {
+        "id": "t-1-0-0",
+        "label": "7 circles, column 2, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-1-1-0",
+        "label": "red dragon, column 2, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-1-2-0",
+        "label": "7 circles, column 2, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-1-3-0",
+        "label": "6 circles, column 2, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-2-0-0",
+        "label": "5 bamboo, column 3, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-2-1-0",
+        "label": "6 circles, column 3, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-2-2-0",
+        "label": "4 circles, column 3, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-2-3-0",
+        "label": "5 bamboo, column 3, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-3-0-0",
+        "label": "4 circles, column 4, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-3-1-0",
+        "label": "red dragon, column 4, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-3-2-0",
+        "label": "6 circles, column 4, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-3-3-0",
+        "label": "3 characters, column 4, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-4-0-0",
+        "label": "4 circles, column 5, row 1, layer 1, blocked"
+      },
+      {
+        "id": "t-4-1-0",
+        "label": "7 circles, column 5, row 2, layer 1, blocked"
+      },
+      {
+        "id": "t-4-2-0",
+        "label": "5 bamboo, column 5, row 3, layer 1, blocked"
+      },
+      {
+        "id": "t-4-3-0",
+        "label": "4 circles, column 5, row 4, layer 1, blocked"
+      },
+      {
+        "id": "t-5-0-0",
+        "label": "3 characters, column 6, row 1, layer 1, open"
+      },
+      {
+        "id": "t-5-1-0",
+        "label": "3 characters, column 6, row 2, layer 1, open"
+      },
+      {
+        "id": "t-5-2-0",
+        "label": "red dragon, column 6, row 3, layer 1, open"
+      },
+      {
+        "id": "t-5-3-0",
+        "label": "7 circles, column 6, row 4, layer 1, open"
+      }
+    ]
+  },
+  "checkpointPreserved": true,
+  "mixerPreserved": true,
+  "inAppUpdateNotice": true,
+  "explicitUpdate": true,
+  "defaultSheet": {
+    "empty": true,
+    "headers": [
+      "Rank",
+      "Name",
+      "Points"
+    ],
+    "moreOpen": false,
+    "nameInputs": 0,
+    "scope": "Level 1 · First light",
+    "status": ""
+  },
+  "historyReachable": true,
+  "matchCount": 22,
+  "undoExact": true,
+  "settings": {
+    "audio": "Audio ready.",
+    "update": "You have the newest version."
+  },
+  "errors": [],
+  "limits": "Actual open desktop public client, not physical installed Pixel/Edge or closed-app OS push. No synthetic public score submitted. Existing scores and old resources retained."
+}

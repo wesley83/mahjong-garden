@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T13:11:16.164Z",
+  "utc": "2026-10-28T13:15:34.468Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -155,8 +155,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 60310,
-      "sha256": "d176aa7b310130030d203b8abbdd17147da7fb725a12933b88dd2c8e945bb4ab"
+      "bytes": 61578,
+      "sha256": "99fe760a406204b0bd67198331f4ad265fc297498e90df0b8478ab9cf7012dae"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -196,7 +196,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 5398,
-      "sha256": "bc49a415800d063c63d8c88d5c1b25ee31345d43b500784d4ca377b170bad7c1"
+      "sha256": "2112abd164017de4107a139b9918b98ee34cd982abc6a168e4b3a879d53400fe"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -509,14 +509,24 @@
       "sha256": "fba5b4666113c3ea954edf3a330152a01ee6727b76c84f490e4aa16b92a990b6"
     },
     {
+      "path": "audit/simplify/public-score-sheet.png",
+      "bytes": 27020,
+      "sha256": "a31b8a8130fe28c583358915047ba6135ccc078b489045027621116cb67b7064"
+    },
+    {
+      "path": "audit/simplify/public.json",
+      "bytes": 9022,
+      "sha256": "c5a713d09a32fcbeb046534b696b3f35d452047f42618e6cc8468d6aa2bc8685"
+    },
+    {
       "path": "audit/simplify/pwa-native.json",
       "bytes": 15979,
       "sha256": "893d6a8a31f70278b52c5d6879e6c4ee7540917505c1af0cd4c6d5d91f40e5d7"
     },
     {
       "path": "audit/simplify/REVIEW.md",
-      "bytes": 6410,
-      "sha256": "45e37dd8bbaafe3dc95778d6dac58c6c3a2b11cac3be6d0b824dfe7560505ac1"
+      "bytes": 7620,
+      "sha256": "17ec93e7d8d4e9bbead3994bd811767455ed15d04cc43fb4a00a3ba80375543f"
     },
     {
       "path": "audit/touch/baseline.json",
