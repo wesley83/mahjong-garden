@@ -3,7 +3,7 @@ import {RUNTIME,ASSETS,CONTROL,hash,sourceIdentity,pngSize} from './contracts.mj
 import {scoreDocument} from './leaderboard-policy.mjs';
 export const REQUIRED_BROWSER=['responsive layout matrix','atomic storage conflict, failure and next action','studio editing, personal image conversion and failed import preservation','studio failed save stays recoverable, retry then close','ordinary controls through match, undo, shuffle, win, retry and reload','game backup export/import round-trip','delayed saves, stale restores, cancellation and image undo','text enlargement, safe insets, long labels and focus','loading, image and audio failure recovery','version-one checkpoint compatibility'];
 const rootDefault=fileURLToPath(new URL('../',import.meta.url));
-export const PRESENTATION_OUTCOMES=['PRESENT-3D','PRESENT-SCENES','PRESENT-SCREENS','PRESENT-MENUS','PRESENT-FACES','PRESENT-LAYOUT','PRESENT-MOTION','PRESENT-RECOVERY'];
+export const PRESENTATION_OUTCOMES=['PRESENT-PARALLAX','PRESENT-3D','PRESENT-SCENES','PRESENT-SCREENS','PRESENT-MENUS','PRESENT-FACES','PRESENT-LAYOUT','PRESENT-MOTION','PRESENT-RECOVERY'];
 REQUIRED_BROWSER.push('CSS 3D presentation and game screen lifecycle','rapid taps and independent tile contacts','music mixer celebration and audio lifecycle');
 export const AUDIO_OUTCOMES=['AUDIO-DEFAULTS','AUDIO-CONTROLS','AUDIO-MUSIC','AUDIO-CELEBRATE','AUDIO-SIGNAL','AUDIO-RECOVERY'];
 REQUIRED_BROWSER.push('named shared leaderboard and submission recovery','balanced scoring and safe PWA update notification');

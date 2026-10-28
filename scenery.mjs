@@ -24,19 +24,19 @@ export function gardenSVG(chapter=1){
     <radialGradient id="lantern"><stop stop-color="#ffe6a5"/><stop offset=".7" stop-color="#e9b66f"/><stop offset="1" stop-color="#936147"/></radialGradient>
     <pattern id="garden-grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#f1e2bb" opacity=".05"/><circle cx="5" cy="4" r=".5" fill="#102f2c" opacity=".08"/></pattern>
   </defs><path fill="url(#garden-sky)" d="M0 0h1440v900H0z"/>
-  <circle cx="1050" cy="220" r="230" fill="url(#garden-glow)"/><circle cx="1050" cy="220" r="${night?51:43}" fill="${night?'#f3dfb1':'#e9ccaa'}" opacity="${night?.9:.7}"/>${stars}
+  <g class="garden-layer" data-parallax-depth="0.2"><circle cx="1050" cy="220" r="230" fill="url(#garden-glow)"/><circle cx="1050" cy="220" r="${night?51:43}" fill="${night?'#f3dfb1':'#e9ccaa'}" opacity="${night?.9:.7}"/>${stars}
   <path d="M-70 470 150 272 268 375 421 180 624 395 800 257 951 350 1140 184 1510 470v190H-70Z" fill="${s.mountain}" opacity=".26"/>
   <path d="m317 302 104-122 102 114-66-38-36-28-34 37Z" fill="#eee8d5" opacity=".35"/>
   <path d="M-30 516 167 380 274 447 491 324 648 463 812 371 1012 476 1195 320 1490 501v230H-30Z" fill="${s.mountain}" opacity=".45"/>
-  <path d="M-40 569q165-133 323-49 165-107 350-25 167-88 329-10 183-105 505 38v240H-40Z" fill="${s.mountain}" opacity=".72"/>
+  </g><g class="garden-layer" data-parallax-depth="0.55"><path d="M-40 569q165-133 323-49 165-107 350-25 167-88 329-10 183-105 505 38v240H-40Z" fill="${s.mountain}" opacity=".72"/>
   <path d="M0 565q349-53 689 4t751-8v339H0Z" fill="url(#garden-water)"/>
   <path d="M0 585q170-89 352-43l-68 57-85 19-199 8ZM1440 537q-170-39-316 17l83 52 233 32Z" fill="#2c4c42"/>
   ${pavilion(index===2?160:205,index===2?566:558,index===2?.65:.85,s.accent)}${special}
   <path d="M0 663q140-111 317-29L254 713 0 770ZM1440 631q-123-44-226 10l43 62 183 46Z" fill="#1c3a31"/>
   <g fill="none" stroke="${s.mist}" opacity=".16"><path d="M300 625h216m-172 8h305m-24-18h350m39 41h213m-818 55h320m-60 26h366m-65-56h380m-632 99h248m98-16h322"/><path d="M975 256h150m-91 8h184M593 414h179m-49 9h170" opacity=".65"/></g>
-  ${pine(40,595,1.7,s.leaf)}${pine(1360,630,1.8,s.leaf)}${pine(1285,557,.9,s.leaf)}${pine(345,529,.44,s.leaf)}${pine(1180,535,.4,s.leaf)}${branches}${lanterns}
+  </g><g class="garden-layer" data-parallax-depth="1">${pine(40,595,1.7,s.leaf)}${pine(1360,630,1.8,s.leaf)}${pine(1285,557,.9,s.leaf)}${pine(345,529,.44,s.leaf)}${pine(1180,535,.4,s.leaf)}${branches}${lanterns}
   <path d="M0 863q129-110 322-55 158-35 282 31 160-58 309-13 236-84 527 23v51H0Z" fill="#152e29"/>
   <g fill="${s.leaf}" stroke="#203d32" stroke-width="3"><path d="M-35 715q153-2 206 185Q36 863-35 715Zm3 93Q94 748 244 875 91 910-32 808Zm1472-83q-147-4-202 175 133-40 202-175Zm5 105q-118-73-271 52 174 21 271-52Z"/></g>
   <g stroke="#809374" stroke-width="1" opacity=".26" fill="none"><path d="M0 770 117 900M0 835l186 47m1254-117-119 135m119-43-180 29"/></g>
-  <path fill="url(#garden-grain)" d="M0 0h1440v900H0z"/></svg>`;
+  </g><path fill="url(#garden-grain)" d="M0 0h1440v900H0z"/></svg>`;
 }

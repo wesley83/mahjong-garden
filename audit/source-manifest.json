@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T13:55:55.327Z",
+  "utc": "2026-10-28T14:31:14.217Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -20,8 +20,8 @@
     },
     {
       "path": "app.mjs",
-      "bytes": 48891,
-      "sha256": "fdb037c589a25f8b5cbde1093780f9fae09db2e7d560a27913b9d03c778d349f"
+      "bytes": 49181,
+      "sha256": "a8abadc9b3710aa4825b4b6ae6278206c14c029309a95f3b945485c21fbbe355"
     },
     {
       "path": "assets/apple-touch-icon.png",
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 64994,
-      "sha256": "e3066e8bf28d799dfbcff1f5b5f02cb801d754cf51d1a0a2f120d4cd9de39e3a"
+      "bytes": 66523,
+      "sha256": "d0bc98cd5dcb31ba0405ebc850a350364fd97a6f56d8616832c9578942d13ed6"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -255,8 +255,8 @@
     },
     {
       "path": "audit/current/browser.json",
-      "bytes": 21866,
-      "sha256": "7ec04cd1a4a59598e5fc8345f49687fdf7cd2a8c04ab4cecbc0276ef88c521e0"
+      "bytes": 23833,
+      "sha256": "ffa3ef0965a51a5d8ff3fdca2bce323c44cab78c81a199fb06b1ed538ac333fc"
     },
     {
       "path": "audit/current/dependencies.json",
@@ -290,18 +290,18 @@
     },
     {
       "path": "audit/current/native.json",
-      "bytes": 1340,
-      "sha256": "22e97106a2303097e20058ecc599d45242291ccddb2c16c76cfb22881ee03d35"
+      "bytes": 2035,
+      "sha256": "281dd2dae2fdbff62732eea470b07664fa59818093aeb69d6abadb8d2280c9d6"
     },
     {
       "path": "audit/current/node-tests.tap",
-      "bytes": 10964,
-      "sha256": "584ff17d7babd7e9b2e824422a121da00c375e31f65b2df03cae1e882a59f67b"
+      "bytes": 11526,
+      "sha256": "ad1319b2cdfe50522ae7bd6552728eef98b4c87d010c00df1dcf0da1c0b5115e"
     },
     {
       "path": "audit/current/node.json",
-      "bytes": 651,
-      "sha256": "0e9b34c994068e24dd76d6d45f5737d76703fd312fa3830bb2e4211108e825ff"
+      "bytes": 682,
+      "sha256": "0c30a6686fe9b2b64611253bdd681795b237bafb1e71a08fd3e9e8ebda4917f1"
     },
     {
       "path": "audit/current/progression.json",
@@ -315,8 +315,8 @@
     },
     {
       "path": "audit/current/pwa.json",
-      "bytes": 16035,
-      "sha256": "6d688fd9144ca3024dfb2854fd44040d78e37688b982ba74bb2d445171b53952"
+      "bytes": 16103,
+      "sha256": "06fc45bf4a6c7bb493856caedf4a4c45fd7e12906ce8dd78244b9ac69bec6b85"
     },
     {
       "path": "audit/current/README.md",
@@ -427,6 +427,51 @@
       "path": "audit/node-tests.txt",
       "bytes": 765,
       "sha256": "d46a8a3933a6f2243ef358dc88a912cd777632572401e1ea0d4427e42d980114"
+    },
+    {
+      "path": "audit/parallax/browser-raw.json",
+      "bytes": 23596,
+      "sha256": "0443b0695096b376de934273e5370797f28a8dafa6729e9e87ac98670a64e2db"
+    },
+    {
+      "path": "audit/parallax/host-preflight-command.txt",
+      "bytes": 3416,
+      "sha256": "211ddcf0cf6a3e74ef503e942ee2bcae3ad6b37e459960a02ecbbcb2122db111"
+    },
+    {
+      "path": "audit/parallax/host-preflight.json",
+      "bytes": 527,
+      "sha256": "d9966b364970f26fb3a7c3af669042d8ac7dc74dd0f235ce506085f4f9d82980"
+    },
+    {
+      "path": "audit/parallax/native-raw.json",
+      "bytes": 1798,
+      "sha256": "0911ce800421c7b28c95198893ad48f92306038b02af2877eccebbcd123d8173"
+    },
+    {
+      "path": "audit/parallax/PLAN.md",
+      "bytes": 2657,
+      "sha256": "a9a6cb1e32f35374ff456c868351866e5181dfe0ce974dbcc231ab4d9cdd34bf"
+    },
+    {
+      "path": "audit/parallax/preliminary-bounds.json",
+      "bytes": 260,
+      "sha256": "c181c205da56acaf68d63a071dc6d8f800e341e6744bbc32d49dd33190a485de"
+    },
+    {
+      "path": "audit/parallax/preliminary.json",
+      "bytes": 285,
+      "sha256": "bc37bd784d2d500b5bddcbd494ea293ea4f96b465c9e50f5c455d1da34774f39"
+    },
+    {
+      "path": "audit/parallax/pwa-native.json",
+      "bytes": 16017,
+      "sha256": "d08a57fd050e9d2d09e475cbdecaa4afda7957797c3723bd88ba062923c1cf75"
+    },
+    {
+      "path": "audit/parallax/REVIEW.md",
+      "bytes": 4971,
+      "sha256": "2fe4933cbe1a398dc4275778706e352bc524c224bc86001e384adde666aa7219"
     },
     {
       "path": "audit/presentation/browser-raw.json",
@@ -715,13 +760,13 @@
     },
     {
       "path": "GAME-PLAN.md",
-      "bytes": 16572,
-      "sha256": "49792386bd54d2dd35c8320bb7f235bf9fd92d4a6d75f4fe3548bce3e7ca4994"
+      "bytes": 17000,
+      "sha256": "e1e4e62e52703e5b50014dc5dd2c883618b61cdb0fa986f3be7068b8eb4f6e6b"
     },
     {
       "path": "game.css",
-      "bytes": 19760,
-      "sha256": "9eb41b1b9c949da63f90c48b57e93bc68b36335be6a12b83609da033808a4c58"
+      "bytes": 20101,
+      "sha256": "f2a54647ee45de6a186bb5dea9de042b4d753ae249f3d4bbd5826ebe3faddf8f"
     },
     {
       "path": "image-input.mjs",
@@ -756,7 +801,12 @@
     {
       "path": "package.json",
       "bytes": 569,
-      "sha256": "46207f28338d1ab18a514f2594e5df795a0e3b9a9cffeb411b94541938118c8e"
+      "sha256": "c44f64d4d83e3f8f4d7ef3c7d039e886f757ceafc1c3bd0bb6365a42cea86e7c"
+    },
+    {
+      "path": "parallax.mjs",
+      "bytes": 3265,
+      "sha256": "e2da3f41c3b8074825fdf6d7f1e7e5372e6eb41b787951124f2cd9f600c42548"
     },
     {
       "path": "pnpm-lock.yaml",
@@ -775,13 +825,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 16247,
-      "sha256": "e7a3b0a6f5d49b2ace0fde184c5127beac7df189e948f99a90d70cfd363b5219"
+      "bytes": 16745,
+      "sha256": "8c3b9684f6a8055881fc2e7f7c8a00a9828b18f138b48d8d5356b3b9c85c714a"
     },
     {
       "path": "scenery.mjs",
-      "bytes": 6788,
-      "sha256": "c29e981fc66db68a50da0fd1fb6f911228c548c3d2ef2a590b3f26acb9e3b15f"
+      "bytes": 6949,
+      "sha256": "9b725030eedd1f6bd889ca5f38b6200616fa563d912b236bd6a2840e6f5555ed"
     },
     {
       "path": "scoring.mjs",
@@ -854,9 +904,19 @@
       "sha256": "c79d53c5aef761c479c1d008b8035af645a45df912efc109b0bea3796bf419e1"
     },
     {
+      "path": "tests/parallax-browser.mjs",
+      "bytes": 5268,
+      "sha256": "ed7701a2dcb0a1465619e0b9c7008a8a7f003525c3b6c109a94eaca91718fd01"
+    },
+    {
+      "path": "tests/parallax.test.mjs",
+      "bytes": 4128,
+      "sha256": "ca3e04448375216366023c45e9ff3581c7abecfc8f538cdaa568874679e32ac1"
+    },
+    {
       "path": "tests/presentation.mjs",
-      "bytes": 7042,
-      "sha256": "a0e79c5d3ec730f8f3e801efd82cac22ccb20658fa4c13bfcbbfc9b0ad1232f7"
+      "bytes": 7213,
+      "sha256": "ccc847218af123269e11aefcced6e2c19cce1cd6eef401a73451cb10cc766c8e"
     },
     {
       "path": "tests/pwa-fixture.mjs",
@@ -870,8 +930,8 @@
     },
     {
       "path": "tests/release.test.mjs",
-      "bytes": 11816,
-      "sha256": "7ebc1eb6db7dfdd76918a5218cf19e4aa5e917982e845ce2b9effd7c71c0ae57"
+      "bytes": 11822,
+      "sha256": "492a7d0da9c49037f9c31106ed6b59b9fe7894bef7a657ecfcb951d096ae8bf4"
     },
     {
       "path": "tests/review.mjs",
@@ -921,7 +981,7 @@
     {
       "path": "tools/build.mjs",
       "bytes": 4903,
-      "sha256": "320bf1110af494cd5fbce34044af31718830b957eae04dfd7091da46b3a55466"
+      "sha256": "7204413c3244e23837e3a99b916ef938c81194b5bfb7cb053d51070c5e09dab7"
     },
     {
       "path": "tools/check.mjs",
@@ -930,8 +990,8 @@
     },
     {
       "path": "tools/contracts.mjs",
-      "bytes": 1890,
-      "sha256": "d734c4d6e6a276a5cb73ca755c53213deb68c9c856f21fb8678bc51060e50aa1"
+      "bytes": 1905,
+      "sha256": "ebc426f1d1f2d43e8d7f765319ab7a6e74ee6d5c35392ac1aaacf92205f9970a"
     },
     {
       "path": "tools/deploy-console.mjs",
@@ -945,8 +1005,8 @@
     },
     {
       "path": "tools/gate.mjs",
-      "bytes": 8599,
-      "sha256": "e2fa0967567c90058ffb7b004ec3aa249c332cc6146bf09084178c249dc8827d"
+      "bytes": 8618,
+      "sha256": "ac9c5f26ee58413e746f0439f4dc05d56b3bdbbc3b210a46038177434a1d43d4"
     },
     {
       "path": "tools/leaderboard-console.mjs",

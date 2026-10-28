@@ -1,0 +1,12 @@
+[
+  {
+    "name": "CSS 3D presentation and game screen lifecycle",
+    "utc": "2026-10-28T14:23:37.268Z",
+    "candidate": "mg-8f5ba2f15cb40d",
+    "status": "failed",
+    "error": "Hidden control [data-open=\"settings-dialog\"]",
+    "observations": {
+      "outcomes": {}
+    }
+  }
+]

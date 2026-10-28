@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-28T13:43:23.834Z",
-  "candidate": "mg-ff019a9b6515b9",
+  "utc": "2026-10-28T14:28:03.018Z",
+  "candidate": "mg-1d22d751f41726",
   "checks": {
     "audioVolumeKeys": true,
     "audioPreferences": true,
@@ -15,6 +15,36 @@
     "leaderboardFocus": true
   },
   "observations": {
+    "left": [
+      {
+        "depth": "0.2",
+        "transform": "translate(2.75px, 0.893px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(7.561px, 2.455px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(13.748px, 4.463px)"
+      }
+    ],
+    "right": [
+      {
+        "depth": "0.2",
+        "transform": "translate(-2.322px, 0.932px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(-6.384px, 2.563px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(-11.608px, 4.661px)"
+      }
+    ],
+    "titleFixed": true,
+    "modalStatic": true,
     "mixer": {
       "music": false,
       "musicVolume": "36",
@@ -22,10 +52,12 @@
       "soundVolume": "64"
     },
     "audio": "Audio ready.",
+    "reducedStatic": true,
     "editor": {
       "count": "31 tiles · add one for an even pair count",
       "focus": "Column 1, row 1, layer 1, empty"
     },
+    "playStatic": true,
     "keyboardCounts": [
       24,
       22,
@@ -42,15 +74,15 @@
       0
     ],
     "repeatedHint": "This pair is already highlighted. No extra hint cost.",
-    "win": "6000 points · 12 pairs · 00:31 · 12 hints · 0 reshuffles",
     "nameReturn": {
       "focus": "View leaderboard",
       "name": "Garden Player"
-    }
+    },
+    "win": "6000 points · 12 pairs · 00:11 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "ff019a9b6515b987f5c72cc56767dbc958a315e65e21febb718873a0f23b84d4",
+  "sourceDigest": "1d22d751f41726b7ff748860c7ae9d9a603935976eacba80ef6408e6a989cb0a",
   "rawEvidence": {
-    "path": "audit/autosave/native-raw.json",
-    "sha256": "0da9e34aecb751d9689d757807417150afccda73fc7bc79f2ccef54911ea78bb"
+    "path": "audit/parallax/native-raw.json",
+    "sha256": "0911ce800421c7b28c95198893ad48f92306038b02af2877eccebbcd123d8173"
   }
 }

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';
 export const ORIGIN='https://grab-lead-8328.onpagelove.com';
-export const RUNTIME=['boot.mjs','app.mjs','audio.mjs','scoring.mjs','pwa.mjs','leaderboard.mjs','core.mjs','profile.mjs','operations.mjs','image-input.mjs','tile-input.mjs','faces.mjs','storage.mjs','scenery.mjs','style.css','game.css','favicon.svg','content/levels.html'];
+export const RUNTIME=['boot.mjs','app.mjs','audio.mjs','scoring.mjs','pwa.mjs','leaderboard.mjs','core.mjs','profile.mjs','operations.mjs','image-input.mjs','tile-input.mjs','faces.mjs','storage.mjs','scenery.mjs','parallax.mjs','style.css','game.css','favicon.svg','content/levels.html'];
 export const CONTROL=['manifest.webmanifest','sw.js'];
 export const ASSETS=[{role:'install-icon',path:'assets/icon-192.png',source:'favicon.svg',width:192,height:192,initial:false},{role:'install-icon',path:'assets/icon-512.png',source:'favicon.svg',width:512,height:512,initial:false},{role:'link-preview',path:'assets/social-card.png',source:'assets/social-card.svg',width:1200,height:630,initial:false},{role:'touch-icon',path:'assets/apple-touch-icon.png',source:'favicon.svg',width:180,height:180,initial:false}];
 export const hash=bytes=>createHash('sha256').update(bytes).digest('hex');

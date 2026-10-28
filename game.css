@@ -5,6 +5,11 @@ body{background:#203c35;color:var(--game-ink);min-height:100svh}
 .world-backdrop,.world-vignette{position:fixed;inset:0;pointer-events:none}
 .world-backdrop{z-index:0;overflow:hidden;background:#294b43}
 .world-art{display:block;width:100%;height:100%;max-width:none;stroke:none;fill:none}
+body[data-screen="title"] .world-art{transform:scale(1.06)}
+.garden-layer{transform-box:view-box;transform-origin:center}
+.world-backdrop[data-parallax-motion="moving"] .garden-layer{will-change:transform}
+.reduced-motion .garden-layer{transform:none!important}
+@media(prefers-reduced-motion:reduce){.garden-layer{transform:none!important}}
 .world-vignette{z-index:1;background:linear-gradient(180deg,#10261f80,transparent 28%,#122c2440 70%,#0e221fe0),radial-gradient(ellipse at center,transparent 12%,#0c241e65 100%)}
 body[data-screen="play"] .world-vignette{background:linear-gradient(180deg,#10261fbb,transparent 30%,#10261f40 70%,#0e221fed),radial-gradient(ellipse at 50% 53%,#122d2755,transparent 75%)}
 .shell{position:relative;z-index:2;max-width:none;padding:0;margin:0}

@@ -8,6 +8,7 @@ import {LatestTask,StudioHistory,bounded,advanceElapsed,abortError} from './oper
 import {imageDimensions} from './image-input.mjs';
 import {tileInput} from './tile-input.mjs';
 import {GardenAudio,defaultAudio,validateAudio} from './audio.mjs';
+import {homeParallax} from './parallax.mjs';
 
 const $=id=>document.getElementById(id),$$=s=>[...document.querySelectorAll(s)];
 const chapters=['The first path','By the water','Above the clouds','Autumn whispers','Under the stars','The hidden garden'];
@@ -22,12 +23,13 @@ let mixer=defaultAudio(),pagePresent=true,audioRecovery;
 const soundscape=new GardenAudio({status:text=>{$('audio-status').textContent=text;}});
 let soundFrame=0,soundTimer=0,screen='title',sceneChapter=0,renderedOriginal;
 let cancelTileContacts=()=>{};
+let homeMotion;
 let leaderboardUI,leaderboardPromise;
 function ensureLeaderboard(){if(leaderboardUI)return Promise.resolve(leaderboardUI);leaderboardPromise??=import('./leaderboard.mjs').then(module=>{leaderboardUI=module.mountLeaderboard({levels,getRun:()=>run,showBoard:()=>openDialog('leaderboard-dialog')});return leaderboardUI;}).catch(error=>{leaderboardPromise=null;throw error;});return leaderboardPromise;}
 async function openLeaderboard(){if(transitionBusy)return;openDialog('leaderboard-dialog');$('leaderboard-status').textContent='Loading scores…';$('leaderboard-load-retry').hidden=true;try{const ui=await ensureLeaderboard();if($('leaderboard-dialog').open)ui.open();}catch{$('leaderboard-status').textContent='Scores could not load. Try again.';$('leaderboard-load-retry').hidden=false;}}
 async function prepareWinScore(){const owner=run;$('leaderboard-entry').hidden=true;$('win-score-retry').hidden=true;$('leaderboard-result').hidden=false;$('leaderboard-result').textContent='Preparing your score…';try{const ui=await ensureLeaderboard();ui.prepareResult(owner);}catch{if(run===owner){$('leaderboard-result').textContent='Your score could not be prepared. You can keep playing.';$('win-score-retry').hidden=false;}}}
 function showScreen(next,{focus=true}={}){cancelTileContacts();updateElapsed();stopEffects();screen=next;document.body.dataset.screen=next;$('title-screen').hidden=next!=='title';$('play-screen').hidden=next!=='play';$('app-header').hidden=next!=='play';if(next==='play')fitBoard();syncClock();if(focus)(next==='title'?$('continue-game'):$('board').querySelector('.tile[aria-disabled="false"]'))?.focus({preventScroll:true});}
-function renderScene(chapter){if(sceneChapter===chapter)return;sceneChapter=chapter;document.body.dataset.chapter=String(chapter);$('world-backdrop').innerHTML=gardenSVG(chapter);$('world-backdrop').dataset.scene=String(chapter);$('scene-label').textContent=gardens[chapter-1].place.toUpperCase();}
+function renderScene(chapter){if(sceneChapter===chapter)return;sceneChapter=chapter;document.body.dataset.chapter=String(chapter);$('world-backdrop').innerHTML=gardenSVG(chapter);$('world-backdrop').dataset.scene=String(chapter);$('scene-label').textContent=gardens[chapter-1].place.toUpperCase();homeMotion?.refresh();}
 const activeImages=()=>editorReady?editorImages:profile.studio.images;
 function message(text){$('game-message').textContent=text;}
 function status(text){$('studio-status').textContent=text;}
@@ -59,7 +61,7 @@ async function transition(action){
   if(focus?.isConnected&&focus.getClientRects().length&&!focus.disabled)focus.focus({preventScroll:true});else $('board').querySelector('.tile[aria-disabled="false"]')?.focus({preventScroll:true});}
 }
 function syncAudio(){soundscape.setActive(ready&&pagePresent&&!document.hidden&&!transitionBusy);}
-function syncClock(){clockActive=ready&&screen==='play'&&!!run&&!run.complete&&!document.hidden&&!transitionBusy&&!document.querySelector('dialog[open]');syncAudio();}
+function syncClock(){clockActive=ready&&screen==='play'&&!!run&&!run.complete&&!document.hidden&&!transitionBusy&&!document.querySelector('dialog[open]');syncAudio();homeMotion?.sync();}
 function updateElapsed(){const now=performance.now(),diff=(now-lastTick)/1000;lastTick=now;if(clockActive)run=advanceElapsed(run,diff);syncClock();}
 function stopEffects(){cancelAnimationFrame(soundFrame);clearTimeout(soundTimer);soundFrame=soundTimer=0;soundscape.stopGroup('effects');}
 function stopAudio(){stopEffects();soundscape.pause();}
@@ -225,6 +227,7 @@ function bind(){
  $('use-images').onclick=()=>{if(editorBusy||transitionBusy||editorImages.length<2)return;profile.settings.theme='custom';renderThemes();renderBoard();status('Your personal images are now the active tile collection.');scheduleSave();};
  $('clear-images').onclick=()=>{if(editorBusy||transitionBusy)return;confirm('Clear your personal images?','This removes the collection from this browser. Export a studio file first to keep a copy.',()=>{history.push(draftFromDOM());editorImages=[];imageChanged();status('Personal image collection cleared. Undo can restore it.');});};
  cancelTileContacts=tileInput($('board'),{activate:choose,enabled:canPlay});
+ homeMotion=homeParallax($('world-backdrop'),{enabled:()=>ready&&screen==='title'&&!profile.settings.reduceMotion&&!transitionBusy&&pagePresent&&!document.querySelector('dialog[open]')});
  window.addEventListener('blur',()=>cancelTileContacts());
  $('board-scroll').addEventListener('scroll',()=>cancelTileContacts(),{passive:true});
  window.addEventListener('resize',()=>cancelTileContacts());

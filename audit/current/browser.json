@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-28T13:46:33.05Z",
-  "candidate": "mg-ff019a9b6515b9",
+  "utc": "2026-10-28T14:29:06.881Z",
+  "candidate": "mg-1d22d751f41726",
   "results": [
     {
-      "utc": "2026-10-28T13:44:11.568Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:26.364Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "responsive layout matrix",
       "status": "passed",
       "observations": [
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "utc": "2026-10-28T13:44:12.585Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:27.314Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "atomic storage conflict, failure and next action",
       "status": "passed",
       "observations": {
@@ -82,8 +82,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:44:18.535Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:33.231Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "studio editing, personal image conversion and failed import preservation",
       "status": "passed",
       "observations": {
@@ -96,8 +96,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:44:20.488Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:35.131Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "studio failed save stays recoverable, retry then close",
       "status": "passed",
       "observations": {
@@ -108,8 +108,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:44:31.499Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:45.997Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "ordinary controls through match, undo, shuffle, win, retry and reload",
       "status": "passed",
       "observations": {
@@ -121,48 +121,48 @@
         "nextLevel": true,
         "iterations": 12,
         "dispatchSamples": 34,
-        "dispatchP95ms": 9.5,
-        "dispatchMaxMs": 12.699999928474426,
+        "dispatchP95ms": 6.699999928474426,
+        "dispatchMaxMs": 6.700000047683716,
         "actionSamples": [
           {
             "selector": "[data-open=\"levels-dialog\"]",
-            "milliseconds": 12.699999928474426
+            "milliseconds": 6.700000047683716
           },
           {
             "selector": "#level-library .chapter-group:first-child .level-card:first-child",
-            "milliseconds": 1.8000000715255737
+            "milliseconds": 1.7000000476837158
           },
           {
             "selector": "#restart",
-            "milliseconds": 5.300000071525574
+            "milliseconds": 4
           },
           {
             "selector": "#confirm-ok",
-            "milliseconds": 5.899999976158142
+            "milliseconds": 3.399999976158142
           },
           {
             "selector": "#hint",
-            "milliseconds": 3.1999999284744263
+            "milliseconds": 1.7000000476837158
           },
           {
-            "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 3.3000000715255737
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 3.200000047683716
           },
           {
-            "selector": "#board [data-tile=\"t-5-2-0\"]",
-            "milliseconds": 3.3000000715255737
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 2.1999999284744263
           },
           {
             "selector": "#undo",
-            "milliseconds": 3.1999999284744263
+            "milliseconds": 2.299999952316284
           },
           {
             "selector": "#shuffle",
-            "milliseconds": 6.100000023841858
+            "milliseconds": 3.1999999284744263
           },
           {
-            "selector": "#board [data-tile=\"t-0-2-0\"]",
-            "milliseconds": 2.399999976158142
+            "selector": "#board [data-tile=\"t-0-0-0\"]",
+            "milliseconds": 3.100000023841858
           },
           {
             "selector": "#board [data-tile=\"t-0-3-0\"]",
@@ -170,103 +170,103 @@
           },
           {
             "selector": "#board [data-tile=\"t-0-1-0\"]",
-            "milliseconds": 2
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-3-0\"]",
-            "milliseconds": 2.1999999284744263
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-1-0\"]",
-            "milliseconds": 2
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-3-0\"]",
-            "milliseconds": 2.100000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-1-0\"]",
             "milliseconds": 1.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-2-0\"]",
-            "milliseconds": 2.3000000715255737
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-1-0\"]",
-            "milliseconds": 2.5
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-3-0\"]",
-            "milliseconds": 1.9000000953674316
-          },
-          {
-            "selector": "#board [data-tile=\"t-5-0-0\"]",
-            "milliseconds": 1.9000000953674316
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-3-0\"]",
-            "milliseconds": 2.200000047683716
-          },
-          {
-            "selector": "#board [data-tile=\"t-4-0-0\"]",
-            "milliseconds": 1.5
           },
           {
             "selector": "#board [data-tile=\"t-5-2-0\"]",
-            "milliseconds": 1.899999976158142
+            "milliseconds": 2.700000047683716
           },
           {
-            "selector": "#board [data-tile=\"t-3-0-0\"]",
-            "milliseconds": 2.299999952316284
-          },
-          {
-            "selector": "#board [data-tile=\"t-2-1-0\"]",
-            "milliseconds": 1.2999999523162842
-          },
-          {
-            "selector": "#board [data-tile=\"t-3-1-0\"]",
-            "milliseconds": 1.7000000476837158
+            "selector": "#board [data-tile=\"t-1-1-0\"]",
+            "milliseconds": 1.5
           },
           {
             "selector": "#board [data-tile=\"t-4-2-0\"]",
-            "milliseconds": 2.100000023841858
+            "milliseconds": 1.7000000476837158
           },
           {
-            "selector": "#board [data-tile=\"t-2-0-0\"]",
-            "milliseconds": 1.399999976158142
+            "selector": "#board [data-tile=\"t-0-2-0\"]",
+            "milliseconds": 1.2999999523162842
           },
           {
-            "selector": "#board [data-tile=\"t-3-2-0\"]",
+            "selector": "#board [data-tile=\"t-5-3-0\"]",
+            "milliseconds": 1.5999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-2-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-3-0\"]",
             "milliseconds": 1.600000023841858
           },
           {
-            "selector": "#board [data-tile=\"t-0-0-0\"]",
-            "milliseconds": 1.600000023841858
-          },
-          {
-            "selector": "#board [data-tile=\"t-1-0-0\"]",
-            "milliseconds": 2
+            "selector": "#board [data-tile=\"t-2-1-0\"]",
+            "milliseconds": 1.1999999284744263
           },
           {
             "selector": "#board [data-tile=\"t-2-2-0\"]",
             "milliseconds": 1.600000023841858
           },
           {
+            "selector": "#board [data-tile=\"t-3-1-0\"]",
+            "milliseconds": 1.8000000715255737
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-2-0\"]",
+            "milliseconds": 1.399999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-0-0\"]",
+            "milliseconds": 1.1999999284744263
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-1-0\"]",
+            "milliseconds": 2.3000000715255737
+          },
+          {
+            "selector": "#board [data-tile=\"t-4-0-0\"]",
+            "milliseconds": 1.0999999046325684
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-3-0\"]",
+            "milliseconds": 1.2000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-1-0-0\"]",
+            "milliseconds": 1.2000000476837158
+          },
+          {
             "selector": "#board [data-tile=\"t-2-3-0\"]",
-            "milliseconds": 9.5
+            "milliseconds": 2.899999976158142
+          },
+          {
+            "selector": "#board [data-tile=\"t-2-0-0\"]",
+            "milliseconds": 1.600000023841858
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-0-0\"]",
+            "milliseconds": 1.7000000476837158
+          },
+          {
+            "selector": "#board [data-tile=\"t-5-1-0\"]",
+            "milliseconds": 1.2999999523162842
+          },
+          {
+            "selector": "#board [data-tile=\"t-3-3-0\"]",
+            "milliseconds": 6.699999928474426
           },
           {
             "selector": "#next-level",
-            "milliseconds": 2.700000047683716
+            "milliseconds": 1.5
           }
         ],
-        "boardDispatchMaxMs": 9.5
+        "boardDispatchMaxMs": 6.699999928474426
       }
     },
     {
-      "utc": "2026-10-28T13:44:31.553Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:46.047Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "game backup export/import round-trip",
       "environment": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
       "status": "passed",
@@ -278,8 +278,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:44:33.569Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:48.065Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "delayed saves, stale restores, cancellation and image undo",
       "observations": {
         "laterEditPreserved": true,
@@ -293,8 +293,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T13:44:42.166Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:26:56.581Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "text enlargement, safe insets, long labels and focus",
       "observations": [
         {
@@ -379,8 +379,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T13:44:46.396Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:27:00.77Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "loading, image and audio failure recovery",
       "observations": {
         "libraryFailureRetry": true,
@@ -393,8 +393,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T13:44:55.362Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:27:09.713Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "version-one checkpoint compatibility",
       "observations": {
         "saveVersion": 1,
@@ -408,11 +408,12 @@
     },
     {
       "name": "CSS 3D presentation and game screen lifecycle",
-      "utc": "2026-10-28T13:44:56.769Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:27:11.082Z",
+      "candidate": "mg-1d22d751f41726",
       "status": "passed",
       "observations": {
         "outcomes": {
+          "PRESENT-PARALLAX": "passed",
           "PRESENT-SCREENS": "passed",
           "PRESENT-3D": "passed",
           "PRESENT-SCENES": "passed",
@@ -421,6 +422,73 @@
           "PRESENT-LAYOUT": "passed",
           "PRESENT-MENUS": "passed",
           "PRESENT-RECOVERY": "passed"
+        },
+        "parallax": {
+          "depth": [
+            {
+              "x": -3.2,
+              "y": 1.44
+            },
+            {
+              "x": -8.8,
+              "y": 3.96
+            },
+            {
+              "x": -16,
+              "y": 7.2
+            }
+          ],
+          "titleFixed": true,
+          "idleStops": true,
+          "passiveTouch": true,
+          "secondaryRefused": true,
+          "controlTouchRefused": true,
+          "modalPause": true,
+          "pageReturnReset": true,
+          "reducedMotion": true,
+          "playStatic": true,
+          "sizes": [
+            {
+              "width": 320,
+              "height": 568,
+              "overscan": {
+                "left": -9.139994621276855,
+                "top": -17.03997802734375,
+                "right": 313.80666065216064,
+                "bottom": 585.0399780273438
+              }
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "overscan": {
+                "left": -11.699992179870605,
+                "top": -25.319988250732422,
+                "right": 401.70000171661377,
+                "bottom": 869.3200263977051
+              }
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "overscan": {
+                "left": -24.8599853515625,
+                "top": -11.699992179870605,
+                "right": 853.5267333984375,
+                "bottom": 401.70000171661377
+              }
+            },
+            {
+              "width": 1280,
+              "height": 720,
+              "overscan": {
+                "left": -37.93998336791992,
+                "top": -21.5999755859375,
+                "right": 1302.606647491455,
+                "bottom": 741.5999145507812
+              }
+            }
+          ]
         },
         "scenes": [
           "DAWN AT THE PAVILION",
@@ -475,8 +543,8 @@
           }
         ],
         "clockSamples": [
-          "00:04",
-          "00:04"
+          "00:05",
+          "00:05"
         ],
         "threeD": {
           "planes": [
@@ -492,8 +560,8 @@
     },
     {
       "name": "rapid taps and independent tile contacts",
-      "utc": "2026-10-28T13:45:17.602Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:27:40.618Z",
+      "candidate": "mg-1d22d751f41726",
       "observations": {
         "outcomes": {
           "TOUCH-RAPID": "passed",
@@ -577,8 +645,8 @@
     },
     {
       "name": "music mixer celebration and audio lifecycle",
-      "utc": "2026-10-28T13:45:28.902Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:27:51.735Z",
+      "candidate": "mg-1d22d751f41726",
       "observations": {
         "outcomes": {
           "AUDIO-DEFAULTS": "passed",
@@ -596,7 +664,7 @@
           "seconds": 26,
           "peak": 0.2052977830171585,
           "clips": 0,
-          "rms": 0.02480392634370728,
+          "rms": 0.02480392634068992,
           "onsetSeconds": 0.025020833333333332,
           "lastSignalSeconds": 25.074708333333334,
           "zeroRenderSilent": true,
@@ -623,8 +691,8 @@
       "status": "passed"
     },
     {
-      "utc": "2026-10-28T13:45:43.534Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:28:06.216Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "named shared leaderboard and submission recovery",
       "status": "passed",
       "observations": {
@@ -724,8 +792,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:45:51.219Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:28:13.816Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "balanced scoring and safe PWA update notification",
       "status": "passed",
       "observations": {
@@ -746,8 +814,8 @@
       }
     },
     {
-      "utc": "2026-10-28T13:45:56.903Z",
-      "candidate": "mg-ff019a9b6515b9",
+      "utc": "2026-10-28T14:28:19.472Z",
+      "candidate": "mg-1d22d751f41726",
       "name": "automatic named scores and durable multi-level outbox",
       "status": "passed",
       "observations": {
@@ -775,9 +843,9 @@
       }
     }
   ],
-  "sourceDigest": "ff019a9b6515b987f5c72cc56767dbc958a315e65e21febb718873a0f23b84d4",
+  "sourceDigest": "1d22d751f41726b7ff748860c7ae9d9a603935976eacba80ef6408e6a989cb0a",
   "rawEvidence": {
-    "path": "audit/autosave/browser-raw.json",
-    "sha256": "26e57a737bf7f76d50474e931282d00a5e3c37dbb00ec21223ee26beaab4a92c"
+    "path": "audit/parallax/browser-raw.json",
+    "sha256": "0443b0695096b376de934273e5370797f28a8dafa6729e9e87ac98670a64e2db"
   }
 }

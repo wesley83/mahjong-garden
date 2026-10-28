@@ -1,0 +1,551 @@
+{
+  "utc": "2026-10-28T14:28:36.477Z",
+  "candidate": "mg-1d22d751f41726",
+  "environment": "Real desktop Chromium worker on isolated localhost4178, exact candidate code and controlled A/B labels. Not physical installed phone or OS push.",
+  "codeGraph": "/preview/releases/mg-1d22d751f41726/boot.mjs",
+  "nativeWorkerUpdate": true,
+  "nativeNotice": true,
+  "saveFailureRefused": true,
+  "checkpointPreserved": true,
+  "laterPreserved": true,
+  "observations": {
+    "before": {
+      "scope": "http://127.0.0.1:4178/__mg-pwa-fixture/",
+      "active": "activated",
+      "activeVersion": "mg-11111111111111",
+      "waitingVersion": null,
+      "frameVersion": "mg-11111111111111",
+      "count": 24,
+      "tiles": [
+        {
+          "id": "t-0-0-0",
+          "label": "north wind, column 1, row 1, layer 1, open"
+        },
+        {
+          "id": "t-0-1-0",
+          "label": "white dragon, column 1, row 2, layer 1, open"
+        },
+        {
+          "id": "t-0-2-0",
+          "label": "white dragon, column 1, row 3, layer 1, open"
+        },
+        {
+          "id": "t-0-3-0",
+          "label": "4 bamboo, column 1, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-0-0",
+          "label": "6 characters, column 2, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-1-1-0",
+          "label": "4 circles, column 2, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-1-2-0",
+          "label": "east wind, column 2, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-1-3-0",
+          "label": "6 characters, column 2, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-0-0",
+          "label": "4 bamboo, column 3, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-0",
+          "label": "4 bamboo, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-2-0",
+          "label": "north wind, column 3, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-2-3-0",
+          "label": "4 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-0-0",
+          "label": "4 circles, column 4, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-0",
+          "label": "6 characters, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-2-0",
+          "label": "east wind, column 4, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-3-3-0",
+          "label": "east wind, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-0-0",
+          "label": "north wind, column 5, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-0",
+          "label": "6 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-2-0",
+          "label": "white dragon, column 5, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-4-3-0",
+          "label": "4 circles, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-5-0-0",
+          "label": "east wind, column 6, row 1, layer 1, open"
+        },
+        {
+          "id": "t-5-1-0",
+          "label": "north wind, column 6, row 2, layer 1, open"
+        },
+        {
+          "id": "t-5-2-0",
+          "label": "white dragon, column 6, row 3, layer 1, open"
+        },
+        {
+          "id": "t-5-3-0",
+          "label": "4 circles, column 6, row 4, layer 1, open"
+        }
+      ],
+      "status": "You have the newest version."
+    },
+    "notice": {
+      "scope": "http://127.0.0.1:4178/__mg-pwa-fixture/",
+      "active": "activated",
+      "waiting": "installed",
+      "activeVersion": "mg-11111111111111",
+      "waitingVersion": "mg-22222222222222",
+      "frameVersion": "mg-11111111111111",
+      "count": 24,
+      "tiles": [
+        {
+          "id": "t-0-0-0",
+          "label": "north wind, column 1, row 1, layer 1, open"
+        },
+        {
+          "id": "t-0-1-0",
+          "label": "white dragon, column 1, row 2, layer 1, open"
+        },
+        {
+          "id": "t-0-2-0",
+          "label": "white dragon, column 1, row 3, layer 1, open"
+        },
+        {
+          "id": "t-0-3-0",
+          "label": "4 bamboo, column 1, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-0-0",
+          "label": "6 characters, column 2, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-1-1-0",
+          "label": "4 circles, column 2, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-1-2-0",
+          "label": "east wind, column 2, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-1-3-0",
+          "label": "6 characters, column 2, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-0-0",
+          "label": "4 bamboo, column 3, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-0",
+          "label": "4 bamboo, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-2-0",
+          "label": "north wind, column 3, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-2-3-0",
+          "label": "4 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-0-0",
+          "label": "4 circles, column 4, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-0",
+          "label": "6 characters, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-2-0",
+          "label": "east wind, column 4, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-3-3-0",
+          "label": "east wind, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-0-0",
+          "label": "north wind, column 5, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-0",
+          "label": "6 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-2-0",
+          "label": "white dragon, column 5, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-4-3-0",
+          "label": "4 circles, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-5-0-0",
+          "label": "east wind, column 6, row 1, layer 1, open"
+        },
+        {
+          "id": "t-5-1-0",
+          "label": "north wind, column 6, row 2, layer 1, open"
+        },
+        {
+          "id": "t-5-2-0",
+          "label": "white dragon, column 6, row 3, layer 1, open"
+        },
+        {
+          "id": "t-5-3-0",
+          "label": "4 circles, column 6, row 4, layer 1, open"
+        }
+      ],
+      "status": "A new version is available. Your current game is still open."
+    },
+    "later": {
+      "scope": "http://127.0.0.1:4178/__mg-pwa-fixture/",
+      "active": "activated",
+      "waiting": "installed",
+      "activeVersion": "mg-11111111111111",
+      "waitingVersion": "mg-22222222222222",
+      "frameVersion": "mg-11111111111111",
+      "count": 24,
+      "tiles": [
+        {
+          "id": "t-0-0-0",
+          "label": "north wind, column 1, row 1, layer 1, open"
+        },
+        {
+          "id": "t-0-1-0",
+          "label": "white dragon, column 1, row 2, layer 1, open"
+        },
+        {
+          "id": "t-0-2-0",
+          "label": "white dragon, column 1, row 3, layer 1, open"
+        },
+        {
+          "id": "t-0-3-0",
+          "label": "4 bamboo, column 1, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-0-0",
+          "label": "6 characters, column 2, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-1-1-0",
+          "label": "4 circles, column 2, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-1-2-0",
+          "label": "east wind, column 2, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-1-3-0",
+          "label": "6 characters, column 2, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-0-0",
+          "label": "4 bamboo, column 3, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-0",
+          "label": "4 bamboo, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-2-0",
+          "label": "north wind, column 3, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-2-3-0",
+          "label": "4 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-0-0",
+          "label": "4 circles, column 4, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-0",
+          "label": "6 characters, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-2-0",
+          "label": "east wind, column 4, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-3-3-0",
+          "label": "east wind, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-0-0",
+          "label": "north wind, column 5, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-0",
+          "label": "6 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-2-0",
+          "label": "white dragon, column 5, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-4-3-0",
+          "label": "4 circles, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-5-0-0",
+          "label": "east wind, column 6, row 1, layer 1, open"
+        },
+        {
+          "id": "t-5-1-0",
+          "label": "north wind, column 6, row 2, layer 1, open"
+        },
+        {
+          "id": "t-5-2-0",
+          "label": "white dragon, column 6, row 3, layer 1, open"
+        },
+        {
+          "id": "t-5-3-0",
+          "label": "4 circles, column 6, row 4, layer 1, open"
+        }
+      ],
+      "status": "A new version is available. Your current game is still open."
+    },
+    "saveFailure": {
+      "scope": "http://127.0.0.1:4178/__mg-pwa-fixture/",
+      "active": "activated",
+      "waiting": "installed",
+      "activeVersion": "mg-11111111111111",
+      "waitingVersion": "mg-22222222222222",
+      "frameVersion": "mg-11111111111111",
+      "count": 24,
+      "tiles": [
+        {
+          "id": "t-0-0-0",
+          "label": "north wind, column 1, row 1, layer 1, open"
+        },
+        {
+          "id": "t-0-1-0",
+          "label": "white dragon, column 1, row 2, layer 1, open"
+        },
+        {
+          "id": "t-0-2-0",
+          "label": "white dragon, column 1, row 3, layer 1, open"
+        },
+        {
+          "id": "t-0-3-0",
+          "label": "4 bamboo, column 1, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-0-0",
+          "label": "6 characters, column 2, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-1-1-0",
+          "label": "4 circles, column 2, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-1-2-0",
+          "label": "east wind, column 2, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-1-3-0",
+          "label": "6 characters, column 2, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-0-0",
+          "label": "4 bamboo, column 3, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-0",
+          "label": "4 bamboo, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-2-0",
+          "label": "north wind, column 3, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-2-3-0",
+          "label": "4 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-0-0",
+          "label": "4 circles, column 4, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-0",
+          "label": "6 characters, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-2-0",
+          "label": "east wind, column 4, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-3-3-0",
+          "label": "east wind, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-0-0",
+          "label": "north wind, column 5, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-0",
+          "label": "6 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-2-0",
+          "label": "white dragon, column 5, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-4-3-0",
+          "label": "4 circles, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-5-0-0",
+          "label": "east wind, column 6, row 1, layer 1, open"
+        },
+        {
+          "id": "t-5-1-0",
+          "label": "north wind, column 6, row 2, layer 1, open"
+        },
+        {
+          "id": "t-5-2-0",
+          "label": "white dragon, column 6, row 3, layer 1, open"
+        },
+        {
+          "id": "t-5-3-0",
+          "label": "4 circles, column 6, row 4, layer 1, open"
+        }
+      ],
+      "status": "Your game could not be saved. Use Retry save or Export backup before updating. The game has not reloaded."
+    },
+    "after": {
+      "scope": "http://127.0.0.1:4178/__mg-pwa-fixture/",
+      "active": "activated",
+      "activeVersion": "mg-22222222222222",
+      "waitingVersion": null,
+      "frameVersion": "mg-22222222222222",
+      "count": 24,
+      "tiles": [
+        {
+          "id": "t-0-0-0",
+          "label": "north wind, column 1, row 1, layer 1, open"
+        },
+        {
+          "id": "t-0-1-0",
+          "label": "white dragon, column 1, row 2, layer 1, open"
+        },
+        {
+          "id": "t-0-2-0",
+          "label": "white dragon, column 1, row 3, layer 1, open"
+        },
+        {
+          "id": "t-0-3-0",
+          "label": "4 bamboo, column 1, row 4, layer 1, open"
+        },
+        {
+          "id": "t-1-0-0",
+          "label": "6 characters, column 2, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-1-1-0",
+          "label": "4 circles, column 2, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-1-2-0",
+          "label": "east wind, column 2, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-1-3-0",
+          "label": "6 characters, column 2, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-2-0-0",
+          "label": "4 bamboo, column 3, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-2-1-0",
+          "label": "4 bamboo, column 3, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-2-2-0",
+          "label": "north wind, column 3, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-2-3-0",
+          "label": "4 bamboo, column 3, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-3-0-0",
+          "label": "4 circles, column 4, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-3-1-0",
+          "label": "6 characters, column 4, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-3-2-0",
+          "label": "east wind, column 4, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-3-3-0",
+          "label": "east wind, column 4, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-4-0-0",
+          "label": "north wind, column 5, row 1, layer 1, blocked"
+        },
+        {
+          "id": "t-4-1-0",
+          "label": "6 characters, column 5, row 2, layer 1, blocked"
+        },
+        {
+          "id": "t-4-2-0",
+          "label": "white dragon, column 5, row 3, layer 1, blocked"
+        },
+        {
+          "id": "t-4-3-0",
+          "label": "4 circles, column 5, row 4, layer 1, blocked"
+        },
+        {
+          "id": "t-5-0-0",
+          "label": "east wind, column 6, row 1, layer 1, open"
+        },
+        {
+          "id": "t-5-1-0",
+          "label": "north wind, column 6, row 2, layer 1, open"
+        },
+        {
+          "id": "t-5-2-0",
+          "label": "white dragon, column 6, row 3, layer 1, open"
+        },
+        {
+          "id": "t-5-3-0",
+          "label": "4 circles, column 6, row 4, layer 1, open"
+        }
+      ],
+      "status": "You have the newest version."
+    }
+  }
+}

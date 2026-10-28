@@ -1,3 +1,4 @@
+import {checkHomeParallax} from './parallax-browser.mjs';
 import {openStore,readProfile} from '../storage.mjs';
 const frame=document.querySelector('#app'),out=document.querySelector('#results');
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -12,7 +13,7 @@ document.querySelector('#presentation').onclick=async()=>{
   for(const dialog of [...doc().querySelectorAll('dialog[open]')].reverse()){if(dialog.id==='studio-dialog')await click('#studio-close');else if(dialog.querySelector('[data-close]'))await click('#'+dialog.id+' [data-close]');}
   frame.width=1280;frame.height=720;
   if(!doc().querySelector('#title-screen').hidden)await click('#continue-game');
-  const before=await state();await click('#nav-play');
+  const parallax=await checkHomeParallax(frame,{click,wait,assert});outcomes['PRESENT-PARALLAX']='passed';const before=await state();await click('#nav-play');
   assert(!doc().querySelector('#title-screen').hidden&&doc().querySelector('#play-screen').hidden,'Title/play states not exclusive');
   assert(doc().activeElement.id==='continue-game','Title focus missing');
   await wait(1250);const clock1=doc().querySelector('#clock').textContent;await wait(1250);const clock2=doc().querySelector('#clock').textContent;
@@ -28,7 +29,7 @@ document.querySelector('#presentation').onclick=async()=>{
   const layouts=[];for(const [width,height]of [[320,568],[390,844],[568,320],[844,390],[1280,720],[1440,900]]){frame.width=width;frame.height=height;await wait(150);assert(doc().documentElement.scrollWidth<=width+1,'Play overflow '+width);const targets=[...doc().querySelectorAll('.app-header button,.game-actions button')].filter(e=>e.getClientRects().length).map(e=>e.getBoundingClientRect());assert(targets.every(r=>r.width>=43.5&&r.height>=43.5),'Control too small '+width);const tiles=[...doc().querySelectorAll('#board .tile')].map(e=>e.getBoundingClientRect());assert(tiles.every(r=>r.width>=28&&r.height>=28),'Tile too small '+width);await click('#nav-play');assert(doc().documentElement.scrollWidth<=width+1,'Title overflow '+width);assert(doc().querySelector('#continue-game').getBoundingClientRect().right<=width+1,'Continue clipped');await click('#continue-game');layouts.push({width,height,targets:targets.length,tiles:tiles.length});}outcomes['PRESENT-LAYOUT']='passed';
   frame.width=1280;frame.height=720;await click('#nav-play');await click('[data-open="help-dialog"]');assert(doc().querySelector('#help-dialog').open,'Help not reachable from title');await click('#help-dialog [data-close]');await click('#continue-game');await click('.journey-button');assert(doc().querySelectorAll('.level-card').length===60,'Level library incomplete');await click('#levels-dialog [data-close]');outcomes['PRESENT-MENUS']='passed';
   const saved=await state();win().location.reload();await wait(1000);assert(!doc().querySelector('#title-screen').hidden,'Reload bypassed title');await click('#continue-game');const restored=await state();assert(JSON.stringify(saved.run.tiles)===JSON.stringify(restored.run.tiles),'Reload changed tiles');assert(JSON.stringify(saved.studio)===JSON.stringify(restored.studio),'Reload changed studio');assert(restored.version===1,'Save format changed');outcomes['PRESENT-RECOVERY']='passed';
-  result.status='passed';result.observations={outcomes,scenes,collections,layouts,clockSamples:[clock1,clock2],threeD:{planes,perspective:computed(doc().querySelector('#board-scroll')).perspective}};
+  result.status='passed';result.observations={outcomes,parallax,scenes,collections,layouts,clockSamples:[clock1,clock2],threeD:{planes,perspective:computed(doc().querySelector('#board-scroll')).perspective}};
  }catch(error){result.status='failed';result.error=error.message;result.observations={outcomes};}
  const results=JSON.parse(out.textContent||'[]');results.push(result);out.textContent=JSON.stringify(results,null,2);
 };

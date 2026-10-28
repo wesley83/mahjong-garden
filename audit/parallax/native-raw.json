@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-28T14:28:03.018Z",
+  "candidate": "mg-1d22d751f41726",
+  "checks": {
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "audioUnlocked": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true
+  },
+  "observations": {
+    "left": [
+      {
+        "depth": "0.2",
+        "transform": "translate(2.75px, 0.893px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(7.561px, 2.455px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(13.748px, 4.463px)"
+      }
+    ],
+    "right": [
+      {
+        "depth": "0.2",
+        "transform": "translate(-2.322px, 0.932px)"
+      },
+      {
+        "depth": "0.55",
+        "transform": "translate(-6.384px, 2.563px)"
+      },
+      {
+        "depth": "1",
+        "transform": "translate(-11.608px, 4.661px)"
+      }
+    ],
+    "titleFixed": true,
+    "modalStatic": true,
+    "mixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "audio": "Audio ready.",
+    "reducedStatic": true,
+    "editor": {
+      "count": "31 tiles · add one for an even pair count",
+      "focus": "Column 1, row 1, layer 1, empty"
+    },
+    "playStatic": true,
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
+    "nameReturn": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    },
+    "win": "6000 points · 12 pairs · 00:11 · 12 hints · 0 reshuffles"
+  }
+}
