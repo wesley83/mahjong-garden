@@ -1,7 +1,7 @@
 {
-  "utc": "2026-10-18T02:26:00.289Z",
-  "candidate": "mg-d496d772a6bc11",
-  "sourceDigest": "d496d772a6bc1175853636a5be520df5f983f161fe1abf25b691d3c3b519cde1",
+  "utc": "2026-10-28T13:05:59.447Z",
+  "candidate": "mg-9bb7f2ca5b1202",
+  "sourceDigest": "9bb7f2ca5b1202b1f6844d62656e0e82fcd2fc2f184c24afd2d8179a786a7992",
   "node": "24.19.0",
   "command": [
     "node",
@@ -13,9 +13,10 @@
     "tests/leaderboard.test.mjs",
     "tests/release.test.mjs",
     "tests/scoring-pwa.test.mjs",
+    "tests/simple-sheet.test.mjs",
     "tests/touch.test.mjs"
   ],
-  "tests": 40,
+  "tests": 42,
   "exitCode": 0,
-  "outputSha256": "da07070ac7435dc44f5dfc3064b1b40a37eed80d95fb7626954b7bf19e7e767c"
+  "outputSha256": "0b309e60c2724b634a4a2173d9987fc220dc6113dcf178d1ba04fa2380357b02"
 }

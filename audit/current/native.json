@@ -1,12 +1,12 @@
 {
-  "utc": "2026-10-18T02:29:34.206Z",
-  "candidate": "mg-d496d772a6bc11",
+  "utc": "2026-10-28T13:08:07.95Z",
+  "candidate": "mg-9bb7f2ca5b1202",
   "checks": {
     "leaderboardName": true,
     "leaderboardFocus": true,
-    "audioUnlocked": true,
     "audioVolumeKeys": true,
     "audioPreferences": true,
+    "audioUnlocked": true,
     "celebrationPreview": true,
     "modalReturn": true,
     "textFocus": true,
@@ -15,18 +15,28 @@
     "keyboardClear": true
   },
   "observations": {
-    "restoredWin": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles",
-    "balancedResult": "Your clear: level 1, 6000 points · 2 stars · 16s (time does not affect rank).",
-    "volumeKeys": {
-      "music": "36",
-      "sound": "64"
-    },
-    "savedMixer": {
+    "audioBeforeReload": {
       "music": false,
       "musicVolume": "36",
       "sound": false,
       "soundVolume": "64"
     },
+    "audioAfterReload": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "settingsReturn": "<button class=\"icon-button\" data-open=\"settings-dialog\" aria-label=\"Settings\"><svg><use href=\"#i-settings\"></use></svg></button>",
+    "editorTextFocus": {
+      "focus": "layout-name",
+      "value": "My little gardenhhhhhhhhh"
+    },
+    "editorToggle": {
+      "count": "31 tiles · add one for an even pair count",
+      "focus": "Column 1, row 1, layer 1, empty"
+    },
+    "mismatch": 24,
     "keyboardCounts": [
       24,
       22,
@@ -42,12 +52,16 @@
       2,
       0
     ],
-    "repeatedHintMessage": "This pair is already highlighted. No extra hint cost.",
-    "win": "6000 points · 12 pairs · 00:16 · 12 hints · 0 reshuffles"
+    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
+    "scoreReturn": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    },
+    "win": "6000 points · 12 pairs · 00:33 · 12 hints · 0 reshuffles"
   },
-  "sourceDigest": "d496d772a6bc1175853636a5be520df5f983f161fe1abf25b691d3c3b519cde1",
+  "sourceDigest": "9bb7f2ca5b1202b1f6844d62656e0e82fcd2fc2f184c24afd2d8179a786a7992",
   "rawEvidence": {
-    "path": "audit/scoring/native-raw.json",
-    "sha256": "a4f476d85eb1abb727952500a7914196c63aa77b16469dc0e9f1a37506206ac1"
+    "path": "audit/simplify/native-raw.json",
+    "sha256": "9c1347eda4f29c2d36a34d04b0ec7915333ec9dbd5859fb7e335a105ce7930c5"
   }
 }

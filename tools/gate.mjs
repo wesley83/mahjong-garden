@@ -8,6 +8,7 @@ REQUIRED_BROWSER.push('CSS 3D presentation and game screen lifecycle','rapid tap
 export const AUDIO_OUTCOMES=['AUDIO-DEFAULTS','AUDIO-CONTROLS','AUDIO-MUSIC','AUDIO-CELEBRATE','AUDIO-SIGNAL','AUDIO-RECOVERY'];
 REQUIRED_BROWSER.push('named shared leaderboard and submission recovery','balanced scoring and safe PWA update notification');
 export const SCORE_PWA_OUTCOMES=['SCORE-MATH','SCORE-UI','SCORE-COMPAT','PWA-DISCOVERY','PWA-SAFE'];
+export const SIMPLE_OUTCOMES=['SIMPLE-VIEW','SIMPLE-WIN','SIMPLE-RANK','SIMPLE-RECOVERY','SIMPLE-ACCESS'];
 export const BOARD_OUTCOMES=['BOARD-NAMES','BOARD-RANK','BOARD-OWNERSHIP','BOARD-SUBMIT'];
 export const TOUCH_OUTCOMES=['TOUCH-RAPID','TOUCH-MULTI','TOUCH-CANCEL','TOUCH-HIT'];
 export async function requiredNodeTests(root=rootDefault){const names=[];for(const file of (await fs.readdir(path.join(root,'tests'))).filter(f=>f.endsWith('.test.mjs')).sort()){const text=await fs.readFile(path.join(root,'tests',file),'utf8');names.push(...[...text.matchAll(/^test\('([^']+)'/gm)].map(m=>m[1]));}if(!names.length||new Set(names).size!==names.length)throw Error('Invalid Node scenario inventory');return names;}
@@ -34,6 +35,7 @@ export async function verifyGate({root=rootDefault,output=path.join(root,'dist')
  const audio=browser.results.find(r=>r.name==='music mixer celebration and audio lifecycle');
  if(AUDIO_OUTCOMES.some(id=>audio?.observations?.outcomes?.[id]!=='passed'))throw Error('Required audio outcome is missing');
  const board=browser.results.find(r=>r.name==='named shared leaderboard and submission recovery');if(BOARD_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required leaderboard outcome is missing');
+ if(SIMPLE_OUTCOMES.some(id=>board?.observations?.outcomes?.[id]!=='passed'))throw Error('Required simple score sheet outcome is missing');
  const scoring=browser.results.find(r=>r.name==='balanced scoring and safe PWA update notification');if(SCORE_PWA_OUTCOMES.some(id=>scoring?.observations?.outcomes?.[id]!=='passed'))throw Error('Required scoring or PWA outcome is missing');
  const pwa=JSON.parse(await fs.readFile(path.join(receiptDirectory,'pwa.json'),'utf8'));if(pwa.candidate!==release.id||!pwa.nativeWorkerUpdate||!pwa.nativeNotice||!pwa.saveFailureRefused||!pwa.checkpointPreserved)throw Error('Real PWA lifecycle evidence is missing');
  const server=JSON.parse(await fs.readFile(path.join(receiptDirectory,'leaderboard-server.json'),'utf8'));if(server.policySha256!==hash(scoreDocument())||!server.production?.passed||!server.syntheticRemoved||!server.fixtureRemoved||!server.backup?.verified)throw Error('Actual leaderboard server evidence is missing');

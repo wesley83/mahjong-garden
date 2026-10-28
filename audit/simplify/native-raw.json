@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-28T13:08:07.950Z",
+  "candidate": "mg-9bb7f2ca5b1202",
+  "checks": {
+    "leaderboardName": true,
+    "leaderboardFocus": true,
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "audioUnlocked": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "audioBeforeReload": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "audioAfterReload": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "settingsReturn": "<button class=\"icon-button\" data-open=\"settings-dialog\" aria-label=\"Settings\"><svg><use href=\"#i-settings\"></use></svg></button>",
+    "editorTextFocus": {
+      "focus": "layout-name",
+      "value": "My little gardenhhhhhhhhh"
+    },
+    "editorToggle": {
+      "count": "31 tiles · add one for an even pair count",
+      "focus": "Column 1, row 1, layer 1, empty"
+    },
+    "mismatch": 24,
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
+    "scoreReturn": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    },
+    "win": "6000 points · 12 pairs · 00:33 · 12 hints · 0 reshuffles"
+  }
+}
