@@ -1,8 +1,8 @@
 {
-  "utc": "2026-10-28T13:09:00.232Z",
-  "candidate": "mg-9bb7f2ca5b1202",
-  "environment": "Real desktop Chromium service worker on disposable localhost4175. Exact candidate modules; controlled A/B worker labels and release metadata. Physical installed Pixel/Edge not exercised.",
-  "codeGraph": "/preview/releases/mg-9bb7f2ca5b1202/boot.mjs",
+  "utc": "2026-10-28T13:44:28.397Z",
+  "candidate": "mg-ff019a9b6515b9",
+  "environment": "Real desktop Chromium native worker on isolated localhost4175, exact candidate modules and controlled A/B metadata. Not physical installed phone or OS push.",
+  "codeGraph": "/preview/releases/mg-ff019a9b6515b9/boot.mjs",
   "nativeWorkerUpdate": true,
   "nativeNotice": true,
   "saveFailureRefused": true,
@@ -548,5 +548,5 @@
       "status": "You have the newest version."
     }
   },
-  "sourceDigest": "9bb7f2ca5b1202b1f6844d62656e0e82fcd2fc2f184c24afd2d8179a786a7992"
+  "sourceDigest": "ff019a9b6515b987f5c72cc56767dbc958a315e65e21febb718873a0f23b84d4"
 }

@@ -1,0 +1,15 @@
+[
+  {
+    "utc": "2026-10-28T13:33:27.661Z",
+    "candidate": "mg-1bcf9c23de7d57",
+    "name": "automatic named scores and durable multi-level outbox",
+    "status": "failed",
+    "error": "Refused background control #board [data-tile=\"t-1-5-0\"]",
+    "observations": {
+      "outcomes": {
+        "AUTO-CLEAR": "passed",
+        "AUTO-QUEUE": "passed"
+      }
+    }
+  }
+]

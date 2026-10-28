@@ -32,9 +32,18 @@ export async function resultFor(run,levels,crypto=globalThis.crypto){
  const identity=JSON.stringify([SCORE_RULES,run.rules,run.levelRevision,run.levelId,run.seed,[...run.original].sort((a,b)=>a.id.localeCompare(b.id))]);const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(identity));
  return{runKey:[...new Uint8Array(bytes)].map(n=>n.toString(16).padStart(2,'0')).join(''),level:level.number,stars:stars(run),seconds:Math.max(1,Math.floor(run.elapsed)),score:balancedScore({pairs:run.original.length/2,hints:run.hints,shuffles:run.shuffles}),pairs:run.original.length/2,hints:run.hints,shuffles:run.shuffles,rules:SCORE_RULES};
 }
-export const emptyLocal=()=>({version:1,revision:0,name:'',pending:null,accepted:[]});
+export const emptyLocal=()=>({version:2,revision:0,name:'',pending:null,queue:[],accepted:[]});
 export function validateLocal(value){
- if(!value||value.version!==1||Object.keys(value).sort().join()!=='accepted,name,pending,revision,version'||!Number.isSafeInteger(value.revision)||value.revision<0||typeof value.name!=='string'||value.name&&playerName(value.name)!==value.name||!Array.isArray(value.accepted)||value.accepted.length>100||value.accepted.some(k=>typeof k!=='string'||!/^[a-f0-9]{64}$/.test(k)))throw Error('Saved leaderboard details are unsupported. They were kept intact.');if(value.pending!==null)validateScore(value.pending);return structuredClone(value);
+ const old=value?.version===1,shape=old?'accepted,name,pending,revision,version':'accepted,name,pending,queue,revision,version';
+ if(!value||![1,2].includes(value.version)||Object.keys(value).sort().join()!==shape||!Number.isSafeInteger(value.revision)||value.revision<0||typeof value.name!=='string'||value.name&&playerName(value.name)!==value.name||!Array.isArray(value.accepted)||value.accepted.length>100||value.accepted.some(k=>typeof k!=='string'||!/^[a-f0-9]{64}$/.test(k)))throw Error('Saved leaderboard details are unsupported. They were kept intact.');
+ const next=structuredClone({...value,version:2,queue:old?[]:value.queue});if(!Array.isArray(next.queue)||next.queue.length>120||!next.pending&&next.queue.length)throw Error('Saved score queue is unsupported. It was kept intact.');if(next.pending!==null)validateScore(next.pending);for(const row of next.queue)validateScore(row);const ids=new Set();for(const row of [next.pending,...next.queue].filter(Boolean)){if(ids.has(row.runKey)||next.accepted.includes(row.runKey))throw Error('Duplicate saved score identity.');ids.add(row.runKey);}return next;
+}
+export function enqueueScore(local,row){
+ validateLocal(local);validateScore(row);if(local.accepted.includes(row.runKey)||[local.pending,...local.queue].some(r=>r?.runKey===row.runKey))return local;
+ if(!local.pending)return{...local,pending:structuredClone(row)};if(local.queue.length>=120)throw Error('Saved score queue is full. Open the leaderboard and retry before saving more results.');return{...local,queue:[...local.queue,structuredClone(row)]};
+}
+export function acknowledgeScore(local,row){
+ validateLocal(local);if(!local.pending||!sameScore(local.pending,row))throw Error('Saved score changed in another tab. Reopen the leaderboard to retry.');return{...local,pending:local.queue[0]??null,queue:local.queue.slice(1),accepted:[row.runKey,...local.accepted.filter(id=>id!==row.runKey)].slice(0,100)};
 }
 export function writeLocal(db,value,revision,{milliseconds=5000}={}){
  validateLocal(value);return new Promise((resolve,reject)=>{const tx=db.transaction('profiles','readwrite'),store=tx.objectStore('profiles'),request=store.get('leaderboard');let error,done=false;const finish=e=>{if(done)return;done=true;clearTimeout(timer);e?reject(e):resolve({...value,revision:revision+1});};const timer=setTimeout(()=>{error=Error('Saving leaderboard details timed out.');try{tx.abort();}catch{}finish(error);},milliseconds);
@@ -54,20 +63,20 @@ export async function sendScore(row,{fetcher=globalThis.fetch,document=globalThi
  throw failure||Error('Submission is not confirmed yet. Your result is kept for Retry.');
 }
 export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=globalThis.document}){
- const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog');let local=emptyLocal(),db,localOK=false,writeBusy=false,sendBusy=false,generation=0,readAbort=null,currentResult=null,preparedRun=null,currentLevel=1,cache=new Map(),loadGeneration=0;
+ const $=id=>document.getElementById(id),dialog=$('leaderboard-dialog');let local=emptyLocal(),db,localOK=false,writeBusy=0,writeTail=Promise.resolve(),sendBusy=false,generation=0,readAbort=null,currentResult=null,preparedRun=null,currentLevel=1,cache=new Map(),loadGeneration=0,scoreError='';
  const legacy=()=>$('leaderboard-edition').value==='legacy';
  const status=text=>{$('leaderboard-status').textContent=text;};
  const submission=text=>{$('leaderboard-submit-status').textContent=text;$('leaderboard-pending-status').textContent=text;};
  $('leaderboard-level').replaceChildren(...levels.map(level=>{const el=document.createElement('option');el.value=String(level.number);el.textContent=`${String(level.number).padStart(2,'0')} · ${level.name}`;return el;}));
  function controls(){
-  const pending=local.pending,eligible=!!currentResult&&getRun()===preparedRun,accepted=eligible&&local.accepted.includes(currentResult.runKey);
-  $('leaderboard-entry').hidden=!eligible||!!pending||!!accepted;
-  $('leaderboard-submit').disabled=writeBusy||sendBusy||!localOK||!eligible||!!pending||!!accepted;
-  $('leaderboard-name').disabled=writeBusy||sendBusy||!localOK||!!pending||!!accepted;
+  const pending=local.pending,eligible=!!currentResult&&getRun()===preparedRun,accepted=eligible&&local.accepted.includes(currentResult.runKey),queued=eligible&&[pending,...local.queue].some(r=>r?.runKey===currentResult.runKey);
+  $('leaderboard-entry').hidden=!eligible||!!queued||!!accepted;
+  $('leaderboard-submit').disabled=!!writeBusy||!localOK||!eligible||!!queued||!!accepted;
+  $('leaderboard-name').disabled=!!writeBusy||!localOK||!!queued||!!accepted;
   $('leaderboard-pending').hidden=!pending;
-  $('leaderboard-retry').disabled=writeBusy||sendBusy||!localOK;$('leaderboard-forget').disabled=writeBusy||sendBusy||!localOK;
-  $('leaderboard-pending-details').textContent=pending?`${pending.player} · Garden ${pending.level} · ${isLegacy(pending)?pending.stars+' stars':pending.score.toLocaleString('en-US')+' points'}`:'';
-  const text=pending?'Your score is saved on this device. Open the leaderboard to send it.':accepted?'Score saved.':'';
+  $('leaderboard-retry').disabled=!!writeBusy||sendBusy||!localOK;$('leaderboard-forget').disabled=!!writeBusy||sendBusy||!localOK;
+  $('leaderboard-pending-details').textContent=pending?`${local.queue.length?local.queue.length+1+' saved scores · Next: ':''}${pending.player} · Garden ${pending.level} · ${isLegacy(pending)?pending.stars+' stars':pending.score.toLocaleString('en-US')+' points'}`:'';
+  const text=scoreError||(accepted?'Score saved.':queued?(sendBusy?'Saving score…':'Score saved on this device. Open the leaderboard to retry.'):eligible&&local.name?`Scores save automatically as ${local.name}.`:'');
   $('leaderboard-result').textContent=text;$('leaderboard-result').hidden=!text;
  }
  function render(rows){
@@ -84,18 +93,21 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
   catch(error){if(owner!==generation||!dialog.open)return;status((cache.has(scope)?'Showing older scores. ':'')+'Scores could not load. Try again.');$('leaderboard-refresh').hidden=false;}
   finally{clearTimeout(timer);if(owner===generation)dialog.setAttribute('aria-busy','false');}
  }
- async function save(next){if(writeBusy)throw Error('Your score is still saving.');writeBusy=true;controls();try{if(!db)db=await openStore();local=await writeLocal(db,next,local.revision);}finally{writeBusy=false;controls();}}
- async function send(){
-  if(sendBusy||!local.pending||!localOK)return;sendBusy=true;controls();const row=structuredClone(local.pending),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);submission('Sending score…');
-  try{await sendScore(row,{document,signal:controller.signal});if(!local.pending||!sameScore(local.pending,row))return;await save({...local,pending:null,accepted:[row.runKey,...local.accepted.filter(k=>k!==row.runKey)].slice(0,100)});submission('Score saved.');if(dialog.open)void refresh();}
-  catch(error){submission('Your score is saved here for Retry. '+(error.name==='AbortError'?'The request timed out.':error.message));}
-  finally{clearTimeout(timer);sendBusy=false;controls();if($('win-dialog').open&&getRun()!==preparedRun)void prepare();}
+ function change(transform){
+  writeBusy++;controls();const task=writeTail.catch(()=>{}).then(async()=>{if(!db)db=await openStore();const saved=await readProfile(db,{key:'leaderboard'}),latest=saved===null?emptyLocal():validateLocal(saved),next=transform(latest);local=next===latest?latest:await writeLocal(db,next,latest.revision);localOK=true;return local;}).catch(error=>{localOK=false;throw error;}).finally(()=>{writeBusy--;controls();});writeTail=task;return task;
  }
- async function prepare(){
-  const owner=++loadGeneration,run=getRun(),draft=run===preparedRun?$('leaderboard-name').value:null;currentResult=null;preparedRun=null;if(sendBusy){controls();return;}localOK=false;controls();
-  try{if(!db)db=await openStore();const saved=await readProfile(db,{key:'leaderboard'});if(owner!==loadGeneration||getRun()!==run)return;local=saved===null?emptyLocal():validateLocal(saved);localOK=true;
-   const result=run?.complete&&!run.custom?await resultFor(structuredClone(run),levels):null;if(owner!==loadGeneration||getRun()!==run)return;currentResult=result;preparedRun=run;$('leaderboard-name').value=local.pending?.player??draft??local.name;submission('');controls();}
-  catch(error){if(owner===loadGeneration){submission(error.message+' You can keep playing.');$('leaderboard-result').hidden=false;$('leaderboard-result').textContent='Your score could not be prepared. Open the leaderboard to retry.';}}
+ async function send(){
+  if(sendBusy||!local.pending||!localOK)return;sendBusy=true;scoreError='';controls();
+  try{await change(v=>v);while(local.pending){const row=structuredClone(local.pending),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);submission('Sending saved scores…');try{await sendScore(row,{document,signal:controller.signal});await change(latest=>acknowledgeScore(latest,row));}finally{clearTimeout(timer);}if(dialog.open)void refresh();}submission('Score saved.');}
+  catch(error){scoreError='Your saved scores are kept here for Retry. '+(error.name==='AbortError'?'The request timed out.':error.message);submission(scoreError);}
+  finally{sendBusy=false;controls();}
+ }
+ async function prepare(automatic=false,run=getRun()){
+  const current=getRun()===run,owner=current?++loadGeneration:loadGeneration,frozen=run?structuredClone(run):null,draft=current&&run===preparedRun?$('leaderboard-name').value:null;if(current){currentResult=null;preparedRun=null;scoreError='';controls();}
+  try{await change(v=>v);const result=frozen?.complete&&!frozen.custom?await resultFor(frozen,levels):null;
+   if(automatic&&result)await change(latest=>latest.name?enqueueScore(latest,validateScore({...result,player:latest.name})):latest);
+   if(current&&owner===loadGeneration&&getRun()===run){currentResult=result;preparedRun=run;$('leaderboard-name').value=draft??local.name;submission('');controls();}if(automatic&&local.pending)void send();}
+  catch(error){if(current&&owner===loadGeneration&&getRun()===run){scoreError='Your score could not be saved. '+error.message+' Open the leaderboard to retry.';submission(scoreError);controls();}}
  }
  async function open(){
   $('leaderboard-options').open=false;$('leaderboard-level').value=String(levels.find(l=>l.id===getRun()?.levelId)?.number||1);$('leaderboard-edition').value='balanced';
@@ -103,12 +115,13 @@ export function mountLeaderboard({levels,getRun,showBoard=()=>{},document=global
  }
  $('leaderboard-level').onchange=()=>void refresh();$('leaderboard-edition').onchange=()=>void refresh();$('leaderboard-refresh').onclick=()=>void refresh();$('leaderboard-reload').onclick=()=>void refresh();
  $('leaderboard-submit').onclick=async()=>{
-  if(writeBusy||sendBusy||!currentResult||getRun()!==preparedRun||local.pending||!localOK)return;
-  try{const name=playerName($('leaderboard-name').value);$('leaderboard-name').value=name;const pending=validateScore({...currentResult,player:name}),owner=preparedRun;await save({...local,name,pending});
+  if(writeBusy||!currentResult||getRun()!==preparedRun||!localOK)return;
+  try{const name=playerName($('leaderboard-name').value);$('leaderboard-name').value=name;const pending=validateScore({...currentResult,player:name}),owner=preparedRun;await change(latest=>enqueueScore({...latest,name},pending));
    if(getRun()===owner&&$('win-dialog').open){showBoard();$('leaderboard-options').open=false;$('leaderboard-level').value=String(pending.level);$('leaderboard-edition').value='balanced';void refresh();}await send();}
   catch(error){submission(error.message);if(!$('leaderboard-entry').hidden)$('leaderboard-name').focus();}
  };
- $('leaderboard-retry').onclick=()=>void send();$('leaderboard-forget').onclick=async()=>{if(writeBusy||sendBusy)return;try{await save({...local,pending:null});submission('Local retry removed. An earlier request may already be public.');controls();}catch(error){submission(error.message);}};
+ $('leaderboard-retry').onclick=async()=>{try{await change(v=>v);await send();}catch(error){submission(error.message);}};$('leaderboard-forget').onclick=async()=>{if(writeBusy||sendBusy)return;try{await change(latest=>({...latest,pending:latest.queue[0]??null,queue:latest.queue.slice(1)}));scoreError='';submission('Local retry removed. An earlier request may already be public.');controls();}catch(error){submission(error.message);}};
  dialog.addEventListener('close',()=>{generation++;readAbort?.abort();dialog.setAttribute('aria-busy','false');});
- return{open:()=>void open(),prepareResult:()=>void prepare()};
+ document.defaultView?.addEventListener('online',()=>{void change(v=>v).then(send).catch(error=>submission(error.message));});
+ return{open:()=>void open(),prepareResult:run=>void prepare(true,run)};
 }

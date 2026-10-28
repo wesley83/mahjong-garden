@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-28T13:39:33.214Z",
+  "candidate": "mg-555907bc517220",
+  "checks": {
+    "leaderboardName": true,
+    "leaderboardFocus": true,
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "audioUnlocked": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true
+  },
+  "observations": {
+    "nameReturn": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    },
+    "mixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "audio": "Audio ready.",
+    "editor": {
+      "count": "31 tiles · add one for an even pair count",
+      "focus": "Column 1, row 1, layer 1, empty"
+    },
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      8,
+      8,
+      8,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
+    "reshuffled": true,
+    "win": "4000 points · 12 pairs · 01:01 · 12 hints · 1 reshuffles",
+    "autoSecondCounts": [
+      30,
+      28,
+      26,
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "secondAuto": {
+      "boardOpen": false,
+      "nameFormHidden": true,
+      "status": "Your saved scores are kept here for Retry. Leaderboard unavailable (404). Try Refresh.",
+      "win": "6000 points · 15 pairs · 00:14 · 15 hints · 0 reshuffles",
+      "winOpen": true
+    },
+    "nativeQueue": "2 saved scores · Next: Garden Player · Garden 1 · 4,000 points"
+  }
+}

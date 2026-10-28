@@ -1,9 +1,7 @@
 {
-  "utc": "2026-10-28T13:08:07.95Z",
-  "candidate": "mg-9bb7f2ca5b1202",
+  "utc": "2026-10-28T13:43:23.834Z",
+  "candidate": "mg-ff019a9b6515b9",
   "checks": {
-    "leaderboardName": true,
-    "leaderboardFocus": true,
     "audioVolumeKeys": true,
     "audioPreferences": true,
     "audioUnlocked": true,
@@ -12,31 +10,22 @@
     "textFocus": true,
     "editorFocus": true,
     "mismatchRefused": true,
-    "keyboardClear": true
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true
   },
   "observations": {
-    "audioBeforeReload": {
+    "mixer": {
       "music": false,
       "musicVolume": "36",
       "sound": false,
       "soundVolume": "64"
     },
-    "audioAfterReload": {
-      "music": false,
-      "musicVolume": "36",
-      "sound": false,
-      "soundVolume": "64"
-    },
-    "settingsReturn": "<button class=\"icon-button\" data-open=\"settings-dialog\" aria-label=\"Settings\"><svg><use href=\"#i-settings\"></use></svg></button>",
-    "editorTextFocus": {
-      "focus": "layout-name",
-      "value": "My little gardenhhhhhhhhh"
-    },
-    "editorToggle": {
+    "audio": "Audio ready.",
+    "editor": {
       "count": "31 tiles · add one for an even pair count",
       "focus": "Column 1, row 1, layer 1, empty"
     },
-    "mismatch": 24,
     "keyboardCounts": [
       24,
       22,
@@ -53,15 +42,15 @@
       0
     ],
     "repeatedHint": "This pair is already highlighted. No extra hint cost.",
-    "scoreReturn": {
+    "win": "6000 points · 12 pairs · 00:31 · 12 hints · 0 reshuffles",
+    "nameReturn": {
       "focus": "View leaderboard",
       "name": "Garden Player"
-    },
-    "win": "6000 points · 12 pairs · 00:33 · 12 hints · 0 reshuffles"
+    }
   },
-  "sourceDigest": "9bb7f2ca5b1202b1f6844d62656e0e82fcd2fc2f184c24afd2d8179a786a7992",
+  "sourceDigest": "ff019a9b6515b987f5c72cc56767dbc958a315e65e21febb718873a0f23b84d4",
   "rawEvidence": {
-    "path": "audit/simplify/native-raw.json",
-    "sha256": "9c1347eda4f29c2d36a34d04b0ec7915333ec9dbd5859fb7e335a105ce7930c5"
+    "path": "audit/autosave/native-raw.json",
+    "sha256": "0da9e34aecb751d9689d757807417150afccda73fc7bc79f2ccef54911ea78bb"
   }
 }

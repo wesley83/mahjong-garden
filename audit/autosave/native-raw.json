@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-28T13:43:23.834Z",
+  "candidate": "mg-ff019a9b6515b9",
+  "checks": {
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "audioUnlocked": true,
+    "celebrationPreview": true,
+    "modalReturn": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "mismatchRefused": true,
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true
+  },
+  "observations": {
+    "mixer": {
+      "music": false,
+      "musicVolume": "36",
+      "sound": false,
+      "soundVolume": "64"
+    },
+    "audio": "Audio ready.",
+    "editor": {
+      "count": "31 tiles · add one for an even pair count",
+      "focus": "Column 1, row 1, layer 1, empty"
+    },
+    "keyboardCounts": [
+      24,
+      22,
+      20,
+      18,
+      16,
+      14,
+      12,
+      10,
+      8,
+      6,
+      4,
+      2,
+      0
+    ],
+    "repeatedHint": "This pair is already highlighted. No extra hint cost.",
+    "win": "6000 points · 12 pairs · 00:31 · 12 hints · 0 reshuffles",
+    "nameReturn": {
+      "focus": "View leaderboard",
+      "name": "Garden Player"
+    }
+  }
+}

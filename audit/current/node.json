@@ -1,13 +1,14 @@
 {
-  "utc": "2026-10-28T13:05:59.447Z",
-  "candidate": "mg-9bb7f2ca5b1202",
-  "sourceDigest": "9bb7f2ca5b1202b1f6844d62656e0e82fcd2fc2f184c24afd2d8179a786a7992",
+  "utc": "2026-10-28T13:41:40.183Z",
+  "candidate": "mg-ff019a9b6515b9",
+  "sourceDigest": "ff019a9b6515b987f5c72cc56767dbc958a315e65e21febb718873a0f23b84d4",
   "node": "24.19.0",
   "command": [
     "node",
     "--test",
     "--test-reporter=tap",
     "tests/audio.test.mjs",
+    "tests/autosave.test.mjs",
     "tests/contracts.test.mjs",
     "tests/core.test.mjs",
     "tests/leaderboard.test.mjs",
@@ -16,7 +17,7 @@
     "tests/simple-sheet.test.mjs",
     "tests/touch.test.mjs"
   ],
-  "tests": 42,
+  "tests": 45,
   "exitCode": 0,
-  "outputSha256": "0b309e60c2724b634a4a2173d9987fc220dc6113dcf178d1ba04fa2380357b02"
+  "outputSha256": "584ff17d7babd7e9b2e824422a121da00c375e31f65b2df03cae1e882a59f67b"
 }

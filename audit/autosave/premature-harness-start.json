@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-28T13:44:06.408Z",
+  "candidate": "mg-ff019a9b6515b9",
+  "results": [
+    {
+      "name": "layout",
+      "status": "failed",
+      "error": "Group exceeded 45 second budget"
+    }
+  ],
+  "errors": [
+    {
+      "level": "error",
+      "message": "TypeError: Cannot read properties of null (reading 'content')\n    at show (http://127.0.0.1:4173/tests/browser.mjs:5:243)\n    at test (http://127.0.0.1:4173/tests/browser.mjs:9:97)",
+      "timestamp": "2026-10-28T13:42:19.608Z",
+      "url": "http://127.0.0.1:4173/tests/browser.mjs"
+    }
+  ],
+  "cause": "Release button was invoked before the iframe entry metadata existed; rerun starts only after the current game has loaded."
+}
