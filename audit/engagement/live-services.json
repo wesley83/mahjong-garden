@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-28T23:34:56.054Z",
+  "candidate": "mg-0abe86a5419a54",
+  "checks": [
+    {
+      "path": "/mahjong-scores.html",
+      "previous": 1,
+      "current": 1,
+      "recordsPreserved": true
+    },
+    {
+      "path": "/mahjong-scores-v2.html",
+      "previous": 15,
+      "current": 15,
+      "recordsPreserved": true
+    },
+    {
+      "path": "/mahjong-challenges.html",
+      "previous": 0,
+      "current": 0,
+      "recordsPreserved": true
+    }
+  ]
+}

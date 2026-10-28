@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-28T23:35:33.206Z",
+  "candidate": "mg-0abe86a5419a54",
+  "notice": "A new version is available. Your current game is still open.",
+  "before": {
+    "version": "mg-fa72bef253399a",
+    "win": "10693 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "detail": "10,000 base + 693 time bonus",
+    "mixer": [
+      {
+        "checked": false,
+        "id": "music",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "music-volume",
+        "value": "35"
+      },
+      {
+        "checked": true,
+        "id": "sound",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "sound-volume",
+        "value": "65"
+      },
+      {
+        "checked": false,
+        "id": "large-tiles",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "reduce-motion",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "import-profile",
+        "value": ""
+      }
+    ]
+  },
+  "after": {
+    "version": "mg-0abe86a5419a54",
+    "win": "10693 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "detail": "10,000 base + 693 time bonus",
+    "mixer": [
+      {
+        "checked": false,
+        "id": "music",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "music-volume",
+        "value": "35"
+      },
+      {
+        "checked": true,
+        "id": "sound",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "sound-volume",
+        "value": "65"
+      },
+      {
+        "checked": false,
+        "id": "large-tiles",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "reduce-motion",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "import-profile",
+        "value": ""
+      }
+    ]
+  },
+  "journeyReturned": true,
+  "liveDaily": {
+    "title": "Emerald maze",
+    "remaining": "50",
+    "hud": "DAILY GARDEN · 2026-10-28 UTC"
+  },
+  "friendLink": "https://grab-lead-8328.onpagelove.com/?challenge=f1-8-1925529649-10",
+  "restorationAvailable": true,
+  "challengeBoard": {
+    "heading": null,
+    "scope": "Daily Garden · 2026-10-28",
+    "message": null
+  },
+  "clientErrors": [],
+  "method": "Existing production client received native worker notice and explicit save/update. Completed journey/mixer inspected before and after; daily start/return, link and restoration exercised without submitting test scores or spending player seeds."
+}

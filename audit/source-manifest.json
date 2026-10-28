@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T23:30:37.629Z",
+  "utc": "2026-10-28T23:36:12.724Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 78989,
-      "sha256": "94de949a4e8e3ee9e9b837248e73f899c62af57a198b273f29eeaef5e37a41a9"
+      "bytes": 79745,
+      "sha256": "9a77e7bc3c1c154f40c310c71f740efd2d8fdb3af1e46a07385a8339ab3e2f76"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -270,8 +270,8 @@
     },
     {
       "path": "audit/current/deployment.json",
-      "bytes": 5579,
-      "sha256": "4cc72d05802f1b4f3c8ac95c3b5e57f27f592e3dc575b86e19b8c2b9dc003cdc"
+      "bytes": 6124,
+      "sha256": "cbf16e5181d18880e9d89395c3f056c1a8d1da3082f6a5ceeabf0872195e07f3"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -362,6 +362,26 @@
       "path": "audit/engagement/host-preflight.json",
       "bytes": 527,
       "sha256": "10384ec48a559f9ffb5a34c814c3d0b0f577471d841d89fb263c8784a8b679bd"
+    },
+    {
+      "path": "audit/engagement/live-daily.png",
+      "bytes": 49697,
+      "sha256": "34759c1f9af77a79e1d4b610d7c89bffc654272d65eff415d4c3b03f64c9afbe"
+    },
+    {
+      "path": "audit/engagement/live-raw.json",
+      "bytes": 2497,
+      "sha256": "4e4a1354e49862ca390efcd384e7748553e4bd9da99331eb47f2ab83f38417fb"
+    },
+    {
+      "path": "audit/engagement/live-services.json",
+      "bytes": 471,
+      "sha256": "354a81e69061bbfadbdf9fcffc994bf3f36869bcb6df90aadb12dc1e4b71627d"
+    },
+    {
+      "path": "audit/engagement/LIVE.md",
+      "bytes": 1844,
+      "sha256": "9fbcfc1986127154b7d59416716006af7c9bfb794fd3dd34ffdcac5b8dad3690"
     },
     {
       "path": "audit/engagement/native-raw.json",

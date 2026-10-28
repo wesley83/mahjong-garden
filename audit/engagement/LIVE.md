@@ -1,0 +1,9 @@
+# Engagement1.9.0 live — MG-060
+
+Published mg-0abe86a5419a54 (source0abe86a5419a54ec5dc362d318e0d50e9f3f8e1356dd9bea20e1f15cb083c027) from pushed commit cd7b7d1b87fccd95729cd144353b309adfd016c3 on October28,2026. Gate passed68 Node,18 browser groups,15 native checks and actual worker lifecycle. All29 public artifacts verified before conditional root promotion. Private fresh backup649files/94directories/19643291bytes is verified under ignored .local/server-backup/2026-10-28T23-31-24-724Z. Existing files/old graphs retained; publisher exited normally.
+
+Existing live client received the new-version notice, then accepted Save & update now. Its completed Lotus pond remained10693points,26pairs,01:55,no hints/shuffles,3stars; immediately sampled music off35/effects on65 stayed identical. Native real worker testing separately refuses failed-save reload and preserves an unfinished active daily plus suspended journey through A→B. This proves in-app update discovery/acceptance, not physical installed-phone OS push.
+
+Actual public Daily Garden starts Oct28 Emerald maze with50 canonical tiles and UTC context. Return restores the original completed journey/points. Friend link identifies its exact original level8/seed/variety; photos/checkpoint are absent. Restore menu credits8 already completed journey levels, without spending player seeds. Daily standings load the separate empty challenge collection. Public score services compare exactly against the fresh backup:1 legacy row,15 balanced rows,0 challenge rows. No public test scores remain. Live raw observations and screenshot are retained; no browser errors observed.
+
+Final sanitized audit/source-manifest and evidence commit/push follow; no source or graph change after acceptance. Local fixture servers and temporary tabs are stopped/closed. The live tab remains available.
