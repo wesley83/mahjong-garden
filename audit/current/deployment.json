@@ -1,148 +1,148 @@
 {
-  "utc": "2026-10-28T15:49:54.610Z",
+  "utc": "2026-10-28T16:05:54.308Z",
   "origin": "https://grab-lead-8328.onpagelove.com",
   "dav": "https://dav-grab-lead-8328.onpagelove.com",
-  "candidate": "mg-5472cbbe018b34",
-  "sourceDigest": "5472cbbe018b34a5b5817b977ae883891b46b073e62dedff3ac2b4705479ee13",
-  "commit": "80b16bb4eedd8a5b15b696d5cfafea5ba0c38e14",
+  "candidate": "mg-8a78db25e8116b",
+  "sourceDigest": "8a78db25e8116b86126fcf2872603f09c861d20ecdbb4dd8209982ae3e4e12f7",
+  "commit": "714d586f28e5884d946373a69a5d593afe99b122",
   "verifiedPublicFiles": 26,
   "backupVerified": true,
   "backupLocation": "Ignored .local/server-backup",
-  "previousEntrySha256": "f4cf8d9525e88d674d4921f39b1be798616aa477e7bf9f87832431879ec3bd15",
+  "previousEntrySha256": "541cc6a788cc4625391ba034d2ba6f885d31a6a1c259a6d1c0ac0f6658d23377",
   "publication": "Retained previous releases; immutable dependencies verified before conditional entry promotion",
-  "sourceEntrySha256": "8003cdb4d806825a45ea395862117c1f24771fcd2d62804ce415c55864934276",
-  "servedEntrySha256": "40e94dc6b41ef517f2489df9a5d4225959e508b5a3bac5e77cb0f2bda716189a",
+  "sourceEntrySha256": "1a2f2b13e95d7be5410ac7d78d6eea62831032e04b4696c328c469a09ceb52e8",
+  "servedEntrySha256": "e48b276f3177a2bfc1f0a8ea572e54ac6fcd2ccfa59de15e1e666472e37fa906",
   "promoted": {
     "path": "/index.html",
     "status": 200,
-    "etag": "\"541cc6a788cc4625391ba034d2ba6f885d31a6a1c259a6d1c0ac0f6658d23377\"",
-    "hash": "541cc6a788cc4625391ba034d2ba6f885d31a6a1c259a6d1c0ac0f6658d23377"
+    "etag": "\"896195492da68d5619df3226bcdd4a7dc9418a40b666251859ddc195d8413b55\"",
+    "hash": "896195492da68d5619df3226bcdd4a7dc9418a40b666251859ddc195d8413b55"
   },
   "written": [
     {
-      "path": "/releases/mg-5472cbbe018b34/boot.mjs",
+      "path": "/releases/mg-8a78db25e8116b/boot.mjs",
       "status": 201,
       "sourceSha256": "5962acd91eed9a53f727e143c17274cafed6f7115b991f01852edde05100969a"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/app.mjs",
+      "path": "/releases/mg-8a78db25e8116b/app.mjs",
       "status": 201,
       "sourceSha256": "a8abadc9b3710aa4825b4b6ae6278206c14c029309a95f3b945485c21fbbe355"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/audio.mjs",
+      "path": "/releases/mg-8a78db25e8116b/audio.mjs",
       "status": 201,
       "sourceSha256": "6728fd0da66e9e8919a5ca06fd3ff67ba6220abc42dd9dd90d6dd97525b375c1"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/scoring.mjs",
+      "path": "/releases/mg-8a78db25e8116b/scoring.mjs",
       "status": 201,
       "sourceSha256": "e134ae5d6a036028038734b2cf94f385b7a319b6019aeb1437bac9fa48568cbf"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/pwa.mjs",
+      "path": "/releases/mg-8a78db25e8116b/pwa.mjs",
       "status": 201,
       "sourceSha256": "4e28e0b5848b3845bef99e27b6289e3d776ed66ddd5c98f5d68679dd36a9992a"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/leaderboard.mjs",
+      "path": "/releases/mg-8a78db25e8116b/leaderboard.mjs",
       "status": 201,
       "sourceSha256": "347df5897a89dc6b5ab4e4ab703be5e10b3e17d23a85a2ba1b26c782cb9f5979"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/core.mjs",
+      "path": "/releases/mg-8a78db25e8116b/core.mjs",
       "status": 201,
       "sourceSha256": "a913942d94113e4d0596ddc6a9be203cd82b1a2a2f9237685cd0716fd6183472"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/profile.mjs",
+      "path": "/releases/mg-8a78db25e8116b/profile.mjs",
       "status": 201,
       "sourceSha256": "7b83a86272982c4893e445da5a7d3d07451520d128f461b641593a332500025c"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/operations.mjs",
+      "path": "/releases/mg-8a78db25e8116b/operations.mjs",
       "status": 201,
       "sourceSha256": "8172c535ebefa56115513fd83cf96fc91c9f9a4beade3f342be43d90ee0c8a16"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/image-input.mjs",
+      "path": "/releases/mg-8a78db25e8116b/image-input.mjs",
       "status": 201,
       "sourceSha256": "d4735c4184f9a8549bd6641fb06939149fb9744fcf1eb668f071032ce3e7ba81"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/tile-input.mjs",
+      "path": "/releases/mg-8a78db25e8116b/tile-input.mjs",
       "status": 201,
       "sourceSha256": "f8eb6c5efa768ef2e3f57ea797ebeaa17daab8c8469fea2df492c62284609759"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/faces.mjs",
+      "path": "/releases/mg-8a78db25e8116b/faces.mjs",
       "status": 201,
       "sourceSha256": "7ce3fd7933dd05a55830551d51b0df352e91915a3dce5d927d8d331da76f5c56"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/storage.mjs",
+      "path": "/releases/mg-8a78db25e8116b/storage.mjs",
       "status": 201,
       "sourceSha256": "6f6404282dfcfafeb1da3dcd87414696c1d184ce75b8b6c8720d014c0ff29302"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/scenery.mjs",
+      "path": "/releases/mg-8a78db25e8116b/scenery.mjs",
       "status": 201,
       "sourceSha256": "9b725030eedd1f6bd889ca5f38b6200616fa563d912b236bd6a2840e6f5555ed"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/parallax.mjs",
+      "path": "/releases/mg-8a78db25e8116b/parallax.mjs",
       "status": 201,
       "sourceSha256": "e2da3f41c3b8074825fdf6d7f1e7e5372e6eb41b787951124f2cd9f600c42548"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/style.css",
+      "path": "/releases/mg-8a78db25e8116b/style.css",
       "status": 201,
       "sourceSha256": "199981196c6b2944aed4c02ada63381962afddbbe4516a52b9473350289740c4"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/game.css",
+      "path": "/releases/mg-8a78db25e8116b/game.css",
       "status": 201,
-      "sourceSha256": "d65db1a43e229830bd7c7ef9b4b6ba822fc1b238b98723c118ecdbc95aa1e2da"
+      "sourceSha256": "ab9e7b4d1d302b66a9b1a072008d652e7f9d61485759d1102093996daba62137"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/favicon.svg",
+      "path": "/releases/mg-8a78db25e8116b/favicon.svg",
       "status": 201,
       "sourceSha256": "744f271d7e716c7a61971f34d672aa5e7267483d0d0851ffe28c35b59ea71739"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/content/levels.html",
+      "path": "/releases/mg-8a78db25e8116b/content/levels.html",
       "status": 201,
       "sourceSha256": "438895f9c8ce29e07460f3a1331b48ea0cddf357462427d140cf06cf7f9aa32f"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/assets/icon-192.png",
+      "path": "/releases/mg-8a78db25e8116b/assets/icon-192.png",
       "status": 201,
       "sourceSha256": "7dbdee5b5b787e477965a546a52a4a9bfab2448a810d091e8b9234458ef63e23"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/assets/icon-512.png",
+      "path": "/releases/mg-8a78db25e8116b/assets/icon-512.png",
       "status": 201,
       "sourceSha256": "16ac1320a6e486137b03e276a00af6f78252331a05d09fa583d4d293db54e60d"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/assets/social-card.png",
+      "path": "/releases/mg-8a78db25e8116b/assets/social-card.png",
       "status": 201,
       "sourceSha256": "1d9fe4e3219ed2ab35b8f583e9a88bce9c742195c20957db21843ad06be776e3"
     },
     {
-      "path": "/releases/mg-5472cbbe018b34/assets/apple-touch-icon.png",
+      "path": "/releases/mg-8a78db25e8116b/assets/apple-touch-icon.png",
       "status": 201,
       "sourceSha256": "9b2f0107ea7a28c6fc93840b3bd55b3b818331614461d613107260cde19ad7b2"
     },
     {
       "path": "/manifest.webmanifest",
       "status": 200,
-      "sha256": "c9379af8e48a257dee8020aa41d3ff6d1802a179c971344a017d92a82cf89e9e"
+      "sha256": "0a92bf91b7d201bf3613d6bff9eb7f130ee54ecf15dbd76b5bc70d00e196518a"
     },
     {
       "path": "/sw.js",
       "status": 200,
-      "sha256": "32ddd5ed31a1ff1aa532d5b1ba250a6503192ec410a6c8d8842a77b76318cc87"
+      "sha256": "ba1887b1cef32cf02355c9f979c41496cc4a7ecd2f9517b67c78058a7714a3f1"
     }
   ],
   "credentialStored": false

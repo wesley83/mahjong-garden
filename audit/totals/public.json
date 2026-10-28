@@ -1,20 +1,8 @@
 {
-  "utc": "2026-10-28T15:53:00.062Z",
-  "candidate": "mg-5472cbbe018b34",
+  "utc": "2026-10-28T16:07:52.840Z",
+  "candidate": "mg-8a78db25e8116b",
   "origin": "https://grab-lead-8328.onpagelove.com/",
   "before": {
-    "level": "Lotus pond",
-    "mixer": {
-      "music": true,
-      "musicVolume": "35",
-      "sound": true,
-      "soundVolume": "65"
-    },
-    "release": "mg-1d22d751f41726",
-    "tiles": [],
-    "win": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles"
-  },
-  "after": {
     "level": "Lotus pond",
     "mixer": {
       "music": false,
@@ -26,14 +14,23 @@
     "tiles": [],
     "win": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles"
   },
+  "after": {
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "release": "mg-8a78db25e8116b",
+    "tiles": [],
+    "win": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles"
+  },
   "notice": "A new version is available. Your current game is still open.",
-  "later": "mg-1d22d751f41726",
   "explicitUpdate": true,
   "checkpointPreserved": true,
-  "mixerBaselineMatches": false,
-  "mixerObservation": "The earlier baseline had music on; after update it was off, with both volume values and effects unchanged. The agent did not reset this later setting. Audio source is unchanged and the separate exact-candidate native mixer persistence checks passed; the long observation interval does not establish when the switch changed.",
+  "mixerPreserved": true,
   "boardRows": "1\tWesley · You\t10,000\nTotal 47,666",
-  "overallRows": "1\tWesley · Your name\t47,666\n5 boards",
   "overall": [
     {
       "boards": "5 boards",
@@ -42,7 +39,13 @@
       "total": "47,666"
     }
   ],
-  "moreCollapsed": true,
+  "caption": {
+    "height": 1,
+    "text": "Combined best scores across boards, including your acknowledged name when available",
+    "width": 1
+  },
+  "captionVisuallyHidden": true,
+  "captionAccessibleTextRetained": true,
   "errors": [],
-  "limits": "Actual desktop public client and current submitted records; no synthetic public name/score created. No authenticated-user or physical-phone claim."
+  "limits": "Actual desktop public client. No synthetic public score/name created. Totals use current submitted records grouped by public alias; no authenticated-user or physical-phone claim. Earlier initial-release observations remain under before-caption-*."
 }

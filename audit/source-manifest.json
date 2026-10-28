@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T16:02:23.853Z",
+  "utc": "2026-10-28T16:09:34.109Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 70725,
-      "sha256": "00e35f183d6508485b438d3a3f08faac0f6df63f579f040d4583aba11e195c47"
+      "bytes": 71896,
+      "sha256": "ee0dce7e707db083cec7f1e80833a10a72620fb989c1ef568f8e8fdba7a34763"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -266,7 +266,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 5579,
-      "sha256": "27ab0b5e0e2ce12a1cdafb0a8d7b19faae77ad659c8c6aace0c8fc9582775903"
+      "sha256": "48c8d8a2f74a46356b17a3e01f9cbb5d243715ec6a0ebd23f4589247b6365dfa"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -735,18 +735,18 @@
     },
     {
       "path": "audit/totals/public-board.png",
-      "bytes": 35770,
-      "sha256": "4aadcf5bb941ecea26e5bd8c268bceacda9730b86cec7a6bc5aabb9bf2d90ed2"
+      "bytes": 31625,
+      "sha256": "dc37d2b2480b354117dc8d1b04e3632c3f3353122dc47ccf4e8a068dfb7382a5"
     },
     {
       "path": "audit/totals/public-overall.png",
-      "bytes": 36444,
-      "sha256": "1a4e74546356388bc7a80ec1914cb85c5e7a315ca2f4e1c79d5605a6c703987b"
+      "bytes": 31057,
+      "sha256": "4e4fa601c19fb8b73c5282b551b56eb9084f586a5299b8123f554e6386197871"
     },
     {
       "path": "audit/totals/public.json",
-      "bytes": 1717,
-      "sha256": "dfa0682da7b5826b3edf28cfc4138c089245d9f47ed37ed1716d58941b950b7d"
+      "bytes": 1569,
+      "sha256": "54a54f0de797c0bec3af91d47ebdf01699a3403707098f22f0654de5123d34a8"
     },
     {
       "path": "audit/totals/pwa-native.json",
@@ -755,8 +755,8 @@
     },
     {
       "path": "audit/totals/REVIEW.md",
-      "bytes": 6799,
-      "sha256": "8c34a9a2f39003a391f6b344304c6a466fdcf1f2a915cd3c7cd326e811d88fc2"
+      "bytes": 8208,
+      "sha256": "6182e04275ad2bc9ca528dbfcf99605d16c24d72b997e5dfbaf1488872de0222"
     },
     {
       "path": "audit/touch/baseline.json",
