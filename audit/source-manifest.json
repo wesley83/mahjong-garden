@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T17:46:48.283Z",
+  "utc": "2026-10-28T17:50:38.917Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 73901,
-      "sha256": "10eb2e9876bfd3d10d032d214a29c8f324b34c886df997ab5aed6a366871b3d8"
+      "bytes": 74922,
+      "sha256": "eae9b5cd87f635e8c226f3ce989c488b51aa4abc033858f886c96512f5205402"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -266,7 +266,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 5579,
-      "sha256": "48c8d8a2f74a46356b17a3e01f9cbb5d243715ec6a0ebd23f4589247b6365dfa"
+      "sha256": "2937687c0d88bcd9528b48401a64ac13501b08392a54188d61ca4755c7534e01"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -354,6 +354,11 @@
       "sha256": "731936ae34e4c3f9a86f2fd8837b217366084dd633d99074a8964e1e2324f0c4"
     },
     {
+      "path": "audit/leaderboard-speed/deployment-journal.json",
+      "bytes": 929,
+      "sha256": "0813bad6c1b2ebe68ce7074fa36cb151a5218e34292d51a809e3af244c7666a5"
+    },
+    {
       "path": "audit/leaderboard-speed/host-preflight-command.txt",
       "bytes": 3434,
       "sha256": "7fddd1ab1ff3e286c563f6afe206582e29450065c1eff9c13e6eb2b04b5f426a"
@@ -367,6 +372,11 @@
       "path": "audit/leaderboard-speed/host-read-baseline.json",
       "bytes": 437,
       "sha256": "50fa0c8425785fa1dfcc735d549afad646269d199ea672ec2e7e686c9dd7195f"
+    },
+    {
+      "path": "audit/leaderboard-speed/mobile-320-cropped.png",
+      "bytes": 24941,
+      "sha256": "c1182318f1cf0da7b16504f40fe55a11261c4c2dd2265919388ef38f31ad1af3"
     },
     {
       "path": "audit/leaderboard-speed/mobile-320-overall.png",
@@ -389,14 +399,24 @@
       "sha256": "71d996b400d58c89f92e6d9d2d165ff68df938e9621f5da5f25cd0dbf4fae565"
     },
     {
+      "path": "audit/leaderboard-speed/public-overall.png",
+      "bytes": 31138,
+      "sha256": "52f79b4d7fb935153e584ea7684b84f5600a211678c8a488f6fc6177392abdb0"
+    },
+    {
+      "path": "audit/leaderboard-speed/public.json",
+      "bytes": 3099,
+      "sha256": "af5d863c3fba03c89623c258ccd2e24e38ad0977a00e150f2cff41999f1816c6"
+    },
+    {
       "path": "audit/leaderboard-speed/pwa-native.json",
       "bytes": 16035,
       "sha256": "16e7535b6abe8d02ee2bf3d87f2f7b8cb6d96cdbeb11b2d382caca845a845464"
     },
     {
       "path": "audit/leaderboard-speed/REVIEW.md",
-      "bytes": 4896,
-      "sha256": "5fd2205059b60aeb93c2c243993f88b823b3707da810eeaf83b0833a041a1b92"
+      "bytes": 6510,
+      "sha256": "c2082570485fd41450c9c8a586e9e6c450705ed939ccc6493efe89f2351bae84"
     },
     {
       "path": "audit/leaderboard/browser-raw.json",

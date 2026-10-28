@@ -1,0 +1,118 @@
+{
+  "utc": "2026-10-28T17:47:53.549Z",
+  "candidate": "mg-86fcd6b194c7fd",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "before": {
+    "candidate": "mg-8a78db25e8116b",
+    "completion": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "tiles": []
+  },
+  "notice": "A new version is available. Your current game is still open.",
+  "later": {
+    "candidate": "mg-8a78db25e8116b",
+    "completion": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "tiles": []
+  },
+  "immediatelyBeforeAcceptance": {
+    "candidate": "mg-8a78db25e8116b",
+    "completion": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "tiles": []
+  },
+  "after": {
+    "candidate": "mg-86fcd6b194c7fd",
+    "completion": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "tiles": []
+  },
+  "board": {
+    "busy": "false",
+    "captionWidth": 1,
+    "rankStyle": {
+      "whiteSpace": "nowrap",
+      "width": 56
+    },
+    "rows": [
+      "1Wesley · You10,000Total 125,666"
+    ],
+    "scope": "Level 8 · Lotus pond",
+    "status": ""
+  },
+  "overall": {
+    "busy": "false",
+    "captionWidth": 1,
+    "rankStyle": {
+      "whiteSpace": "nowrap",
+      "width": 56
+    },
+    "rows": [
+      "1Wesley · Your name125,66613 boards"
+    ],
+    "scope": "All 60 boards",
+    "status": ""
+  },
+  "boardAgain": {
+    "busy": "false",
+    "captionWidth": 1,
+    "rankStyle": {
+      "whiteSpace": "nowrap",
+      "width": 56
+    },
+    "rows": [
+      "1Wesley · You10,000Total 125,666"
+    ],
+    "scope": "Level 8 · Lotus pond",
+    "status": ""
+  },
+  "reopen": {
+    "busy": "false",
+    "captionWidth": 1,
+    "rankStyle": {
+      "whiteSpace": "nowrap",
+      "width": 56
+    },
+    "rows": [
+      "1Wesley · You10,000Total 125,666"
+    ],
+    "scope": "Level 8 · Lotus pond",
+    "status": ""
+  },
+  "checkpointPreserved": true,
+  "warmViewsReady": true,
+  "errors": [],
+  "limits": "Actual desktop public client; mobile reflow/performance assertions use controlled localhost fixtures. No physical Pixel/Edge latency claim. No synthetic public scores created."
+}

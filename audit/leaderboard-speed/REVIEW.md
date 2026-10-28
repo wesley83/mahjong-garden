@@ -26,3 +26,12 @@ Scoring, aliases, ranks, time reference, outbox 2, profile/run 1, backup 2, audi
 No failed candidate promoted. The native editor focus probe initially checked aria-checked, while this existing control uses aria-pressed; it was corrected to observe the actual empty label/pressed=false, 31 tiles and retained focus. The isolated QA worker's acceptance was observed through activated B and reloaded B, rather than stopping at the transient activating state.
 
 Publication remains conditional on fresh backup and final public acceptance; append executed observations below.
+
+
+## Publication — SPEED-PUBLISH passed
+
+Pushed source c116bf498b5721b841fed7fe2f00a8e645ce75c3 passed the clean/raw-source provenance check and promoted as mg-86fcd6b194c7fd at 2026-10-28T17:49:13.291Z. Fresh verified local backup: 543 files, 81 directories, 16596374 bytes; private path recorded in deployment-journal.json. All 26 public artifacts verified. Previous release graphs and both score services were retained; no wipe, score reseed, policy rewrite or synthetic public record. Owner publisher exited successfully.
+
+The actual old public client received the new-version notice. Later left it open. Explicit Save & update now loaded this candidate and preserved the immediately sampled completed Lotus pond checkpoint (10000 points / 26 pairs / 01:55 / no assistance), music off 35 and effects on 65. Actual live board shows 10000 with combined Total 125666; Overall agrees at 125666 from 13 boards. These are current public results, independently of the earlier seven-record timing baseline. Board→Overall→Board and close/reopen are ready with empty loading status at the next native observation, with correct view/scope and rows. No public-browser network timing claim is made. Header has nowrap and 56px width; descriptive caption remains 1px and accessible. Public error log empty. public-overall.png was inspected. Focused mobile-320-cropped.png supplements the prepromotion populated preview captures.
+
+Final audit scan, evidence commit/push and clean source/remote checks follow. Controlled mobile-size and actual public desktop evidence are distinguished from physical Pixel/Edge behavior.

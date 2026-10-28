@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-28T17:50:38.046Z",
+  "candidate": "mg-86fcd6b194c7fd",
+  "sourceCommit": "c116bf498b5721b841fed7fe2f00a8e645ce75c3",
+  "backup": {
+    "verified": true,
+    "files": 543,
+    "directories": 81,
+    "bytes": 16596374,
+    "location": "Ignored .local/server-backup/2026-10-28T17-47-46-699Z"
+  },
+  "phases": [
+    {
+      "state": "tested-source-committed-pushed-and-byte-verified",
+      "commit": "c116bf498b5721b841fed7fe2f00a8e645ce75c3"
+    },
+    {
+      "state": "fresh-full-backup-verified"
+    },
+    {
+      "state": "conditional-promotion-and-public-readback-completed",
+      "utc": "2026-10-28T17:49:13.291Z",
+      "verifiedPublicFiles": 26
+    },
+    {
+      "state": "public-notice-acceptance-checkpoint-and-warm-views-verified",
+      "receipt": "audit/leaderboard-speed/public.json"
+    }
+  ],
+  "previousReleasesRetained": true,
+  "serverRecordsPreserved": true,
+  "credentialStored": false
+}
