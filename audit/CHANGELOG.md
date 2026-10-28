@@ -382,3 +382,9 @@
 ## MG-056 — timed scoring coverage and evidence barriers
 - Candidate mg-fa72bef253399a, source fa72bef253399af70509d6b2a52a5afeec0053a69ebf28ec5fefe9de39004aba, projection mg-time-points-1/version1.8.0.55 Node/16 browser/11 native and real-worker update evidence pass; TIME outcomes and missing-outcome refusal are required. 394923 initial bytes/26 artifacts. Separate review and raw/preliminary evidence retained.
 - Clear points/breakdown/no Stay, clock menu pause/resume, board/totals/old-record projection, best replay/alias/tie/ownership, raw payload compatibility and existing cache/outbox/PWA/game/editor/audio regressions checked. Actual server policy hash unchanged. Fresh full backup, pushed raw source, conditional promotion and live acceptance still precede completion.
+
+
+## MG-057 — timed scoring release live
+- Source c6fe4d2eb12d6540acf67d2aacd2996c96b6f12e promoted as mg-fa72bef253399a /1.8.0, after55 Node/16 browser/11 native and actual worker acceptance. Verified fresh backup566files/84directories/17122769bytes; all26 artifacts publicly verified. Existing score services and old graphs retained, no wipe/data rewrite. Publisher exited.
+- Actual old client received notice and explicit update preserved the original completed Lotus pond time/counters/stars and immediately sampled mixer. New clear shows10693=10000base+693time bonus, Score saved, no Stay option. Board/Overall agree at134128 across13boards; independent arithmetic from all13 public canonical records matches. Browser errors empty.320/390px clear and populated320px Overall visuals inspected.
+- Final sanitized evidence commit/push and clean remote-head/source-byte check complete delivery; projection mg-time-points-1 and canonical score-2 contracts remain distinct.

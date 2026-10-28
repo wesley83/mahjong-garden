@@ -1,0 +1,105 @@
+{
+  "utc": "2026-10-28T18:17:08.885Z",
+  "method": "Independent arithmetic from public validated canonical bases/pair counts/seconds; no production ranking/points projection imported.",
+  "rows": 13,
+  "totals": [
+    {
+      "alias": "wesley",
+      "points": 134128,
+      "boards": 13
+    }
+  ],
+  "scores": [
+    {
+      "runKey": "6e9d2eac6720aa0c3b5b21ececb3e153d74852f06fe81c2955f1b8ec0003dc01",
+      "points": 9681,
+      "base": 9666,
+      "seconds": 7241,
+      "pairs": 12
+    },
+    {
+      "runKey": "e99c8fc12da6887017ac9eff422b06d1bcff9aacc76b6858b337264dd34fd5e5",
+      "points": 10790,
+      "base": 10000,
+      "seconds": 37,
+      "pairs": 14
+    },
+    {
+      "runKey": "975589281d29ea68ec2819cdc729323f0174d1a501e9ec29b567faef7e984c2c",
+      "points": 8530,
+      "base": 8000,
+      "seconds": 147,
+      "pairs": 29
+    },
+    {
+      "runKey": "6073583cf51dea1af964e4b31fc97e9abc1882b78a81c6014e9a726e8ce2bb6f",
+      "points": 10716,
+      "base": 10000,
+      "seconds": 75,
+      "pairs": 19
+    },
+    {
+      "runKey": "8353cac27639a0697d4ac411d56920c83e2cff643dc43dfa7b7d6b705d9a224d",
+      "points": 10693,
+      "base": 10000,
+      "seconds": 115,
+      "pairs": 26
+    },
+    {
+      "runKey": "e030027d898a7487f2b1bea0ada7d8a35f63dfe6c943c1fb4eb10467c4f55200",
+      "points": 10803,
+      "base": 10000,
+      "seconds": 49,
+      "pairs": 20
+    },
+    {
+      "runKey": "99dc5a92760a61cda0dd7f86d2c835b82e12d228aca4d4d50641ea2995fbeafa",
+      "points": 10710,
+      "base": 10000,
+      "seconds": 106,
+      "pairs": 26
+    },
+    {
+      "runKey": "d86795acd3fee4afa7deb1c94d59993732e05386b2de703d321f1cad1184d4ca",
+      "points": 10745,
+      "base": 10000,
+      "seconds": 65,
+      "pairs": 19
+    },
+    {
+      "runKey": "0e0087a8f8e70e9b720a129a54312930133010a3905c427dbc78eb2c1a7ab83d",
+      "points": 10729,
+      "base": 10000,
+      "seconds": 104,
+      "pairs": 28
+    },
+    {
+      "runKey": "262cd59ca0bf53e8b8fff8765f5253ac0b48ae5e4dbdd974af599db0b4caf21d",
+      "points": 8549,
+      "base": 8000,
+      "seconds": 155,
+      "pairs": 34
+    },
+    {
+      "runKey": "643fcdcd7da3b498dfcf8d13ea66d7e40d50338ca1e228f900b6d03d44133d66",
+      "points": 10763,
+      "base": 10000,
+      "seconds": 65,
+      "pairs": 21
+    },
+    {
+      "runKey": "38ebdc0782fff381bc6e483d931638e39ffae57f99d3628767011fb29c17ce58",
+      "points": 10763,
+      "base": 10000,
+      "seconds": 96,
+      "pairs": 31
+    },
+    {
+      "runKey": "ac0232ac6ef7f62a29e5adfe3ed3ca0648808bbb5c53d05b054275eb1eee91e1",
+      "points": 10656,
+      "base": 10000,
+      "seconds": 225,
+      "pairs": 43
+    }
+  ]
+}

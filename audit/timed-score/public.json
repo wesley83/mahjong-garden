@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-28T18:15:51.350Z",
+  "candidate": "mg-fa72bef253399a",
+  "origin": "https://grab-lead-8328.onpagelove.com/",
+  "before": {
+    "candidate": "mg-86fcd6b194c7fd",
+    "clock": "01:55",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "stars": "3 of 3 stars",
+    "stats": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "tiles": []
+  },
+  "notice": "A new version is available. Your current game is still open.",
+  "immediatelyBeforeAcceptance": {
+    "candidate": "mg-86fcd6b194c7fd",
+    "clock": "01:55",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "stars": "3 of 3 stars",
+    "stats": "10000 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "tiles": []
+  },
+  "after": {
+    "breakdown": "10,000 base + 693 time bonus",
+    "candidate": "mg-fa72bef253399a",
+    "clock": "01:55",
+    "description": "Lotus pond is complete. Take a breath; you earned it.",
+    "level": "Lotus pond",
+    "mixer": {
+      "music": false,
+      "musicVolume": "35",
+      "sound": true,
+      "soundVolume": "65"
+    },
+    "remaining": "0",
+    "stars": "3 of 3 stars",
+    "stats": "10693 points · 26 pairs · 01:55 · 0 hints · 0 reshuffles",
+    "tiles": []
+  },
+  "checkpointPreserved": true,
+  "stayOptionAbsent": true,
+  "timePointsCorrect": true,
+  "board": {
+    "rows": [
+      {
+        "detail": "Total 134,128",
+        "name": "Wesley · You",
+        "points": 10693,
+        "runKey": "8353cac27639a0697d4ac411d56920c83e2cff643dc43dfa7b7d6b705d9a224d"
+      }
+    ],
+    "scope": "Level 8 · Lotus pond",
+    "status": ""
+  },
+  "overall": {
+    "rows": [
+      {
+        "detail": "13 boards",
+        "name": "Wesley · Your name",
+        "points": 134128
+      }
+    ],
+    "scope": "All 60 boards",
+    "status": ""
+  },
+  "errors": [],
+  "limits": "Actual public desktop client, controlled mobile-size preview/native input elsewhere; no physical Pixel/Edge timing claim. No synthetic public scores created; canonical records preserved."
+}

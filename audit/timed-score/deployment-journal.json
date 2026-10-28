@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-28T18:18:08.273Z",
+  "candidate": "mg-fa72bef253399a",
+  "sourceCommit": "c6fe4d2eb12d6540acf67d2aacd2996c96b6f12e",
+  "backup": {
+    "verified": true,
+    "files": 566,
+    "directories": 84,
+    "bytes": 17122769,
+    "location": "Ignored .local/server-backup/2026-10-28T18-14-58-433Z"
+  },
+  "phases": [
+    {
+      "state": "source-tested-committed-pushed-and-byte-verified",
+      "commit": "c6fe4d2eb12d6540acf67d2aacd2996c96b6f12e"
+    },
+    {
+      "state": "fresh-full-backup-verified"
+    },
+    {
+      "state": "conditional-promotion-public-artifact-readback-completed",
+      "utc": "2026-10-28T18:16:34.434Z",
+      "files": 26
+    },
+    {
+      "state": "public-notice-explicit-update-checkpoint-removed-option-and-time-points-verified",
+      "receipt": "audit/timed-score/public.json"
+    },
+    {
+      "state": "independent-public-base-time-arithmetic-matches-both-views",
+      "receipt": "audit/timed-score/public-expected.json"
+    }
+  ],
+  "serverRecordsPreserved": true,
+  "previousGraphsRetained": true,
+  "credentialStored": false
+}

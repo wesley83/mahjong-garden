@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-28T18:14:18.204Z",
+  "utc": "2026-10-28T18:18:09.103Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 76090,
-      "sha256": "1a63550cc4e3c493a1d75450050133c524449626ea979fcb1156aa93b619867a"
+      "bytes": 77065,
+      "sha256": "c5be1e84b0a033d1ef1b06428abbbafa1d0fd951f44cbd3d559fd194925111dd"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -266,7 +266,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 5579,
-      "sha256": "2937687c0d88bcd9528b48401a64ac13501b08392a54188d61ca4755c7534e01"
+      "sha256": "4cc72d05802f1b4f3c8ac95c3b5e57f27f592e3dc575b86e19b8c2b9dc003cdc"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -734,6 +734,11 @@
       "sha256": "a9acd01d6d872b63d55b968272815fd9aeffd564ef62a6d74543137b035e5e69"
     },
     {
+      "path": "audit/timed-score/deployment-journal.json",
+      "bytes": 1081,
+      "sha256": "e051d8325398edd184dba406ee56aaee9afe687681b21d59d4c123a5e8775958"
+    },
+    {
       "path": "audit/timed-score/foreground-clock-browser.json",
       "bytes": 23377,
       "sha256": "81ce2f59d0e0180bd90e6793d6188ac9310fc0196df098cae427416c7cb84001"
@@ -799,14 +804,29 @@
       "sha256": "c2086fc80aa3242a9ad4363ec960de2dc95d74013ff18f304d1d4530c28c2906"
     },
     {
+      "path": "audit/timed-score/public-clear.png",
+      "bytes": 34992,
+      "sha256": "bc98bee50d0af59c480c8e27c147d431b1119b2d0ab754ab4896942cb5ec067a"
+    },
+    {
+      "path": "audit/timed-score/public-expected.json",
+      "bytes": 2659,
+      "sha256": "e41c362b26aa088de2d392270426778e2a7c79c088bbff1e6a7f966527387f2b"
+    },
+    {
+      "path": "audit/timed-score/public.json",
+      "bytes": 2399,
+      "sha256": "f6eb2a14ac1c7176b85d45504330f2632e6ed5f5ca37d9be64ff43acd880cc79"
+    },
+    {
       "path": "audit/timed-score/pwa-native.json",
       "bytes": 20602,
       "sha256": "2afe9d8260990f036cb3b33d78d410b02e545b1d0535495b5f907b0771559d79"
     },
     {
       "path": "audit/timed-score/REVIEW.md",
-      "bytes": 5661,
-      "sha256": "42d8f2a7fc28fb67aa8fba0bebf51346b8d12d70d32c23e355a4e4d0758b4611"
+      "bytes": 7212,
+      "sha256": "fa24c870ca1834c0cd83e920f2aa3cdd8242a073e4c0a036bb5dacfcf319b6e1"
     },
     {
       "path": "audit/timed-score/second-host-preflight.json",
