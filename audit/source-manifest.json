@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-29T12:46:57.678Z",
+  "utc": "2026-10-29T12:51:53.535Z",
   "actor": "Codex",
   "scope": "Reviewable source and sanitized evidence. Excludes private backup, generated dist, Git metadata and this manifest itself.",
   "files": [
@@ -225,8 +225,8 @@
     },
     {
       "path": "audit/CHANGELOG.md",
-      "bytes": 81208,
-      "sha256": "b0fb8077c788d69d9639085c1aea1ddfafcf47c052e5b9a0a28854d47a35dcb0"
+      "bytes": 81909,
+      "sha256": "a1b6e5705a578889121dcfbb57f71e66727913ee48cd7a82fd00f9d3d9108f20"
     },
     {
       "path": "audit/current/browser-attempts.json",
@@ -271,7 +271,7 @@
     {
       "path": "audit/current/deployment.json",
       "bytes": 6124,
-      "sha256": "cbf16e5181d18880e9d89395c3f056c1a8d1da3082f6a5ceeabf0872195e07f3"
+      "sha256": "5c1370635cc8f1db2d3c04f534ca161b7efde4508f580f77931a4a1df3b56d79"
     },
     {
       "path": "audit/current/leaderboard-server.json",
@@ -442,6 +442,26 @@
       "path": "audit/footer-overlap/host-preflight.json",
       "bytes": 527,
       "sha256": "238ec670813525545a4b9be8d60c6cb16d74fcbc7c094c9851bd15cfebbc4e46"
+    },
+    {
+      "path": "audit/footer-overlap/live-home-1920.png",
+      "bytes": 87397,
+      "sha256": "301eb71849d1a7c4d1ab3b38a401fe63c274d4e77da76269c1462a125ed94920"
+    },
+    {
+      "path": "audit/footer-overlap/live-raw.json",
+      "bytes": 3506,
+      "sha256": "df5fc0314a9bbc5aa133d6073c846f87b218197f7591f5ca7c8d0cecf91f5306"
+    },
+    {
+      "path": "audit/footer-overlap/live-services.json",
+      "bytes": 495,
+      "sha256": "b36398bb0ece34d49ab1bed2c8415aadd101d2ab0321079ee873c6903c758b45"
+    },
+    {
+      "path": "audit/footer-overlap/LIVE.md",
+      "bytes": 1454,
+      "sha256": "a64e8a13e657e4f7c6b45ec6a53c54b6adbff9e6b0375680656ae24c795f1178"
     },
     {
       "path": "audit/footer-overlap/native-raw.json",

@@ -1,0 +1,7 @@
+# Footer1.9.1 live — MG-063
+
+October29,2026: pushed source f5c1eefb8d6492301b6b942699513dc78b44249b promoted as mg-878b41214345b9/source878b41214345b985370c9fa9d1de79cee909e6c303c870fc8d8a165e39b0b24d. Required gate passed68 Node/18 browser groups/15 native checks,104 visible footer cases and actual worker save-refusal/acceptance.339619 initialbytes,29 public artifacts verified. Fresh verified private backup675files/97directories/20112204bytes under ignored .local/server-backup/2026-10-29T12-47-38-190Z. Existing files/graphs retained; publisher exited.
+
+The existing1.9.0 public client received the new-version notice and accepted Save & update now. Completed Lotus pond remained10693points/26pairs/01:55/no assistance; music off35/effects on65 stayed identical. At an actual controlled1920×1080 viewport, home branding and save text occupy separate rows with8px vertical clearance. Save state moves to play-save-slot during play, below the help trigger. Public screenshot and geometry/raw observations retained; viewport override reset. No browser errors observed. Existing score records match the backup(1legacy/29balanced/0challenge), with no public synthetic writes.
+
+Final evidence commit/push follows; no production source changed after verification. Temporary local tabs/servers are closed/stopped; the live game remains available. Tool-visible Chromium evidence does not claim a physical monitor/phone or installed-phone OS push result.
