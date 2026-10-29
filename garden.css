@@ -5,8 +5,8 @@
 .tile-freed .tile-top{animation:freed-glow .85s ease-out}.goal-tile .tile-top:after{content:"";position:absolute;right:3px;top:3px;width:9px;height:9px;border-radius:50%;background:#c59b41;box-shadow:0 0 0 2px #fff4c5}.layer-celebration{color:#e7c987!important;text-shadow:0 0 12px #e7c98744}
 @keyframes freed-glow{from{box-shadow:0 0 0 3px #eed28e,0 0 16px #efd99e99}to{box-shadow:0 0 0 1px #eed28e00,0 0 0 #efd99e00}}
 .reduced-motion .tile-freed .tile-top{animation:none;outline:2px solid #e6c77f}@media(prefers-reduced-motion:reduce){.tile-freed .tile-top{animation:none;outline:2px solid #e6c77f}}
-@media(max-width:420px){.garden-dialog{padding:18px}.garden-dialog h2{font-size:1.65rem}.garden-preview{height:150px}.garden-addition{gap:8px}.garden-addition button{width:100%}.title-actions .daily-feature{min-height:44px}.title-bottom>span{letter-spacing:1px}}
+@media(max-width:420px){.garden-dialog{padding:18px}.garden-dialog h2{font-size:1.65rem}.garden-preview{height:150px}.garden-addition{gap:8px}.garden-addition button{width:100%}.title-actions .daily-feature{min-height:44px}.title-footer-copy>span{letter-spacing:1px}}
 .garden-dialog button{min-width:44px}#title-garden{min-width:44px;width:44px}
 @media(max-width:700px){.title-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.title-actions .continue-button{grid-column:1/-1}.title-actions .title-menu-button{font-size:.72rem;gap:6px;padding:4px}.title-actions .title-menu-button svg{width:15px}}
-@media(max-width:700px) and (max-height:750px){.title-screen{padding:62px 18px 80px}.title-kicker{margin-bottom:10px}.title-rule{margin:12px 0}.title-description{margin-bottom:14px}}
+@media(max-width:700px) and (max-height:750px){.title-screen{padding:62px 18px 16px}.title-kicker{margin-bottom:10px}.title-rule{margin:12px 0}.title-description{margin-bottom:14px}}
 @media(max-width:360px){.garden-tabs{display:grid;grid-template-columns:repeat(3,minmax(44px,1fr))}}

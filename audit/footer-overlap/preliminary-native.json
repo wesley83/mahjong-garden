@@ -1,0 +1,760 @@
+{
+  "utc": "2026-10-29T12:40:35.180Z",
+  "candidate": "mg-4a1718a138746a",
+  "checks": {
+    "audioUnlocked": true,
+    "audioVolumeKeys": true,
+    "audioPreferences": true,
+    "celebrationPreview": true,
+    "mismatchRefused": true,
+    "textFocus": true,
+    "editorFocus": true,
+    "keyboardClear": true,
+    "leaderboardName": true,
+    "leaderboardFocus": true,
+    "friendChallenge": true,
+    "modalReturn": true,
+    "restorationGarden": true,
+    "dailyGarden": true,
+    "layerObjective": true
+  },
+  "observations": {
+    "actions": [
+      [
+        "button Settings",
+        "Return"
+      ],
+      [
+        "slider (settable, integer) Music volume",
+        "ArrowRight"
+      ],
+      [
+        "slider (settable, integer) Sound effects volume",
+        "ArrowLeft"
+      ],
+      [
+        "button Preview celebration",
+        "Return"
+      ],
+      [
+        "checkbox (settable, integer) Description: Background music",
+        "Space"
+      ],
+      [
+        "button Close settings",
+        "Return"
+      ],
+      [
+        "button Settings",
+        "Return"
+      ],
+      [
+        "button Close settings",
+        "Return"
+      ],
+      [
+        "button Continue journey",
+        "Return"
+      ],
+      [
+        "Description: 3 bamboo, column 1, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 2 characters, column 1, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Description: Tile studio",
+        "Return"
+      ],
+      [
+        "text field (settable) Layout name",
+        null
+      ],
+      [
+        "button Description: Save and close studio",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 3 bamboo, column 1, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 3 bamboo, column 6, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 characters, column 5, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 characters, column 6, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 5 bamboo, column 4, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 5 bamboo, column 1, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: east wind, column 3, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: east wind, column 1, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: east wind, column 2, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: east wind, column 2, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 2 characters, column 1, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 2 characters, column 3, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 5 bamboo, column 2, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 5 bamboo, column 6, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: orchid, column 2, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: orchid, column 5, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 3 bamboo, column 3, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 3 bamboo, column 5, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 2 characters, column 4, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 2 characters, column 3, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 characters, column 4, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 characters, column 6, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: orchid, column 5, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: orchid, column 4, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "text field (settable) Name",
+        null
+      ],
+      [
+        "button Challenge a friend",
+        "Return"
+      ],
+      [
+        "button Description: Close garden menu",
+        "Return"
+      ],
+      [
+        "button On to the next garden",
+        "Return"
+      ],
+      [
+        "button Description: Return to title screen",
+        "Return"
+      ],
+      [
+        "button Description: Restore your garden",
+        "Return"
+      ],
+      [
+        "Description: By the water",
+        "Return"
+      ],
+      [
+        "button Description: Close garden menu",
+        "Return"
+      ],
+      [
+        "button Daily Garden",
+        "Return"
+      ],
+      [
+        "button This week’s challenges",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: white dragon, column 2, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: white dragon, column 1, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 9 characters, column 7, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 9 characters, column 8, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 6, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 8, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 5, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 7, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 8 characters, column 4, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 8 characters, column 8, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 7 bamboo, column 1, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 7 bamboo, column 2, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 3 circles, column 2, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 3 circles, column 7, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 7, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 2, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 6 circles, column 6, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 6 circles, column 7, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: plum blossom, column 5, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: plum blossom, column 3, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 6 circles, column 4, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 6 circles, column 3, row 3, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: white dragon, column 3, row 1, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: white dragon, column 4, row 3, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 3, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 1 characters, column 3, row 7, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 3 circles, column 4, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 3 circles, column 2, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 9 characters, column 4, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 9 characters, column 3, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 7 bamboo, column 1, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 7 bamboo, column 4, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 8 characters, column 2, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 8 characters, column 7, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 9 circles, column 5, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 9 circles, column 6, row 3, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 6, row 5, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 5, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 6, row 6, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 circles, column 3, row 2, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 9 circles, column 3, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 9 circles, column 6, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: plum blossom, column 5, row 3, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "Description: plum blossom, column 4, row 7, layer 1, open",
+        "Return"
+      ],
+      [
+        "button Reshuffle",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 4 bamboo, column 5, row 3, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 4 bamboo, column 4, row 2, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 9 bamboo, column 4, row 2, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 9 bamboo, column 5, row 2, layer 2, open, objective tile",
+        "Return"
+      ],
+      [
+        "button Hint",
+        "Return"
+      ],
+      [
+        "Description: 5 characters, column 3, row 4, layer 1, open",
+        "Return"
+      ],
+      [
+        "Description: 5 characters, column 6, row 2, layer 2, open, objective tile",
+        "Return"
+      ]
+    ],
+    "pairs": [
+      [
+        "3 bamboo, column 1, row 1, layer 1, open",
+        "3 bamboo, column 6, row 1, layer 1, open"
+      ],
+      [
+        "4 characters, column 5, row 1, layer 1, open",
+        "4 characters, column 6, row 2, layer 1, open"
+      ],
+      [
+        "5 bamboo, column 4, row 1, layer 1, open",
+        "5 bamboo, column 1, row 4, layer 1, open"
+      ],
+      [
+        "east wind, column 3, row 1, layer 1, open",
+        "east wind, column 1, row 3, layer 1, open"
+      ],
+      [
+        "east wind, column 2, row 3, layer 1, open",
+        "east wind, column 2, row 4, layer 1, open"
+      ],
+      [
+        "2 characters, column 1, row 2, layer 1, open",
+        "2 characters, column 3, row 3, layer 1, open"
+      ],
+      [
+        "5 bamboo, column 2, row 2, layer 1, open",
+        "5 bamboo, column 6, row 4, layer 1, open"
+      ],
+      [
+        "orchid, column 2, row 1, layer 1, open",
+        "orchid, column 5, row 4, layer 1, open"
+      ],
+      [
+        "3 bamboo, column 3, row 2, layer 1, open",
+        "3 bamboo, column 5, row 2, layer 1, open"
+      ],
+      [
+        "2 characters, column 4, row 2, layer 1, open",
+        "2 characters, column 3, row 4, layer 1, open"
+      ],
+      [
+        "4 characters, column 4, row 3, layer 1, open",
+        "4 characters, column 6, row 3, layer 1, open"
+      ],
+      [
+        "orchid, column 5, row 3, layer 1, open",
+        "orchid, column 4, row 4, layer 1, open"
+      ]
+    ],
+    "layerPairs": [
+      [
+        "white dragon, column 2, row 1, layer 1, open",
+        "white dragon, column 1, row 6, layer 1, open"
+      ],
+      [
+        "9 characters, column 7, row 1, layer 1, open",
+        "9 characters, column 8, row 6, layer 1, open"
+      ],
+      [
+        "1 characters, column 6, row 1, layer 1, open",
+        "1 characters, column 8, row 2, layer 1, open"
+      ],
+      [
+        "4 circles, column 5, row 1, layer 1, open",
+        "4 circles, column 7, row 2, layer 1, open"
+      ],
+      [
+        "8 characters, column 4, row 1, layer 1, open",
+        "8 characters, column 8, row 4, layer 1, open"
+      ],
+      [
+        "7 bamboo, column 1, row 2, layer 1, open",
+        "7 bamboo, column 2, row 3, layer 1, open"
+      ],
+      [
+        "3 circles, column 2, row 2, layer 1, open",
+        "3 circles, column 7, row 3, layer 1, open"
+      ],
+      [
+        "1 characters, column 7, row 4, layer 1, open",
+        "1 characters, column 2, row 5, layer 1, open"
+      ],
+      [
+        "6 circles, column 6, row 4, layer 1, open",
+        "6 circles, column 7, row 5, layer 1, open"
+      ],
+      [
+        "plum blossom, column 5, row 4, layer 1, open",
+        "plum blossom, column 3, row 5, layer 1, open"
+      ],
+      [
+        "6 circles, column 4, row 4, layer 1, open",
+        "6 circles, column 3, row 3, layer 2, open, objective tile"
+      ],
+      [
+        "white dragon, column 3, row 1, layer 1, open",
+        "white dragon, column 4, row 3, layer 2, open, objective tile"
+      ],
+      [
+        "1 characters, column 3, row 3, layer 1, open",
+        "1 characters, column 3, row 7, layer 1, open"
+      ],
+      [
+        "3 circles, column 4, row 3, layer 1, open",
+        "3 circles, column 2, row 6, layer 1, open"
+      ],
+      [
+        "9 characters, column 4, row 5, layer 1, open",
+        "9 characters, column 3, row 6, layer 1, open"
+      ],
+      [
+        "7 bamboo, column 1, row 4, layer 1, open",
+        "7 bamboo, column 4, row 6, layer 1, open"
+      ],
+      [
+        "8 characters, column 2, row 4, layer 1, open",
+        "8 characters, column 7, row 6, layer 1, open"
+      ],
+      [
+        "9 circles, column 5, row 5, layer 1, open",
+        "9 circles, column 6, row 3, layer 2, open, objective tile"
+      ],
+      [
+        "4 circles, column 6, row 5, layer 1, open",
+        "4 circles, column 5, row 6, layer 1, open"
+      ],
+      [
+        "4 circles, column 6, row 6, layer 1, open",
+        "4 circles, column 3, row 2, layer 2, open, objective tile"
+      ],
+      [
+        "9 circles, column 3, row 2, layer 1, open",
+        "9 circles, column 6, row 3, layer 1, open"
+      ],
+      [
+        "plum blossom, column 5, row 3, layer 2, open, objective tile",
+        "plum blossom, column 4, row 7, layer 1, open"
+      ],
+      [
+        "4 bamboo, column 5, row 3, layer 1, open",
+        "4 bamboo, column 4, row 2, layer 2, open, objective tile"
+      ],
+      [
+        "9 bamboo, column 4, row 2, layer 1, open",
+        "9 bamboo, column 5, row 2, layer 2, open, objective tile"
+      ],
+      [
+        "5 characters, column 3, row 4, layer 1, open",
+        "5 characters, column 6, row 2, layer 2, open, objective tile"
+      ]
+    ],
+    "mixer": [
+      {
+        "checked": false,
+        "id": "music",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "music-volume",
+        "value": "36"
+      },
+      {
+        "checked": true,
+        "id": "sound",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "sound-volume",
+        "value": "64"
+      },
+      {
+        "checked": false,
+        "id": "large-tiles",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "reduce-motion",
+        "value": "on"
+      },
+      {
+        "checked": false,
+        "id": "import-profile",
+        "value": ""
+      }
+    ],
+    "win": "✿A LITTLE MORE SPACE TO BREATHEA layer, cleared.Clear the top layer is complete. Your journey is waiting just as you left it.★☆☆4529 points · 25 pairs · 00:27 · 25 hints · 1 reshuffles4,153 base + 376 time bonusNameYour name and scores are public. Future clears save automatically.Save scoreRetry score setupView leaderboardChallenge a friendReturn to your journey →",
+    "method": "Native Chromium keyboard and AX controls on localhost4193. No public test scores submitted."
+  }
+}

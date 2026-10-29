@@ -1,0 +1,2781 @@
+{
+  "utc": "2026-10-29T12:34:56.813Z",
+  "candidate": "mg-0abe86a5419a54",
+  "name": "footer overlap regression",
+  "observations": {
+    "rows": [
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 520.4791870117188,
+          "width": 67.63542175292969,
+          "height": 10.520833969116211,
+          "right": 85.63542175292969,
+          "bottom": 531.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 520.4791870117188,
+          "width": 143.64584350585938,
+          "height": 10.520833969116211,
+          "right": 161.64584350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 520.4791870117188,
+          "width": 67.63542175292969,
+          "height": 10.520833969116211,
+          "right": 85.63542175292969,
+          "bottom": 531.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 520.4791870117188,
+          "width": 143.64584350585938,
+          "height": 10.520833969116211,
+          "right": 161.64584350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 796.4791870117188,
+          "width": 67.63542175292969,
+          "height": 10.520833969116211,
+          "right": 85.63542175292969,
+          "bottom": 807.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 796.4791870117188,
+          "width": 143.64584350585938,
+          "height": 10.520833969116211,
+          "right": 161.64584350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 796.4791870117188,
+          "width": 67.63542175292969,
+          "height": 10.520833969116211,
+          "right": 85.63542175292969,
+          "bottom": 807.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 796.4791870117188,
+          "width": 143.64584350585938,
+          "height": 10.520833969116211,
+          "right": 161.64584350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 667.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 680.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 667.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 680.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 667.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 680.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 667.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 680.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 715.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 728.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 715.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 728.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 715.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 728.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 715.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 728.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 747.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 760.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 847.9166870117188,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 860.000020980835
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1027.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1040.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1027.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1040.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1027.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1040.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1027.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1040.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1387.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 1400.0000820159912
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 1,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 2107.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 2120.000082015991
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 1,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 2107.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 2120.000082015991
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 1,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 2107.916748046875,
+          "width": 77.70833587646484,
+          "height": 12.083333969116211,
+          "right": 107.70833587646484,
+          "bottom": 2120.000082015991
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 1,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 2107.916748046875,
+          "width": 165.03125,
+          "height": 12.083333969116211,
+          "right": 195.03125,
+          "bottom": 2120.000082015991
+        },
+        "collisions": []
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 509.94793701171875,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 497.75,
+              "width": 88.66667175292969,
+              "height": 40,
+              "right": 110.66667175292969,
+              "bottom": 537.75
+            }
+          },
+          {
+            "selector": ".title-bottom button",
+            "text": "",
+            "rect": {
+              "x": 130.6666717529297,
+              "y": 495.75,
+              "width": 44,
+              "height": 44,
+              "right": 174.6666717529297,
+              "bottom": 539.75
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 467.84375,
+          "width": 137.09375,
+          "height": 63.15625,
+          "right": 155.09375,
+          "bottom": 531
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 497.75,
+              "width": 88.66667175292969,
+              "height": 40,
+              "right": 110.66667175292969,
+              "bottom": 537.75
+            }
+          },
+          {
+            "selector": ".title-bottom button",
+            "text": "",
+            "rect": {
+              "x": 130.6666717529297,
+              "y": 495.75,
+              "width": 44,
+              "height": 44,
+              "right": 174.6666717529297,
+              "bottom": 539.75
+            }
+          },
+          {
+            "selector": ".title-content",
+            "text": "SIX CHAPTERS · SIXTY GARDENSMAHJONGGarden✦A quiet journey. One pair at a time.\n   Continue journeyDaily GardenChoose a gardenLeaderboardTile studio\n   LEVEL 11 · Little bridge\n  ",
+            "rect": {
+              "x": 18,
+              "y": -175.33334350585938,
+              "width": 268.66668701171875,
+              "height": 663.0833740234375,
+              "right": 286.66668701171875,
+              "bottom": 487.7500305175781
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 509.94793701171875,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 39.052085876464844,
+              "y": 473.3333435058594,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 280.93750762939453,
+              "bottom": 514.0000114440918
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 467.84375,
+          "width": 144,
+          "height": 63.15625,
+          "right": 162,
+          "bottom": 531
+        },
+        "collisions": [
+          {
+            "selector": ".game-message",
+            "text": "Garden cleared. A little more space to breathe.",
+            "rect": {
+              "x": 10,
+              "y": 398.875,
+              "width": 300,
+              "height": 74.45833587646484,
+              "right": 310,
+              "bottom": 473.33333587646484
+            }
+          },
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 39.052085876464844,
+              "y": 473.3333435058594,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 280.93750762939453,
+              "bottom": 514.0000114440918
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 785.9479370117188,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 784.3125,
+              "width": 157.7916717529297,
+              "height": 20,
+              "right": 179.7916717529297,
+              "bottom": 804.3125
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 764.8958740234375,
+          "width": 168.59375,
+          "height": 42.10416793823242,
+          "right": 186.59375,
+          "bottom": 807.0000419616699
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 784.3125,
+              "width": 157.7916717529297,
+              "height": 20,
+              "right": 179.7916717529297,
+              "bottom": 804.3125
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 785.9479370117188,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 74.05208587646484,
+              "y": 749.3333740234375,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 315.93750762939453,
+              "bottom": 790.0000419616699
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 764.8958740234375,
+          "width": 175.5,
+          "height": 42.10416793823242,
+          "right": 193.5,
+          "bottom": 807.0000419616699
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 74.05208587646484,
+              "y": 749.3333740234375,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 315.93750762939453,
+              "bottom": 790.0000419616699
+            }
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 680
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 649.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 672.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 680
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 649.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 672.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 680
+        },
+        "collisions": []
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 680
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 728
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 697.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 720.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 728
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 697.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 720.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 728
+        },
+        "collisions": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 728
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1040
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 1009.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 1032.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1040
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 1009.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 1032.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1040
+        },
+        "collisions": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1040
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 3440,
+        "height": 1440,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1375.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1400
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 2095.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 2120
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 2095.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 2120
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 2095.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 2120
+        },
+        "collisions": []
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 2095.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 2120
+        },
+        "collisions": []
+      }
+    ],
+    "failures": [
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 509.94793701171875,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 497.75,
+              "width": 88.66667175292969,
+              "height": 40,
+              "right": 110.66667175292969,
+              "bottom": 537.75
+            }
+          },
+          {
+            "selector": ".title-bottom button",
+            "text": "",
+            "rect": {
+              "x": 130.6666717529297,
+              "y": 495.75,
+              "width": 44,
+              "height": 44,
+              "right": 174.6666717529297,
+              "bottom": 539.75
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 467.84375,
+          "width": 137.09375,
+          "height": 63.15625,
+          "right": 155.09375,
+          "bottom": 531
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 497.75,
+              "width": 88.66667175292969,
+              "height": 40,
+              "right": 110.66667175292969,
+              "bottom": 537.75
+            }
+          },
+          {
+            "selector": ".title-bottom button",
+            "text": "",
+            "rect": {
+              "x": 130.6666717529297,
+              "y": 495.75,
+              "width": 44,
+              "height": 44,
+              "right": 174.6666717529297,
+              "bottom": 539.75
+            }
+          },
+          {
+            "selector": ".title-content",
+            "text": "SIX CHAPTERS · SIXTY GARDENSMAHJONGGarden✦A quiet journey. One pair at a time.\n   Continue journeyDaily GardenChoose a gardenLeaderboardTile studio\n   LEVEL 11 · Little bridge\n  ",
+            "rect": {
+              "x": 18,
+              "y": -175.33334350585938,
+              "width": 268.66668701171875,
+              "height": 663.0833740234375,
+              "right": 286.66668701171875,
+              "bottom": 487.7500305175781
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 509.94793701171875,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 531.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 39.052085876464844,
+              "y": 473.3333435058594,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 280.93750762939453,
+              "bottom": 514.0000114440918
+            }
+          }
+        ]
+      },
+      {
+        "width": 320,
+        "height": 568,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 467.84375,
+          "width": 144,
+          "height": 63.15625,
+          "right": 162,
+          "bottom": 531
+        },
+        "collisions": [
+          {
+            "selector": ".game-message",
+            "text": "Garden cleared. A little more space to breathe.",
+            "rect": {
+              "x": 10,
+              "y": 398.875,
+              "width": 300,
+              "height": 74.45833587646484,
+              "right": 310,
+              "bottom": 473.33333587646484
+            }
+          },
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 39.052085876464844,
+              "y": 473.3333435058594,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 280.93750762939453,
+              "bottom": 514.0000114440918
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 785.9479370117188,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 784.3125,
+              "width": 157.7916717529297,
+              "height": 20,
+              "right": 179.7916717529297,
+              "bottom": 804.3125
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 764.8958740234375,
+          "width": 168.59375,
+          "height": 42.10416793823242,
+          "right": 186.59375,
+          "bottom": 807.0000419616699
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 22,
+              "y": 784.3125,
+              "width": 157.7916717529297,
+              "height": 20,
+              "right": 179.7916717529297,
+              "bottom": 804.3125
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "play",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 18,
+          "y": 785.9479370117188,
+          "width": 135.27084350585938,
+          "height": 21.05208396911621,
+          "right": 153.27084350585938,
+          "bottom": 807.000020980835
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 74.05208587646484,
+              "y": 749.3333740234375,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 315.93750762939453,
+              "bottom": 790.0000419616699
+            }
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "scale": 2,
+        "screen": "play",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 18,
+          "y": 764.8958740234375,
+          "width": 175.5,
+          "height": 42.10416793823242,
+          "right": 193.5,
+          "bottom": 807.0000419616699
+        },
+        "collisions": [
+          {
+            "selector": ".tile-list summary",
+            "text": "Text tiles & keyboard help",
+            "rect": {
+              "x": 74.05208587646484,
+              "y": 749.3333740234375,
+              "width": 241.8854217529297,
+              "height": 40.66666793823242,
+              "right": 315.93750762939453,
+              "bottom": 790.0000419616699
+            }
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 680
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 649.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 672.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 655.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 680
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 649.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 672.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 728
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 697.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 720.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 703.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 728
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 697.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 720.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.6041870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.937520980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1600,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 800,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 735.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 760
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 729.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 752.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 900,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 835.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 860
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 829.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 852.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "title",
+        "status": "Saved on this device",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 155.4166717529297,
+          "height": 24.1875,
+          "right": 185.4166717529297,
+          "bottom": 1040
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 1009.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 1032.875020980835
+            }
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scale": 2,
+        "screen": "title",
+        "status": "Temporary play · export a backup to keep it",
+        "rect": {
+          "x": 30,
+          "y": 1015.8125,
+          "width": 330.0625,
+          "height": 24.1875,
+          "right": 360.0625,
+          "bottom": 1040
+        },
+        "collisions": [
+          {
+            "selector": ".title-bottom>span",
+            "text": "MAHJONG SOLITAIRE",
+            "rect": {
+              "x": 34,
+              "y": 1009.5416870117188,
+              "width": 205.73959350585938,
+              "height": 23.33333396911621,
+              "right": 239.73959350585938,
+              "bottom": 1032.875020980835
+            }
+          }
+        ]
+      }
+    ],
+    "passed": false
+  },
+  "status": "failed"
+}

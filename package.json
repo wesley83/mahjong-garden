@@ -1,6 +1,6 @@
 {
   "name": "mahjong-garden",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "type": "module",
   "description": "A quiet mahjong solitaire game with 60 levels and a personal tile studio",
   "license": "MIT",
